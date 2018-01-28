@@ -1,0 +1,14 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '8.0'
+
+target 'GC' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  #use_frameworks!
+
+  # Pods for GC
+  pod 'AFNetworking', '3.1.0’
+  pod 'MJRefresh', '3.1.15'
+  pod 'MJExtension', '3.0.13'
+  pod 'SDWebImage', '4.2.2'
+
+end

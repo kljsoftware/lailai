@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  GC
+
+  Created by hzg on 2018/1/27.
+  Copyright © 2018年 demo. All rights reserved.
+*/
+
+/// 首页
+"tab_wallet"   = "积分钱包";
+"tab_business" = "绿色商家";
+"tab_news"     = "绿色新闻";
+"tab_profile"  = "我";
