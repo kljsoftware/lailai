@@ -35,18 +35,5 @@ extension UIView {
         view.addSubview(blurView)
         return view
     }
-    
-    /// 渐变视图
-    class func gradientView(frame:CGRect, start:CGPoint, end:CGPoint, color:UIColor = COLOR_464646) -> UIView {
-        let view = UIView(frame: frame)
-        view.backgroundColor = UIColor.clear
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = view.bounds
-        gradientLayer.startPoint = start
-        gradientLayer.endPoint = end
-        gradientLayer.colors = [color.cgColor, color.withAlphaComponent(0.0).cgColor]
-        view.layer.addSublayer(gradientLayer)
-        return view
-    }
 
 }

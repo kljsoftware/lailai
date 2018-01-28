@@ -17,6 +17,12 @@ enum LanguageKey : String {
     case tab_news
     case tab_profile
     
+    /// 闪屏页
+    case splash_skip
+    
+    /// 注册
+    case register
+    
     /// 获取对应的语言字串
     var value : String {
         return LanguageHelper.shared.getLanguageText(by: self.rawValue)

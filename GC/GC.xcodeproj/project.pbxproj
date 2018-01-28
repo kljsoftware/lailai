@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3C25DA3E201CC286003E4BFB /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C25DA3D201CC286003E4BFB /* UIImageView+Extension.swift */; };
+		3C374616201DB37A000FD752 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C374615201DB37A000FD752 /* Launch.storyboard */; };
+		3C374618201DB866000FD752 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C374617201DB866000FD752 /* splash.png */; };
+		3C37461A201DBA14000FD752 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C374619201DBA14000FD752 /* BorderView.swift */; };
+		3C37461C201DBC66000FD752 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C37461B201DBC66000FD752 /* SplashViewController.swift */; };
+		3C875580201DC5090081F181 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C87557F201DC5090081F181 /* Register.storyboard */; };
+		3C875582201DC59E0081F181 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C875581201DC59E0081F181 /* RegisterViewController.swift */; };
 		3C8DCEEC201D76C400C9F40E /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C8DCEDA201D76C400C9F40E /* launch.png */; };
 		3C8DCEED201D76C400C9F40E /* tab_business_nor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C8DCEDC201D76C400C9F40E /* tab_business_nor@3x.png */; };
 		3C8DCEEE201D76C400C9F40E /* tab_wallet_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C8DCEDD201D76C400C9F40E /* tab_wallet_sel@2x.png */; };
@@ -62,6 +68,12 @@
 
 /* Begin PBXFileReference section */
 		3C25DA3D201CC286003E4BFB /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		3C374615201DB37A000FD752 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		3C374617201DB866000FD752 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		3C374619201DBA14000FD752 /* BorderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
+		3C37461B201DBC66000FD752 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		3C87557F201DC5090081F181 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		3C875581201DC59E0081F181 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3C8DCED5201D441000C9F40E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3C8DCED7201D441D00C9F40E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3C8DCEDA201D76C400C9F40E /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
@@ -133,9 +145,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C37461D201DBF08000FD752 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3C37461E201DBF08000FD752 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				3C87557F201DC5090081F181 /* Register.storyboard */,
+				3C875581201DC59E0081F181 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		3C8DCED9201D76C400C9F40E /* Launch */ = {
 			isa = PBXGroup;
 			children = (
+				3C374617201DB866000FD752 /* splash.png */,
 				3C8DCEDA201D76C400C9F40E /* launch.png */,
 			);
 			path = Launch;
@@ -218,6 +247,7 @@
 		3CB55388201CB73F009AC1CD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3C374619201DBA14000FD752 /* BorderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -331,6 +361,8 @@
 			isa = PBXGroup;
 			children = (
 				3CFD84F2201C9B5900F9E7E5 /* Launch */,
+				3C37461D201DBF08000FD752 /* Login */,
+				3C37461E201DBF08000FD752 /* Register */,
 				3CFD84F0201C9B5900F9E7E5 /* Home */,
 				3CFD84FF201CA61A00F9E7E5 /* Wallet */,
 				3CFD8500201CA61A00F9E7E5 /* Business */,
@@ -353,6 +385,8 @@
 			isa = PBXGroup;
 			children = (
 				3CFD84F3201C9B5900F9E7E5 /* LaunchScreen.storyboard */,
+				3C374615201DB37A000FD752 /* Launch.storyboard */,
+				3C37461B201DBC66000FD752 /* SplashViewController.swift */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -484,9 +518,11 @@
 				3C8DCEF5201D76C400C9F40E /* tab_profile_nor@3x.png in Resources */,
 				3CFD84F5201C9B5900F9E7E5 /* Assets.xcassets in Resources */,
 				3CFD8507201CA67000F9E7E5 /* News.storyboard in Resources */,
+				3C374618201DB866000FD752 /* splash.png in Resources */,
 				3C8DCEEF201D76C400C9F40E /* tab_news_nor@3x.png in Resources */,
 				3CF97C14201CB4AC00FB67DB /* Localizable.strings in Resources */,
 				3C8DCEED201D76C400C9F40E /* tab_business_nor@3x.png in Resources */,
+				3C374616201DB37A000FD752 /* Launch.storyboard in Resources */,
 				3CFD84F7201C9B5900F9E7E5 /* Info.plist in Resources */,
 				3C8DCEF6201D76C400C9F40E /* tab_news_sel@3x.png in Resources */,
 				3C8DCEF9201D76C400C9F40E /* tab_business_sel@2x.png in Resources */,
@@ -501,6 +537,7 @@
 				3CFD84F8201C9B5900F9E7E5 /* Home.storyboard in Resources */,
 				3C8DCEFB201D76C400C9F40E /* tab_news_sel@2x.png in Resources */,
 				3C8DCEFC201D76C400C9F40E /* tab_profile_nor@2x.png in Resources */,
+				3C875580201DC5090081F181 /* Register.storyboard in Resources */,
 				3CFD8503201CA65200F9E7E5 /* Wallet.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,6 +610,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C875582201DC59E0081F181 /* RegisterViewController.swift in Sources */,
 				3CFD8513201CA70300F9E7E5 /* ProfileViewController.swift in Sources */,
 				3CFD84FD201C9FAC00F9E7E5 /* HomeTabBarController.swift in Sources */,
 				3CB5539D201CB73F009AC1CD /* String+Extension.swift in Sources */,
@@ -586,11 +624,13 @@
 				3CFD8511201CA6F300F9E7E5 /* NewsViewController.swift in Sources */,
 				3CB55399201CB73F009AC1CD /* UIButton+Extension.swift in Sources */,
 				3CB553A1201CB73F009AC1CD /* UserDefaultMacro.swift in Sources */,
+				3C37461C201DBC66000FD752 /* SplashViewController.swift in Sources */,
 				3CB55392201CB73F009AC1CD /* HttpRequest.swift in Sources */,
 				3CB553A0201CB73F009AC1CD /* LanguageHelper.swift in Sources */,
 				3CB5539B201CB73F009AC1CD /* UIImage+Extension.swift in Sources */,
 				3CB553A2201CB73F009AC1CD /* NetworkMacro.swift in Sources */,
 				3CB55397201CB73F009AC1CD /* UIColor+Extension.swift in Sources */,
+				3C37461A201DBA14000FD752 /* BorderView.swift in Sources */,
 				3C25DA3E201CC286003E4BFB /* UIImageView+Extension.swift in Sources */,
 				3CB553A5201CB73F009AC1CD /* GlobalMacro.swift in Sources */,
 				3CB55398201CB73F009AC1CD /* Date+Extension.swift in Sources */,

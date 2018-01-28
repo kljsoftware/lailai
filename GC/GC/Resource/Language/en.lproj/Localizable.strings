@@ -11,3 +11,5 @@
 "tab_business" = "business";
 "tab_news"     = "news";
 "tab_profile"  = "mine";
+
+"splash_skip"  = "skip";
