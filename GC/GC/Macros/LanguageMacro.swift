@@ -26,6 +26,9 @@ enum LanguageKey : String {
     /// 积分钱包相关
     case wallet_donate
     
+    ///  "我"相关
+    case profile_setting
+    
     /// 获取对应的语言字串
     var value : String {
         return LanguageHelper.shared.getLanguageText(by: self.rawValue)

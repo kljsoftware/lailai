@@ -13,13 +13,13 @@ private let pushPopAnimationDuration = 0.5, pushPopDelayDuration = 0.1
 extension UIView {
     
     /// 圆角
-    var cornerRadius:CGFloat {
+    @IBInspectable var cornerRadius:CGFloat {
         get {
             return layer.cornerRadius
         }
         set {
             layer.cornerRadius = newValue
-            layer.masksToBounds = true
+            layer.masksToBounds = false
             layer.shouldRasterize = true // 性能优化 参照http://www.jianshu.com/p/687bf79b4fd3
             layer.rasterizationScale = UIScreen.main.scale
         }
