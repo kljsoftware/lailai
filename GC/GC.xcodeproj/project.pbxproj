@@ -45,6 +45,11 @@
 		3C91FC23201F1FA400BB492D /* NewsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C91FC22201F1FA400BB492D /* NewsHeaderView.xib */; };
 		3C91FC25201F203800BB492D /* NewsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C91FC24201F203800BB492D /* NewsHeaderView.swift */; };
 		3C91FC28201F21C500BB492D /* news_header.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C91FC27201F21C500BB492D /* news_header.png */; };
+		3C91FC2C201F3A9E00BB492D /* avatar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C91FC2A201F3A9D00BB492D /* avatar@3x.png */; };
+		3C91FC2D201F3A9E00BB492D /* avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C91FC2B201F3A9D00BB492D /* avatar@2x.png */; };
+		3C91FC31201F3C7C00BB492D /* common_forward@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C91FC2F201F3C7C00BB492D /* common_forward@3x.png */; };
+		3C91FC32201F3C7C00BB492D /* common_forward@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C91FC30201F3C7C00BB492D /* common_forward@2x.png */; };
+		3C91FC34201F4D1900BB492D /* ProfileDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C91FC33201F4D1900BB492D /* ProfileDetailsViewController.swift */; };
 		3CB55392201CB73F009AC1CD /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB55377201CB73F009AC1CD /* HttpRequest.swift */; };
 		3CB55393201CB73F009AC1CD /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB5537A201CB73F009AC1CD /* Log.swift */; };
 		3CB55394201CB73F009AC1CD /* OnePixelConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB5537B201CB73F009AC1CD /* OnePixelConstraint.swift */; };
@@ -121,6 +126,11 @@
 		3C91FC22201F1FA400BB492D /* NewsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsHeaderView.xib; sourceTree = "<group>"; };
 		3C91FC24201F203800BB492D /* NewsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHeaderView.swift; sourceTree = "<group>"; };
 		3C91FC27201F21C500BB492D /* news_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news_header.png; sourceTree = "<group>"; };
+		3C91FC2A201F3A9D00BB492D /* avatar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar@3x.png"; sourceTree = "<group>"; };
+		3C91FC2B201F3A9D00BB492D /* avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar@2x.png"; sourceTree = "<group>"; };
+		3C91FC2F201F3C7C00BB492D /* common_forward@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_forward@3x.png"; sourceTree = "<group>"; };
+		3C91FC30201F3C7C00BB492D /* common_forward@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_forward@2x.png"; sourceTree = "<group>"; };
+		3C91FC33201F4D1900BB492D /* ProfileDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsViewController.swift; sourceTree = "<group>"; };
 		3CB55370201CB5FD009AC1CD /* GC-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GC-Bridging-Header.h"; sourceTree = "<group>"; };
 		3CB55377201CB73F009AC1CD /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 		3CB5537A201CB73F009AC1CD /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
@@ -236,6 +246,24 @@
 				3C91FC27201F21C500BB492D /* news_header.png */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		3C91FC29201F3A9D00BB492D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3C91FC2A201F3A9D00BB492D /* avatar@3x.png */,
+				3C91FC2B201F3A9D00BB492D /* avatar@2x.png */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		3C91FC2E201F3C7C00BB492D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3C91FC2F201F3C7C00BB492D /* common_forward@3x.png */,
+				3C91FC30201F3C7C00BB492D /* common_forward@2x.png */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		3CB55374201CB73F009AC1CD /* Vendors */ = {
@@ -392,6 +420,8 @@
 				3C8DCED9201D76C400C9F40E /* Launch */,
 				3C8DCEDB201D76C400C9F40E /* Home */,
 				3C4B0708201EF7CA00856698 /* Wallet */,
+				3C91FC29201F3A9D00BB492D /* Profile */,
+				3C91FC2E201F3C7C00BB492D /* Common */,
 				3C91FC26201F21C500BB492D /* Test */,
 			);
 			path = Image;
@@ -445,6 +475,7 @@
 			children = (
 				3CFD8508201CA67E00F9E7E5 /* Profile.storyboard */,
 				3CFD8512201CA70300F9E7E5 /* ProfileViewController.swift */,
+				3C91FC33201F4D1900BB492D /* ProfileDetailsViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -575,6 +606,7 @@
 				3C8DCEF7201D76C400C9F40E /* tab_wallet_nor@2x.png in Resources */,
 				3C8DCEF5201D76C400C9F40E /* tab_profile_nor@3x.png in Resources */,
 				3CFD84F5201C9B5900F9E7E5 /* Assets.xcassets in Resources */,
+				3C91FC32201F3C7C00BB492D /* common_forward@2x.png in Resources */,
 				3CFD8507201CA67000F9E7E5 /* News.storyboard in Resources */,
 				3C374618201DB866000FD752 /* splash.png in Resources */,
 				3C4B0710201EF91800856698 /* WalletCollectionViewCell.xib in Resources */,
@@ -590,14 +622,17 @@
 				3C8DCEF0201D76C400C9F40E /* tab_profile_sel@3x.png in Resources */,
 				3C8DCEFA201D76C400C9F40E /* tab_wallet_nor@3x.png in Resources */,
 				3C4B070C201EF7CA00856698 /* wallet_donate@2x.png in Resources */,
+				3C91FC31201F3C7C00BB492D /* common_forward@3x.png in Resources */,
 				3CFD84F9201C9B5900F9E7E5 /* LaunchScreen.storyboard in Resources */,
 				3C8DCEEC201D76C400C9F40E /* launch.png in Resources */,
 				3C4B070B201EF7CA00856698 /* wallet_donate@3x.png in Resources */,
 				3C8DCEF3201D76C400C9F40E /* tab_wallet_sel@3x.png in Resources */,
 				3C8DCEF8201D76C400C9F40E /* tab_business_sel@3x.png in Resources */,
 				3C91FC23201F1FA400BB492D /* NewsHeaderView.xib in Resources */,
+				3C91FC2C201F3A9E00BB492D /* avatar@3x.png in Resources */,
 				3C4B0718201F130E00856698 /* PersonalDonateView.xib in Resources */,
 				3CFD8509201CA67E00F9E7E5 /* Profile.storyboard in Resources */,
+				3C91FC2D201F3A9E00BB492D /* avatar@2x.png in Resources */,
 				3C4B071E201F1C5D00856698 /* NewsCell.xib in Resources */,
 				3CFD84F8201C9B5900F9E7E5 /* Home.storyboard in Resources */,
 				3C8DCEFB201D76C400C9F40E /* tab_news_sel@2x.png in Resources */,
@@ -691,6 +726,7 @@
 				3CFD850F201CA6E000F9E7E5 /* BusinessViewController.swift in Sources */,
 				3CFD8511201CA6F300F9E7E5 /* NewsViewController.swift in Sources */,
 				3CB55399201CB73F009AC1CD /* UIButton+Extension.swift in Sources */,
+				3C91FC34201F4D1900BB492D /* ProfileDetailsViewController.swift in Sources */,
 				3CB553A1201CB73F009AC1CD /* UserDefaultMacro.swift in Sources */,
 				3C37461C201DBC66000FD752 /* SplashViewController.swift in Sources */,
 				3C4B0712201F04DD00856698 /* WalletResultModel.swift in Sources */,
