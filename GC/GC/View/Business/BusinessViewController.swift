@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// 绿色商家
 class BusinessViewController: UIViewController {
 
     override func viewDidLoad() {

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="86" id="KGk-i7-Jjw" customClass="NewsCell" customModule="GC" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="85.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news_header.png" translatesAutoresizingMaskIntoConstraints="NO" id="VhO-6E-l80">
+                        <rect key="frame" x="12" y="13" width="80" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="LJT-mV-CJv"/>
+                            <constraint firstAttribute="width" constant="80" id="cOr-92-fUM"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5M5-XM-20l">
+                        <rect key="frame" x="104" y="17" width="204" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yX-KY-579">
+                        <rect key="frame" x="104" y="48" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWh-9O-45G">
+                        <rect key="frame" x="266" y="48" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VhO-6E-l80" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="67N-Ka-QiO"/>
+                    <constraint firstItem="5M5-XM-20l" firstAttribute="leading" secondItem="VhO-6E-l80" secondAttribute="trailing" constant="12" id="9XL-Rv-Lpu"/>
+                    <constraint firstItem="iWh-9O-45G" firstAttribute="centerY" secondItem="5yX-KY-579" secondAttribute="centerY" id="AdO-rd-J66"/>
+                    <constraint firstItem="5yX-KY-579" firstAttribute="bottom" secondItem="VhO-6E-l80" secondAttribute="bottom" constant="-4" id="Gnc-Gm-cLN"/>
+                    <constraint firstAttribute="trailing" secondItem="iWh-9O-45G" secondAttribute="trailing" constant="12" id="SXR-fG-Kcx"/>
+                    <constraint firstItem="VhO-6E-l80" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="eTt-ir-5JB"/>
+                    <constraint firstItem="5M5-XM-20l" firstAttribute="top" secondItem="VhO-6E-l80" secondAttribute="top" constant="4" id="k78-Hr-5Oa"/>
+                    <constraint firstAttribute="trailing" secondItem="5M5-XM-20l" secondAttribute="trailing" constant="12" id="rWt-bT-4TF"/>
+                    <constraint firstItem="5yX-KY-579" firstAttribute="leading" secondItem="VhO-6E-l80" secondAttribute="trailing" constant="12" id="sFK-Fo-dc5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="34" y="33"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="news_header.png" width="960" height="540"/>
+    </resources>
+</document>
