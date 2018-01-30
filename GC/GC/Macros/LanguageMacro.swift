@@ -11,23 +11,16 @@
 /// 多语言键值类型
 enum LanguageKey : String {
    
-    /// 首页
-    case tab_wallet
-    case tab_business
-    case tab_news
-    case tab_profile
-    
-    /// 闪屏页
-    case splash_skip
-    
-    /// 注册
-    case register
-    
-    /// 积分钱包相关
-    case wallet_donate
-    
-    ///  "我"相关
-    case profile_setting
+    case tab_wallet   // 积分钱包
+    case tab_business // 绿色商家
+    case tab_news     // 绿色新闻
+    case tab_profile  // 我
+    case splash_skip  // 跳过
+    case register     // 注册
+    case phoneNum     // 手机号
+    case authCode     // 验证码
+    case wallet_donate // 积分捐赠
+    case profile_setting // 个人设置
     
     /// 获取对应的语言字串
     var value : String {

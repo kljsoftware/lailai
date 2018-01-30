@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C1938FC2020008A00E7D007 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C1938FB2020008A00E7D007 /* Login.storyboard */; };
+		3C1938FE202000E600E7D007 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1938FD202000E600E7D007 /* LoginViewController.swift */; };
 		3C25DA3E201CC286003E4BFB /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C25DA3D201CC286003E4BFB /* UIImageView+Extension.swift */; };
 		3C374616201DB37A000FD752 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C374615201DB37A000FD752 /* Launch.storyboard */; };
 		3C374618201DB866000FD752 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C374617201DB866000FD752 /* splash.png */; };
@@ -86,6 +88,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C1938FB2020008A00E7D007 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		3C1938FD202000E600E7D007 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3C25DA3D201CC286003E4BFB /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		3C374615201DB37A000FD752 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		3C374617201DB866000FD752 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
@@ -186,6 +190,8 @@
 		3C37461D201DBF08000FD752 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				3C1938FB2020008A00E7D007 /* Login.storyboard */,
+				3C1938FD202000E600E7D007 /* LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -337,10 +343,10 @@
 			isa = PBXGroup;
 			children = (
 				3CB55390201CB73F009AC1CD /* GlobalMacro.swift */,
-				3CB5538C201CB73F009AC1CD /* UserDefaultMacro.swift */,
 				3CB5538D201CB73F009AC1CD /* NetworkMacro.swift */,
-				3CB5538E201CB73F009AC1CD /* LanguageMacro.swift */,
 				3CB5538F201CB73F009AC1CD /* NotificationMacro.swift */,
+				3CB5538C201CB73F009AC1CD /* UserDefaultMacro.swift */,
+				3CB5538E201CB73F009AC1CD /* LanguageMacro.swift */,
 			);
 			path = Macros;
 			sourceTree = "<group>";
@@ -621,6 +627,7 @@
 				3C8DCEF4201D76C400C9F40E /* tab_business_nor@2x.png in Resources */,
 				3C8DCEF0201D76C400C9F40E /* tab_profile_sel@3x.png in Resources */,
 				3C8DCEFA201D76C400C9F40E /* tab_wallet_nor@3x.png in Resources */,
+				3C1938FC2020008A00E7D007 /* Login.storyboard in Resources */,
 				3C4B070C201EF7CA00856698 /* wallet_donate@2x.png in Resources */,
 				3C91FC31201F3C7C00BB492D /* common_forward@3x.png in Resources */,
 				3CFD84F9201C9B5900F9E7E5 /* LaunchScreen.storyboard in Resources */,
@@ -710,6 +717,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C1938FE202000E600E7D007 /* LoginViewController.swift in Sources */,
 				3C875582201DC59E0081F181 /* RegisterViewController.swift in Sources */,
 				3CFD8513201CA70300F9E7E5 /* ProfileViewController.swift in Sources */,
 				3C4B070F201EF91800856698 /* WalletCollectionViewCell.swift in Sources */,

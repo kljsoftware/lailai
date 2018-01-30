@@ -11,5 +11,6 @@
 /// 当前语言
 let UserDefaultLanguage = "language"
 
-
+/// 令牌字符串
+let UserDefaultToken = "token"
 

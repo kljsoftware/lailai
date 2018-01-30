@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// 个人简介
+/// 个人详情设置界面
 class ProfileViewController: UIViewController {
 
     /// 登陆显示视图【显示个人名称、电话信息】
