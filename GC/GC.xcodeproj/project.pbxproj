@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3C1938FC2020008A00E7D007 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C1938FB2020008A00E7D007 /* Login.storyboard */; };
 		3C1938FE202000E600E7D007 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1938FD202000E600E7D007 /* LoginViewController.swift */; };
+		3C193900202011CF00E7D007 /* Register2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1938FF202011CF00E7D007 /* Register2ViewController.swift */; };
+		3C193902202052F700E7D007 /* FotgotPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C193901202052F700E7D007 /* FotgotPwdViewController.swift */; };
+		3C1939042020530F00E7D007 /* FotgotPwd2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1939032020530F00E7D007 /* FotgotPwd2ViewController.swift */; };
 		3C25DA3E201CC286003E4BFB /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C25DA3D201CC286003E4BFB /* UIImageView+Extension.swift */; };
 		3C374616201DB37A000FD752 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C374615201DB37A000FD752 /* Launch.storyboard */; };
 		3C374618201DB866000FD752 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C374617201DB866000FD752 /* splash.png */; };
@@ -90,6 +93,9 @@
 /* Begin PBXFileReference section */
 		3C1938FB2020008A00E7D007 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		3C1938FD202000E600E7D007 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3C1938FF202011CF00E7D007 /* Register2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register2ViewController.swift; sourceTree = "<group>"; };
+		3C193901202052F700E7D007 /* FotgotPwdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotgotPwdViewController.swift; sourceTree = "<group>"; };
+		3C1939032020530F00E7D007 /* FotgotPwd2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotgotPwd2ViewController.swift; sourceTree = "<group>"; };
 		3C25DA3D201CC286003E4BFB /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		3C374615201DB37A000FD752 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		3C374617201DB866000FD752 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
@@ -192,6 +198,8 @@
 			children = (
 				3C1938FB2020008A00E7D007 /* Login.storyboard */,
 				3C1938FD202000E600E7D007 /* LoginViewController.swift */,
+				3C193901202052F700E7D007 /* FotgotPwdViewController.swift */,
+				3C1939032020530F00E7D007 /* FotgotPwd2ViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -201,6 +209,7 @@
 			children = (
 				3C87557F201DC5090081F181 /* Register.storyboard */,
 				3C875581201DC59E0081F181 /* RegisterViewController.swift */,
+				3C1938FF202011CF00E7D007 /* Register2ViewController.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -739,10 +748,13 @@
 				3C37461C201DBC66000FD752 /* SplashViewController.swift in Sources */,
 				3C4B0712201F04DD00856698 /* WalletResultModel.swift in Sources */,
 				3CB55392201CB73F009AC1CD /* HttpRequest.swift in Sources */,
+				3C193900202011CF00E7D007 /* Register2ViewController.swift in Sources */,
 				3CB553A0201CB73F009AC1CD /* LanguageHelper.swift in Sources */,
 				3CB5539B201CB73F009AC1CD /* UIImage+Extension.swift in Sources */,
 				3C4B0716201F12F400856698 /* PersonalDonateView.swift in Sources */,
 				3CB553A2201CB73F009AC1CD /* NetworkMacro.swift in Sources */,
+				3C1939042020530F00E7D007 /* FotgotPwd2ViewController.swift in Sources */,
+				3C193902202052F700E7D007 /* FotgotPwdViewController.swift in Sources */,
 				3CB55397201CB73F009AC1CD /* UIColor+Extension.swift in Sources */,
 				3C37461A201DBA14000FD752 /* BorderView.swift in Sources */,
 				3C4B071A201F190E00856698 /* NewsResultModel.swift in Sources */,

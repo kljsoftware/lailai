@@ -8,7 +8,8 @@
 
 // 通知常量定义
 
-/// 登陆、注册、登陆成功
+/// 登录、登出、注册、登陆成功
 let NoticationUserLogin     = Notification.Name("NoticationUserLogin")
+let NoticationUserLogout    = Notification.Name("NoticationUserLogout")
 let NoticationUserRegister  = Notification.Name("NoticationUserRegister")
 let NoticationUserLoginSuccess = Notification.Name("NoticationUserLoginSuccess")

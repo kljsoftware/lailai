@@ -37,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     fileprivate func registerNotification() {
         NotificationCenter.default.addObserver(self, selector: #selector(notifyUserRegister(_:)), name: NoticationUserRegister, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(notifyUserLogin(_:)), name: NoticationUserLogin, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(notifyUserLogin(_:)), name: NoticationUserLogout, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(notifyUserLoginSuccess(_:)), name: NoticationUserLoginSuccess, object: nil)
     }
     
@@ -44,6 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     fileprivate func unregisterNotification() {
         NotificationCenter.default.removeObserver(self, name: NoticationUserRegister, object: nil)
         NotificationCenter.default.removeObserver(self, name: NoticationUserLogin, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NoticationUserLogout, object: nil)
         NotificationCenter.default.removeObserver(self, name: NoticationUserLoginSuccess, object: nil)
     }
     
@@ -52,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(withIdentifier: "registerNC")
     }
     
-    /// 通知用户登录
+    /// 通知用户登录/登出
     @objc private func notifyUserLogin(_ notify:Notification) {
         window?.rootViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "loginNC")
     }

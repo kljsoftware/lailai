@@ -26,4 +26,5 @@ let DEVICE_STATUS_BAR_HEIGHT: CGFloat  = iPhoneX ? 44 : 20
 // iPhoneX竖屏底部指示部分
 let DEVICE_INDICATOR_HEIGHT: CGFloat    = iPhoneX ? 34 : 0
 
-
+/// 常用颜色定义
+let COLOR_2673FD = UIColor.hexToColor(0x2673FD)

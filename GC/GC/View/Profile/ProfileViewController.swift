@@ -59,8 +59,6 @@ class ProfileViewController: UIViewController {
     
     /// 点击退出登陆
     @IBAction func onQuitButtonClicked(_ sender: UIButton) {
-        loginView.isHidden = true
-        logoutView.isHidden = false
-        quitLoginView.isHidden = true
+        NotificationCenter.default.post(name: NoticationUserLogout, object: nil)
     }
 }
