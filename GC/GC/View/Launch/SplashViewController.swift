@@ -83,6 +83,26 @@ class SplashViewController: UIViewController {
     
     /// 记时结束
     private func finished() {
+        // 首次登陆流程
+        /*
+         1，用户注册 register
+         2，短信验证 sendPhoneCode
+         3，登录 login 成功后将 token 保存手机中。
+         */
+        guard let token = UserDefaults.standard.string(forKey: UserDefaultToken) else {
+            NotificationCenter.default.post(name: NoticationUserRegister, object: nil)
+            return
+        }
         
+        // 非首次流程
+        /*
+         1，本地有token，验证是否可用 checkToken;
+         2，不可用让用户重新登陆
+         */
+        if token == "有效可用" {
+            NotificationCenter.default.post(name: NoticationUserLoginSuccess, object: nil)
+        } else {
+            NotificationCenter.default.post(name: NoticationUserLogin, object: nil)
+        }
     }
 }

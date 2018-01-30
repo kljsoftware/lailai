@@ -6,7 +6,6 @@
   Copyright © 2018年 demo. All rights reserved.
 */
 
-/// 首页
 "tab_wallet"   = "积分钱包";
 "tab_business" = "绿色商家";
 "tab_news"     = "绿色新闻";
@@ -14,6 +13,8 @@
 
 "splash_skip"  = "跳过";
 "register"     = "注册";
+"phoneNum"     = "手机号";
+"authCode"     = "验证码";
 
 "wallet_donate" = "积分捐赠";
 
