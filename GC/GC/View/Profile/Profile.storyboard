@@ -190,7 +190,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l85-79-EhO">
                                         <rect key="frame" x="0.0" y="0.0" width="351" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="onQuitButtonClicked:" destination="kp2-vt-oL5" eventType="touchUpInside" id="zXk-iN-6wV"/>
                                         </connections>

@@ -50,8 +50,8 @@
                                     <constraint firstAttribute="height" constant="30" id="xWm-wz-Mzk"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9fa-j5-fcZ">
-                                <rect key="frame" x="0.0" y="250" width="375" height="417"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9fa-j5-fcZ">
+                                <rect key="frame" x="12" y="250" width="351" height="405"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YQP-aH-SaR">
                                     <size key="itemSize" width="50" height="50"/>
@@ -78,13 +78,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="2ZT-d5-CyX" secondAttribute="trailing" id="4Vc-D4-son"/>
-                            <constraint firstItem="yHz-JQ-5BW" firstAttribute="top" secondItem="9fa-j5-fcZ" secondAttribute="bottom" id="6bN-IZ-ogH"/>
+                            <constraint firstItem="yHz-JQ-5BW" firstAttribute="top" secondItem="9fa-j5-fcZ" secondAttribute="bottom" constant="12" id="6bN-IZ-ogH"/>
                             <constraint firstItem="2ZT-d5-CyX" firstAttribute="top" secondItem="sZi-UP-nlG" secondAttribute="bottom" id="Kmx-ub-GJV"/>
-                            <constraint firstItem="9fa-j5-fcZ" firstAttribute="leading" secondItem="i0X-Eb-Xcj" secondAttribute="leading" id="NkM-Ra-fdh"/>
+                            <constraint firstItem="9fa-j5-fcZ" firstAttribute="leading" secondItem="i0X-Eb-Xcj" secondAttribute="leading" constant="12" id="NkM-Ra-fdh"/>
                             <constraint firstItem="2ZT-d5-CyX" firstAttribute="leading" secondItem="i0X-Eb-Xcj" secondAttribute="leading" id="Olb-5u-Pyr"/>
                             <constraint firstItem="Dxc-d5-yAC" firstAttribute="top" secondItem="2ZT-d5-CyX" secondAttribute="bottom" id="bYC-1q-d9i"/>
                             <constraint firstAttribute="trailing" secondItem="Dxc-d5-yAC" secondAttribute="trailing" id="kDy-nu-48b"/>
-                            <constraint firstAttribute="trailing" secondItem="9fa-j5-fcZ" secondAttribute="trailing" id="oyi-Im-diW"/>
+                            <constraint firstAttribute="trailing" secondItem="9fa-j5-fcZ" secondAttribute="trailing" constant="12" id="oyi-Im-diW"/>
                             <constraint firstItem="Dxc-d5-yAC" firstAttribute="leading" secondItem="i0X-Eb-Xcj" secondAttribute="leading" id="sas-YV-yD7"/>
                             <constraint firstItem="9fa-j5-fcZ" firstAttribute="top" secondItem="Dxc-d5-yAC" secondAttribute="bottom" id="uQe-Nd-WDx"/>
                         </constraints>
@@ -92,6 +92,7 @@
                     <navigationItem key="navigationItem" id="fTM-pR-3FU"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="bannerContainerView" destination="2ZT-d5-CyX" id="IXm-ka-Pf8"/>
                         <outlet property="collectionView" destination="9fa-j5-fcZ" id="Osf-cU-KHF"/>
                         <outlet property="donateLabel" destination="sb5-Vv-q3K" id="4lD-pH-WEb"/>
                     </connections>

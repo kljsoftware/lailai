@@ -7,11 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C0D8EE02021BC0B001099FE /* Donate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C0D8EDF2021BC0B001099FE /* Donate.storyboard */; };
+		3C0D8EE22021BC35001099FE /* DonateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0D8EE12021BC35001099FE /* DonateViewController.swift */; };
 		3C1938FC2020008A00E7D007 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C1938FB2020008A00E7D007 /* Login.storyboard */; };
 		3C1938FE202000E600E7D007 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1938FD202000E600E7D007 /* LoginViewController.swift */; };
 		3C193900202011CF00E7D007 /* Register2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1938FF202011CF00E7D007 /* Register2ViewController.swift */; };
 		3C193902202052F700E7D007 /* FotgotPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C193901202052F700E7D007 /* FotgotPwdViewController.swift */; };
 		3C1939042020530F00E7D007 /* FotgotPwd2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1939032020530F00E7D007 /* FotgotPwd2ViewController.swift */; };
+		3C1939062020614800E7D007 /* BusinessTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1939052020614800E7D007 /* BusinessTitleView.xib */; };
+		3C1939082020631700E7D007 /* BusinessTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1939072020631700E7D007 /* BusinessTitleView.swift */; };
+		3C19390A20207A6A00E7D007 /* BusinessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C19390920207A6A00E7D007 /* BusinessView.swift */; };
+		3C19390C20207A7600E7D007 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C19390B20207A7600E7D007 /* MapView.swift */; };
+		3C19391120207C0900E7D007 /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C19390F20207C0900E7D007 /* BusinessCell.swift */; };
+		3C19391220207C0900E7D007 /* BusinessCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C19391020207C0900E7D007 /* BusinessCell.xib */; };
+		3C19391520207E1800E7D007 /* points.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C19391420207E1700E7D007 /* points.png */; };
 		3C25DA3E201CC286003E4BFB /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C25DA3D201CC286003E4BFB /* UIImageView+Extension.swift */; };
 		3C374616201DB37A000FD752 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C374615201DB37A000FD752 /* Launch.storyboard */; };
 		3C374618201DB866000FD752 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C374617201DB866000FD752 /* splash.png */; };
@@ -87,15 +96,24 @@
 		3CFD850F201CA6E000F9E7E5 /* BusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFD850E201CA6E000F9E7E5 /* BusinessViewController.swift */; };
 		3CFD8511201CA6F300F9E7E5 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFD8510201CA6F300F9E7E5 /* NewsViewController.swift */; };
 		3CFD8513201CA70300F9E7E5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFD8512201CA70300F9E7E5 /* ProfileViewController.swift */; };
-		4D850DB77CE4F3D91B4E1E09 /* libPods-GC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81FE3ECD8337BA8F8E939CDB /* libPods-GC.a */; };
+		A43A50E4E7F53329C5B11904 /* Pods_GC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19EB8A19ED869E797BC1EDA /* Pods_GC.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C0D8EDF2021BC0B001099FE /* Donate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Donate.storyboard; sourceTree = "<group>"; };
+		3C0D8EE12021BC35001099FE /* DonateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateViewController.swift; sourceTree = "<group>"; };
 		3C1938FB2020008A00E7D007 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		3C1938FD202000E600E7D007 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3C1938FF202011CF00E7D007 /* Register2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register2ViewController.swift; sourceTree = "<group>"; };
 		3C193901202052F700E7D007 /* FotgotPwdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotgotPwdViewController.swift; sourceTree = "<group>"; };
 		3C1939032020530F00E7D007 /* FotgotPwd2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotgotPwd2ViewController.swift; sourceTree = "<group>"; };
+		3C1939052020614800E7D007 /* BusinessTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessTitleView.xib; sourceTree = "<group>"; };
+		3C1939072020631700E7D007 /* BusinessTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTitleView.swift; sourceTree = "<group>"; };
+		3C19390920207A6A00E7D007 /* BusinessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessView.swift; sourceTree = "<group>"; };
+		3C19390B20207A7600E7D007 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		3C19390F20207C0900E7D007 /* BusinessCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
+		3C19391020207C0900E7D007 /* BusinessCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessCell.xib; sourceTree = "<group>"; };
+		3C19391420207E1700E7D007 /* points.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = points.png; sourceTree = "<group>"; };
 		3C25DA3D201CC286003E4BFB /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		3C374615201DB37A000FD752 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		3C374617201DB866000FD752 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
@@ -176,8 +194,8 @@
 		3CFD850E201CA6E000F9E7E5 /* BusinessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessViewController.swift; sourceTree = "<group>"; };
 		3CFD8510201CA6F300F9E7E5 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		3CFD8512201CA70300F9E7E5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		81FE3ECD8337BA8F8E939CDB /* libPods-GC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBEE1DAB0CF91082AD1F3A01 /* Pods-GC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GC.release.xcconfig"; path = "Pods/Target Support Files/Pods-GC/Pods-GC.release.xcconfig"; sourceTree = "<group>"; };
+		C19EB8A19ED869E797BC1EDA /* Pods_GC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43E3385E1A3FF1553B1E9E5 /* Pods-GC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GC/Pods-GC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,13 +204,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D850DB77CE4F3D91B4E1E09 /* libPods-GC.a in Frameworks */,
+				A43A50E4E7F53329C5B11904 /* Pods_GC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C0D8EDE2021BB39001099FE /* Donate */ = {
+			isa = PBXGroup;
+			children = (
+				3C0D8EDF2021BC0B001099FE /* Donate.storyboard */,
+				3C0D8EE12021BC35001099FE /* DonateViewController.swift */,
+			);
+			path = Donate;
+			sourceTree = "<group>";
+		};
+		3C19391320207E1700E7D007 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				3C19391420207E1700E7D007 /* points.png */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
 		3C37461D201DBF08000FD752 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -435,6 +470,7 @@
 				3C8DCED9201D76C400C9F40E /* Launch */,
 				3C8DCEDB201D76C400C9F40E /* Home */,
 				3C4B0708201EF7CA00856698 /* Wallet */,
+				3C19391320207E1700E7D007 /* Business */,
 				3C91FC29201F3A9D00BB492D /* Profile */,
 				3C91FC2E201F3C7C00BB492D /* Common */,
 				3C91FC26201F21C500BB492D /* Test */,
@@ -461,6 +497,7 @@
 				3CFD84FF201CA61A00F9E7E5 /* Wallet */,
 				3CFD8500201CA61A00F9E7E5 /* Business */,
 				3CFD8501201CA61B00F9E7E5 /* News */,
+				3C0D8EDE2021BB39001099FE /* Donate */,
 				3CFD84FE201CA61A00F9E7E5 /* Profile */,
 			);
 			path = View;
@@ -514,6 +551,12 @@
 			children = (
 				3CFD8504201CA66300F9E7E5 /* Business.storyboard */,
 				3CFD850E201CA6E000F9E7E5 /* BusinessViewController.swift */,
+				3C1939072020631700E7D007 /* BusinessTitleView.swift */,
+				3C1939052020614800E7D007 /* BusinessTitleView.xib */,
+				3C19390920207A6A00E7D007 /* BusinessView.swift */,
+				3C19390B20207A7600E7D007 /* MapView.swift */,
+				3C19390F20207C0900E7D007 /* BusinessCell.swift */,
+				3C19391020207C0900E7D007 /* BusinessCell.xib */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -545,7 +588,7 @@
 			children = (
 				3C8DCED7201D441D00C9F40E /* Foundation.framework */,
 				3C8DCED5201D441000C9F40E /* UIKit.framework */,
-				81FE3ECD8337BA8F8E939CDB /* libPods-GC.a */,
+				C19EB8A19ED869E797BC1EDA /* Pods_GC.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -617,16 +660,19 @@
 				3C8DCEF1201D76C400C9F40E /* tab_profile_sel@2x.png in Resources */,
 				3C8DCEF2201D76C400C9F40E /* tab_news_nor@2x.png in Resources */,
 				3C8DCEEE201D76C400C9F40E /* tab_wallet_sel@2x.png in Resources */,
+				3C19391220207C0900E7D007 /* BusinessCell.xib in Resources */,
 				3CFD8505201CA66300F9E7E5 /* Business.storyboard in Resources */,
 				3C8DCEF7201D76C400C9F40E /* tab_wallet_nor@2x.png in Resources */,
 				3C8DCEF5201D76C400C9F40E /* tab_profile_nor@3x.png in Resources */,
 				3CFD84F5201C9B5900F9E7E5 /* Assets.xcassets in Resources */,
 				3C91FC32201F3C7C00BB492D /* common_forward@2x.png in Resources */,
 				3CFD8507201CA67000F9E7E5 /* News.storyboard in Resources */,
+				3C19391520207E1800E7D007 /* points.png in Resources */,
 				3C374618201DB866000FD752 /* splash.png in Resources */,
 				3C4B0710201EF91800856698 /* WalletCollectionViewCell.xib in Resources */,
 				3C8DCEEF201D76C400C9F40E /* tab_news_nor@3x.png in Resources */,
 				3CF97C14201CB4AC00FB67DB /* Localizable.strings in Resources */,
+				3C1939062020614800E7D007 /* BusinessTitleView.xib in Resources */,
 				3C8DCEED201D76C400C9F40E /* tab_business_nor@3x.png in Resources */,
 				3C374616201DB37A000FD752 /* Launch.storyboard in Resources */,
 				3CFD84F7201C9B5900F9E7E5 /* Info.plist in Resources */,
@@ -643,6 +689,7 @@
 				3C8DCEEC201D76C400C9F40E /* launch.png in Resources */,
 				3C4B070B201EF7CA00856698 /* wallet_donate@3x.png in Resources */,
 				3C8DCEF3201D76C400C9F40E /* tab_wallet_sel@3x.png in Resources */,
+				3C0D8EE02021BC0B001099FE /* Donate.storyboard in Resources */,
 				3C8DCEF8201D76C400C9F40E /* tab_business_sel@3x.png in Resources */,
 				3C91FC23201F1FA400BB492D /* NewsHeaderView.xib in Resources */,
 				3C91FC2C201F3A9E00BB492D /* avatar@3x.png in Resources */,
@@ -668,15 +715,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GC/Pods-GC-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -729,9 +780,11 @@
 				3C1938FE202000E600E7D007 /* LoginViewController.swift in Sources */,
 				3C875582201DC59E0081F181 /* RegisterViewController.swift in Sources */,
 				3CFD8513201CA70300F9E7E5 /* ProfileViewController.swift in Sources */,
+				3C1939082020631700E7D007 /* BusinessTitleView.swift in Sources */,
 				3C4B070F201EF91800856698 /* WalletCollectionViewCell.swift in Sources */,
 				3CFD84FD201C9FAC00F9E7E5 /* HomeTabBarController.swift in Sources */,
 				3CB5539D201CB73F009AC1CD /* String+Extension.swift in Sources */,
+				3C19390C20207A7600E7D007 /* MapView.swift in Sources */,
 				3CB5539A201CB73F009AC1CD /* UIView+Extension.swift in Sources */,
 				3CB55394201CB73F009AC1CD /* OnePixelConstraint.swift in Sources */,
 				3CB55393201CB73F009AC1CD /* Log.swift in Sources */,
@@ -743,6 +796,7 @@
 				3CFD850F201CA6E000F9E7E5 /* BusinessViewController.swift in Sources */,
 				3CFD8511201CA6F300F9E7E5 /* NewsViewController.swift in Sources */,
 				3CB55399201CB73F009AC1CD /* UIButton+Extension.swift in Sources */,
+				3C0D8EE22021BC35001099FE /* DonateViewController.swift in Sources */,
 				3C91FC34201F4D1900BB492D /* ProfileDetailsViewController.swift in Sources */,
 				3CB553A1201CB73F009AC1CD /* UserDefaultMacro.swift in Sources */,
 				3C37461C201DBC66000FD752 /* SplashViewController.swift in Sources */,
@@ -753,6 +807,7 @@
 				3CB5539B201CB73F009AC1CD /* UIImage+Extension.swift in Sources */,
 				3C4B0716201F12F400856698 /* PersonalDonateView.swift in Sources */,
 				3CB553A2201CB73F009AC1CD /* NetworkMacro.swift in Sources */,
+				3C19390A20207A6A00E7D007 /* BusinessView.swift in Sources */,
 				3C1939042020530F00E7D007 /* FotgotPwd2ViewController.swift in Sources */,
 				3C193902202052F700E7D007 /* FotgotPwdViewController.swift in Sources */,
 				3CB55397201CB73F009AC1CD /* UIColor+Extension.swift in Sources */,
@@ -765,6 +820,7 @@
 				3CB55395201CB73F009AC1CD /* PortraitViewController.swift in Sources */,
 				3CFD850D201CA6CF00F9E7E5 /* WalletViewController.swift in Sources */,
 				3CB5539E201CB73F009AC1CD /* Dictionary+Extension.swift in Sources */,
+				3C19391120207C0900E7D007 /* BusinessCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -900,19 +956,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F43E3385E1A3FF1553B1E9E5 /* Pods-GC.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = PH3BAB6MV5;
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/GC/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACH_O_TYPE = mh_execute;
 				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fe520.yuejuanyi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "528d2809-b398-40c5-a427-af31dae37e9d";
@@ -921,6 +977,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
 		};
@@ -928,20 +985,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BBEE1DAB0CF91082AD1F3A01 /* Pods-GC.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = PH3BAB6MV5;
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/GC/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACH_O_TYPE = mh_execute;
 				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
 				"OTHER_SWIFT_FLAGS[arch=*]" = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fe520.yuejuanyi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -950,6 +1007,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/GC/Config/GC-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
 		};

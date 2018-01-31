@@ -19,19 +19,22 @@ PODS:
   - SDWebImage (4.2.2):
     - SDWebImage/Core (= 4.2.2)
   - SDWebImage/Core (4.2.2)
+  - SnapKit (3.2.0)
 
 DEPENDENCIES:
   - AFNetworking (= 3.1.0)
   - MJExtension (= 3.0.13)
   - MJRefresh (= 3.1.15)
   - SDWebImage (= 4.2.2)
+  - SnapKit (= 3.2.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: 9af70f5f9327a2cf87f0fb5929f35fcc2fa638ea
   SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
-PODFILE CHECKSUM: 21b05fee6a74b63ff38ffed8c6938faad83689fb
+PODFILE CHECKSUM: ac83775d20b72448d22be2e8206c9c47615c0212
 
 COCOAPODS: 1.4.0.beta.2

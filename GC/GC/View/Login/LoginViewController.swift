@@ -46,7 +46,7 @@ class LoginViewController: UIViewController {
     private func setup() {
         navigationItem.title = LanguageKey.login.value
         phoneTextField.placeholder = LanguageKey.phoneNum.value
-        pwdTextField.placeholder = LanguageKey.input_pwd.value
+        pwdTextField.placeholder = LanguageKey.pwd.value
         authCodeTextField.placeholder = LanguageKey.authCode.value
         rememberpwdTextField.placeholder = LanguageKey.rememberpwd.value
         loginButton.setTitle(LanguageKey.login.value, for: .normal)

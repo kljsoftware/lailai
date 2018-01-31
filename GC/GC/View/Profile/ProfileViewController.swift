@@ -35,6 +35,7 @@ class ProfileViewController: UIViewController {
     // MARK: - private methods
     private func setup() {
         navigationItem.title = LanguageKey.tab_profile.value
+        quitButton.setTitle(LanguageKey.logout.value, for: .normal)
         loginOrProfileButton.isExclusiveTouch = true
         settingButton.isExclusiveTouch = true
         linkBusinessButton.isExclusiveTouch = true

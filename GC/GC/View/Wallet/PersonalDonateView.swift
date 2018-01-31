@@ -12,7 +12,7 @@ class PersonalDonateView: UIView {
     
     
     // MARK: - public methods
-    func update(model:PersonalDonateModel) {
+    func update(/*model:PersonalDonateModel*/) {
         
     }
 }

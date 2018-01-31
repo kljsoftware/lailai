@@ -8,11 +8,11 @@
 
 import UIKit
 
-/// 单元间隔空白
+// 相关常量定义
+/// 单元间隔空白、单元宽高
 private let blank:CGFloat = 12
-
-/// 单元宽高
 private let walletCellWidth = (DEVICE_SCREEN_WIDTH - blank*3)/2, walletCellHeight:CGFloat = 100
+private let personalDonateViewHeight:CGFloat = 80
 
 /// 积分钱包
 class WalletViewController: UIViewController {
@@ -23,10 +23,20 @@ class WalletViewController: UIViewController {
     /// 网格视图
     @IBOutlet weak var collectionView: UICollectionView!
     
+    /// 条幅广告容器
+    @IBOutlet weak var bannerContainerView: UIView!
+    
     /// 个人捐赠视图
-//    private lazy var personalDonateView:PersonalDonateView = {
-//
-//    }()
+    private lazy var personalDonateView:PersonalDonateView = {
+        let _personalDonateView = Bundle.main.loadNibNamed("PersonalDonateView", owner: nil, options: nil)?.first as! PersonalDonateView
+        self.bannerContainerView.addSubview(_personalDonateView)
+        _personalDonateView.snp.makeConstraints { (maker) in
+            maker.left.equalTo(blank)
+            maker.bottom.right.equalTo(-blank)
+            maker.height.equalTo(personalDonateViewHeight)
+        }
+        return _personalDonateView
+    }()
     
     /// 数据模型
     var model = WalletResultModel()
@@ -48,9 +58,6 @@ class WalletViewController: UIViewController {
         /// 标题
         navigationItem.title = LanguageKey.tab_wallet.value
         
-        /// 条幅广告
-        /// 个人捐赠视图
-        
         /// 积分捐赠区域
         donateLabel.text = LanguageKey.wallet_donate.value
         collectionView.register(UINib(nibName: "WalletCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "kWalletCollectionViewCell")
@@ -58,7 +65,7 @@ class WalletViewController: UIViewController {
     }
     
     private func requestData() {
-        
+        personalDonateView.update()
     }
 }
 

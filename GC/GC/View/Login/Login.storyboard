@@ -508,10 +508,10 @@
                                         <real key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fill">
-                                        <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.14901960784313725" green="0.45098039215686275" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="stroke">
-                                        <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.14901960784313725" green="0.45098039215686275" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
