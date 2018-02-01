@@ -16,6 +16,8 @@ private let businessTitleWidth:CGFloat = 200, businessTitleHeight:CGFloat = 44
 /// 绿色商家
 class BusinessViewController: UIViewController {
     
+    private let viewModel = BusinessViewModel()
+    
     /// 导航标题视图
     fileprivate lazy var businessTitleView:BusinessTitleView = {
         let _businessTitleView = Bundle.main.loadNibNamed("BusinessTitleView", owner: nil, options: nil)![0] as! BusinessTitleView
@@ -89,6 +91,8 @@ class BusinessViewController: UIViewController {
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
         }
+        
+        viewModel.getDealers()
     }
 }
 

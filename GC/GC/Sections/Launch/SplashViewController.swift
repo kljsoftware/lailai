@@ -10,6 +10,8 @@ import UIKit
 
 /// 闪屏页
 class SplashViewController: UIViewController {
+    
+    private let viewModel = LaunchViewModel()
 
     /// 跳过&广告展示倒计时
     @IBOutlet weak var skipLabel: UILabel!
@@ -27,9 +29,8 @@ class SplashViewController: UIViewController {
         setup()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    deinit {
+        Log.e("deinit")
     }
 
     /// 点击跳过按钮
@@ -83,24 +84,6 @@ class SplashViewController: UIViewController {
     
     /// 记时结束
     private func finished() {
-
-        /*
-            本地是否有token, 若没有直接进入登录界面
-         */
-        guard let token = UserDefaults.standard.string(forKey: UserDefaultToken) else {
-            NotificationCenter.default.post(name: NoticationUserLogin, object: nil)
-            return
-        }
-        
-        // 非首次流程
-        /*
-         1，本地有token，验证是否可用 checkToken;
-         2，不可用让用户重新登陆
-         */
-        if token == "有效可用" {
-            NotificationCenter.default.post(name: NoticationUserLoginSuccess, object: nil)
-        } else {
-            NotificationCenter.default.post(name: NoticationUserLogin, object: nil)
-        }
+        viewModel.checkToken()
     }
 }

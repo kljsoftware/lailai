@@ -5,3 +5,5 @@
 #import "AFNetworking.h"
 #import "UIImageView+WebCache.h"
 #import "MJExtension.h"
+#import <CommonCrypto/CommonDigest.h>
+#import <CommonCrypto/CommonHMAC.h>

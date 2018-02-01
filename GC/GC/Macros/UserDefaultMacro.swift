@@ -14,3 +14,8 @@ let UserDefaultLanguage = "language"
 /// 令牌字符串
 let UserDefaultToken = "token"
 
+/// 用户名&密码&是否记住密码
+let UserDefaultUserName = "UserName"
+let UserDefaultUserPwd  = "UserPwd"
+let UserDefaultRememberPwd = "RememberPwd"
+

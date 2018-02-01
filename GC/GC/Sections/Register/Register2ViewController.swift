@@ -9,6 +9,8 @@
 import UIKit
 
 class Register2ViewController: UIViewController {
+    
+    private let viewModel = RegiserViewModel()
 
     /// 输入密码，再次输入密码，注册按钮
     @IBOutlet weak var pwdTextField: UITextField!
@@ -30,6 +32,7 @@ class Register2ViewController: UIViewController {
     
     /// 点击注册按钮
     @IBAction func onRegisterButtonClicked(_ sender: UIButton) {
-        NotificationCenter.default.post(name: NoticationUserLoginSuccess, object: nil)
+        viewModel.register(tel: "13013505566", pwd: "1517277703")
+       // NotificationCenter.default.post(name: NoticationUserLoginSuccess, object: nil)
     }
 }

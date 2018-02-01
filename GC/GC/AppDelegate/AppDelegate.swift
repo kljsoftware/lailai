@@ -56,6 +56,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     /// 通知用户登录/登出
     @objc private func notifyUserLogin(_ notify:Notification) {
+        /// 清除token
+        Token.shared.update(value: "")
         window?.rootViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "loginNC")
     }
     

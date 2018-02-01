@@ -1,0 +1,19 @@
+//
+//  UIHelper.swift
+//  GC
+//
+//  Created by hzg on 2018/2/1.
+//  Copyright © 2018年 demo. All rights reserved.
+//
+
+import Toast_Swift
+
+/// 界面助手类
+class UIHelper {
+    
+    /// 提示
+    class func tip(message:String, position:ToastPosition = .center) {
+        let window = (UIApplication.shared.delegate as! AppDelegate).window
+        window?.makeToast(message, duration: 1, position: position)
+    }
+}

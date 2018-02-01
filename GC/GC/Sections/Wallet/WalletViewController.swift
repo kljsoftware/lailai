@@ -38,9 +38,6 @@ class WalletViewController: UIViewController {
         return _personalDonateView
     }()
     
-    /// 数据模型
-    var model = WalletResultModel()
-    
     // MARK: - override methods
     override func viewDidLoad() {
         super.viewDidLoad()
