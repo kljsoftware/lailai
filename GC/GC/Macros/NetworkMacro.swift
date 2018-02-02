@@ -9,7 +9,7 @@
 
 // MARK: - 服务器地址
 #if true
-    let SERVER_ADDRESS = "106.14.170.7/v2"   //测试服
+    let SERVER_ADDRESS = "106.14.170.7"   //测试服
 #else
     let SERVER_ADDRESS = "47.93.125.157/v2"   //正式服
 #endif
@@ -36,6 +36,13 @@ class Token {
     }
 }
 
+/// 图片地址
+class NetworkImg {
+    class func getUrl(name:String) -> String {
+        return "\(HTTP_ADDRESS)/img/\(name)"
+    }
+}
+
 /// api地址
 enum NetworkURL {
     case register // 3.1注册
@@ -48,7 +55,6 @@ enum NetworkURL {
     case getPoints      // 3.10积分钱包
     case getContributionHistory // 3.11捐赠记录
     case getDealers             // 3.12绿色地图
-    case img(name:String)       // 通用网络图片接口
     
     /// url地址
     var url : String {
@@ -74,9 +80,7 @@ enum NetworkURL {
             api = "\(Token.shared.value)/getContributionHistory"
         case .getDealers:
             api = "\(Token.shared.value)/getDealers"
-        case let .img(name):
-            api = "img/\(name)"
         }
-        return "\(HTTP_ADDRESS)/\(api)"
+        return "\(HTTP_ADDRESS)/v2/\(api)"
     }
 }

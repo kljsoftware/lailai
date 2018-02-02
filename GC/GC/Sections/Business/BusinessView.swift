@@ -14,15 +14,25 @@ private let cellHeight:CGFloat = 104
 /// 绿色商家
 class BusinessView: UIView {
     
+    /// 数据模型
+    var model : BusinessResultModel? {
+        didSet {
+            if model != nil {
+                tableView.reloadData()
+            }
+        }
+    }
+    
     /// 列表视图
     private lazy var tableView:UITableView = {
         let _tableView = UITableView(frame: self.bounds)
         _tableView.delegate = self
         _tableView.dataSource = self
+        _tableView.separatorStyle = .none
         self.addSubview(_tableView)
         return _tableView
     }()
-
+    
     // MARK: - override methods
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,6 +44,7 @@ class BusinessView: UIView {
     }
     
     // MARK: - private methods
+    /// 初始化
     private func setup() {
         tableView.register(UINib(nibName: "BusinessCell", bundle: nil), forCellReuseIdentifier: "kBusinessCell")
     }
@@ -44,12 +55,14 @@ extension BusinessView : UITableViewDataSource, UITableViewDelegate {
     
     // 各个分区的单元(Cell)个数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        if model == nil { return 0}
+        return model!.data.count
     }
     
     // 单元(cell)视图
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "kBusinessCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "kBusinessCell", for: indexPath) as! BusinessCell
+        cell.udpate(model: model!.data[indexPath.row])
         return cell
     }
     

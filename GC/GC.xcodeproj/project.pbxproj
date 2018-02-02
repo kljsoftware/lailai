@@ -13,6 +13,11 @@
 		3C37461A201DBA14000FD752 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C374619201DBA14000FD752 /* BorderView.swift */; };
 		3C4B070B201EF7CA00856698 /* wallet_donate@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C4B0709201EF7CA00856698 /* wallet_donate@3x.png */; };
 		3C4B070C201EF7CA00856698 /* wallet_donate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C4B070A201EF7CA00856698 /* wallet_donate@2x.png */; };
+		3C65505A20243B8600FE0504 /* WalletCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65505820243B8600FE0504 /* WalletCell.swift */; };
+		3C65505B20243B8600FE0504 /* WalletCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C65505920243B8600FE0504 /* WalletCell.xib */; };
+		3C65505E20243D0300FE0504 /* WalletSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65505C20243D0300FE0504 /* WalletSectionCell.swift */; };
+		3C65505F20243D0300FE0504 /* WalletSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C65505D20243D0300FE0504 /* WalletSectionCell.xib */; };
+		3C655061202445B000FE0504 /* WalletModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C655060202445B000FE0504 /* WalletModel.swift */; };
 		3C8DCEEC201D76C400C9F40E /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C8DCEDA201D76C400C9F40E /* launch.png */; };
 		3C8DCEED201D76C400C9F40E /* tab_business_nor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C8DCEDC201D76C400C9F40E /* tab_business_nor@3x.png */; };
 		3C8DCEEE201D76C400C9F40E /* tab_wallet_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C8DCEDD201D76C400C9F40E /* tab_wallet_sel@2x.png */; };
@@ -116,6 +121,11 @@
 		3C374619201DBA14000FD752 /* BorderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
 		3C4B0709201EF7CA00856698 /* wallet_donate@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wallet_donate@3x.png"; sourceTree = "<group>"; };
 		3C4B070A201EF7CA00856698 /* wallet_donate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wallet_donate@2x.png"; sourceTree = "<group>"; };
+		3C65505820243B8600FE0504 /* WalletCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCell.swift; sourceTree = "<group>"; };
+		3C65505920243B8600FE0504 /* WalletCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletCell.xib; sourceTree = "<group>"; };
+		3C65505C20243D0300FE0504 /* WalletSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletSectionCell.swift; sourceTree = "<group>"; };
+		3C65505D20243D0300FE0504 /* WalletSectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletSectionCell.xib; sourceTree = "<group>"; };
+		3C655060202445B000FE0504 /* WalletModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletModel.swift; sourceTree = "<group>"; };
 		3C8DCED5201D441000C9F40E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3C8DCED7201D441D00C9F40E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3C8DCEDA201D76C400C9F40E /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
@@ -476,10 +486,10 @@
 			children = (
 				3CF364E52022A916003179E8 /* News.storyboard */,
 				3CF364E32022A916003179E8 /* NewsViewController.swift */,
-				3CF364E22022A916003179E8 /* NewsCell.swift */,
-				3CF364E42022A916003179E8 /* NewsHeaderView.xib */,
-				3CF364E62022A916003179E8 /* NewsCell.xib */,
 				3CF364E72022A916003179E8 /* NewsHeaderView.swift */,
+				3CF364E42022A916003179E8 /* NewsHeaderView.xib */,
+				3CF364E22022A916003179E8 /* NewsCell.swift */,
+				3CF364E62022A916003179E8 /* NewsCell.xib */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -488,12 +498,17 @@
 			isa = PBXGroup;
 			children = (
 				3CF364EE2022A916003179E8 /* Wallet.storyboard */,
-				3CF364E92022A916003179E8 /* WalletCollectionViewCell.xib */,
 				3CF364EB2022A916003179E8 /* WalletViewController.swift */,
-				3CF364EC2022A916003179E8 /* WalletCollectionViewCell.swift */,
 				3CF364ED2022A916003179E8 /* BannnerView.swift */,
 				3CF364EA2022A916003179E8 /* PersonalDonateView.swift */,
 				3CF364EF2022A916003179E8 /* PersonalDonateView.xib */,
+				3C65505C20243D0300FE0504 /* WalletSectionCell.swift */,
+				3C65505D20243D0300FE0504 /* WalletSectionCell.xib */,
+				3C65505820243B8600FE0504 /* WalletCell.swift */,
+				3C65505920243B8600FE0504 /* WalletCell.xib */,
+				3CF364EC2022A916003179E8 /* WalletCollectionViewCell.swift */,
+				3CF364E92022A916003179E8 /* WalletCollectionViewCell.xib */,
+				3C655060202445B000FE0504 /* WalletModel.swift */,
 				3CF3652E2022FADA003179E8 /* WalletViewModel.swift */,
 			);
 			path = Wallet;
@@ -707,11 +722,13 @@
 				3CF97C14201CB4AC00FB67DB /* Localizable.strings in Resources */,
 				3C8DCEED201D76C400C9F40E /* tab_business_nor@3x.png in Resources */,
 				3CF364F82022A916003179E8 /* Donate.storyboard in Resources */,
+				3C65505B20243B8600FE0504 /* WalletCell.xib in Resources */,
 				3CFD84F7201C9B5900F9E7E5 /* Info.plist in Resources */,
 				3C91FC28201F21C500BB492D /* news_header.png in Resources */,
 				3C8DCEF6201D76C400C9F40E /* tab_news_sel@3x.png in Resources */,
 				3CF365072022A916003179E8 /* Profile.storyboard in Resources */,
 				3C8DCEF9201D76C400C9F40E /* tab_business_sel@2x.png in Resources */,
+				3C65505F20243D0300FE0504 /* WalletSectionCell.xib in Resources */,
 				3C8DCEF4201D76C400C9F40E /* tab_business_nor@2x.png in Resources */,
 				3C8DCEF0201D76C400C9F40E /* tab_profile_sel@3x.png in Resources */,
 				3C8DCEFA201D76C400C9F40E /* tab_wallet_nor@3x.png in Resources */,
@@ -817,6 +834,7 @@
 				3CF365212022D9AB003179E8 /* BaseViewModel.swift in Sources */,
 				3CF364C42022A3ED003179E8 /* HTTPSessionManager.swift in Sources */,
 				3CF364F62022A916003179E8 /* HomeTabBarController.swift in Sources */,
+				3C65505E20243D0300FE0504 /* WalletSectionCell.swift in Sources */,
 				3CF365292022E672003179E8 /* LoginViewModel.swift in Sources */,
 				3CF3650B2022A916003179E8 /* NewsViewController.swift in Sources */,
 				3CF365092022A916003179E8 /* ProfileViewController.swift in Sources */,
@@ -846,7 +864,9 @@
 				3CB553A0201CB73F009AC1CD /* LanguageHelper.swift in Sources */,
 				3CF364FE2022A916003179E8 /* BusinessViewController.swift in Sources */,
 				3CB5539B201CB73F009AC1CD /* UIImage+Extension.swift in Sources */,
+				3C65505A20243B8600FE0504 /* WalletCell.swift in Sources */,
 				3CB553A2201CB73F009AC1CD /* NetworkMacro.swift in Sources */,
+				3C655061202445B000FE0504 /* WalletModel.swift in Sources */,
 				3CB55397201CB73F009AC1CD /* UIColor+Extension.swift in Sources */,
 				3C37461A201DBA14000FD752 /* BorderView.swift in Sources */,
 				3CF364FD2022A916003179E8 /* MapView.swift in Sources */,

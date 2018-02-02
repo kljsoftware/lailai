@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="102.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news_header.png" translatesAutoresizingMaskIntoConstraints="NO" id="L1E-Ah-iJa">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news_header.png" translatesAutoresizingMaskIntoConstraints="NO" id="L1E-Ah-iJa">
                         <rect key="frame" x="12" y="21" width="60" height="60.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="60" id="F2V-a7-mdf"/>
@@ -39,14 +39,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ne7-GT-dyj">
-                                <rect key="frame" x="0.0" y="22" width="26.5" height="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ne7-GT-dyj">
+                                <rect key="frame" x="0.0" y="22" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0e-OO-Snf">
-                                <rect key="frame" x="0.0" y="60.5" width="37.5" height="18"/>
+                                <rect key="frame" x="0.0" y="60.5" width="212" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -104,19 +104,46 @@
                             <constraint firstItem="z0n-bC-aAq" firstAttribute="leading" secondItem="VDE-ck-kSl" secondAttribute="leading" id="qt1-gY-Z7m"/>
                             <constraint firstItem="x0e-OO-Snf" firstAttribute="top" secondItem="z0n-bC-aAq" secondAttribute="bottom" constant="4" id="wcm-lh-6FZ"/>
                             <constraint firstItem="VlS-zv-wpT" firstAttribute="top" secondItem="VDE-ck-kSl" secondAttribute="top" id="xvV-uz-XPw"/>
+                            <constraint firstAttribute="trailing" secondItem="x0e-OO-Snf" secondAttribute="trailing" constant="12" id="y5g-aw-kB1"/>
                             <constraint firstItem="VlS-zv-wpT" firstAttribute="leading" secondItem="VDE-ck-kSl" secondAttribute="leading" id="zRS-8U-XuH"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uSo-LY-qys">
+                        <rect key="frame" x="0.0" y="101.5" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.92156862745098034" green="0.92549019607843142" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="uNV-ke-d5C" customClass="OnePixelConstraint" customModule="GC" customModuleProvider="target">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="onePixelConstant">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="uSo-LY-qys" secondAttribute="trailing" id="0gu-7g-vEW"/>
                     <constraint firstItem="L1E-Ah-iJa" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1zN-bd-lUD"/>
                     <constraint firstItem="VDE-ck-kSl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="N58-vL-EqP"/>
+                    <constraint firstItem="uSo-LY-qys" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ocj-OE-vhG"/>
+                    <constraint firstAttribute="bottom" secondItem="uSo-LY-qys" secondAttribute="bottom" id="WRY-cE-mFH"/>
                     <constraint firstAttribute="trailing" secondItem="VDE-ck-kSl" secondAttribute="trailing" constant="12" id="YGr-GH-GnN"/>
                     <constraint firstItem="L1E-Ah-iJa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="mfO-dT-BXf"/>
                     <constraint firstAttribute="bottom" secondItem="VDE-ck-kSl" secondAttribute="bottom" constant="12" id="q4S-JC-KEn"/>
                     <constraint firstItem="VDE-ck-kSl" firstAttribute="leading" secondItem="L1E-Ah-iJa" secondAttribute="trailing" constant="12" id="w5i-is-YNX"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="addressLabel" destination="x0e-OO-Snf" id="wYq-vj-EfQ"/>
+                <outlet property="logoImageView" destination="L1E-Ah-iJa" id="NJk-GF-OI1"/>
+                <outlet property="nameLabel" destination="VlS-zv-wpT" id="cWB-md-vRa"/>
+                <outlet property="star1" destination="z0n-bC-aAq" id="u5H-ul-otl"/>
+                <outlet property="star2" destination="7Fh-x6-kft" id="3Mi-Br-HtS"/>
+                <outlet property="star3" destination="5mS-bJ-Bhv" id="sKL-Oc-ATM"/>
+                <outlet property="star4" destination="EIt-qs-kVP" id="G3p-wM-FsT"/>
+                <outlet property="star5" destination="iKT-lg-ycR" id="f75-2o-aEE"/>
+            </connections>
             <point key="canvasLocation" x="34" y="70.5"/>
         </tableViewCell>
     </objects>

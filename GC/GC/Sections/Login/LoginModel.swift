@@ -22,6 +22,6 @@ class LoginRequestModel: BaseRequestModel {
 /// 登陆结果模型
 class LoginResultModel: BaseResultModel {
     
-    /// 令牌  若成功返回  msg即是令牌信息
-  //  var token = ""
+    /// 令牌  若成功返回
+    var data = ""
 }

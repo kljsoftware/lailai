@@ -9,34 +9,23 @@
 import UIKit
 
 // 相关常量定义
-/// 单元间隔空白、单元宽高
-private let blank:CGFloat = 12
-private let walletCellWidth = (DEVICE_SCREEN_WIDTH - blank*3)/2, walletCellHeight:CGFloat = 100
+/// 单元间隔空白、单元宽高、列表头距导航栏初始位置
+private let blank:CGFloat = 12, sectionHeight:CGFloat = 32, collectionCellHeight:CGFloat = 100
 private let personalDonateViewHeight:CGFloat = 80
+private let tableTopMargin:CGFloat = 100
 
 /// 积分钱包
 class WalletViewController: UIViewController {
-
-    /// 捐赠视图
-    @IBOutlet weak var donateLabel: UILabel!
     
-    /// 网格视图
-    @IBOutlet weak var collectionView: UICollectionView!
+    /// 业务模块
+    fileprivate let viewModel = WalletViewModel()
     
     /// 条幅广告容器
     @IBOutlet weak var bannerContainerView: UIView!
     
-    /// 个人捐赠视图
-    private lazy var personalDonateView:PersonalDonateView = {
-        let _personalDonateView = Bundle.main.loadNibNamed("PersonalDonateView", owner: nil, options: nil)?.first as! PersonalDonateView
-        self.bannerContainerView.addSubview(_personalDonateView)
-        _personalDonateView.snp.makeConstraints { (maker) in
-            maker.left.equalTo(blank)
-            maker.bottom.right.equalTo(-blank)
-            maker.height.equalTo(personalDonateViewHeight)
-        }
-        return _personalDonateView
-    }()
+    /// 列表视图距上约束及列表视图
+    @IBOutlet weak var tableTopLayoutConstraint: NSLayoutConstraint!
+    @IBOutlet weak var tableView: UITableView!
     
     // MARK: - override methods
     override func viewDidLoad() {
@@ -51,54 +40,83 @@ class WalletViewController: UIViewController {
 
     // MARK: - private methods
     private func setup() {
-        
-        /// 标题
         navigationItem.title = LanguageKey.tab_wallet.value
-        
-        /// 积分捐赠区域
-        donateLabel.text = LanguageKey.wallet_donate.value
-        collectionView.register(UINib(nibName: "WalletCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "kWalletCollectionViewCell")
-        collectionView.register(UINib(nibName: "WalletCollectionSectionView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "kWalletCollectionSectionView")
+        automaticallyAdjustsScrollViewInsets = false
+        tableView.register(UINib(nibName: "WalletSectionCell", bundle: nil), forCellReuseIdentifier: "kWalletSectionCell")
+        tableView.register(UINib(nibName: "WalletCell", bundle: nil), forCellReuseIdentifier: "kWalletCell")
+        tableView.tableHeaderView = tableViewHeaderView()
+        tableTopLayoutConstraint.constant = tableTopMargin
     }
     
     private func requestData() {
-        personalDonateView.update()
+        viewModel.getPoints()
+        viewModel.setCompletion(onSuccess: { [weak self](resultModel) in
+            self?.tableView.reloadData()
+        }) { (error) in
+            UIHelper.tip(message: error)
+        }
+    }
+    
+    /// 列表头部视图
+    private func tableViewHeaderView() -> UIView {
+        let containerView = UIView(frame:CGRect(x: 0, y: 0, width: DEVICE_SCREEN_WIDTH, height: personalDonateViewHeight))
+        containerView.clipsToBounds = true
+        let headerView = Bundle.main.loadNibNamed("PersonalDonateView", owner: nil, options: nil)?[0] as! PersonalDonateView
+        containerView.addSubview(headerView)
+        return containerView
     }
 }
 
-// MARK: - UICollectionViewDataSource & UICollectionViewDelegateFlowLayout
-extension WalletViewController :  UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+// MARK:  UITableViewDataSource&UITableViewDelegate
+extension WalletViewController : UITableViewDataSource, UITableViewDelegate {
     
-    // MARK: - UICollectionViewDataSource
-    /// 网格分区
-    /// 总共网格单元的个数
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+    // 各个分区的单元(Cell)个数
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
-    // 网格单元
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return collectionView.dequeueReusableCell(withReuseIdentifier: "kWalletCollectionViewCell", for: indexPath)
+    // 单元(cell)视图
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "kWalletCell", for: indexPath) as! WalletCell
+        cell.walletModel = viewModel.walletModel
+        return cell
     }
     
-    /// 分区单元
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        return collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "kWalletCollectionSectionView", for: indexPath)
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return tableView.dequeueReusableCell(withIdentifier: "kWalletSectionCell")
     }
     
-    // MARK: - UICollectionViewDelegateFlowLayout
-    /// 设置选择单元的宽高
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: walletCellWidth, height: walletCellHeight)
+    // 单元(cell)的高度
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let count = viewModel.walletModel.data.count
+        let row = count % 2 == 0 ? count / 2 : (count + 1)/2
+        let height = collectionCellHeight * CGFloat(row) + CGFloat(row + 1)*blank
+        return height
     }
     
-    /// 单元之前的间隔
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return blank
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return sectionHeight
     }
     
-    /// 点击单元
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    // 单元(cell)选中事件
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
 }
+
+// MARK: - UIScrollViewDelegate
+extension WalletViewController : UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let dy = scrollView.contentOffset.y
+        tableTopLayoutConstraint.constant -= dy
+        if tableTopLayoutConstraint.constant < 0 {
+            tableTopLayoutConstraint.constant = 0
+        }
+        
+        if tableTopLayoutConstraint.constant > tableTopMargin {
+            tableTopLayoutConstraint.constant = tableTopMargin
+        }
+    }
+}
+
+

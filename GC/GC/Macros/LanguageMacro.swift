@@ -32,6 +32,7 @@ enum LanguageKey : String {
     case wallet_donate // 积分捐赠
     case profile_setting // 个人设置
     case map             // 地图
+    case balance         // 捐赠积分额
     
     /// 获取对应的语言字串
     var value : String {

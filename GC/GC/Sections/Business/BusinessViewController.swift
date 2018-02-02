@@ -78,7 +78,7 @@ class BusinessViewController: UIViewController {
         businessTitleView.mapbuttonCallback = { [weak self] in
             self?.scrollView.contentOffset.x = DEVICE_SCREEN_WIDTH
         }
-        
+        automaticallyAdjustsScrollViewInsets = false
         businessView = BusinessView(frame: CGRect(x: 0, y: 0, width: DEVICE_SCREEN_WIDTH, height: APP_CONTENT_HEIGHT))
         mapView = MapView(frame: CGRect(x: DEVICE_SCREEN_WIDTH, y: 0, width: DEVICE_SCREEN_WIDTH, height: APP_CONTENT_HEIGHT))
         scrollView.addSubview(businessView)
@@ -93,6 +93,11 @@ class BusinessViewController: UIViewController {
         }
         
         viewModel.getDealers()
+        viewModel.setCompletion(onSuccess: { [weak self](resultModel) in
+            self?.businessView.model = resultModel as? BusinessResultModel
+        }) { (error) in
+            UIHelper.tip(message: error)
+        }
     }
 }
 

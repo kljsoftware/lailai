@@ -11,18 +11,16 @@ class BusinessRequestModel : BaseRequestModel {
 
 }
 
-/*
 /// 结果模型
 class BusinessResultModel : BaseResultModel {
     
-    var items = [BusinessModel]()
+    var data = [BusinessModel]()
     
     /// 指定数组元素类型
     override class func mj_objectClassInArray() -> [AnyHashable: Any]! {
-        return ["items" : BusinessModel.self]
+        return ["data" : BusinessModel.self]
     }
 }
- */
 
 /// 绿色商家
 class BusinessModel : NSObject {

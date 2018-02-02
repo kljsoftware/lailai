@@ -23,7 +23,7 @@ class LoginViewModel: BaseViewModel {
             
             let model = LoginResultModel.mj_object(withKeyValues: json)
             if success && model != nil && model!.code == 0 {
-                Token.shared.update(value: model!.msg)
+                Token.shared.update(value: model!.data)
                 UserDefaults.standard.set(tel, forKey: UserDefaultUserName)
                 UserDefaults.standard.set(pwd, forKey: UserDefaultUserPwd)
                 NotificationCenter.default.post(name: NoticationUserLoginSuccess, object: nil)
