@@ -74,6 +74,10 @@
                 <constraint firstItem="aZh-Fe-2xP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="12" id="xyH-eS-XVS"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="avatarImageView" destination="wkL-jh-ErU" id="TQM-fz-E60"/>
+                <outlet property="nameLabel" destination="Rmo-hb-UKC" id="gm4-Gf-dqs"/>
+            </connections>
             <point key="canvasLocation" x="27" y="-8"/>
         </view>
     </objects>

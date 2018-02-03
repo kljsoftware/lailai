@@ -8,6 +8,6 @@
 
 /// 服务器返回的结果模型
 class BaseResultModel: NSObject {
-    var msg = ""
+    var msg  = ""
     var code = 0 // 0表示成功返回
 }

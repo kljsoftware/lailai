@@ -10,6 +10,12 @@ import UIKit
 
 class PersonalDonateView: UIView {
     
+    /// 头文件
+    @IBOutlet weak var avatarImageView: UIImageView!
+    
+    /// 人名
+    @IBOutlet weak var nameLabel: UILabel!
+    
     
     // MARK: - public methods
     func update(/*model:PersonalDonateModel*/) {

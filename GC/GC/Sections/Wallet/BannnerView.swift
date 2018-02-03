@@ -19,6 +19,7 @@ class BannnerView: UIView {
         let _scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
         _scrollView.showsVerticalScrollIndicator = false
         _scrollView.showsHorizontalScrollIndicator = false
+        _scrollView.bounces = false
         _scrollView.isPagingEnabled = true
         _scrollView.backgroundColor = UIColor.clear
         self.addSubview(_scrollView)
@@ -27,6 +28,7 @@ class BannnerView: UIView {
         for i in 0..<self.banners.count {
             let banner = UIImageView()
             banner.frame = CGRect(x: CGFloat(i) * self.frame.width, y: 0, width: self.frame.width, height: self.frame.height)
+            banner.setImage(urlStr: self.banners[i], placeholderStr: "news_header.png", radius: 0)
             _scrollView.addSubview(banner)
         }
         return _scrollView

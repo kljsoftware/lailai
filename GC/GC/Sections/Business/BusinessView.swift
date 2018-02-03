@@ -23,6 +23,9 @@ class BusinessView: UIView {
         }
     }
     
+    /// 回调闭包
+    var didSelectClosure:((_ model:BusinessModel) -> Void)?
+    
     /// 列表视图
     private lazy var tableView:UITableView = {
         let _tableView = UITableView(frame: self.bounds)
@@ -73,6 +76,6 @@ extension BusinessView : UITableViewDataSource, UITableViewDelegate {
     
     // 单元(cell)选中事件
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        didSelectClosure?(model!.data[indexPath.row])
     }
 }
