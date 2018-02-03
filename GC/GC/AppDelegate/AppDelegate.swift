@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - UIApplicationDelegate
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         setup()
+        addons()
         registerNotification()
         return true
     }
@@ -52,6 +53,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /// 通知用户注册
     @objc private func notifyUserRegister(_ notify:Notification) {
         window?.rootViewController = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(withIdentifier: "registerNC")
+    }
+    
+    /// 第三方配置相关
+    private func addons() {
+        
     }
     
     /// 通知用户登录/登出

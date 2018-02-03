@@ -52,5 +52,10 @@ class Register2ViewController: UIViewController {
         }
         
         viewModel.register(tel: phone, pwd: pwd1)
+        viewModel.setCompletion(onSuccess: { (resultModel) in
+            
+        }) { (error) in
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 }

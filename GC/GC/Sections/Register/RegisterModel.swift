@@ -23,5 +23,5 @@ class RegisterRequestModel: BaseRequestModel {
 class RegisterResultModel: BaseResultModel {
     
     /// 令牌/密钥
-    var token = ""
+    var data = ""
 }

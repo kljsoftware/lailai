@@ -74,9 +74,22 @@ class RegisterViewController: UIViewController {
     
     /// 下一步
     fileprivate func next() {
-        let vc = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(withIdentifier: "register2") as! Register2ViewController
-        vc.phone = phoneTextField.text!
-        navigationController?.pushViewController(vc, animated: true)
+        SMSSDK.commitVerificationCode(codeTextField.text!, phoneNumber: phoneTextField.text!, zone: "86") { [weak self](error) in
+            guard let wself = self else {
+                return
+            }
+            if error == nil {
+                wself.stopTimer()
+                wself.sendCodeLabel.text = LanguageKey.sendAgain.value
+                wself.sendCodeButton.isEnabled = true
+                let vc = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(withIdentifier: "register2") as! Register2ViewController
+                vc.phone = wself.phoneTextField.text!
+                wself.navigationController?.pushViewController(vc, animated: true)
+            } else {
+                Log.e("error = \(error!.localizedDescription)")
+                UIHelper.tip(message: error!.localizedDescription)
+            }
+        }
     }
     
     /// 计时开始
@@ -121,9 +134,24 @@ class RegisterViewController: UIViewController {
     
     /// 点击发送验证码
     @IBAction func onSendCodeButtonClicked(_ sender: UIButton) {
-        sender.isEnabled = false
-        current = 60
-        startTimer()
+        if phoneTextField.text != nil && phoneTextField.text!.checkTelephone() {
+            sender.isEnabled = false
+            current = 60
+            
+            SMSSDK.getVerificationCode(by: SMSGetCodeMethod.SMS, phoneNumber: phoneTextField.text!, zone: "86", template: "123456", result: {[weak self](error) in
+                guard let wself = self else {
+                    return
+                }
+                if error == nil {
+                    wself.startTimer()
+                } else {
+                    Log.e("error = \(error!.localizedDescription)")
+                    UIHelper.tip(message: error!.localizedDescription)
+                }
+            })
+            
+            
+        }
     }
 }
 
