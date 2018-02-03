@@ -54,17 +54,39 @@
                                 <rect key="frame" x="24" y="132" width="327" height="44"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cl4-tJ-CbZ">
-                                        <rect key="frame" x="12" y="0.0" width="215" height="44"/>
+                                        <rect key="frame" x="12" y="0.0" width="273" height="44"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m2B-df-ZnM" customClass="BorderView" customModule="GC" customModuleProvider="target">
-                                        <rect key="frame" x="239" y="4" width="88" height="36"/>
+                                        <rect key="frame" x="297" y="4" width="30" height="36"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7B-t0-8sr">
+                                                <rect key="frame" x="12" y="0.0" width="6" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDK-Xr-YJw">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="36"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="onSendCodeButtonClicked:" destination="Mip-0m-dt6" eventType="touchUpInside" id="chk-wG-1vD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="88" id="BHX-Ab-kZR"/>
+                                            <constraint firstItem="Z7B-t0-8sr" firstAttribute="top" secondItem="m2B-df-ZnM" secondAttribute="top" id="Bov-Q7-vhG"/>
+                                            <constraint firstAttribute="bottom" secondItem="Z7B-t0-8sr" secondAttribute="bottom" id="GVL-ay-Y44"/>
+                                            <constraint firstItem="TDK-Xr-YJw" firstAttribute="leading" secondItem="m2B-df-ZnM" secondAttribute="leading" id="NN8-w6-eTe"/>
+                                            <constraint firstAttribute="bottom" secondItem="TDK-Xr-YJw" secondAttribute="bottom" id="OTe-2f-Zxr"/>
+                                            <constraint firstItem="TDK-Xr-YJw" firstAttribute="top" secondItem="m2B-df-ZnM" secondAttribute="top" id="ZzJ-md-ce2"/>
                                             <constraint firstAttribute="height" constant="36" id="e0M-7i-MkD"/>
+                                            <constraint firstAttribute="trailing" secondItem="TDK-Xr-YJw" secondAttribute="trailing" id="gks-Wc-WHD"/>
+                                            <constraint firstAttribute="trailing" secondItem="Z7B-t0-8sr" secondAttribute="trailing" constant="12" id="nG3-dM-GAq"/>
+                                            <constraint firstItem="Z7B-t0-8sr" firstAttribute="leading" secondItem="m2B-df-ZnM" secondAttribute="leading" constant="12" id="zrh-Vl-C1w"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="fill">
@@ -150,6 +172,8 @@
                         <outlet property="codeTextField" destination="cl4-tJ-CbZ" id="Ccn-vS-naP"/>
                         <outlet property="nextButton" destination="ED9-xD-tG6" id="0sq-Yy-gLA"/>
                         <outlet property="phoneTextField" destination="dlB-J8-KP5" id="HFe-NX-mFo"/>
+                        <outlet property="sendCodeButton" destination="TDK-Xr-YJw" id="kAH-vR-Mdl"/>
+                        <outlet property="sendCodeLabel" destination="Z7B-t0-8sr" id="2Ly-0G-YSc"/>
                         <segue destination="kMk-Hv-TeB" kind="show" id="JeQ-3q-aGd"/>
                     </connections>
                 </viewController>

@@ -106,8 +106,7 @@ class LoginViewController: UIViewController {
     private func setLoginEnabled() {
         let isValidPhone = phoneTextField.text != nil && !phoneTextField.text!.isBlank()
         let isValidPwd   = pwdTextField.text != nil && !pwdTextField.text!.isBlank()
-       // let isValidCode  = authCodeTextField.text != nil && !authCodeTextField!.text!.isBlank()
-        loginButton.isEnabled  = isValidPhone && isValidPwd// && isValidCode
+        loginButton.isEnabled  = isValidPhone && isValidPwd
     }
     
     /// 登陆

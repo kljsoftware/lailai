@@ -29,3 +29,5 @@
 "profile_setting" = "个人设置";
 "map" = "地图";
 "balance" = "捐赠积分额";
+"sendCode" = "发送验证码";
+"sendAgain" = "重新发送";

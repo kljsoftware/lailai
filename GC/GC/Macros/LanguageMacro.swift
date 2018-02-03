@@ -33,6 +33,8 @@ enum LanguageKey : String {
     case profile_setting // 个人设置
     case map             // 地图
     case balance         // 捐赠积分额
+    case sendCode        // 发送验证码
+    case sendAgain       // 重新发送
     
     /// 获取对应的语言字串
     var value : String {

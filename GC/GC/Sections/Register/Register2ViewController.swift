@@ -10,6 +10,9 @@ import UIKit
 
 class Register2ViewController: UIViewController {
     
+    /// 参数:电话号码
+    var phone = ""
+    
     private let viewModel = RegiserViewModel()
 
     /// 输入密码，再次输入密码，注册按钮
@@ -32,7 +35,22 @@ class Register2ViewController: UIViewController {
     
     /// 点击注册按钮
     @IBAction func onRegisterButtonClicked(_ sender: UIButton) {
-        viewModel.register(tel: "13013505566", pwd: "1517277703")
-       // NotificationCenter.default.post(name: NoticationUserLoginSuccess, object: nil)
+        
+        guard let pwd1 = pwdTextField.text else {
+            UIHelper.tip(message: "密码不能为空")
+            return
+        }
+        
+        guard let pwd2 = pwd2TextField.text else {
+            UIHelper.tip(message: "密码不能为空")
+            return
+        }
+        
+        if pwd1 != pwd2 {
+            UIHelper.tip(message: "密码输入不一致")
+            return
+        }
+        
+        viewModel.register(tel: phone, pwd: pwd1)
     }
 }
