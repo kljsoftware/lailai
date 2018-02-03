@@ -10,6 +10,7 @@
 "tab_wallet"   = "Wallet";
 "tab_business" = "Business";
 "tab_news"     = "News";
+"tab_donate"   = "Donation";
 "tab_profile"  = "Mine";
 
 //登录注册
