@@ -28,10 +28,10 @@
             </objects>
             <point key="canvasLocation" x="448.80000000000001" y="137.18140929535232"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Base Navigation Controller-->
         <scene sceneID="8Qa-1B-Rc2">
             <objects>
-                <navigationController storyboardIdentifier="Donate" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AM6-2V-Ufa" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Donate" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AM6-2V-Ufa" customClass="BaseNavigationController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="T7F-JA-hRN">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

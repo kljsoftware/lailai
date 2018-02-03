@@ -96,6 +96,13 @@ extension WalletViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "kWalletCell", for: indexPath) as! WalletCell
         cell.walletModel = viewModel.walletModel
+        cell.didSelectItemClosure = { [weak self](model) in
+            guard let wself = self else {
+                return
+            }
+            let vc = UIStoryboard(name: "Wallet", bundle: nil).instantiateViewController(withIdentifier: "donate_record")
+            wself.navigationController?.pushViewController(vc, animated: true)
+        }
         return cell
     }
     
@@ -113,11 +120,6 @@ extension WalletViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return sectionHeight
-    }
-    
-    // 单元(cell)选中事件
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
     }
 }
 

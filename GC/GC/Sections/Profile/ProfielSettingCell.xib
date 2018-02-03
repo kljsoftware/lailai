@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Arial.ttf">
+            <string>ArialMT</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="55" id="KGk-i7-Jjw" customClass="ProfielSettingCell" customModule="GC" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="54.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Umn-KW-ep3">
+                        <rect key="frame" x="12" y="11.5" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="32" id="S2w-cT-aLO"/>
+                            <constraint firstAttribute="height" constant="32" id="mSK-Q8-83b"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNz-SW-sTm">
+                        <rect key="frame" x="50" y="19.5" width="34.5" height="16"/>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_forward.png" translatesAutoresizingMaskIntoConstraints="NO" id="h0q-dA-Yti">
+                        <rect key="frame" x="303" y="23" width="5" height="9"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pqu-FZ-Xfg">
+                        <rect key="frame" x="0.0" y="53.5" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="8dy-pE-YEY" customClass="OnePixelConstraint" customModule="GC" customModuleProvider="target">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="onePixelConstant">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="h0q-dA-Yti" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="A6g-nZ-5vk"/>
+                    <constraint firstAttribute="trailing" secondItem="Pqu-FZ-Xfg" secondAttribute="trailing" id="E88-Ms-DsE"/>
+                    <constraint firstAttribute="trailing" secondItem="h0q-dA-Yti" secondAttribute="trailing" constant="12" id="W6u-JG-PbU"/>
+                    <constraint firstItem="UNz-SW-sTm" firstAttribute="centerY" secondItem="Umn-KW-ep3" secondAttribute="centerY" id="axQ-oI-cGf"/>
+                    <constraint firstAttribute="bottom" secondItem="Pqu-FZ-Xfg" secondAttribute="bottom" id="fpI-yl-EOz"/>
+                    <constraint firstItem="Pqu-FZ-Xfg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="oEq-5K-9Ff"/>
+                    <constraint firstItem="Umn-KW-ep3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="rSN-dZ-0tm"/>
+                    <constraint firstItem="Umn-KW-ep3" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="xtV-Eh-OvG"/>
+                    <constraint firstItem="UNz-SW-sTm" firstAttribute="leading" secondItem="Umn-KW-ep3" secondAttribute="trailing" constant="6" id="zq0-LW-e5p"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="iconImageView" destination="Umn-KW-ep3" id="M9g-fc-eDH"/>
+                <outlet property="nameLabel" destination="UNz-SW-sTm" id="yZm-VQ-Qj6"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="174.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="common_forward.png" width="5" height="9"/>
+    </resources>
+</document>

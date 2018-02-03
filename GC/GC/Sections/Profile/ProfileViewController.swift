@@ -6,25 +6,25 @@
 //  Copyright © 2018年 demo. All rights reserved.
 //
 
-import UIKit
+
+///  常量定义
+private let profileHeight:CGFloat = 116, settingCellHeight:CGFloat = 50, quitCellHeight:CGFloat = 100
+
+/// 单元类型
+private enum ProfileCellType : Int {
+    case profile
+    case setting
+    case business_link
+    case quit
+    
+    static var count = 4
+}
 
 /// 个人详情设置界面
 class ProfileViewController: UIViewController {
 
-    /// 登陆显示视图【显示个人名称、电话信息】
-    @IBOutlet weak var loginView: UIView!
-   
-    /// 登出显示视图
-    @IBOutlet weak var logoutView: UIView!
-    
-    /// 退出登陆视图
-    @IBOutlet weak var quitLoginView: BorderView!
-    
-    /// 登陆、注册或个人信息详情按钮; 设置按钮；链接商家按钮; 退出按钮
-    @IBOutlet weak var loginOrProfileButton: UIButton!
-    @IBOutlet weak var settingButton: UIButton!
-    @IBOutlet weak var linkBusinessButton: UIButton!
-    @IBOutlet weak var quitButton: UIButton!
+    /// 列表视图
+    @IBOutlet weak var tableView: UITableView!
    
     // MARK: - override methods
     override func viewDidLoad() {
@@ -35,31 +35,67 @@ class ProfileViewController: UIViewController {
     // MARK: - private methods
     private func setup() {
         navigationItem.title = LanguageKey.tab_profile.value
-        quitButton.setTitle(LanguageKey.logout.value, for: .normal)
-        loginOrProfileButton.isExclusiveTouch = true
-        settingButton.isExclusiveTouch = true
-        linkBusinessButton.isExclusiveTouch = true
-        quitButton.isExclusiveTouch = true
+        automaticallyAdjustsScrollViewInsets = false
+        tableView.register(UINib(nibName: "ProfileCell", bundle: nil), forCellReuseIdentifier: "kProfileCell")
+        tableView.register(UINib(nibName: "ProfielSettingCell", bundle: nil), forCellReuseIdentifier: "kProfielSettingCell")
+        tableView.register(UINib(nibName: "ProfileQuitCell", bundle: nil), forCellReuseIdentifier: "kProfileQuitCell")
+    }
+}
+
+// MARK:  UITableViewDataSource&UITableViewDelegate
+extension ProfileViewController : UITableViewDataSource, UITableViewDelegate {
+    
+    // 各个分区的单元(Cell)个数
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return ProfileCellType.count
     }
     
-    // MARK: - IBAction methods
-    /// 登陆状态，点击显示个人详细设置界面；否则进入登陆或注册流程
-    @IBAction func onLoginOrProfileButtonClicked(_ sender: UIButton) {
-        let vc = UIStoryboard.init(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ProfileDetails")
-        navigationController?.pushViewController(vc, animated: true)
+    // 单元(cell)视图
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch ProfileCellType(rawValue: indexPath.row)! {
+        case .profile:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileCell", for: indexPath) as! ProfileCell
+            return cell
+        case .setting:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "kProfielSettingCell", for: indexPath) as! ProfielSettingCell
+            cell.update(name: LanguageKey.setting.value)
+            return cell
+        case .business_link:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "kProfielSettingCell", for: indexPath) as! ProfielSettingCell
+            cell.update(name: LanguageKey.business_link.value)
+            return cell
+        case .quit:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileQuitCell", for: indexPath) as! ProfileQuitCell
+            return cell
+        }
     }
     
-    /// 点击进入设置界面
-    @IBAction func onSetttingButtonClicked(_ sender: UIButton) {
-        
+    // 单元(cell)的高度
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch ProfileCellType(rawValue: indexPath.row)! {
+        case .profile:
+            return profileHeight
+        case .setting:
+            return settingCellHeight
+        case .business_link:
+            return settingCellHeight
+        case .quit:
+            return quitCellHeight
+        }
     }
     
-    /// 点击进入链接商家界面
-    @IBAction func onLinkBusinessButtonClicked(_ sender: UIButton) {
-    }
-    
-    /// 点击退出登陆
-    @IBAction func onQuitButtonClicked(_ sender: UIButton) {
-        NotificationCenter.default.post(name: NoticationUserLogout, object: nil)
+    /// 单元点击
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch ProfileCellType(rawValue: indexPath.row)! {
+        case .profile:
+            let vc = UIStoryboard.init(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ProfileDetails")
+            navigationController?.pushViewController(vc, animated: true)
+        case .setting:
+            break
+        case .business_link:
+            break
+        case .quit:
+            NotificationCenter.default.post(name: NoticationUserLogout, object: nil)
+        }
     }
 }

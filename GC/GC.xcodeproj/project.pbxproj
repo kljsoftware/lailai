@@ -28,6 +28,9 @@
 		3C6550742025934400FE0504 /* tab_donate_sel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C6550702025934400FE0504 /* tab_donate_sel@3x.png */; };
 		3C6550752025934400FE0504 /* tab_donate_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C6550712025934400FE0504 /* tab_donate_sel@2x.png */; };
 		3C6550772025A3BA00FE0504 /* img_frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C6550762025A3B900FE0504 /* img_frame.png */; };
+		3C65507A2025DF7C00FE0504 /* DonateRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6550792025DF7C00FE0504 /* DonateRecordViewController.swift */; };
+		3C65507D2025E50E00FE0504 /* DonateRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65507B2025E50E00FE0504 /* DonateRecordCell.swift */; };
+		3C65507E2025E50E00FE0504 /* DonateRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C65507C2025E50E00FE0504 /* DonateRecordCell.xib */; };
 		3C8DCEEC201D76C400C9F40E /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C8DCEDA201D76C400C9F40E /* launch.png */; };
 		3C8DCEED201D76C400C9F40E /* tab_business_nor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C8DCEDC201D76C400C9F40E /* tab_business_nor@3x.png */; };
 		3C8DCEEE201D76C400C9F40E /* tab_wallet_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C8DCEDD201D76C400C9F40E /* tab_wallet_sel@2x.png */; };
@@ -66,6 +69,19 @@
 		3CB553A3201CB73F009AC1CD /* LanguageMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB5538E201CB73F009AC1CD /* LanguageMacro.swift */; };
 		3CB553A4201CB73F009AC1CD /* NotificationMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB5538F201CB73F009AC1CD /* NotificationMacro.swift */; };
 		3CB553A5201CB73F009AC1CD /* GlobalMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB55390201CB73F009AC1CD /* GlobalMacro.swift */; };
+		3CD6AA1E2025EE4900EAEECA /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6AA1C2025EE4900EAEECA /* ProfileCell.swift */; };
+		3CD6AA1F2025EE4900EAEECA /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CD6AA1D2025EE4900EAEECA /* ProfileCell.xib */; };
+		3CD6AA222025F05F00EAEECA /* ProfielSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6AA202025F05F00EAEECA /* ProfielSettingCell.swift */; };
+		3CD6AA232025F05F00EAEECA /* ProfielSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CD6AA212025F05F00EAEECA /* ProfielSettingCell.xib */; };
+		3CD6AA262025F07900EAEECA /* ProfileQuitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6AA242025F07900EAEECA /* ProfileQuitCell.swift */; };
+		3CD6AA272025F07900EAEECA /* ProfileQuitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CD6AA252025F07900EAEECA /* ProfileQuitCell.xib */; };
+		3CD6AA292025F9D900EAEECA /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6AA282025F9D900EAEECA /* BaseNavigationController.swift */; };
+		3CD6AA2C2025FF8000EAEECA /* ProfileDetailAvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6AA2A2025FF8000EAEECA /* ProfileDetailAvatarCell.swift */; };
+		3CD6AA2D2025FF8000EAEECA /* ProfileDetailAvatarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CD6AA2B2025FF8000EAEECA /* ProfileDetailAvatarCell.xib */; };
+		3CD6AA302025FF9D00EAEECA /* ProfileDetailOtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6AA2E2025FF9D00EAEECA /* ProfileDetailOtherCell.swift */; };
+		3CD6AA312025FF9D00EAEECA /* ProfileDetailOtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CD6AA2F2025FF9D00EAEECA /* ProfileDetailOtherCell.xib */; };
+		3CD6AA342025FFB600EAEECA /* ProfileDetailDescCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6AA322025FFB600EAEECA /* ProfileDetailDescCell.swift */; };
+		3CD6AA352025FFB600EAEECA /* ProfileDetailDescCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CD6AA332025FFB600EAEECA /* ProfileDetailDescCell.xib */; };
 		3CF364C42022A3ED003179E8 /* HTTPSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF364C32022A3ED003179E8 /* HTTPSessionManager.swift */; };
 		3CF364F52022A916003179E8 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF364C72022A916003179E8 /* Home.storyboard */; };
 		3CF364F62022A916003179E8 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF364C82022A916003179E8 /* HomeTabBarController.swift */; };
@@ -146,6 +162,9 @@
 		3C6550702025934400FE0504 /* tab_donate_sel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_donate_sel@3x.png"; sourceTree = "<group>"; };
 		3C6550712025934400FE0504 /* tab_donate_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_donate_sel@2x.png"; sourceTree = "<group>"; };
 		3C6550762025A3B900FE0504 /* img_frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_frame.png; sourceTree = "<group>"; };
+		3C6550792025DF7C00FE0504 /* DonateRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateRecordViewController.swift; sourceTree = "<group>"; };
+		3C65507B2025E50E00FE0504 /* DonateRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateRecordCell.swift; sourceTree = "<group>"; };
+		3C65507C2025E50E00FE0504 /* DonateRecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonateRecordCell.xib; sourceTree = "<group>"; };
 		3C8DCED5201D441000C9F40E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3C8DCED7201D441D00C9F40E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3C8DCEDA201D76C400C9F40E /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
@@ -187,6 +206,19 @@
 		3CB5538E201CB73F009AC1CD /* LanguageMacro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageMacro.swift; sourceTree = "<group>"; };
 		3CB5538F201CB73F009AC1CD /* NotificationMacro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationMacro.swift; sourceTree = "<group>"; };
 		3CB55390201CB73F009AC1CD /* GlobalMacro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalMacro.swift; sourceTree = "<group>"; };
+		3CD6AA1C2025EE4900EAEECA /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		3CD6AA1D2025EE4900EAEECA /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
+		3CD6AA202025F05F00EAEECA /* ProfielSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfielSettingCell.swift; sourceTree = "<group>"; };
+		3CD6AA212025F05F00EAEECA /* ProfielSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfielSettingCell.xib; sourceTree = "<group>"; };
+		3CD6AA242025F07900EAEECA /* ProfileQuitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileQuitCell.swift; sourceTree = "<group>"; };
+		3CD6AA252025F07900EAEECA /* ProfileQuitCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileQuitCell.xib; sourceTree = "<group>"; };
+		3CD6AA282025F9D900EAEECA /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		3CD6AA2A2025FF8000EAEECA /* ProfileDetailAvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailAvatarCell.swift; sourceTree = "<group>"; };
+		3CD6AA2B2025FF8000EAEECA /* ProfileDetailAvatarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileDetailAvatarCell.xib; sourceTree = "<group>"; };
+		3CD6AA2E2025FF9D00EAEECA /* ProfileDetailOtherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailOtherCell.swift; sourceTree = "<group>"; };
+		3CD6AA2F2025FF9D00EAEECA /* ProfileDetailOtherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileDetailOtherCell.xib; sourceTree = "<group>"; };
+		3CD6AA322025FFB600EAEECA /* ProfileDetailDescCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailDescCell.swift; sourceTree = "<group>"; };
+		3CD6AA332025FFB600EAEECA /* ProfileDetailDescCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileDetailDescCell.xib; sourceTree = "<group>"; };
 		3CF364C32022A3ED003179E8 /* HTTPSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPSessionManager.swift; sourceTree = "<group>"; };
 		3CF364C72022A916003179E8 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		3CF364C82022A916003179E8 /* HomeTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
@@ -282,6 +314,16 @@
 				3C4B070A201EF7CA00856698 /* wallet_donate@2x.png */,
 			);
 			path = Wallet;
+			sourceTree = "<group>";
+		};
+		3C6550782025DF5000FE0504 /* Donate */ = {
+			isa = PBXGroup;
+			children = (
+				3C6550792025DF7C00FE0504 /* DonateRecordViewController.swift */,
+				3C65507B2025E50E00FE0504 /* DonateRecordCell.swift */,
+				3C65507C2025E50E00FE0504 /* DonateRecordCell.xib */,
+			);
+			path = Donate;
 			sourceTree = "<group>";
 		};
 		3C8DCED9201D76C400C9F40E /* Launch */ = {
@@ -506,7 +548,19 @@
 			children = (
 				3CF364DE2022A916003179E8 /* Profile.storyboard */,
 				3CF364E02022A916003179E8 /* ProfileViewController.swift */,
+				3CD6AA1C2025EE4900EAEECA /* ProfileCell.swift */,
+				3CD6AA1D2025EE4900EAEECA /* ProfileCell.xib */,
+				3CD6AA202025F05F00EAEECA /* ProfielSettingCell.swift */,
+				3CD6AA212025F05F00EAEECA /* ProfielSettingCell.xib */,
+				3CD6AA242025F07900EAEECA /* ProfileQuitCell.swift */,
+				3CD6AA252025F07900EAEECA /* ProfileQuitCell.xib */,
 				3CF364DF2022A916003179E8 /* ProfileDetailsViewController.swift */,
+				3CD6AA2A2025FF8000EAEECA /* ProfileDetailAvatarCell.swift */,
+				3CD6AA2B2025FF8000EAEECA /* ProfileDetailAvatarCell.xib */,
+				3CD6AA2E2025FF9D00EAEECA /* ProfileDetailOtherCell.swift */,
+				3CD6AA2F2025FF9D00EAEECA /* ProfileDetailOtherCell.xib */,
+				3CD6AA322025FFB600EAEECA /* ProfileDetailDescCell.swift */,
+				3CD6AA332025FFB600EAEECA /* ProfileDetailDescCell.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -527,6 +581,7 @@
 		3CF364E82022A916003179E8 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				3C6550782025DF5000FE0504 /* Donate */,
 				3CF364EE2022A916003179E8 /* Wallet.storyboard */,
 				3CF364EB2022A916003179E8 /* WalletViewController.swift */,
 				3CF364ED2022A916003179E8 /* BannnerView.swift */,
@@ -560,6 +615,7 @@
 		3CF3651F2022D99B003179E8 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				3CD6AA282025F9D900EAEECA /* BaseNavigationController.swift */,
 				3CF365202022D9AB003179E8 /* BaseViewModel.swift */,
 				3CF365222022DA86003179E8 /* BaseRequestModel.swift */,
 				3CF365242022DAAF003179E8 /* BaseResultModel.swift */,
@@ -745,6 +801,7 @@
 				3C8DCEF7201D76C400C9F40E /* tab_wallet_nor@2x.png in Resources */,
 				3CF3650E2022A916003179E8 /* NewsCell.xib in Resources */,
 				3C8DCEF5201D76C400C9F40E /* tab_profile_nor@3x.png in Resources */,
+				3CD6AA272025F07900EAEECA /* ProfileQuitCell.xib in Resources */,
 				3CF365032022A916003179E8 /* BusinessCell.xib in Resources */,
 				3CF365172022A916003179E8 /* Login.storyboard in Resources */,
 				3CFD84F5201C9B5900F9E7E5 /* Assets.xcassets in Resources */,
@@ -752,6 +809,9 @@
 				3C19391520207E1800E7D007 /* points.png in Resources */,
 				3CF364FC2022A916003179E8 /* Business.storyboard in Resources */,
 				3CF364FB2022A916003179E8 /* Launch.storyboard in Resources */,
+				3CD6AA1F2025EE4900EAEECA /* ProfileCell.xib in Resources */,
+				3CD6AA312025FF9D00EAEECA /* ProfileDetailOtherCell.xib in Resources */,
+				3CD6AA232025F05F00EAEECA /* ProfielSettingCell.xib in Resources */,
 				3C6550772025A3BA00FE0504 /* img_frame.png in Resources */,
 				3C374618201DB866000FD752 /* splash.png in Resources */,
 				3CF364F92022A916003179E8 /* LaunchScreen.storyboard in Resources */,
@@ -774,11 +834,14 @@
 				3C4B070C201EF7CA00856698 /* wallet_donate@2x.png in Resources */,
 				3C91FC31201F3C7C00BB492D /* common_forward@3x.png in Resources */,
 				3CF3650D2022A916003179E8 /* News.storyboard in Resources */,
+				3C65507E2025E50E00FE0504 /* DonateRecordCell.xib in Resources */,
+				3CD6AA352025FFB600EAEECA /* ProfileDetailDescCell.xib in Resources */,
 				3CF364F52022A916003179E8 /* Home.storyboard in Resources */,
 				3C8DCEEC201D76C400C9F40E /* launch.png in Resources */,
 				3CF365012022A916003179E8 /* BusinessTitleView.xib in Resources */,
 				3C4B070B201EF7CA00856698 /* wallet_donate@3x.png in Resources */,
 				3C8DCEF3201D76C400C9F40E /* tab_wallet_sel@3x.png in Resources */,
+				3CD6AA2D2025FF8000EAEECA /* ProfileDetailAvatarCell.xib in Resources */,
 				3C8DCEF8201D76C400C9F40E /* tab_business_sel@3x.png in Resources */,
 				3C91FC2C201F3A9E00BB492D /* avatar@3x.png in Resources */,
 				3CF365162022A916003179E8 /* PersonalDonateView.xib in Resources */,
@@ -875,17 +938,21 @@
 				3CF364C42022A3ED003179E8 /* HTTPSessionManager.swift in Sources */,
 				3CF364F62022A916003179E8 /* HomeTabBarController.swift in Sources */,
 				3C65505E20243D0300FE0504 /* WalletSectionCell.swift in Sources */,
+				3CD6AA1E2025EE4900EAEECA /* ProfileCell.swift in Sources */,
 				3CF365292022E672003179E8 /* LoginViewModel.swift in Sources */,
+				3CD6AA342025FFB600EAEECA /* ProfileDetailDescCell.swift in Sources */,
 				3CF3650B2022A916003179E8 /* NewsViewController.swift in Sources */,
 				3CF365092022A916003179E8 /* ProfileViewController.swift in Sources */,
 				3CF364FF2022A916003179E8 /* BusinessView.swift in Sources */,
 				3CF3651C2022A98D003179E8 /* RegisterModel.swift in Sources */,
+				3CD6AA302025FF9D00EAEECA /* ProfileDetailOtherCell.swift in Sources */,
 				3CF364F72022A916003179E8 /* DonateViewController.swift in Sources */,
 				3CF365132022A916003179E8 /* WalletCollectionViewCell.swift in Sources */,
 				3CF3651A2022A916003179E8 /* FotgotPwdViewController.swift in Sources */,
 				3CB55394201CB73F009AC1CD /* OnePixelConstraint.swift in Sources */,
 				3CF3652F2022FADA003179E8 /* WalletViewModel.swift in Sources */,
 				3CF3653120231DA8003179E8 /* BusinessModel.swift in Sources */,
+				3C65507A2025DF7C00FE0504 /* DonateRecordViewController.swift in Sources */,
 				3CF3652D2022EE8B003179E8 /* LaunchViewModel.swift in Sources */,
 				3CB55393201CB73F009AC1CD /* Log.swift in Sources */,
 				3CB553A4201CB73F009AC1CD /* NotificationMacro.swift in Sources */,
@@ -900,9 +967,11 @@
 				3CF365082022A916003179E8 /* ProfileDetailsViewController.swift in Sources */,
 				3CF365272022E52E003179E8 /* LoginModel.swift in Sources */,
 				3CF365112022A916003179E8 /* PersonalDonateView.swift in Sources */,
+				3CD6AA222025F05F00EAEECA /* ProfielSettingCell.swift in Sources */,
 				3CF3650F2022A916003179E8 /* NewsHeaderView.swift in Sources */,
 				3CB553A0201CB73F009AC1CD /* LanguageHelper.swift in Sources */,
 				3CF364FE2022A916003179E8 /* BusinessViewController.swift in Sources */,
+				3C65507D2025E50E00FE0504 /* DonateRecordCell.swift in Sources */,
 				3CB5539B201CB73F009AC1CD /* UIImage+Extension.swift in Sources */,
 				3C65505A20243B8600FE0504 /* WalletCell.swift in Sources */,
 				3CB553A2201CB73F009AC1CD /* NetworkMacro.swift in Sources */,
@@ -912,6 +981,7 @@
 				3CF364FD2022A916003179E8 /* MapView.swift in Sources */,
 				3CF365142022A916003179E8 /* BannnerView.swift in Sources */,
 				3C25DA3E201CC286003E4BFB /* UIImageView+Extension.swift in Sources */,
+				3CD6AA292025F9D900EAEECA /* BaseNavigationController.swift in Sources */,
 				3CF365232022DA86003179E8 /* BaseRequestModel.swift in Sources */,
 				3CB553A5201CB73F009AC1CD /* GlobalMacro.swift in Sources */,
 				3CF3651E2022A9F2003179E8 /* RegiserViewModel.swift in Sources */,
@@ -920,8 +990,10 @@
 				3CF365122022A916003179E8 /* WalletViewController.swift in Sources */,
 				3CB55398201CB73F009AC1CD /* Date+Extension.swift in Sources */,
 				3CB55395201CB73F009AC1CD /* PortraitViewController.swift in Sources */,
+				3CD6AA2C2025FF8000EAEECA /* ProfileDetailAvatarCell.swift in Sources */,
 				3CF365052022A916003179E8 /* Register2ViewController.swift in Sources */,
 				3CB5539E201CB73F009AC1CD /* Dictionary+Extension.swift in Sources */,
+				3CD6AA262025F07900EAEECA /* ProfileQuitCell.swift in Sources */,
 				3CF365252022DAAF003179E8 /* BaseResultModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

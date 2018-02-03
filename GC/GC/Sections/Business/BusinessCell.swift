@@ -16,6 +16,7 @@ class BusinessCell: UITableViewCell {
     ///  商家名
     @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var phoneLabel: UILabel!
     /// 地址
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var star1: UIImageView!
@@ -39,11 +40,15 @@ class BusinessCell: UITableViewCell {
         /// 商家名
         nameLabel.text = model.name
         
+        /// 号码
+        phoneLabel.text = "—— ——"
+        
         /// 星级评价显示
         let stars = [star1, star2, star3, star4, star5]
         for star in stars {
             star?.isHidden = true
         }
+        stars[0]?.isHidden = false
         if model.level > 0 {
             for i in 0..<model.level {
                 stars[i]?.isHidden = false

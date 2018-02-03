@@ -34,6 +34,7 @@
 
 //积分钱包
 "wallet_donate" = "积分捐赠";
+"donate_record" = "积分捐赠记录";
 
 //积分商家
 "map" = "地图";
@@ -44,4 +45,13 @@
 //公益捐赠
 
 // 我
+"setting" = "设置";
+"business_link" = "商家API链接设置";
 "profile_setting" = "个人设置";
+"photo" = "照片";
+"nick"  = "昵称";
+"gender" = "性别";
+"region" = "地区";
+"email" = "邮箱";
+"desc" = "个人描述";
+

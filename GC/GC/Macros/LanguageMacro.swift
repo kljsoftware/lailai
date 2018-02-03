@@ -31,11 +31,22 @@ enum LanguageKey : String {
     case settingpwd   // 设置密码
     case save         // 保存
     case wallet_donate // 积分捐赠
+   
+    case setting         // 设置
+    case business_link   // 商家API链接设置
     case profile_setting // 个人设置
+    case photo // 照片
+    case nick  // 昵称
+    case gender  // 性别
+    case region  // 地区
+    case email   // 邮箱
+    case desc    // 个人描述
+
     case map             // 地图
     case balance         // 捐赠积分额
     case sendCode        // 发送验证码
     case sendAgain       // 重新发送
+    case donate_record   // 积分捐赠记录
     
     /// 获取对应的语言字串
     var value : String {

@@ -312,10 +312,10 @@
             </objects>
             <point key="canvasLocation" x="1302" y="-135"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Base Navigation Controller-->
         <scene sceneID="GGT-Zn-wvw">
             <objects>
-                <navigationController storyboardIdentifier="registerNC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VOe-Oj-IyR" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="registerNC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VOe-Oj-IyR" customClass="BaseNavigationController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2VG-Og-XED">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

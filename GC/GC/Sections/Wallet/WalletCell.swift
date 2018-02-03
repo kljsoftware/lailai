@@ -25,6 +25,9 @@ class WalletCell: UITableViewCell {
         }
     }
     
+    /// 捐赠项点击回调闭包
+    var didSelectItemClosure:((_ model: WalletModel) -> Void)?
+    
     /// 初始化
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -68,6 +71,7 @@ extension WalletCell :  UICollectionViewDataSource, UICollectionViewDelegateFlow
     
     /// 点击单元
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let vc = UIStoryboard(name: "Wallet", bundle: nil).instantiateViewController(withIdentifier: "donate_record")
+        didSelectItemClosure?(walletModel.data[indexPath.row])
     }
 }

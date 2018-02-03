@@ -103,10 +103,10 @@
             </objects>
             <point key="canvasLocation" x="476" y="154.43349753694582"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Base Navigation Controller-->
         <scene sceneID="I64-pN-jmo">
             <objects>
-                <navigationController storyboardIdentifier="Launch" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="Gn5-VU-FJa" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Launch" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="Gn5-VU-FJa" customClass="BaseNavigationController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ndK-ru-tTw">
                         <autoresizingMask key="autoresizingMask"/>
