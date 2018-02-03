@@ -9,6 +9,7 @@
 "tab_wallet"   = "积分钱包";
 "tab_business" = "绿色商家";
 "tab_news"     = "绿色新闻";
+"tab_donate"   = "公益捐赠";
 "tab_profile"  = "我";
 
 "splash_skip"  = "跳过";

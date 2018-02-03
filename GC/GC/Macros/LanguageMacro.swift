@@ -14,6 +14,7 @@ enum LanguageKey : String {
     case tab_wallet   // 积分钱包
     case tab_business // 绿色商家
     case tab_news     // 绿色新闻
+    case tab_donate   // 公益捐赠
     case tab_profile  // 我
     case splash_skip  // 跳过
     case register     // 注册
