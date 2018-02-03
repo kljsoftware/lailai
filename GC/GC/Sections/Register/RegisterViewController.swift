@@ -48,6 +48,7 @@ class RegisterViewController: UIViewController {
         codeTextField.placeholder = LanguageKey.authCode.value
         nextButton.setTitle(LanguageKey.nextStep.value, for: .normal)
         sendCodeLabel.text = LanguageKey.sendCode.value
+        setNextEnabled()
     }
     
     /// 注册通知
@@ -78,10 +79,10 @@ class RegisterViewController: UIViewController {
             guard let wself = self else {
                 return
             }
+            wself.stopTimer()
+            wself.sendCodeLabel.text = LanguageKey.sendAgain.value
+            wself.sendCodeButton.isEnabled = true
             if error == nil {
-                wself.stopTimer()
-                wself.sendCodeLabel.text = LanguageKey.sendAgain.value
-                wself.sendCodeButton.isEnabled = true
                 let vc = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(withIdentifier: "register2") as! Register2ViewController
                 vc.phone = wself.phoneTextField.text!
                 wself.navigationController?.pushViewController(vc, animated: true)
@@ -142,15 +143,16 @@ class RegisterViewController: UIViewController {
                 guard let wself = self else {
                     return
                 }
+                wself.startTimer()
                 if error == nil {
-                    wself.startTimer()
+                    
                 } else {
                     Log.e("error = \(error!.localizedDescription)")
                     UIHelper.tip(message: error!.localizedDescription)
                 }
             })
-            
-            
+        } else {
+            UIHelper.tip(message: "手机号为空或输入错误")
         }
     }
 }
