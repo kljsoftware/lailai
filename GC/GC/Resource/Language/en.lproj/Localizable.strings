@@ -7,9 +7,41 @@
 */
 
 /// 首页
-"tab_wallet"   = "wallet";
-"tab_business" = "business";
-"tab_news"     = "news";
-"tab_profile"  = "mine";
+"tab_wallet"   = "Wallet";
+"tab_business" = "Business";
+"tab_news"     = "News";
+"tab_profile"  = "Mine";
 
-"splash_skip"  = "skip";
+//登录注册
+"splash_skip"  = "Skip";
+"register"     = "Register";
+"pwd"          = "Password";
+"input_pwd"    = "Input password";
+"input_pwd_again" = "Enter the password again";
+"phoneNum"     = "Phone Number";
+"authCode"     = "Verification Code";
+"nextStep"     = "Next step";
+"login"        = "Sign in";
+"logout"       = "Sign out";
+"rememberpwd"  = "Remember the password";
+"forgotpwd"    = "Forget the account or password";
+"settingpwd"   = "Set the password";
+"save"         = "Save";
+"sendCode" = "Send authentication code";
+"sendAgain" = "Resend";
+
+// 通用
+
+//积分钱包
+"wallet_donate" = "Donation";
+
+//积分商家
+"map" = "Map";
+"balance" = "Endowment amount";
+
+//绿色新闻
+
+//公益捐赠
+
+// 我
+"profile_setting" = "Personal settings";
