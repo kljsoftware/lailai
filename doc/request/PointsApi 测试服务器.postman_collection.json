@@ -1,0 +1,490 @@
+{
+	"id": "7d80326a-6d20-e23d-650c-3e3f819b65be",
+	"name": "PointsApi 测试服务器",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"name": "3.10积分钱包",
+			"description": "",
+			"collectionId": "7d80326a-6d20-e23d-650c-3e3f819b65be",
+			"order": [
+				"e688abe7-79c0-0d44-054d-9d889f826499"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "c6433889-7caa-2776-4162-dbc4d67872a1"
+		},
+		{
+			"name": "3.11捐赠记录",
+			"description": "",
+			"collectionId": "7d80326a-6d20-e23d-650c-3e3f819b65be",
+			"order": [
+				"5d7c2547-3771-56ed-9f2c-3aad7d2af60d"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "65fcb7c5-5ed8-3be1-9be3-914898f41f71"
+		},
+		{
+			"name": "3.12绿色地图",
+			"description": "",
+			"collectionId": "7d80326a-6d20-e23d-650c-3e3f819b65be",
+			"order": [
+				"5ce2f7b6-c9c8-bcac-57a1-b93f3364bc5a"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "84d29aad-0c4e-1d28-e6aa-9b3581226b29"
+		},
+		{
+			"name": "3.1注册",
+			"description": "",
+			"collectionId": "7d80326a-6d20-e23d-650c-3e3f819b65be",
+			"order": [
+				"609cf228-e54a-00bd-87a1-61850a70c123",
+				"d876c218-660d-220d-71a8-b0cb23f9fba2"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "6999df8c-d596-1698-eb8c-cad14d8af2a2"
+		},
+		{
+			"name": "3.3登陆(用户名密码登录)",
+			"description": "",
+			"collectionId": "7d80326a-6d20-e23d-650c-3e3f819b65be",
+			"order": [
+				"dbac834a-7a56-3a05-a662-f7464eb7f3e6"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "1c0f2fc3-9e80-ed54-bde8-34a445818b22"
+		},
+		{
+			"name": "3.4检查token是否过期",
+			"description": "",
+			"collectionId": "7d80326a-6d20-e23d-650c-3e3f819b65be",
+			"order": [
+				"7b1adca3-e39d-c7dd-a4d7-d0c54e6b4b82"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "7f71d68a-da7d-2a20-19be-44b4be481181"
+		},
+		{
+			"name": "3.5个人信息修改",
+			"description": "",
+			"collectionId": "7d80326a-6d20-e23d-650c-3e3f819b65be",
+			"order": [
+				"b2809404-31a4-1f9c-3ba9-8b885bea1ad6"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "f19bcb3a-53ae-f3e2-8e02-a3b02336c971"
+		},
+		{
+			"name": "3.6密码修改",
+			"description": "",
+			"collectionId": "7d80326a-6d20-e23d-650c-3e3f819b65be",
+			"order": [
+				"60b83eb8-876f-0031-d419-8827f55c3831"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "b2ef261f-d00d-8c93-0dae-646d454e8118"
+		},
+		{
+			"name": "3.7反馈信息",
+			"description": "",
+			"collectionId": "7d80326a-6d20-e23d-650c-3e3f819b65be",
+			"order": [
+				"f8f2b153-74b9-7391-d5e9-6c4350b8b827"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "c905fc7e-8066-a89e-672e-86889209d45d"
+		},
+		{
+			"name": "3.9关于",
+			"description": "",
+			"collectionId": "7d80326a-6d20-e23d-650c-3e3f819b65be",
+			"order": [
+				"43d3046f-9640-439b-82a2-844af9246661"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "4a26226e-ae76-8f89-7a8e-9ce5e50da7d7"
+		},
+		{
+			"name": "测试服务器通否",
+			"description": "",
+			"collectionId": "7d80326a-6d20-e23d-650c-3e3f819b65be",
+			"order": [
+				"2b606c7d-0020-0fbc-74ef-3a4c0ead2060"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "d3d39cec-70f9-772c-8f33-50e15ddea144"
+		}
+	],
+	"folders_order": [
+		"d3d39cec-70f9-772c-8f33-50e15ddea144",
+		"6999df8c-d596-1698-eb8c-cad14d8af2a2",
+		"1c0f2fc3-9e80-ed54-bde8-34a445818b22",
+		"7f71d68a-da7d-2a20-19be-44b4be481181",
+		"f19bcb3a-53ae-f3e2-8e02-a3b02336c971",
+		"b2ef261f-d00d-8c93-0dae-646d454e8118",
+		"c905fc7e-8066-a89e-672e-86889209d45d",
+		"4a26226e-ae76-8f89-7a8e-9ce5e50da7d7",
+		"c6433889-7caa-2776-4162-dbc4d67872a1",
+		"65fcb7c5-5ed8-3be1-9be3-914898f41f71",
+		"84d29aad-0c4e-1d28-e6aa-9b3581226b29"
+	],
+	"timestamp": 1517302149619,
+	"owner": "3630550",
+	"public": false,
+	"events": [],
+	"variables": [],
+	"auth": null,
+	"requests": [
+		{
+			"id": "2b606c7d-0020-0fbc-74ef-3a4c0ead2060",
+			"headers": "",
+			"headerData": [],
+			"url": "http://106.14.170.7/v2/123456/getLoginUser",
+			"folder": "d3d39cec-70f9-772c-8f33-50e15ddea144",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"auth": null,
+			"time": 1517375998655,
+			"name": "getLoginUser",
+			"description": "",
+			"collectionId": "7d80326a-6d20-e23d-650c-3e3f819b65be",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "43d3046f-9640-439b-82a2-844af9246661",
+			"headers": "",
+			"headerData": [],
+			"url": "http://106.14.170.7/v2/getAbout",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"events": [],
+			"auth": null,
+			"method": "GET",
+			"collectionId": "7d80326a-6d20-e23d-650c-3e3f819b65be",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://106.14.170.7/v2/getAbout",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1517377600633,
+			"version": 2,
+			"responses": [],
+			"folder": "4a26226e-ae76-8f89-7a8e-9ce5e50da7d7",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "5ce2f7b6-c9c8-bcac-57a1-b93f3364bc5a",
+			"headers": "",
+			"headerData": [],
+			"url": "http://106.14.170.7/v2/KbUpiUr0JgvAHwRi4y7MYQ/getDealers",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"events": [],
+			"auth": null,
+			"method": "GET",
+			"collectionId": "7d80326a-6d20-e23d-650c-3e3f819b65be",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://106.14.170.7/v2/KbUpiUr0JgvAHwRi4y7MYQ/getDealers",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1517377819965,
+			"version": 2,
+			"responses": [],
+			"folder": "84d29aad-0c4e-1d28-e6aa-9b3581226b29",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "5d7c2547-3771-56ed-9f2c-3aad7d2af60d",
+			"headers": "",
+			"headerData": [],
+			"url": "http://106.14.170.7/v2/KbUpiUr0JgvAHwRi4y7MYQ/getContributionHistory",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"events": [],
+			"auth": null,
+			"method": "GET",
+			"collectionId": "7d80326a-6d20-e23d-650c-3e3f819b65be",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://106.14.170.7/v2/KbUpiUr0JgvAHwRi4y7MYQ/getContributionHistory",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1517377755454,
+			"version": 2,
+			"responses": [],
+			"folder": "65fcb7c5-5ed8-3be1-9be3-914898f41f71",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "609cf228-e54a-00bd-87a1-61850a70c123",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://106.14.170.7/v2/register",
+			"folder": "6999df8c-d596-1698-eb8c-cad14d8af2a2",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"auth": null,
+			"time": 1517376012144,
+			"name": "register",
+			"description": null,
+			"collectionId": "7d80326a-6d20-e23d-650c-3e3f819b65be",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": " {\r\n\t\"tel\": \"13013505566\",\r\n\t\"password\": \"1517277703\",\r\n\t\"code\": \"ZWExZGY4ZTQ3M2Q4ZmU5NjMxYmM5NmQ0MGNiYTdhYjJlZWQ2NDJkMQ==\"\r\n}\r\n"
+		},
+		{
+			"id": "60b83eb8-876f-0031-d419-8827f55c3831",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://106.14.170.7/v2/KbUpiUr0JgvAHwRi4y7MYQ/modityPassword",
+			"folder": "b2ef261f-d00d-8c93-0dae-646d454e8118",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"auth": null,
+			"time": 1517384516495,
+			"name": "modityPassword",
+			"description": "",
+			"collectionId": "7d80326a-6d20-e23d-650c-3e3f819b65be",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\r\n\"newPassword\":\"231211\",\r\n\"oldPassword\":\"123456\"\r\n}\r\n"
+		},
+		{
+			"id": "7b1adca3-e39d-c7dd-a4d7-d0c54e6b4b82",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://106.14.170.7/v2/F4WfyLuKmgtgP9aQt7ASCQ/checkToken",
+			"folder": "7f71d68a-da7d-2a20-19be-44b4be481181",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"auth": null,
+			"time": 1517376134206,
+			"name": "checkToken",
+			"description": "",
+			"collectionId": "7d80326a-6d20-e23d-650c-3e3f819b65be",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": ""
+		},
+		{
+			"id": "b2809404-31a4-1f9c-3ba9-8b885bea1ad6",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://106.14.170.7/v2/KbUpiUr0JgvAHwRi4y7MYQ/modityUserInfo",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"auth": null,
+			"time": 1517377092237,
+			"name": "http://106.14.170.7/v2/Y71coTbn9MDN0/GVHbGtbw/modityUserInfo",
+			"description": "",
+			"collectionId": "7d80326a-6d20-e23d-650c-3e3f819b65be",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\n    \"tel\": \"13013505566\",\n    \"name\": \"张三\",\n    \"shortName\": \"三\",\n    \"email\": null,\n    \"sex\": null,\n    \"birthday\": null,\n    \"city\": null,\n    \"level\": null,\n    \"createdDate\": null,\n    \"logo\": null,\n    \"description\": null\n}"
+		},
+		{
+			"id": "d876c218-660d-220d-71a8-b0cb23f9fba2",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://106.14.170.7/v2/register",
+			"folder": "6999df8c-d596-1698-eb8c-cad14d8af2a2",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"auth": null,
+			"time": 1517376056032,
+			"name": "register-test2",
+			"description": "",
+			"collectionId": "7d80326a-6d20-e23d-650c-3e3f819b65be",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\r\n\t\"tel\": \"17011123488\",\r\n\t\"password\": \"IamPass123\",\r\n\t\"code\": \"YTRkZDVkOGYyMzI5MTY1ZGZiMGQ4OGEyYTg3NWIzYTNhZTUxODc5NA==\"\r\n}\r\n"
+		},
+		{
+			"id": "dbac834a-7a56-3a05-a662-f7464eb7f3e6",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://106.14.170.7/v2/login",
+			"folder": "1c0f2fc3-9e80-ed54-bde8-34a445818b22",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"auth": null,
+			"time": 1517376165919,
+			"name": "login",
+			"description": "",
+			"collectionId": "7d80326a-6d20-e23d-650c-3e3f819b65be",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\r\n\t\"tel\": \"13013505566\",\r\n\t\"password\": \"1517277703\",\r\n\t\"code\": \"ZWExZGY4ZTQ3M2Q4ZmU5NjMxYmM5NmQ0MGNiYTdhYjJlZWQ2NDJkMQ==\"\r\n}"
+		},
+		{
+			"id": "e688abe7-79c0-0d44-054d-9d889f826499",
+			"headers": "",
+			"headerData": [],
+			"url": "http://106.14.170.7/v2/KbUpiUr0JgvAHwRi4y7MYQ/getPoints",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"events": [],
+			"auth": null,
+			"method": "GET",
+			"collectionId": "7d80326a-6d20-e23d-650c-3e3f819b65be",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://106.14.170.7/v2/KbUpiUr0JgvAHwRi4y7MYQ/getPoints",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1517377723259,
+			"version": 2,
+			"responses": [],
+			"folder": "c6433889-7caa-2776-4162-dbc4d67872a1",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "f8f2b153-74b9-7391-d5e9-6c4350b8b827",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://106.14.170.7/v2/KbUpiUr0JgvAHwRi4y7MYQ/putFeedback",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"auth": null,
+			"time": 1517377556735,
+			"name": "http://106.14.170.7/v2/KbUpiUr0JgvAHwRi4y7MYQ/putFeedback",
+			"description": "",
+			"collectionId": "7d80326a-6d20-e23d-650c-3e3f819b65be",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\r\n\"info\":\"info\"\r\n}\r\n"
+		}
+	]
+}
