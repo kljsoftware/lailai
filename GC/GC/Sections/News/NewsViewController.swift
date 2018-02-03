@@ -19,6 +19,7 @@ class NewsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = LanguageKey.tab_news.value
+        automaticallyAdjustsScrollViewInsets = false
         tableView.register(UINib(nibName: "NewsCell", bundle: nil), forCellReuseIdentifier: "kNewsCell")
         tableView.tableHeaderView = tableViewHeaderView()
     }
@@ -33,6 +34,9 @@ class NewsViewController: UIViewController {
         containerView.clipsToBounds = true
         let headerView = Bundle.main.loadNibNamed("NewsHeaderView", owner: nil, options: nil)?[0] as! NewsHeaderView
         containerView.addSubview(headerView)
+        headerView.snp.makeConstraints { (maker) in
+            maker.left.right.top.bottom.equalTo(containerView)
+        }
         return containerView
     }
 }

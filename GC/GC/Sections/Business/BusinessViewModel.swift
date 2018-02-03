@@ -19,7 +19,9 @@ class BusinessViewModel: BaseViewModel {
                 self.businessResultModel = resultModel!
                 self.successCallback?(resultModel!)
             } else {
-                self.failureCallback?("error")
+                let msg = resultModel != nil ? resultModel!.msg : "error"
+                Log.e(msg)
+                self.failureCallback?(msg)
             }
         }
     }

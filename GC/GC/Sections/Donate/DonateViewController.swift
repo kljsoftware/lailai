@@ -13,5 +13,6 @@ class DonateViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = LanguageKey.tab_donate.value
     }
 }

@@ -26,9 +26,13 @@ class LaunchViewModel : BaseViewModel {
          2，不可用让用户重新登陆
          */
         HTTPSessionManager.shared.request(method: .POST, urlString: NetworkURL.checkToken.url, parameters: nil) { (josn, success) in
-            if success {
+            let model = BaseResultModel.mj_object(withKeyValues: josn)
+            if success && model != nil && model!.code == 0 {
                 NotificationCenter.default.post(name: NoticationUserLoginSuccess, object: nil)
             } else {
+                let msg = model != nil ? model!.msg : "error"
+                UIHelper.tip(message: msg)
+                Token.shared.update(value: "")
                 NotificationCenter.default.post(name: NoticationUserLogin, object: nil)
             }
         }
