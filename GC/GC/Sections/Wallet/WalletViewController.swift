@@ -11,7 +11,7 @@ import UIKit
 // 相关常量定义
 /// 单元间隔空白、单元宽高、列表头距导航栏初始位置
 private let blank:CGFloat = 12, sectionHeight:CGFloat = 32, collectionCellHeight:CGFloat = 100
-private let personalDonateViewHeight:CGFloat = 80
+private let personalDonateViewHeight:CGFloat = 100
 private let tableTopMargin:CGFloat = 100
 private let bannerHeight:CGFloat = 200
 
@@ -54,10 +54,8 @@ class WalletViewController: UIViewController {
     private func setupBanner() {
         let banner = BannnerView(frame: CGRect(x: 0, y: 0, width: DEVICE_SCREEN_WIDTH, height: bannerHeight))
         bannerContainerView.addSubview(banner)
-        banner.setup(banners: ["https://timgsa.baidu.com/timg？image&quality=80&size=b9999_10000&sec=1518228816&di=173b46d8a336368cab80d69602eb6193&imgtype=jpg&er=1&src=http%3A%2F%2Fpic.35pic.com%2Fnormal%2F06%2F23%2F08%2F5916570_103848077311_2.jpg"])
-//        ,
-//        "http://img4.imgtn.bdimg.com/it/u=3357021395,3491635869&fm=27&gp=0.jpg",
-//        "http://img4.imgtn.bdimg.com/it/u=3357021395,3491635869&fm=27&gp=0.jpg"
+        banner.setup(banners: [NetworkImg.getUrl(name: "Starbuckslogo.png"),
+                               NetworkImg.getUrl(name: "ddicon02.png")])
     }
     
     /// 请求数据
@@ -74,9 +72,14 @@ class WalletViewController: UIViewController {
     /// 列表头部视图
     private func tableViewHeaderView() -> UIView {
         let containerView = UIView(frame:CGRect(x: 0, y: 0, width: DEVICE_SCREEN_WIDTH, height: personalDonateViewHeight))
+        containerView.backgroundColor = UIColor.clear
         containerView.clipsToBounds = true
         let headerView = Bundle.main.loadNibNamed("PersonalDonateView", owner: nil, options: nil)?[0] as! PersonalDonateView
         containerView.addSubview(headerView)
+        headerView.snp.makeConstraints { (maker) in
+            maker.left.top.equalTo(blank)
+            maker.right.bottom.equalTo(-blank)
+        }
         return containerView
     }
 }

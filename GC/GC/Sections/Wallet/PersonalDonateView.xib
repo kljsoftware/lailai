@@ -11,13 +11,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="PersonalDonateView" customModule="GC" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PersonalDonateView" customModule="GC" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rsj-cx-Ic8">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
-                    <color key="backgroundColor" red="0.92156862750000001" green="0.92941176469999998" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                             <real key="value" value="8"/>
@@ -55,6 +55,31 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hY5-Ig-Qia">
+                    <rect key="frame" x="317" y="12" width="60" height="18"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_frame.png" translatesAutoresizingMaskIntoConstraints="NO" id="73u-ov-3ee">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="18"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 5种积分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFQ-kK-sRp">
+                            <rect key="frame" x="10.5" y="3" width="40" height="12"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="RFQ-kK-sRp" firstAttribute="centerY" secondItem="hY5-Ig-Qia" secondAttribute="centerY" id="2wS-ik-Jq5"/>
+                        <constraint firstAttribute="width" constant="60" id="9HN-QP-uwH"/>
+                        <constraint firstItem="73u-ov-3ee" firstAttribute="top" secondItem="hY5-Ig-Qia" secondAttribute="top" id="AFD-ZB-gcT"/>
+                        <constraint firstItem="73u-ov-3ee" firstAttribute="leading" secondItem="hY5-Ig-Qia" secondAttribute="leading" id="AJs-bD-h90"/>
+                        <constraint firstItem="RFQ-kK-sRp" firstAttribute="centerX" secondItem="hY5-Ig-Qia" secondAttribute="centerX" id="aIM-bV-GDa"/>
+                        <constraint firstAttribute="height" constant="18" id="aP1-6B-fAE"/>
+                        <constraint firstAttribute="bottom" secondItem="73u-ov-3ee" secondAttribute="bottom" id="eyj-e8-puu"/>
+                        <constraint firstAttribute="trailing" secondItem="73u-ov-3ee" secondAttribute="trailing" id="p03-Xk-0rq"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
@@ -62,9 +87,11 @@
                 <constraint firstItem="wkL-jh-ErU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="79G-dT-PJ5"/>
                 <constraint firstItem="wkL-jh-ErU" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="7KA-kL-jO9"/>
                 <constraint firstItem="EhL-2O-baz" firstAttribute="leading" secondItem="aZh-Fe-2xP" secondAttribute="leading" id="AHD-eP-4uH"/>
+                <constraint firstAttribute="trailing" secondItem="hY5-Ig-Qia" secondAttribute="trailing" constant="-2" id="F6j-yO-yLw"/>
                 <constraint firstItem="Rsj-cx-Ic8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Gp1-dB-cOv"/>
                 <constraint firstItem="aZh-Fe-2xP" firstAttribute="centerY" secondItem="Rmo-hb-UKC" secondAttribute="centerY" id="UzW-xn-JfK"/>
                 <constraint firstItem="Rsj-cx-Ic8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VEb-id-dwj"/>
+                <constraint firstItem="hY5-Ig-Qia" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="XF1-HI-7Gb"/>
                 <constraint firstItem="Rmo-hb-UKC" firstAttribute="leading" secondItem="wkL-jh-ErU" secondAttribute="trailing" constant="12" id="Xtd-Lm-gaS"/>
                 <constraint firstAttribute="bottom" secondItem="Rsj-cx-Ic8" secondAttribute="bottom" id="Y78-F4-5lX"/>
                 <constraint firstItem="KrN-Hx-jok" firstAttribute="top" secondItem="Rmo-hb-UKC" secondAttribute="bottom" constant="4" id="cAJ-Zc-qhf"/>
@@ -83,5 +110,6 @@
     </objects>
     <resources>
         <image name="avatar.png" width="60" height="60"/>
+        <image name="img_frame.png" width="180" height="56"/>
     </resources>
 </document>

@@ -40,7 +40,7 @@ extension WalletCell :  UICollectionViewDataSource, UICollectionViewDelegateFlow
     /// 网格分区
     /// 总共网格单元的个数
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return walletModel.data.count
+        return 1
     }
     
     // 网格单元

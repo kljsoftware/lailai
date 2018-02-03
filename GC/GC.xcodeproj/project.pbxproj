@@ -27,6 +27,7 @@
 		3C6550732025934400FE0504 /* tab_donate_nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C65506F2025934400FE0504 /* tab_donate_nor@2x.png */; };
 		3C6550742025934400FE0504 /* tab_donate_sel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C6550702025934400FE0504 /* tab_donate_sel@3x.png */; };
 		3C6550752025934400FE0504 /* tab_donate_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C6550712025934400FE0504 /* tab_donate_sel@2x.png */; };
+		3C6550772025A3BA00FE0504 /* img_frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C6550762025A3B900FE0504 /* img_frame.png */; };
 		3C8DCEEC201D76C400C9F40E /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C8DCEDA201D76C400C9F40E /* launch.png */; };
 		3C8DCEED201D76C400C9F40E /* tab_business_nor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C8DCEDC201D76C400C9F40E /* tab_business_nor@3x.png */; };
 		3C8DCEEE201D76C400C9F40E /* tab_wallet_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C8DCEDD201D76C400C9F40E /* tab_wallet_sel@2x.png */; };
@@ -144,6 +145,7 @@
 		3C65506F2025934400FE0504 /* tab_donate_nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_donate_nor@2x.png"; sourceTree = "<group>"; };
 		3C6550702025934400FE0504 /* tab_donate_sel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_donate_sel@3x.png"; sourceTree = "<group>"; };
 		3C6550712025934400FE0504 /* tab_donate_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_donate_sel@2x.png"; sourceTree = "<group>"; };
+		3C6550762025A3B900FE0504 /* img_frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_frame.png; sourceTree = "<group>"; };
 		3C8DCED5201D441000C9F40E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3C8DCED7201D441D00C9F40E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3C8DCEDA201D76C400C9F40E /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 		3C4B0708201EF7CA00856698 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				3C6550762025A3B900FE0504 /* img_frame.png */,
 				3C4B0709201EF7CA00856698 /* wallet_donate@3x.png */,
 				3C4B070A201EF7CA00856698 /* wallet_donate@2x.png */,
 			);
@@ -749,6 +752,7 @@
 				3C19391520207E1800E7D007 /* points.png in Resources */,
 				3CF364FC2022A916003179E8 /* Business.storyboard in Resources */,
 				3CF364FB2022A916003179E8 /* Launch.storyboard in Resources */,
+				3C6550772025A3BA00FE0504 /* img_frame.png in Resources */,
 				3C374618201DB866000FD752 /* splash.png in Resources */,
 				3CF364F92022A916003179E8 /* LaunchScreen.storyboard in Resources */,
 				3C8DCEEF201D76C400C9F40E /* tab_news_nor@3x.png in Resources */,
