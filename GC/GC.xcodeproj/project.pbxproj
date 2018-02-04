@@ -636,8 +636,8 @@
 				3CF364F32022A916003179E8 /* LoginViewController.swift */,
 				3CF365262022E52E003179E8 /* LoginModel.swift */,
 				3CF365282022E672003179E8 /* LoginViewModel.swift */,
-				3CF364F22022A916003179E8 /* FotgotPwd2ViewController.swift */,
 				3CF364F42022A916003179E8 /* FotgotPwdViewController.swift */,
+				3CF364F22022A916003179E8 /* FotgotPwd2ViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
