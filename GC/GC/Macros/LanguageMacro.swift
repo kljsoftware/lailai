@@ -26,6 +26,7 @@ enum LanguageKey : String {
     case nextStep     // 下一步
     case login        // 登录
     case logout       // 退出登录
+    case back_login   // 返回登陆
     case rememberpwd  // 记住密码
     case forgotpwd    // 忘记账号或密码
     case settingpwd   // 设置密码

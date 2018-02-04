@@ -48,6 +48,8 @@ class FotgotPwdViewController: UIViewController {
         nextButton.setTitle(LanguageKey.nextStep.value, for: .normal)
         sendCodeLabel.text = LanguageKey.sendCode.value
         setNextEnabled()
+        let buttonItem = UIBarButtonItem(title: LanguageKey.back_login.value, style: UIBarButtonItemStyle.done, target: self, action: #selector(onQuitButtonClicked))
+        navigationItem.rightBarButtonItem = buttonItem
     }
     
     /// 注册通知
@@ -126,7 +128,12 @@ class FotgotPwdViewController: UIViewController {
         }
     }
     
-    // MARK: - IBAction methods
+    // MARK: - Action methods
+    /// 返回登陆
+    func onQuitButtonClicked(sender:UIButton) {
+        NotificationCenter.default.post(name: NoticationUserLogin, object: nil)
+    }
+    
     /// 下一步
     @IBAction func onNextButtonClicked(_ sender: UIButton) {
         let vc = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "fotgotpwd2")

@@ -31,6 +31,14 @@ class Register2ViewController: UIViewController {
         pwdTextField.placeholder = LanguageKey.input_pwd.value
         pwd2TextField.placeholder = LanguageKey.input_pwd_again.value
         registerButton.setTitle(LanguageKey.register.value, for: .normal)
+        let buttonItem = UIBarButtonItem(title: LanguageKey.back_login.value, style: UIBarButtonItemStyle.done, target: self, action: #selector(onQuitButtonClicked))
+        navigationItem.rightBarButtonItem = buttonItem
+    }
+    
+    // MARK: - action methods
+    /// 返回登陆
+    func onQuitButtonClicked(sender:UIButton) {
+        NotificationCenter.default.post(name: NoticationUserLogin, object: nil)
     }
     
     /// 点击注册按钮

@@ -26,6 +26,14 @@ class FotgotPwd2ViewController: UIViewController {
         pwdTextField.placeholder = LanguageKey.input_pwd.value
         pwd2TextField.placeholder = LanguageKey.input_pwd_again.value
         saveButton.setTitle(LanguageKey.save.value, for: .normal)
+        let buttonItem = UIBarButtonItem(title: LanguageKey.back_login.value, style: UIBarButtonItemStyle.done, target: self, action: #selector(onQuitButtonClicked))
+        navigationItem.rightBarButtonItem = buttonItem
+    }
+    
+    // MARK: - action methods
+    /// 返回登陆
+    func onQuitButtonClicked(sender:UIButton) {
+        NotificationCenter.default.post(name: NoticationUserLogin, object: nil)
     }
     
     /// 点击保存密码按钮

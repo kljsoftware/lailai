@@ -333,10 +333,10 @@
 		3C7E26C52026930400ED4B56 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				3C7E26C92026930400ED4B56 /* ProfileDetailsViewController.swift */,
 				3C7E26C62026930400ED4B56 /* ProfileDetailAvatarCell.swift */,
 				3C7E26C72026930400ED4B56 /* ProfileDetailAvatarCell.xib */,
 				3C7E26C82026930400ED4B56 /* ProfileDetailOtherCell.swift */,
-				3C7E26C92026930400ED4B56 /* ProfileDetailsViewController.swift */,
 				3C7E26CA2026930400ED4B56 /* ProfileDetailDescCell.xib */,
 				3C7E26CB2026930400ED4B56 /* ProfileDetailOtherCell.xib */,
 				3C7E26CC2026930400ED4B56 /* ProfileDetailDescCell.swift */,
