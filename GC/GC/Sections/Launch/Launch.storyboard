@@ -8,6 +8,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Arial.ttf">
+            <string>ArialMT</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Splash View Controller-->
         <scene sceneID="pRw-sG-dSW">
@@ -24,52 +29,55 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash.png" translatesAutoresizingMaskIntoConstraints="NO" id="hay-3X-udI">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9wv-Fh-0hv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news_header.png" translatesAutoresizingMaskIntoConstraints="NO" id="9wv-Fh-0hv">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="678"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rut-qp-IQg" customClass="BorderView" customModule="GC" customModuleProvider="target">
-                                <rect key="frame" x="275" y="88" width="88" height="88"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rut-qp-IQg">
+                                <rect key="frame" x="319" y="88" width="44" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmC-0q-nGr">
-                                        <rect key="frame" x="44" y="10" width="0.0" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="22" y="17" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="10"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nlo-BR-ZBv">
-                                        <rect key="frame" x="44" y="78" width="0.0" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="22" y="21" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="10"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="6yz-tn-iTd"/>
-                                    <constraint firstAttribute="width" constant="88" id="8Wu-OR-4zI"/>
-                                    <constraint firstAttribute="bottom" secondItem="Nlo-BR-ZBv" secondAttribute="bottom" constant="10" id="8wI-ki-BQo"/>
-                                    <constraint firstItem="cmC-0q-nGr" firstAttribute="top" secondItem="rut-qp-IQg" secondAttribute="top" constant="10" id="UVy-66-JEC"/>
+                                    <constraint firstAttribute="height" constant="44" id="6yz-tn-iTd"/>
+                                    <constraint firstAttribute="width" constant="44" id="8Wu-OR-4zI"/>
+                                    <constraint firstItem="Nlo-BR-ZBv" firstAttribute="top" secondItem="cmC-0q-nGr" secondAttribute="bottom" constant="4" id="Uvt-Yz-kdA"/>
                                     <constraint firstItem="cmC-0q-nGr" firstAttribute="centerX" secondItem="rut-qp-IQg" secondAttribute="centerX" id="V2t-q0-CKz"/>
+                                    <constraint firstItem="cmC-0q-nGr" firstAttribute="centerY" secondItem="rut-qp-IQg" secondAttribute="centerY" constant="-5" id="ZGh-K0-YfQ"/>
                                     <constraint firstItem="Nlo-BR-ZBv" firstAttribute="centerX" secondItem="rut-qp-IQg" secondAttribute="centerX" id="d0T-EQ-rDk"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="radius">
-                                        <real key="value" value="44"/>
+                                        <real key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="fill">
-                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="stroke">
-                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ER-re-UgV">
-                                <rect key="frame" x="275" y="88" width="88" height="88"/>
+                                <rect key="frame" x="319" y="88" width="44" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="TKH-MZ-9b4"/>
-                                    <constraint firstAttribute="width" constant="88" id="Z0a-Ec-fNK"/>
+                                    <constraint firstAttribute="height" constant="44" id="TKH-MZ-9b4"/>
+                                    <constraint firstAttribute="width" constant="44" id="Z0a-Ec-fNK"/>
                                 </constraints>
                                 <connections>
                                     <action selector="onSkipButtonClicked:" destination="TcE-Yt-V8A" eventType="touchUpInside" id="If9-69-Gmj"/>
@@ -122,6 +130,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="news_header.png" width="533" height="300"/>
         <image name="splash.png" width="750" height="1334"/>
     </resources>
 </document>

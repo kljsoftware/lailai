@@ -91,9 +91,11 @@ extension ProfileViewController : UITableViewDataSource, UITableViewDelegate {
             let vc = UIStoryboard.init(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ProfileDetails")
             navigationController?.pushViewController(vc, animated: true)
         case .setting:
-            break
+            let vc = UIStoryboard.init(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ProfileSetting")
+            navigationController?.pushViewController(vc, animated: true)
         case .business_link:
-            break
+            let vc = UIStoryboard.init(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ProfileBusiness")
+            navigationController?.pushViewController(vc, animated: true)
         case .quit:
             NotificationCenter.default.post(name: NoticationUserLogout, object: nil)
         }

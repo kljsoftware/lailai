@@ -23,7 +23,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="54.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Umn-KW-ep3">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news_header.png" translatesAutoresizingMaskIntoConstraints="NO" id="Umn-KW-ep3">
                         <rect key="frame" x="12" y="11.5" width="32" height="32"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="32" id="S2w-cT-aLO"/>
@@ -74,5 +74,6 @@
     </objects>
     <resources>
         <image name="common_forward.png" width="5" height="9"/>
+        <image name="news_header.png" width="533" height="300"/>
     </resources>
 </document>

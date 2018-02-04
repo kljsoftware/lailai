@@ -8,6 +8,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Arial.ttf">
+            <string>ArialMT</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="vtU-Nx-HjA">
@@ -119,6 +124,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBa-o0-6cJ">
                                         <rect key="frame" x="0.0" y="-0.5" width="351" height="44"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                         <state key="normal">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -148,18 +154,20 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acv-3b-FPs">
-                                <rect key="frame" x="12" y="364" width="30" height="30"/>
+                                <rect key="frame" x="16" y="364" width="30" height="28"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
                                 <state key="normal">
-                                    <color key="titleColor" red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="onRegisterButtonClicked:" destination="MZ6-WJ-kJy" eventType="touchUpInside" id="2p3-jB-hTT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3R-6X-9dU">
-                                <rect key="frame" x="333" y="364" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3R-6X-9dU">
+                                <rect key="frame" x="329" y="364" width="30" height="28"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
                                 <state key="normal">
-                                    <color key="titleColor" red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="onForgotButtonClicked:" destination="MZ6-WJ-kJy" eventType="touchUpInside" id="XyF-WA-kd7"/>
@@ -175,14 +183,14 @@
                             <constraint firstItem="e3R-6X-9dU" firstAttribute="top" secondItem="p2u-OT-Plt" secondAttribute="bottom" constant="12" id="OWq-C0-Rch"/>
                             <constraint firstItem="0Ox-dG-xLq" firstAttribute="leading" secondItem="4iD-vT-q6U" secondAttribute="leading" constant="24" id="QFv-9o-Bjf"/>
                             <constraint firstAttribute="trailing" secondItem="keQ-lH-Nme" secondAttribute="trailing" constant="24" id="QqP-IN-V4t"/>
-                            <constraint firstAttribute="trailing" secondItem="e3R-6X-9dU" secondAttribute="trailing" constant="12" id="XCs-CC-WJR"/>
+                            <constraint firstAttribute="trailing" secondItem="e3R-6X-9dU" secondAttribute="trailing" constant="16" id="XCs-CC-WJR"/>
                             <constraint firstItem="p2u-OT-Plt" firstAttribute="top" secondItem="0Ox-dG-xLq" secondAttribute="bottom" constant="88" id="agc-hq-93Y"/>
                             <constraint firstItem="acv-3b-FPs" firstAttribute="top" secondItem="p2u-OT-Plt" secondAttribute="bottom" constant="12" id="f1w-XO-X2c"/>
                             <constraint firstAttribute="trailing" secondItem="SBk-4R-Qee" secondAttribute="trailing" constant="24" id="mOo-Tx-XoT"/>
                             <constraint firstItem="keQ-lH-Nme" firstAttribute="leading" secondItem="4iD-vT-q6U" secondAttribute="leading" constant="24" id="oUe-z2-LZd"/>
                             <constraint firstItem="0Ox-dG-xLq" firstAttribute="top" secondItem="SBk-4R-Qee" secondAttribute="bottom" id="r8a-FE-zNu"/>
                             <constraint firstAttribute="trailing" secondItem="0Ox-dG-xLq" secondAttribute="trailing" constant="24" id="raP-LI-UEt"/>
-                            <constraint firstItem="acv-3b-FPs" firstAttribute="leading" secondItem="4iD-vT-q6U" secondAttribute="leading" constant="12" id="sdx-EW-KM0"/>
+                            <constraint firstItem="acv-3b-FPs" firstAttribute="leading" secondItem="4iD-vT-q6U" secondAttribute="leading" constant="16" id="sdx-EW-KM0"/>
                             <constraint firstAttribute="trailing" secondItem="p2u-OT-Plt" secondAttribute="trailing" constant="12" id="zIi-A7-DDB"/>
                         </constraints>
                     </view>

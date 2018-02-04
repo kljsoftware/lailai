@@ -31,6 +31,15 @@
 		3C65507A2025DF7C00FE0504 /* DonateRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6550792025DF7C00FE0504 /* DonateRecordViewController.swift */; };
 		3C65507D2025E50E00FE0504 /* DonateRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C65507B2025E50E00FE0504 /* DonateRecordCell.swift */; };
 		3C65507E2025E50E00FE0504 /* DonateRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C65507C2025E50E00FE0504 /* DonateRecordCell.xib */; };
+		3C7E26CF2026930400ED4B56 /* ProfileDetailAvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7E26C62026930400ED4B56 /* ProfileDetailAvatarCell.swift */; };
+		3C7E26D02026930400ED4B56 /* ProfileDetailAvatarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C7E26C72026930400ED4B56 /* ProfileDetailAvatarCell.xib */; };
+		3C7E26D12026930400ED4B56 /* ProfileDetailOtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7E26C82026930400ED4B56 /* ProfileDetailOtherCell.swift */; };
+		3C7E26D22026930400ED4B56 /* ProfileDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7E26C92026930400ED4B56 /* ProfileDetailsViewController.swift */; };
+		3C7E26D32026930400ED4B56 /* ProfileDetailDescCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C7E26CA2026930400ED4B56 /* ProfileDetailDescCell.xib */; };
+		3C7E26D42026930500ED4B56 /* ProfileDetailOtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C7E26CB2026930400ED4B56 /* ProfileDetailOtherCell.xib */; };
+		3C7E26D52026930500ED4B56 /* ProfileDetailDescCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7E26CC2026930400ED4B56 /* ProfileDetailDescCell.swift */; };
+		3C7E26D72026960100ED4B56 /* ProfileSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7E26D62026960100ED4B56 /* ProfileSettingViewController.swift */; };
+		3C7E26D9202698B000ED4B56 /* ProfileBusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7E26D8202698B000ED4B56 /* ProfileBusinessViewController.swift */; };
 		3C8DCEEC201D76C400C9F40E /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C8DCEDA201D76C400C9F40E /* launch.png */; };
 		3C8DCEED201D76C400C9F40E /* tab_business_nor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C8DCEDC201D76C400C9F40E /* tab_business_nor@3x.png */; };
 		3C8DCEEE201D76C400C9F40E /* tab_wallet_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C8DCEDD201D76C400C9F40E /* tab_wallet_sel@2x.png */; };
@@ -76,12 +85,6 @@
 		3CD6AA262025F07900EAEECA /* ProfileQuitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6AA242025F07900EAEECA /* ProfileQuitCell.swift */; };
 		3CD6AA272025F07900EAEECA /* ProfileQuitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CD6AA252025F07900EAEECA /* ProfileQuitCell.xib */; };
 		3CD6AA292025F9D900EAEECA /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6AA282025F9D900EAEECA /* BaseNavigationController.swift */; };
-		3CD6AA2C2025FF8000EAEECA /* ProfileDetailAvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6AA2A2025FF8000EAEECA /* ProfileDetailAvatarCell.swift */; };
-		3CD6AA2D2025FF8000EAEECA /* ProfileDetailAvatarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CD6AA2B2025FF8000EAEECA /* ProfileDetailAvatarCell.xib */; };
-		3CD6AA302025FF9D00EAEECA /* ProfileDetailOtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6AA2E2025FF9D00EAEECA /* ProfileDetailOtherCell.swift */; };
-		3CD6AA312025FF9D00EAEECA /* ProfileDetailOtherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CD6AA2F2025FF9D00EAEECA /* ProfileDetailOtherCell.xib */; };
-		3CD6AA342025FFB600EAEECA /* ProfileDetailDescCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6AA322025FFB600EAEECA /* ProfileDetailDescCell.swift */; };
-		3CD6AA352025FFB600EAEECA /* ProfileDetailDescCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CD6AA332025FFB600EAEECA /* ProfileDetailDescCell.xib */; };
 		3CF364C42022A3ED003179E8 /* HTTPSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF364C32022A3ED003179E8 /* HTTPSessionManager.swift */; };
 		3CF364F52022A916003179E8 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF364C72022A916003179E8 /* Home.storyboard */; };
 		3CF364F62022A916003179E8 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF364C82022A916003179E8 /* HomeTabBarController.swift */; };
@@ -102,7 +105,6 @@
 		3CF365052022A916003179E8 /* Register2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF364DB2022A916003179E8 /* Register2ViewController.swift */; };
 		3CF365062022A916003179E8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF364DC2022A916003179E8 /* RegisterViewController.swift */; };
 		3CF365072022A916003179E8 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF364DE2022A916003179E8 /* Profile.storyboard */; };
-		3CF365082022A916003179E8 /* ProfileDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF364DF2022A916003179E8 /* ProfileDetailsViewController.swift */; };
 		3CF365092022A916003179E8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF364E02022A916003179E8 /* ProfileViewController.swift */; };
 		3CF3650A2022A916003179E8 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF364E22022A916003179E8 /* NewsCell.swift */; };
 		3CF3650B2022A916003179E8 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF364E32022A916003179E8 /* NewsViewController.swift */; };
@@ -165,6 +167,15 @@
 		3C6550792025DF7C00FE0504 /* DonateRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateRecordViewController.swift; sourceTree = "<group>"; };
 		3C65507B2025E50E00FE0504 /* DonateRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateRecordCell.swift; sourceTree = "<group>"; };
 		3C65507C2025E50E00FE0504 /* DonateRecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonateRecordCell.xib; sourceTree = "<group>"; };
+		3C7E26C62026930400ED4B56 /* ProfileDetailAvatarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailAvatarCell.swift; sourceTree = "<group>"; };
+		3C7E26C72026930400ED4B56 /* ProfileDetailAvatarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileDetailAvatarCell.xib; sourceTree = "<group>"; };
+		3C7E26C82026930400ED4B56 /* ProfileDetailOtherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailOtherCell.swift; sourceTree = "<group>"; };
+		3C7E26C92026930400ED4B56 /* ProfileDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailsViewController.swift; sourceTree = "<group>"; };
+		3C7E26CA2026930400ED4B56 /* ProfileDetailDescCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileDetailDescCell.xib; sourceTree = "<group>"; };
+		3C7E26CB2026930400ED4B56 /* ProfileDetailOtherCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileDetailOtherCell.xib; sourceTree = "<group>"; };
+		3C7E26CC2026930400ED4B56 /* ProfileDetailDescCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailDescCell.swift; sourceTree = "<group>"; };
+		3C7E26D62026960100ED4B56 /* ProfileSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingViewController.swift; sourceTree = "<group>"; };
+		3C7E26D8202698B000ED4B56 /* ProfileBusinessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBusinessViewController.swift; sourceTree = "<group>"; };
 		3C8DCED5201D441000C9F40E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3C8DCED7201D441D00C9F40E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3C8DCEDA201D76C400C9F40E /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
@@ -213,12 +224,6 @@
 		3CD6AA242025F07900EAEECA /* ProfileQuitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileQuitCell.swift; sourceTree = "<group>"; };
 		3CD6AA252025F07900EAEECA /* ProfileQuitCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileQuitCell.xib; sourceTree = "<group>"; };
 		3CD6AA282025F9D900EAEECA /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
-		3CD6AA2A2025FF8000EAEECA /* ProfileDetailAvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailAvatarCell.swift; sourceTree = "<group>"; };
-		3CD6AA2B2025FF8000EAEECA /* ProfileDetailAvatarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileDetailAvatarCell.xib; sourceTree = "<group>"; };
-		3CD6AA2E2025FF9D00EAEECA /* ProfileDetailOtherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailOtherCell.swift; sourceTree = "<group>"; };
-		3CD6AA2F2025FF9D00EAEECA /* ProfileDetailOtherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileDetailOtherCell.xib; sourceTree = "<group>"; };
-		3CD6AA322025FFB600EAEECA /* ProfileDetailDescCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailDescCell.swift; sourceTree = "<group>"; };
-		3CD6AA332025FFB600EAEECA /* ProfileDetailDescCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileDetailDescCell.xib; sourceTree = "<group>"; };
 		3CF364C32022A3ED003179E8 /* HTTPSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPSessionManager.swift; sourceTree = "<group>"; };
 		3CF364C72022A916003179E8 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		3CF364C82022A916003179E8 /* HomeTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
@@ -239,7 +244,6 @@
 		3CF364DB2022A916003179E8 /* Register2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register2ViewController.swift; sourceTree = "<group>"; };
 		3CF364DC2022A916003179E8 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3CF364DE2022A916003179E8 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
-		3CF364DF2022A916003179E8 /* ProfileDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailsViewController.swift; sourceTree = "<group>"; };
 		3CF364E02022A916003179E8 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3CF364E22022A916003179E8 /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		3CF364E32022A916003179E8 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -324,6 +328,36 @@
 				3C65507C2025E50E00FE0504 /* DonateRecordCell.xib */,
 			);
 			path = Donate;
+			sourceTree = "<group>";
+		};
+		3C7E26C52026930400ED4B56 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				3C7E26C62026930400ED4B56 /* ProfileDetailAvatarCell.swift */,
+				3C7E26C72026930400ED4B56 /* ProfileDetailAvatarCell.xib */,
+				3C7E26C82026930400ED4B56 /* ProfileDetailOtherCell.swift */,
+				3C7E26C92026930400ED4B56 /* ProfileDetailsViewController.swift */,
+				3C7E26CA2026930400ED4B56 /* ProfileDetailDescCell.xib */,
+				3C7E26CB2026930400ED4B56 /* ProfileDetailOtherCell.xib */,
+				3C7E26CC2026930400ED4B56 /* ProfileDetailDescCell.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		3C7E26CD2026930400ED4B56 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				3C7E26D62026960100ED4B56 /* ProfileSettingViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		3C7E26CE2026930400ED4B56 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				3C7E26D8202698B000ED4B56 /* ProfileBusinessViewController.swift */,
+			);
+			path = Business;
 			sourceTree = "<group>";
 		};
 		3C8DCED9201D76C400C9F40E /* Launch */ = {
@@ -546,6 +580,9 @@
 		3CF364DD2022A916003179E8 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				3C7E26C52026930400ED4B56 /* Detail */,
+				3C7E26CD2026930400ED4B56 /* Setting */,
+				3C7E26CE2026930400ED4B56 /* Business */,
 				3CF364DE2022A916003179E8 /* Profile.storyboard */,
 				3CF364E02022A916003179E8 /* ProfileViewController.swift */,
 				3CD6AA1C2025EE4900EAEECA /* ProfileCell.swift */,
@@ -554,13 +591,6 @@
 				3CD6AA212025F05F00EAEECA /* ProfielSettingCell.xib */,
 				3CD6AA242025F07900EAEECA /* ProfileQuitCell.swift */,
 				3CD6AA252025F07900EAEECA /* ProfileQuitCell.xib */,
-				3CF364DF2022A916003179E8 /* ProfileDetailsViewController.swift */,
-				3CD6AA2A2025FF8000EAEECA /* ProfileDetailAvatarCell.swift */,
-				3CD6AA2B2025FF8000EAEECA /* ProfileDetailAvatarCell.xib */,
-				3CD6AA2E2025FF9D00EAEECA /* ProfileDetailOtherCell.swift */,
-				3CD6AA2F2025FF9D00EAEECA /* ProfileDetailOtherCell.xib */,
-				3CD6AA322025FFB600EAEECA /* ProfileDetailDescCell.swift */,
-				3CD6AA332025FFB600EAEECA /* ProfileDetailDescCell.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -806,11 +836,11 @@
 				3CF365172022A916003179E8 /* Login.storyboard in Resources */,
 				3CFD84F5201C9B5900F9E7E5 /* Assets.xcassets in Resources */,
 				3C91FC32201F3C7C00BB492D /* common_forward@2x.png in Resources */,
+				3C7E26D32026930400ED4B56 /* ProfileDetailDescCell.xib in Resources */,
 				3C19391520207E1800E7D007 /* points.png in Resources */,
 				3CF364FC2022A916003179E8 /* Business.storyboard in Resources */,
 				3CF364FB2022A916003179E8 /* Launch.storyboard in Resources */,
 				3CD6AA1F2025EE4900EAEECA /* ProfileCell.xib in Resources */,
-				3CD6AA312025FF9D00EAEECA /* ProfileDetailOtherCell.xib in Resources */,
 				3CD6AA232025F05F00EAEECA /* ProfielSettingCell.xib in Resources */,
 				3C6550772025A3BA00FE0504 /* img_frame.png in Resources */,
 				3C374618201DB866000FD752 /* splash.png in Resources */,
@@ -833,15 +863,15 @@
 				3C8DCEFA201D76C400C9F40E /* tab_wallet_nor@3x.png in Resources */,
 				3C4B070C201EF7CA00856698 /* wallet_donate@2x.png in Resources */,
 				3C91FC31201F3C7C00BB492D /* common_forward@3x.png in Resources */,
+				3C7E26D42026930500ED4B56 /* ProfileDetailOtherCell.xib in Resources */,
 				3CF3650D2022A916003179E8 /* News.storyboard in Resources */,
 				3C65507E2025E50E00FE0504 /* DonateRecordCell.xib in Resources */,
-				3CD6AA352025FFB600EAEECA /* ProfileDetailDescCell.xib in Resources */,
 				3CF364F52022A916003179E8 /* Home.storyboard in Resources */,
 				3C8DCEEC201D76C400C9F40E /* launch.png in Resources */,
 				3CF365012022A916003179E8 /* BusinessTitleView.xib in Resources */,
 				3C4B070B201EF7CA00856698 /* wallet_donate@3x.png in Resources */,
 				3C8DCEF3201D76C400C9F40E /* tab_wallet_sel@3x.png in Resources */,
-				3CD6AA2D2025FF8000EAEECA /* ProfileDetailAvatarCell.xib in Resources */,
+				3C7E26D02026930400ED4B56 /* ProfileDetailAvatarCell.xib in Resources */,
 				3C8DCEF8201D76C400C9F40E /* tab_business_sel@3x.png in Resources */,
 				3C91FC2C201F3A9E00BB492D /* avatar@3x.png in Resources */,
 				3CF365162022A916003179E8 /* PersonalDonateView.xib in Resources */,
@@ -930,6 +960,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CB5539D201CB73F009AC1CD /* String+Extension.swift in Sources */,
+				3C7E26D72026960100ED4B56 /* ProfileSettingViewController.swift in Sources */,
 				3CF3650A2022A916003179E8 /* NewsCell.swift in Sources */,
 				3CB5539A201CB73F009AC1CD /* UIView+Extension.swift in Sources */,
 				3CF365182022A916003179E8 /* FotgotPwd2ViewController.swift in Sources */,
@@ -940,13 +971,13 @@
 				3C65505E20243D0300FE0504 /* WalletSectionCell.swift in Sources */,
 				3CD6AA1E2025EE4900EAEECA /* ProfileCell.swift in Sources */,
 				3CF365292022E672003179E8 /* LoginViewModel.swift in Sources */,
-				3CD6AA342025FFB600EAEECA /* ProfileDetailDescCell.swift in Sources */,
+				3C7E26D52026930500ED4B56 /* ProfileDetailDescCell.swift in Sources */,
 				3CF3650B2022A916003179E8 /* NewsViewController.swift in Sources */,
 				3CF365092022A916003179E8 /* ProfileViewController.swift in Sources */,
 				3CF364FF2022A916003179E8 /* BusinessView.swift in Sources */,
 				3CF3651C2022A98D003179E8 /* RegisterModel.swift in Sources */,
-				3CD6AA302025FF9D00EAEECA /* ProfileDetailOtherCell.swift in Sources */,
 				3CF364F72022A916003179E8 /* DonateViewController.swift in Sources */,
+				3C7E26D22026930400ED4B56 /* ProfileDetailsViewController.swift in Sources */,
 				3CF365132022A916003179E8 /* WalletCollectionViewCell.swift in Sources */,
 				3CF3651A2022A916003179E8 /* FotgotPwdViewController.swift in Sources */,
 				3CB55394201CB73F009AC1CD /* OnePixelConstraint.swift in Sources */,
@@ -960,11 +991,13 @@
 				3CF3652B2022EB19003179E8 /* UIHelper.swift in Sources */,
 				3CB553A3201CB73F009AC1CD /* LanguageMacro.swift in Sources */,
 				3CF365192022A916003179E8 /* LoginViewController.swift in Sources */,
+				3C7E26D9202698B000ED4B56 /* ProfileBusinessViewController.swift in Sources */,
+				3C7E26D12026930400ED4B56 /* ProfileDetailOtherCell.swift in Sources */,
+				3C7E26CF2026930400ED4B56 /* ProfileDetailAvatarCell.swift in Sources */,
 				3CF365062022A916003179E8 /* RegisterViewController.swift in Sources */,
 				3CB55399201CB73F009AC1CD /* UIButton+Extension.swift in Sources */,
 				3CF3653320232377003179E8 /* BusinessViewModel.swift in Sources */,
 				3CB553A1201CB73F009AC1CD /* UserDefaultMacro.swift in Sources */,
-				3CF365082022A916003179E8 /* ProfileDetailsViewController.swift in Sources */,
 				3CF365272022E52E003179E8 /* LoginModel.swift in Sources */,
 				3CF365112022A916003179E8 /* PersonalDonateView.swift in Sources */,
 				3CD6AA222025F05F00EAEECA /* ProfielSettingCell.swift in Sources */,
@@ -990,7 +1023,6 @@
 				3CF365122022A916003179E8 /* WalletViewController.swift in Sources */,
 				3CB55398201CB73F009AC1CD /* Date+Extension.swift in Sources */,
 				3CB55395201CB73F009AC1CD /* PortraitViewController.swift in Sources */,
-				3CD6AA2C2025FF8000EAEECA /* ProfileDetailAvatarCell.swift in Sources */,
 				3CF365052022A916003179E8 /* Register2ViewController.swift in Sources */,
 				3CB5539E201CB73F009AC1CD /* Dictionary+Extension.swift in Sources */,
 				3CD6AA262025F07900EAEECA /* ProfileQuitCell.swift in Sources */,

@@ -42,11 +42,49 @@
                     <connections>
                         <outlet property="tableView" destination="Q9G-Jw-egU" id="4Ow-ih-uU7"/>
                         <segue destination="UG2-Uf-XYr" kind="show" id="XgS-pg-k3s"/>
+                        <segue destination="oTC-ux-9yt" kind="show" id="sq5-8F-qdA"/>
+                        <segue destination="oKL-br-MNH" kind="show" id="5HR-Zt-8Qi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1A-Mi-XWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="544.79999999999995" y="201.94902548725639"/>
+        </scene>
+        <!--Profile Setting View Controller-->
+        <scene sceneID="JXU-xi-o5Z">
+            <objects>
+                <viewController storyboardIdentifier="ProfileSetting" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oTC-ux-9yt" customClass="ProfileSettingViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CGc-XG-TAc"/>
+                        <viewControllerLayoutGuide type="bottom" id="unA-UG-lt8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6iE-Ku-mjG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GLc-aY-kng" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1361" y="202"/>
+        </scene>
+        <!--Profile Business View Controller-->
+        <scene sceneID="eAR-SQ-xTs">
+            <objects>
+                <viewController storyboardIdentifier="ProfileBusiness" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oKL-br-MNH" customClass="ProfileBusinessViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Yb-Ee-rk3"/>
+                        <viewControllerLayoutGuide type="bottom" id="IGj-yM-FLZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q5Q-Ni-XpU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XLb-t9-F1J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1361" y="974"/>
         </scene>
         <!--Profile Details View Controller-->
         <scene sceneID="enM-fY-On1">
@@ -84,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rN5-CE-MIo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1346" y="202"/>
+            <point key="canvasLocation" x="1361" y="-533"/>
         </scene>
         <!--Base Navigation Controller-->
         <scene sceneID="5sf-ZS-4YE">
