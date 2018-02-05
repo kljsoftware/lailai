@@ -8,13 +8,7 @@
 
 
 // MARK: - 服务器地址
-#if true
-    let SERVER_ADDRESS = "106.14.170.7"   //测试服
-#else
-    let SERVER_ADDRESS = "47.93.125.157/v2"   //正式服
-#endif
-
-let HTTP_ADDRESS       = "http://\(SERVER_ADDRESS)"
+let HTTP_ADDRESS = "https://api.greencitycoin.cn"   //正式服
 
 // 加密key
 let ENCRYPTION_KEY     = "Guall0130"
