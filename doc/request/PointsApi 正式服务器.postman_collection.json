@@ -63,6 +63,66 @@
 			"id": "1af01e84-a471-c05b-4447-b205f60eb3f9"
 		},
 		{
+			"name": "3.15获取闪屏页广告",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"order": [
+				"eff79c89-e506-9933-46b1-b0967b12eb46"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "236d3ed5-b222-b2cf-6cb6-47ab196433fe"
+		},
+		{
+			"name": "3.16积分页广告",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"order": [
+				"d2442764-1469-5115-18aa-11f654d9cd19"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "3718c8cb-9e82-9558-8a93-559a05149697"
+		},
+		{
+			"name": "3.17获取个人用户信息",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"order": [
+				"4eb1f0ac-4454-1f45-38ea-c84566a070d1"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "9007bd01-ef7c-ae31-fbd7-49c643af2200"
+		},
+		{
+			"name": "3.18根据位置返回商家列表",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"order": [
+				"a45c118b-da3e-c034-fcbd-bd42263022ac"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "e14388ef-c16a-cbe4-bdac-fff65f27ee21"
+		},
+		{
+			"name": "3.19根据关键词返回绿色商家列表",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"order": [
+				"ca7fdd22-ef4e-9acf-a3ea-c506a562d3b2"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "3675a417-3432-fb37-851e-ca27548d7567"
+		},
+		{
 			"name": "3.1注册",
 			"description": "",
 			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
@@ -74,6 +134,18 @@
 			"folders_order": [],
 			"auth": null,
 			"id": "51b75969-9ac1-1538-77e0-feeb813c2757"
+		},
+		{
+			"name": "3.20获取新闻",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"order": [
+				"18b2109e-b4d7-3827-3559-9b46b7aa3709"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "c384ef3f-c53c-61d4-600b-63badac37c8a"
 		},
 		{
 			"name": "3.3登陆(用户名密码登录)",
@@ -195,7 +267,13 @@
 		"3268e124-ac90-3290-f479-bcab7561553e",
 		"ff848232-4f93-dc77-db63-61347e2527d2",
 		"816124aa-0d32-cbaf-9d7b-873feecea5cd",
-		"1af01e84-a471-c05b-4447-b205f60eb3f9"
+		"1af01e84-a471-c05b-4447-b205f60eb3f9",
+		"236d3ed5-b222-b2cf-6cb6-47ab196433fe",
+		"3718c8cb-9e82-9558-8a93-559a05149697",
+		"9007bd01-ef7c-ae31-fbd7-49c643af2200",
+		"e14388ef-c16a-cbe4-bdac-fff65f27ee21",
+		"3675a417-3432-fb37-851e-ca27548d7567",
+		"c384ef3f-c53c-61d4-600b-63badac37c8a"
 	],
 	"timestamp": 1517302149619,
 	"owner": "3630550",
@@ -303,6 +381,30 @@
 			"rawModeData": "{\r\n\t\"tel\": \"13313499588\",\r\n\t\"password\": \"123456789\",\r\n\t\"code\": \"ZjUzN2FkZGY0MmJiYjU3NDIwOWFkNWJmNDExMjYzYmU1YTJmYjdkMA==\"\r\n}"
 		},
 		{
+			"id": "18b2109e-b4d7-3827-3559-9b46b7aa3709",
+			"headers": "",
+			"headerData": [],
+			"url": "https://api.greencitycoin.cn/v2/KwT4Dw5NPIGPhYAR8Wi4Kw/getNews",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"events": [],
+			"auth": null,
+			"method": "GET",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"data": null,
+			"dataMode": "params",
+			"name": "https://api.greencitycoin.cn/v2/KwT4Dw5NPIGPhYAR8Wi4Kw/getNews",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1517799775770,
+			"version": 2,
+			"responses": [],
+			"folder": "c384ef3f-c53c-61d4-600b-63badac37c8a",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
 			"id": "277cbce2-0f0a-5556-8d9c-f594ad650be0",
 			"headers": "",
 			"headerData": [],
@@ -401,6 +503,27 @@
 			"currentHelper": null,
 			"helperAttributes": null,
 			"rawModeData": "{\r\n\"newPassword\":\"123456789\",\r\n\"oldPassword\":\"1234567\"\r\n}\r\n"
+		},
+		{
+			"id": "4eb1f0ac-4454-1f45-38ea-c84566a070d1",
+			"headers": "",
+			"headerData": [],
+			"url": "https://api.greencitycoin.cn/v2/KwT4Dw5NPIGPhYAR8Wi4Kw/getUserInfo",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"auth": null,
+			"time": 1517799518645,
+			"name": "https://api.greencitycoin.cn/v2/KwT4Dw5NPIGPhYAR8Wi4Kw/getUserInfo",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null
 		},
 		{
 			"id": "699b6375-b4e4-b593-bba9-111ec8221387",
@@ -516,6 +639,122 @@
 			"helperAttributes": null
 		},
 		{
+			"id": "a45c118b-da3e-c034-fcbd-bd42263022ac",
+			"headers": "",
+			"headerData": [],
+			"url": "https://api.greencitycoin.cn/v2/KwT4Dw5NPIGPhYAR8Wi4Kw/getDealersByAddress?address=16.5333,17.3456&page=0&size=10",
+			"queryParams": [
+				{
+					"key": "address",
+					"value": "16.5333,17.3456",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "page",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "size",
+					"value": "10",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"events": [],
+			"auth": null,
+			"method": "GET",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"data": null,
+			"dataMode": "params",
+			"name": "https://api.greencitycoin.cn/v2/KwT4Dw5NPIGPhYAR8Wi4Kw/getDealersByAddress?address=16.5333,17.3456&page=0&size=10",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1517799620825,
+			"version": 2,
+			"responses": [],
+			"folder": "e14388ef-c16a-cbe4-bdac-fff65f27ee21",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "ca7fdd22-ef4e-9acf-a3ea-c506a562d3b2",
+			"headers": "",
+			"headerData": [],
+			"url": "https://api.greencitycoin.cn/v2/KwT4Dw5NPIGPhYAR8Wi4Kw/getDealersByName? name =星巴克address=16.5333,17.3456&page=0&size=10",
+			"queryParams": [
+				{
+					"key": " name ",
+					"value": "星巴克address=16.5333,17.3456",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "page",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "size",
+					"value": "10",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"events": [],
+			"auth": null,
+			"method": "GET",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"data": null,
+			"dataMode": "params",
+			"name": "https://api.greencitycoin.cn/v2/KwT4Dw5NPIGPhYAR8Wi4Kw/getDealersByName? name =星巴克address=16.5333,17.3456&page=0&size=10",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1517799707040,
+			"version": 2,
+			"responses": [],
+			"folder": "3675a417-3432-fb37-851e-ca27548d7567",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "d2442764-1469-5115-18aa-11f654d9cd19",
+			"headers": "",
+			"headerData": [],
+			"url": "https://api.greencitycoin.cn/v2/getPointsPageAd",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"events": [],
+			"auth": null,
+			"method": "GET",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"data": null,
+			"dataMode": "params",
+			"name": "https://api.greencitycoin.cn/v2/getPointsPageAd",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1517799265753,
+			"version": 2,
+			"responses": [],
+			"folder": "3718c8cb-9e82-9558-8a93-559a05149697",
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
 			"id": "db445a70-7705-2f19-41ec-2998b1bd46ad",
 			"headers": "",
 			"headerData": [],
@@ -534,6 +773,30 @@
 			"description": "",
 			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
 			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "eff79c89-e506-9933-46b1-b0967b12eb46",
+			"headers": "",
+			"headerData": [],
+			"url": "https://api.greencitycoin.cn/v2/getPointsScAd",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"events": [],
+			"auth": null,
+			"method": "GET",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"data": null,
+			"dataMode": "params",
+			"name": "https://api.greencitycoin.cn/v2/getPointsScAd",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1517799232150,
+			"version": 2,
+			"responses": [],
+			"folder": "236d3ed5-b222-b2cf-6cb6-47ab196433fe",
 			"currentHelper": null,
 			"helperAttributes": null
 		},
