@@ -1,0 +1,587 @@
+{
+	"id": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+	"name": "PointsApi 正式服务器",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"name": "3.10积分钱包",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"order": [
+				"277cbce2-0f0a-5556-8d9c-f594ad650be0"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "274a0a0c-23a6-cede-fe46-749ca4c8fb43"
+		},
+		{
+			"name": "3.11捐赠记录",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"order": [
+				"040eff6a-cf25-ed1a-9d22-8ff2ac5fe6d4"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "3268e124-ac90-3290-f479-bcab7561553e"
+		},
+		{
+			"name": "3.12绿色地图",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"order": [
+				"a1796817-fcba-643e-3999-33002cc31997"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "ff848232-4f93-dc77-db63-61347e2527d2"
+		},
+		{
+			"name": "3.13查看反馈信息",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"order": [
+				"fbbef21f-a6a7-a8c1-545f-3e9f61bf5437"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "816124aa-0d32-cbaf-9d7b-873feecea5cd"
+		},
+		{
+			"name": "3.14",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"order": [],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "1af01e84-a471-c05b-4447-b205f60eb3f9"
+		},
+		{
+			"name": "3.1注册",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"order": [
+				"699b6375-b4e4-b593-bba9-111ec8221387",
+				"87cbc9b3-3f9c-925e-cad5-b429f85afd8a"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "51b75969-9ac1-1538-77e0-feeb813c2757"
+		},
+		{
+			"name": "3.3登陆(用户名密码登录)",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"order": [
+				"185774fe-efc2-0a87-5b6e-710e420deb02"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "50ad1559-f1f0-7c63-c65b-a11cd32f32aa"
+		},
+		{
+			"name": "3.4检查token是否过期",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"order": [
+				"38c85a95-ca8e-a7d8-a50f-579397b34a9f"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "d3e75815-51ae-212b-8b68-807deeef3fb6"
+		},
+		{
+			"name": "3.5个人信息修改",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"order": [
+				"84e87ed5-ab1d-8f8c-e979-be4de7d47c7e"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "b3201d2f-7d4a-fa98-c360-415d1fc157c5"
+		},
+		{
+			"name": "3.6密码修改",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"order": [
+				"4d7697ed-e481-0f91-50ab-57c8e6a29b8d"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "b553bd12-a182-72ef-bf13-bf89a5633c6a"
+		},
+		{
+			"name": "3.7反馈信息",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"order": [
+				"0e410335-e715-457a-d260-6877bfdfff34"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "75f25946-0847-defa-042a-1852891af1d8"
+		},
+		{
+			"name": "3.9关于",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"order": [
+				"f8334d6c-d705-5acf-48b1-cf59fae365d0"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "24e7ec56-2d4e-7a26-f270-0cfeade3e784"
+		},
+		{
+			"name": "得到全部的用户（测试使用）",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"order": [
+				"db445a70-7705-2f19-41ec-2998b1bd46ad"
+			],
+			"owner": "3630550",
+			"folders_order": [],
+			"auth": null,
+			"id": "6b8d08e8-017f-fcb4-f97c-ffd6b3dda90e",
+			"events": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "eefd2a8a-f478-474c-92b7-f81e98f695b2",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "6d51d56a-9e1b-409e-8b77-8723c195b5f5",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"folders_order": [
+		"6b8d08e8-017f-fcb4-f97c-ffd6b3dda90e",
+		"51b75969-9ac1-1538-77e0-feeb813c2757",
+		"50ad1559-f1f0-7c63-c65b-a11cd32f32aa",
+		"d3e75815-51ae-212b-8b68-807deeef3fb6",
+		"b3201d2f-7d4a-fa98-c360-415d1fc157c5",
+		"b553bd12-a182-72ef-bf13-bf89a5633c6a",
+		"75f25946-0847-defa-042a-1852891af1d8",
+		"24e7ec56-2d4e-7a26-f270-0cfeade3e784",
+		"274a0a0c-23a6-cede-fe46-749ca4c8fb43",
+		"3268e124-ac90-3290-f479-bcab7561553e",
+		"ff848232-4f93-dc77-db63-61347e2527d2",
+		"816124aa-0d32-cbaf-9d7b-873feecea5cd",
+		"1af01e84-a471-c05b-4447-b205f60eb3f9"
+	],
+	"timestamp": 1517302149619,
+	"owner": "3630550",
+	"public": false,
+	"events": [],
+	"variables": [],
+	"auth": null,
+	"requests": [
+		{
+			"id": "040eff6a-cf25-ed1a-9d22-8ff2ac5fe6d4",
+			"headers": "",
+			"headerData": [],
+			"url": "https://api.greencitycoin.cn/v2/+3j1VDMXiQw6essfM4yWkA/getContributionHistory?page=0&size=10",
+			"folder": "3268e124-ac90-3290-f479-bcab7561553e",
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "size",
+					"value": "10",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"auth": null,
+			"time": 1517735141568,
+			"name": "getContributionHistory",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "0e410335-e715-457a-d260-6877bfdfff34",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://api.greencitycoin.cn/v2/v55b7tjz2FwXfDKpfr2Q/putFeedback",
+			"folder": "75f25946-0847-defa-042a-1852891af1d8",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"auth": null,
+			"time": 1517718713181,
+			"name": "putFeedback",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\r\n\"info\":\"info\"\r\n}\r\n"
+		},
+		{
+			"id": "185774fe-efc2-0a87-5b6e-710e420deb02",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://api.greencitycoin.cn/v2/login",
+			"folder": "50ad1559-f1f0-7c63-c65b-a11cd32f32aa",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"auth": null,
+			"time": 1517718637840,
+			"name": "login",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\r\n\t\"tel\": \"13313499588\",\r\n\t\"password\": \"123456789\",\r\n\t\"code\": \"ZjUzN2FkZGY0MmJiYjU3NDIwOWFkNWJmNDExMjYzYmU1YTJmYjdkMA==\"\r\n}"
+		},
+		{
+			"id": "277cbce2-0f0a-5556-8d9c-f594ad650be0",
+			"headers": "",
+			"headerData": [],
+			"url": "https://api.greencitycoin.cn/v2/+3j1VDMXiQw6essfM4yWkA/getPoints?page=0&size=10",
+			"folder": "274a0a0c-23a6-cede-fe46-749ca4c8fb43",
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "0",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "size",
+					"value": "10",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"auth": null,
+			"time": 1517734972014,
+			"name": "getPoints",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "38c85a95-ca8e-a7d8-a50f-579397b34a9f",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://api.greencitycoin.cn/v2/20AYfIx3Q+YjaNzPcEBvyg/checkToken",
+			"folder": "d3e75815-51ae-212b-8b68-807deeef3fb6",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"auth": null,
+			"time": 1517718689034,
+			"name": "checkToken",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": ""
+		},
+		{
+			"id": "4d7697ed-e481-0f91-50ab-57c8e6a29b8d",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://api.greencitycoin.cn/v2/v55b7tjz2FwXfDKpfr2Q/modityPassword",
+			"folder": "b553bd12-a182-72ef-bf13-bf89a5633c6a",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"auth": null,
+			"time": 1517718704181,
+			"name": "modityPassword",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\r\n\"newPassword\":\"123456789\",\r\n\"oldPassword\":\"1234567\"\r\n}\r\n"
+		},
+		{
+			"id": "699b6375-b4e4-b593-bba9-111ec8221387",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://api.greencitycoin.cn/v2/register",
+			"folder": "51b75969-9ac1-1538-77e0-feeb813c2757",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"auth": null,
+			"time": 1517718622181,
+			"name": "register",
+			"description": null,
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": " {\r\n\t\"tel\": \"13313499588\",\r\n\t\"password\": \"123456789\",\r\n\t\"code\": \"ZjUzN2FkZGY0MmJiYjU3NDIwOWFkNWJmNDExMjYzYmU1YTJmYjdkMA==\"\r\n}\r\n"
+		},
+		{
+			"id": "84e87ed5-ab1d-8f8c-e979-be4de7d47c7e",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://api.greencitycoin.cn/v2/y2HckFdFpeRWD+sat1xMmw/modityUserInfo",
+			"folder": "b3201d2f-7d4a-fa98-c360-415d1fc157c5",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"auth": null,
+			"time": 1517718722989,
+			"name": "modityUserInfo",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\n    \"tel\": \"1331349958q8\",\n    \"name\": \"王五\",\n    \"shortName\": \"五\",\n    \"email\": null,\n    \"sex\": null,\n    \"birthday\": null,\n    \"city\": null,\n    \"level\": null,\n    \"createdDate\": null,\n    \"logo\": null,\n    \"description\": null\n}"
+		},
+		{
+			"id": "87cbc9b3-3f9c-925e-cad5-b429f85afd8a",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://api.greencitycoin.cn/v2/register",
+			"folder": "51b75969-9ac1-1538-77e0-feeb813c2757",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"auth": null,
+			"time": 1517718886090,
+			"name": "register-test2",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\r\n\t\"tel\": \"17011123488\",\r\n\t\"password\": \"IamPass123\",\r\n\t\"code\": \"YTRkZDVkOGYyMzI5MTY1ZGZiMGQ4OGEyYTg3NWIzYTNhZTUxODc5NA==\"\r\n}\r\n"
+		},
+		{
+			"id": "a1796817-fcba-643e-3999-33002cc31997",
+			"headers": "",
+			"headerData": [],
+			"url": "https://api.greencitycoin.cn/v2/v55b7tjz2FwXfDKpfr2Q/getDealers",
+			"folder": "ff848232-4f93-dc77-db63-61347e2527d2",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"auth": null,
+			"time": 1517718846210,
+			"name": "getDealers",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "db445a70-7705-2f19-41ec-2998b1bd46ad",
+			"headers": "",
+			"headerData": [],
+			"url": "https://api.greencitycoin.cn/v2/getAllLoginUser",
+			"folder": "6b8d08e8-017f-fcb4-f97c-ffd6b3dda90e",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"auth": null,
+			"time": 1517725812808,
+			"name": "getLoginUser",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "f8334d6c-d705-5acf-48b1-cf59fae365d0",
+			"headers": "",
+			"headerData": [],
+			"url": "https://api.greencitycoin.cn/v2/getAbout",
+			"folder": "24e7ec56-2d4e-7a26-f270-0cfeade3e784",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"auth": null,
+			"time": 1517718742077,
+			"name": "getAbout",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null
+		},
+		{
+			"id": "fbbef21f-a6a7-a8c1-545f-3e9f61bf5437",
+			"headers": "",
+			"headerData": [],
+			"url": "https://api.greencitycoin.cn/v2/v55b7tjz2FwXfDKpfr2Q/getFeedback",
+			"folder": "816124aa-0d32-cbaf-9d7b-873feecea5cd",
+			"queryParams": [],
+			"events": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"auth": null,
+			"time": 1517718864094,
+			"name": "getFeedback",
+			"description": "",
+			"collectionId": "3b4ae49e-6494-99a0-2812-81fbef1b5b50",
+			"responses": [],
+			"currentHelper": null,
+			"helperAttributes": null
+		}
+	]
+}

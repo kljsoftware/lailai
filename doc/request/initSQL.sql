@@ -54,6 +54,7 @@ CREATE TABLE `dealer` (
   `name` varchar(50) DEFAULT NULL COMMENT '商家名称',
   `description` text COMMENT '描述',
   `logo` varchar(256) DEFAULT '' COMMENT '图标路径',
+  `color` varchar(30) DEFAULT NULL COMMENT '商家颜色', 
   `coordinate` varchar(100) DEFAULT NULL COMMENT '坐标',
   `address` varchar(100) DEFAULT NULL COMMENT '地址',
   `level` int(11) DEFAULT NULL COMMENT '绿色认证级别',
@@ -72,8 +73,6 @@ CREATE TABLE `member_dea_rel` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `tel` varchar(20) NOT NULL COMMENT '手机号',
   `dealer_id` int(11) NOT NULL COMMENT '积分商家id',
-  `dealer_name` varchar(50) DEFAULT NULL COMMENT '商家名称',
-  `dealer_logo` varchar(256) DEFAULT '' COMMENT '图标路径',
   `member_dea_name` varchar(50) DEFAULT NULL COMMENT '积分商家用户名',
   `balance` decimal(13,2) DEFAULT NULL COMMENT '积分余额',
   PRIMARY KEY (`id`)
@@ -133,4 +132,55 @@ CREATE TABLE `help_feedback` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='帮助反馈表';
 
 
+
+
+
+-- ----------------------------
+-- Table structure for `points_advertisement`
+-- ----------------------------
+DROP TABLE IF EXISTS `points_advertisement`;
+CREATE TABLE `points_advertisement` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `ad_name` varchar(20) NOT NULL COMMENT '广告名称',
+  `ad_url` varchar(50) DEFAULT NULL COMMENT '广告图片地址',
+  `ad_type` tinyint(4) NOT NULL DEFAULT '0' COMMENT '广告类型?0闪屏页;1积分页',
+  `ad_remark` text COMMENT '备注',
+  `created_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建日期',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='积分广告表';
+
+
+
+
+
+-- ----------------------------
+-- Table structure for `points_rank`
+-- ----------------------------
+DROP TABLE IF EXISTS `points_rank`;
+CREATE TABLE `points_rank` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `start_scope` int(11) NOT NULL COMMENT '开始积分范围',
+  `end_scope` int(11) NOT NULL COMMENT '结束积分范围',
+  `rank_name` text COMMENT '会员等级',
+  `created_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建日期',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='会员等级表';
+
+
+INSERT INTO `points`.`points_rank` (`id`, `start_scope`, `end_scope`, `rank_name`, `created_date`) VALUES ('1', '0', '0', '普通会员', '2018-02-04 17:29:28');
+INSERT INTO `points`.`points_rank` (`id`, `start_scope`, `end_scope`, `rank_name`, `created_date`) VALUES ('2', '100', '300', '中级会员', '2018-02-04 17:29:28');
+INSERT INTO `points`.`points_rank` (`id`, `start_scope`, `end_scope`, `rank_name`, `created_date`) VALUES ('3', '300', '800', '高级会员', '2018-02-04 17:29:28');
+INSERT INTO `points`.`points_rank` (`id`, `start_scope`, `end_scope`, `rank_name`, `created_date`) VALUES ('4', '800', '1500', '白金会员', '2018-02-04 17:29:28');
+INSERT INTO `points`.`points_rank` (`id`, `start_scope`, `end_scope`, `rank_name`, `created_date`) VALUES ('5', '1500', '2500', '黄金会员', '2018-02-04 17:29:28');
+
+-- ----------------------------
+-- Table structure for `green_news`
+-- ----------------------------
+DROP TABLE IF EXISTS `green_news`;
+CREATE TABLE `green_news` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `news` text COMMENT '新闻',
+  `created_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建日期',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='绿色新闻表';
 
