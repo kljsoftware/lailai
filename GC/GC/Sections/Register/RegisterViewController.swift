@@ -146,7 +146,7 @@ class RegisterViewController: UIViewController {
             sender.isEnabled = false
             current = 60
             
-            SMSSDK.getVerificationCode(by: SMSGetCodeMethod.SMS, phoneNumber: phoneTextField.text!, zone: "86", template: "123456", result: {[weak self](error) in
+            SMSSDK.getVerificationCode(by: SMSGetCodeMethod.SMS, phoneNumber: phoneTextField.text!, zone: "86", template: "", result: {[weak self](error) in
                 guard let wself = self else {
                     return
                 }
