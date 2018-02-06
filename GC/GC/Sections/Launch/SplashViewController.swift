@@ -26,7 +26,12 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        viewModel.getPointsScAd()
+        viewModel.setCompletion(onSuccess: {[weak self] (resultModel) in
+            self?.setup(model: resultModel as! SplashModel)
+        }) { (error) in
+            Log.e(error)
+        }
     }
 
     deinit {
@@ -41,7 +46,7 @@ class SplashViewController: UIViewController {
     
     // MARK: - private methods
     /// 初始化
-    private func setup() {
+    private func setup(model:SplashModel) {
         skipLabel.text = LanguageKey.splash_skip.value
         duration = 5
         current = duration

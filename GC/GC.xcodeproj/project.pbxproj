@@ -62,6 +62,14 @@
 		3C91FC2D201F3A9E00BB492D /* avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C91FC2B201F3A9D00BB492D /* avatar@2x.png */; };
 		3C91FC31201F3C7C00BB492D /* common_forward@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C91FC2F201F3C7C00BB492D /* common_forward@3x.png */; };
 		3C91FC32201F3C7C00BB492D /* common_forward@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C91FC30201F3C7C00BB492D /* common_forward@2x.png */; };
+		3CB4D0F62029F03C00AB70B9 /* SplashModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4D0F52029F03C00AB70B9 /* SplashModel.swift */; };
+		3CB4D0F82029FE5100AB70B9 /* DonateRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4D0F72029FE5100AB70B9 /* DonateRecordModel.swift */; };
+		3CB4D0FA202A011600AB70B9 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4D0F9202A011600AB70B9 /* NewsModel.swift */; };
+		3CB4D0FC202A033200AB70B9 /* DonateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4D0FB202A033200AB70B9 /* DonateModel.swift */; };
+		3CB4D0FF202A044A00AB70B9 /* DonateDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4D0FE202A044A00AB70B9 /* DonateDetailsModel.swift */; };
+		3CB4D101202A05AF00AB70B9 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4D100202A05AF00AB70B9 /* ProfileModel.swift */; };
+		3CB4D103202A06A800AB70B9 /* ProfileDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4D102202A06A800AB70B9 /* ProfileDetailsModel.swift */; };
+		3CB4D107202A085C00AB70B9 /* BlockChainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4D106202A085C00AB70B9 /* BlockChainModel.swift */; };
 		3CB55393201CB73F009AC1CD /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB5537A201CB73F009AC1CD /* Log.swift */; };
 		3CB55394201CB73F009AC1CD /* OnePixelConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB5537B201CB73F009AC1CD /* OnePixelConstraint.swift */; };
 		3CB55395201CB73F009AC1CD /* PortraitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB5537C201CB73F009AC1CD /* PortraitViewController.swift */; };
@@ -200,6 +208,14 @@
 		3C91FC2B201F3A9D00BB492D /* avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar@2x.png"; sourceTree = "<group>"; };
 		3C91FC2F201F3C7C00BB492D /* common_forward@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_forward@3x.png"; sourceTree = "<group>"; };
 		3C91FC30201F3C7C00BB492D /* common_forward@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_forward@2x.png"; sourceTree = "<group>"; };
+		3CB4D0F52029F03C00AB70B9 /* SplashModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashModel.swift; sourceTree = "<group>"; };
+		3CB4D0F72029FE5100AB70B9 /* DonateRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateRecordModel.swift; sourceTree = "<group>"; };
+		3CB4D0F9202A011600AB70B9 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		3CB4D0FB202A033200AB70B9 /* DonateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateModel.swift; sourceTree = "<group>"; };
+		3CB4D0FE202A044A00AB70B9 /* DonateDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateDetailsModel.swift; sourceTree = "<group>"; };
+		3CB4D100202A05AF00AB70B9 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		3CB4D102202A06A800AB70B9 /* ProfileDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsModel.swift; sourceTree = "<group>"; };
+		3CB4D106202A085C00AB70B9 /* BlockChainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockChainModel.swift; sourceTree = "<group>"; };
 		3CB55370201CB5FD009AC1CD /* GC-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GC-Bridging-Header.h"; sourceTree = "<group>"; };
 		3CB5537A201CB73F009AC1CD /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		3CB5537B201CB73F009AC1CD /* OnePixelConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnePixelConstraint.swift; sourceTree = "<group>"; };
@@ -326,6 +342,7 @@
 				3C6550792025DF7C00FE0504 /* DonateRecordViewController.swift */,
 				3C65507B2025E50E00FE0504 /* DonateRecordCell.swift */,
 				3C65507C2025E50E00FE0504 /* DonateRecordCell.xib */,
+				3CB4D0F72029FE5100AB70B9 /* DonateRecordModel.swift */,
 			);
 			path = Donate;
 			sourceTree = "<group>";
@@ -340,6 +357,7 @@
 				3C7E26CA2026930400ED4B56 /* ProfileDetailDescCell.xib */,
 				3C7E26CB2026930400ED4B56 /* ProfileDetailOtherCell.xib */,
 				3C7E26CC2026930400ED4B56 /* ProfileDetailDescCell.swift */,
+				3CB4D102202A06A800AB70B9 /* ProfileDetailsModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -420,6 +438,14 @@
 				3C91FC30201F3C7C00BB492D /* common_forward@2x.png */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		3CB4D0FD202A043A00AB70B9 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				3CB4D0FE202A044A00AB70B9 /* DonateDetailsModel.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		3CB55374201CB73F009AC1CD /* Vendors */ = {
@@ -531,8 +557,10 @@
 		3CF364C92022A916003179E8 /* Donate */ = {
 			isa = PBXGroup;
 			children = (
+				3CB4D0FD202A043A00AB70B9 /* Details */,
 				3CF364CB2022A916003179E8 /* Donate.storyboard */,
 				3CF364CA2022A916003179E8 /* DonateViewController.swift */,
+				3CB4D0FB202A033200AB70B9 /* DonateModel.swift */,
 			);
 			path = Donate;
 			sourceTree = "<group>";
@@ -543,6 +571,7 @@
 				3CF364CD2022A916003179E8 /* LaunchScreen.storyboard */,
 				3CF364CF2022A916003179E8 /* Launch.storyboard */,
 				3CF364CE2022A916003179E8 /* SplashViewController.swift */,
+				3CB4D0F52029F03C00AB70B9 /* SplashModel.swift */,
 				3CF3652C2022EE8B003179E8 /* LaunchViewModel.swift */,
 			);
 			path = Launch;
@@ -591,6 +620,7 @@
 				3CD6AA212025F05F00EAEECA /* ProfielSettingCell.xib */,
 				3CD6AA242025F07900EAEECA /* ProfileQuitCell.swift */,
 				3CD6AA252025F07900EAEECA /* ProfileQuitCell.xib */,
+				3CB4D100202A05AF00AB70B9 /* ProfileModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -604,6 +634,7 @@
 				3CF364E42022A916003179E8 /* NewsHeaderView.xib */,
 				3CF364E22022A916003179E8 /* NewsCell.swift */,
 				3CF364E62022A916003179E8 /* NewsCell.xib */,
+				3CB4D0F9202A011600AB70B9 /* NewsModel.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -649,6 +680,7 @@
 				3CF365202022D9AB003179E8 /* BaseViewModel.swift */,
 				3CF365222022DA86003179E8 /* BaseRequestModel.swift */,
 				3CF365242022DAAF003179E8 /* BaseResultModel.swift */,
+				3CB4D106202A085C00AB70B9 /* BlockChainModel.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -972,6 +1004,7 @@
 				3CD6AA1E2025EE4900EAEECA /* ProfileCell.swift in Sources */,
 				3CF365292022E672003179E8 /* LoginViewModel.swift in Sources */,
 				3C7E26D52026930500ED4B56 /* ProfileDetailDescCell.swift in Sources */,
+				3CB4D0F82029FE5100AB70B9 /* DonateRecordModel.swift in Sources */,
 				3CF3650B2022A916003179E8 /* NewsViewController.swift in Sources */,
 				3CF365092022A916003179E8 /* ProfileViewController.swift in Sources */,
 				3CF364FF2022A916003179E8 /* BusinessView.swift in Sources */,
@@ -982,18 +1015,22 @@
 				3CF3651A2022A916003179E8 /* FotgotPwdViewController.swift in Sources */,
 				3CB55394201CB73F009AC1CD /* OnePixelConstraint.swift in Sources */,
 				3CF3652F2022FADA003179E8 /* WalletViewModel.swift in Sources */,
+				3CB4D0FC202A033200AB70B9 /* DonateModel.swift in Sources */,
 				3CF3653120231DA8003179E8 /* BusinessModel.swift in Sources */,
 				3C65507A2025DF7C00FE0504 /* DonateRecordViewController.swift in Sources */,
 				3CF3652D2022EE8B003179E8 /* LaunchViewModel.swift in Sources */,
 				3CB55393201CB73F009AC1CD /* Log.swift in Sources */,
 				3CB553A4201CB73F009AC1CD /* NotificationMacro.swift in Sources */,
+				3CB4D103202A06A800AB70B9 /* ProfileDetailsModel.swift in Sources */,
 				3CFD84F4201C9B5900F9E7E5 /* AppDelegate.swift in Sources */,
 				3CF3652B2022EB19003179E8 /* UIHelper.swift in Sources */,
 				3CB553A3201CB73F009AC1CD /* LanguageMacro.swift in Sources */,
+				3CB4D0FF202A044A00AB70B9 /* DonateDetailsModel.swift in Sources */,
 				3CF365192022A916003179E8 /* LoginViewController.swift in Sources */,
 				3C7E26D9202698B000ED4B56 /* ProfileBusinessViewController.swift in Sources */,
 				3C7E26D12026930400ED4B56 /* ProfileDetailOtherCell.swift in Sources */,
 				3C7E26CF2026930400ED4B56 /* ProfileDetailAvatarCell.swift in Sources */,
+				3CB4D107202A085C00AB70B9 /* BlockChainModel.swift in Sources */,
 				3CF365062022A916003179E8 /* RegisterViewController.swift in Sources */,
 				3CB55399201CB73F009AC1CD /* UIButton+Extension.swift in Sources */,
 				3CF3653320232377003179E8 /* BusinessViewModel.swift in Sources */,
@@ -1015,9 +1052,11 @@
 				3CF365142022A916003179E8 /* BannnerView.swift in Sources */,
 				3C25DA3E201CC286003E4BFB /* UIImageView+Extension.swift in Sources */,
 				3CD6AA292025F9D900EAEECA /* BaseNavigationController.swift in Sources */,
+				3CB4D0FA202A011600AB70B9 /* NewsModel.swift in Sources */,
 				3CF365232022DA86003179E8 /* BaseRequestModel.swift in Sources */,
 				3CB553A5201CB73F009AC1CD /* GlobalMacro.swift in Sources */,
 				3CF3651E2022A9F2003179E8 /* RegiserViewModel.swift in Sources */,
+				3CB4D101202A05AF00AB70B9 /* ProfileModel.swift in Sources */,
 				3CF365022022A916003179E8 /* BusinessTitleView.swift in Sources */,
 				3CF365002022A916003179E8 /* BusinessCell.swift in Sources */,
 				3CF365122022A916003179E8 /* WalletViewController.swift in Sources */,
@@ -1025,6 +1064,7 @@
 				3CB55395201CB73F009AC1CD /* PortraitViewController.swift in Sources */,
 				3CF365052022A916003179E8 /* Register2ViewController.swift in Sources */,
 				3CB5539E201CB73F009AC1CD /* Dictionary+Extension.swift in Sources */,
+				3CB4D0F62029F03C00AB70B9 /* SplashModel.swift in Sources */,
 				3CD6AA262025F07900EAEECA /* ProfileQuitCell.swift in Sources */,
 				3CF365252022DAAF003179E8 /* BaseResultModel.swift in Sources */,
 			);

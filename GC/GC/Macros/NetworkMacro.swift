@@ -39,14 +39,16 @@ class NetworkImg {
 
 /// api地址
 enum NetworkURL {
-    case register // 3.1注册
-    case login    // 3.3登录
-    case checkToken     // 3.4检查token是否过期
+    case register // 2.1注册
+    case login    // 2.2登录
+    case checkToken     // 2.3检查token是否过期
+    case getPointsScAd  // 2.4 获取闪屏页广告
+    case getPointsBase  // 3.1 获取积分钱包基础数据
+    case getPoints      // 3.2 获取积分钱包商家数据
     case modityUserInfo // 3.5个人信息修改
     case modityPassword // 3.6密码修改
     case putFeedback    // 3.7反馈信息
     case getAbout       // 3.9关于
-    case getPoints      // 3.10积分钱包
     case getContributionHistory // 3.11捐赠记录
     case getDealers             // 3.12绿色地图
     
@@ -60,6 +62,12 @@ enum NetworkURL {
             api = "login"
         case .checkToken:
             api = "\(Token.shared.value)/checkToken"
+        case .getPointsScAd:
+            api = "getPointsScAd"
+        case .getPointsBase:
+            api = "\(Token.shared.value)/getPointsBase"
+        case .getPoints:
+            api = "\(Token.shared.value)/getPoints"
         case .modityUserInfo:
             api = "\(Token.shared.value)/modityUserInfo"
         case .modityPassword:
@@ -68,8 +76,6 @@ enum NetworkURL {
             api = "\(Token.shared.value)/putFeedback"
         case .getAbout:
             api = "getAbout"
-        case .getPoints:
-            api = "\(Token.shared.value)/getPoints"
         case .getContributionHistory:
             api = "\(Token.shared.value)/getContributionHistory"
         case .getDealers:

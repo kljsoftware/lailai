@@ -6,13 +6,33 @@
 //  Copyright © 2018年 demo. All rights reserved.
 //
 
-/// 请求模型
-class BusinessRequestModel : BaseRequestModel {
 
+/// 4.商家地图
+/// 4.1 获取绿色商家位置列表 请求模型
+class BusinessRequestModel : BaseRequestModel {
+    var page = 0  // 第几页 从0开始
+    var size = 10 // 每页显示数
+}
+
+/// 4.2 根据位置返回商家列表
+class BusinessDealersRequestModel : BaseRequestModel {
+    var address = "16.5333,17.3456" // 位置坐标
+    var page = 0                    // 第几页 从0开始
+    var size = 10                   // 每页显示数
+}
+
+/// 4.3 根据关键字返回商家列表
+class BusinessNameRequestModel : BaseRequestModel {
+    var name = ""  // 搜索关键字
+    var page = 0   // 第几页 从0开始
+    var size = 10  // 每页显示数
 }
 
 /// 结果模型
 class BusinessResultModel : BaseResultModel {
+    
+    /// 是否有更多页
+    var has_more = true
     
     var data = [BusinessModel]()
     
@@ -27,6 +47,7 @@ class BusinessModel : NSObject {
     var id =  1    /// 商家id
     var name = ""  /// 商家名
     var desc = ""  /// 商家描述
+    var color = ""
     var logo = ""  /// 商家logo
     var coordinate = "" /// 商家定位坐标
     var address = ""    /// 商家地址
@@ -34,6 +55,7 @@ class BusinessModel : NSObject {
     var link  = 0  ///
     var createdDate = 0 /// 创建日期
     var del = 0    ///
+    var blockchain_id = 0 /// 区块链id
 
     /// 将属性名换为其他key去字典中取值
     override class func mj_replacedKeyFromPropertyName() -> [AnyHashable : Any]! {

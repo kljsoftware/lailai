@@ -119,6 +119,7 @@
             </constraints>
             <size key="customSize" width="212" height="123"/>
             <connections>
+                <outlet property="backImageView" destination="epJ-vi-Fhb" id="Olf-Je-hfI"/>
                 <outlet property="balance" destination="kKB-9h-usg" id="hEc-s9-pP6"/>
                 <outlet property="balanceLabel" destination="Iia-Ar-ntI" id="Mqw-j2-xJ5"/>
                 <outlet property="logoImageView" destination="XMQ-r1-fMd" id="hwS-4o-MOr"/>

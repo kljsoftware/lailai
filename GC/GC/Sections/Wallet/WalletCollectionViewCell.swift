@@ -10,6 +10,9 @@ import UIKit
 
 class WalletCollectionViewCell: UICollectionViewCell {
     
+    /// bg
+    @IBOutlet weak var backImageView: UIImageView!
+    
     /// logo
     @IBOutlet weak var logoImageView: UIImageView!
     
@@ -29,6 +32,7 @@ class WalletCollectionViewCell: UICollectionViewCell {
 
     // MARK: - public methods
     func update(model:WalletModel) {
+        backImageView.backgroundColor = UIColor.hexStringToColor(model.color)
         logoImageView.setImage(urlStr: NetworkImg.getUrl(name: model.dealerLogo), placeholderStr: "", radius: 30)
         nameLabel.text = model.dealerName
         balanceLabel.text = "\(model.balance)"
