@@ -72,6 +72,7 @@
 		3CB4D10E202AF8D000AB70B9 /* AdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB4D10C202AF8D000AB70B9 /* AdView.xib */; };
 		3CB4D10F202AF8D000AB70B9 /* AdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4D10D202AF8D000AB70B9 /* AdView.swift */; };
 		3CB4D111202B093600AB70B9 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4D110202B093600AB70B9 /* ProfileViewModel.swift */; };
+		3CB4D119202B488300AB70B9 /* ProfileSettingPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4D118202B488200AB70B9 /* ProfileSettingPwdViewController.swift */; };
 		3CB55393201CB73F009AC1CD /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB5537A201CB73F009AC1CD /* Log.swift */; };
 		3CB55394201CB73F009AC1CD /* OnePixelConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB5537B201CB73F009AC1CD /* OnePixelConstraint.swift */; };
 		3CB55395201CB73F009AC1CD /* PortraitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB5537C201CB73F009AC1CD /* PortraitViewController.swift */; };
@@ -220,6 +221,7 @@
 		3CB4D10C202AF8D000AB70B9 /* AdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdView.xib; sourceTree = "<group>"; };
 		3CB4D10D202AF8D000AB70B9 /* AdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdView.swift; sourceTree = "<group>"; };
 		3CB4D110202B093600AB70B9 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		3CB4D118202B488200AB70B9 /* ProfileSettingPwdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSettingPwdViewController.swift; sourceTree = "<group>"; };
 		3CB55370201CB5FD009AC1CD /* GC-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GC-Bridging-Header.h"; sourceTree = "<group>"; };
 		3CB5537A201CB73F009AC1CD /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		3CB5537B201CB73F009AC1CD /* OnePixelConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnePixelConstraint.swift; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				3C7E26D62026960100ED4B56 /* ProfileSettingViewController.swift */,
+				3CB4D118202B488200AB70B9 /* ProfileSettingPwdViewController.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -999,6 +1002,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CB5539D201CB73F009AC1CD /* String+Extension.swift in Sources */,
+				3CB4D119202B488300AB70B9 /* ProfileSettingPwdViewController.swift in Sources */,
 				3C7E26D72026960100ED4B56 /* ProfileSettingViewController.swift in Sources */,
 				3CF3650A2022A916003179E8 /* NewsCell.swift in Sources */,
 				3CB5539A201CB73F009AC1CD /* UIView+Extension.swift in Sources */,

@@ -26,4 +26,21 @@ class ProfileViewModel: BaseViewModel {
             }
         }
     }
+    
+    // 7.5 修改密码
+    func modityPassword(newpwd:String, oldpwd:String) {
+        let reqModel = ModifyPasswordRequestModel()
+        reqModel.newPassword = newpwd
+        reqModel.oldPassword = oldpwd
+        HTTPSessionManager.shared.request(method: .POST, urlString: NetworkURL.modityPassword.url, parameters: reqModel.mj_keyValues()) { (json, success) in
+            let resultModel = BaseResultModel.mj_object(withKeyValues: json)
+            if success && resultModel != nil && resultModel!.code == 0 {
+                self.successCallback?(resultModel!)
+            } else {
+                let msg = resultModel != nil ? resultModel!.msg : "error"
+                Log.e(msg)
+                self.failureCallback?(msg)
+            }
+        }
+    }
 }

@@ -1,5 +1,5 @@
 //
-//  FotgotPwd2ViewController.swift
+//  ProfileSettingPwdViewController.swift
 //  GC
 //
 //  Created by hzg on 2018/1/30.
@@ -8,10 +8,11 @@
 
 import UIKit
 
-class FotgotPwd2ViewController: UIViewController {
-
-    var tel = ""
+class ProfileSettingPwdViewController: UIViewController {
     
+    /// 业务模块
+    let viewModel = ProfileViewModel()
+
     /// 输入密码，再次输入密码，注册按钮
     @IBOutlet weak var pwdTextField: UITextField!
     @IBOutlet weak var pwd2TextField: UITextField!
@@ -29,12 +30,9 @@ class FotgotPwd2ViewController: UIViewController {
     
     private func setup() {
         navigationItem.title = LanguageKey.settingpwd.value
-        navigationItem.hidesBackButton = true
         pwdTextField.placeholder = LanguageKey.input_pwd.value
         pwd2TextField.placeholder = LanguageKey.input_pwd_again.value
         saveButton.setTitle(LanguageKey.save.value, for: .normal)
-        let buttonItem = UIBarButtonItem(title: LanguageKey.back_login.value, style: UIBarButtonItemStyle.done, target: self, action: #selector(onQuitButtonClicked))
-        navigationItem.rightBarButtonItem = buttonItem
         setNextEnabled()
     }
     
@@ -60,34 +58,18 @@ class FotgotPwd2ViewController: UIViewController {
         saveButton.isEnabled  = isValidPwd && isValidPwd2
     }
     
-    // MARK: - action methods
-    /// 返回登陆
-    func onQuitButtonClicked(sender:UIButton) {
-        NotificationCenter.default.post(name: NoticationUserLogin, object: nil)
-    }
-    
     /// 点击保存密码按钮
     @IBAction func onSaveButtonClicked(_ sender: UIButton) {
-        LoginViewModel().login(tel: tel, pwd: pwdTextField.text!)
-    }
-    
-    /// 保存密码并登录
-    fileprivate func save() {
-        
-    }
-}
-
-extension FotgotPwd2ViewController : UITextFieldDelegate {
-    // 点击软键盘Next、go处理
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        if textField == pwdTextField {
-            pwd2TextField.becomeFirstResponder()
-        } /*else if textField == pwdTextField {
-             authCodeTextField.becomeFirstResponder()
-         }*/ else {
-            save()
+        let oldpwd = UserDefaults.standard.value(forKey: UserDefaultUserPwd) as? String ?? ""
+        viewModel.modityPassword(newpwd: pwdTextField.text!, oldpwd: oldpwd)
+        viewModel.setCompletion(onSuccess: { [weak self](resultModel) in
+            guard let wself = self else {
+                return
+            }
+            UserDefaults.standard.set(wself.pwdTextField.text!, forKey: UserDefaultUserPwd)
+            UIHelper.tip(message: "修改成功")
+        }) { (error) in
+            UIHelper.tip(message: error)
         }
-        return true
     }
 }

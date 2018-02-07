@@ -44,6 +44,9 @@ enum LanguageKey : String {
     case desc    // 个人描述
     case man     // 男
     case woman   // 女
+    case language // 语言
+    case faq   // 帮助与反馈
+    case about // 关于绿积分"
 
     case map             // 地图
     case balance         // 捐赠积分额

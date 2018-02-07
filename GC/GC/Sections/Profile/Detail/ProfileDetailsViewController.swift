@@ -30,6 +30,9 @@ class ProfileDetailsViewController: UIViewController {
         }
     }
     
+    /// 选取头像
+    var image:UIImage?
+    
     /// 列表
     @IBOutlet weak var tableView: UITableView!
     
@@ -93,7 +96,7 @@ extension ProfileDetailsViewController : UITableViewDataSource, UITableViewDeleg
         switch type {
         case .avatar:
             let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileDetailAvatarCell", for: indexPath) as! ProfileDetailAvatarCell
-            cell.update(name: tuple.labelName, content: tuple.content)
+            cell.update(name: tuple.labelName, content: tuple.content, image: image)
             return cell
         case .desc:
             let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileDetailDescCell", for: indexPath) as! ProfileDetailDescCell
@@ -120,6 +123,35 @@ extension ProfileDetailsViewController : UITableViewDataSource, UITableViewDeleg
     
     /// 单元点击
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let type = ProfileDetailsCellType(rawValue: indexPath.row)!
+        switch type {
+        case .avatar:
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+                let picker = UIImagePickerController()
+                picker.delegate = self
+                picker.allowsEditing = true
+                picker.sourceType = .savedPhotosAlbum
+                self.present(picker, animated: true, completion:nil)
+            }
+        case .desc:
+            break
+        default:
+            break
+        }
+    }
+}
+
+/// 图像选取委托事件
+extension ProfileDetailsViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
+        picker.dismiss(animated: false) { [weak self] in
+            var image = info[UIImagePickerControllerEditedImage] as? UIImage
+            if nil == image {
+                image = info[UIImagePickerControllerOriginalImage] as? UIImage
+            }
+            self?.image = image
+            self?.tableView.reloadData()
+        }
     }
 }

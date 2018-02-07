@@ -124,8 +124,9 @@ class LoginViewController: UIViewController {
     
     /// 点击忘记密码按钮
     @IBAction func onForgotButtonClicked(_ sender: UIButton) {
-        let vc = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "fotgotpwd")
-        navigationController?.pushViewController(vc, animated: true)
+        let vc = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "fotgotpwd") as! FotgotPwdViewController
+        vc.tel = phoneTextField.text ?? ""
+        _ = navigationController?.pushViewController(vc, animated: true)
     }
     
     /// 开关变化监听

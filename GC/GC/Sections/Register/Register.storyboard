@@ -28,7 +28,10 @@
                                         <rect key="frame" x="12" y="0.0" width="303" height="49"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Mip-0m-dt6" id="JB8-vf-s7z"/>
+                                        </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="APQ-JG-Hrn">
                                         <rect key="frame" x="0.0" y="49" width="327" height="1"/>
@@ -57,7 +60,10 @@
                                         <rect key="frame" x="12" y="0.0" width="238" height="50"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Mip-0m-dt6" id="atu-dh-W0l"/>
+                                        </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m2B-df-ZnM" customClass="BorderView" customModule="GC" customModuleProvider="target">
                                         <rect key="frame" x="262" y="7" width="65" height="36"/>
@@ -203,7 +209,10 @@
                                         <rect key="frame" x="12" y="0.0" width="303" height="43"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="kMk-Hv-TeB" id="Qh4-GH-ai8"/>
+                                        </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USB-E8-b4N">
                                         <rect key="frame" x="0.0" y="43" width="327" height="1"/>
@@ -232,7 +241,10 @@
                                         <rect key="frame" x="12" y="0.0" width="303" height="44"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="kMk-Hv-TeB" id="fGl-qj-4YL"/>
+                                        </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wkc-Ze-9EE">
                                         <rect key="frame" x="0.0" y="43" width="327" height="1"/>

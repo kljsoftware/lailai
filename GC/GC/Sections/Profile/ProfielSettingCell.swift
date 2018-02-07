@@ -9,9 +9,6 @@
 import UIKit
 
 class ProfielSettingCell: UITableViewCell {
-
-    /// 图标
-    @IBOutlet weak var iconImageView: UIImageView!
    
     /// 名称
     @IBOutlet weak var nameLabel: UILabel!

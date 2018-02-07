@@ -259,7 +259,10 @@
                                         <rect key="frame" x="12" y="0.0" width="303" height="49"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="apt-Cn-wgM" id="Wbz-DD-x6a"/>
+                                        </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="trR-RB-sxf">
                                         <rect key="frame" x="0.0" y="49" width="327" height="1"/>
@@ -294,7 +297,10 @@
                                         <rect key="frame" x="12" y="0.0" width="238" height="50"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="apt-Cn-wgM" id="N1p-n0-FOG"/>
+                                        </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nZh-6T-mcB" customClass="BorderView" customModule="GC" customModuleProvider="target">
                                         <rect key="frame" x="262" y="7" width="65" height="36"/>
@@ -448,7 +454,10 @@
                                         <rect key="frame" x="12" y="0.0" width="303" height="49"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="dVN-Sf-sc0" id="Hnn-44-bz0"/>
+                                        </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5dn-mb-tOw">
                                         <rect key="frame" x="0.0" y="49" width="327" height="1"/>
@@ -483,7 +492,10 @@
                                         <rect key="frame" x="12" y="0.0" width="303" height="50"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="dVN-Sf-sc0" id="lR5-QR-OnV"/>
+                                        </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUv-uU-Xa4">
                                         <rect key="frame" x="0.0" y="49" width="327" height="1"/>

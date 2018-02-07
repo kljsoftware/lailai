@@ -10,7 +10,10 @@ import UIKit
 
 class FotgotPwdViewController: UIViewController {
 
-    /// 手机号&手机号输入
+    /// 手机号
+    var tel = ""
+    
+    /// 手机号
     @IBOutlet weak var phoneTextField: UITextField!
     
     /// 验证码&验证码输入
@@ -44,6 +47,7 @@ class FotgotPwdViewController: UIViewController {
         navigationItem.title = LanguageKey.forgotpwd.value
         navigationItem.hidesBackButton = true
         phoneTextField.placeholder = LanguageKey.phoneNum.value
+        phoneTextField.text = tel
         codeTextField.placeholder = LanguageKey.authCode.value
         nextButton.setTitle(LanguageKey.nextStep.value, for: .normal)
         sendCodeLabel.text = LanguageKey.sendCode.value
@@ -84,8 +88,8 @@ class FotgotPwdViewController: UIViewController {
             wself.sendCodeLabel.text = LanguageKey.sendAgain.value
             wself.sendCodeButton.isEnabled = true
             if error == nil {
-                let vc = UIStoryboard(name: "Register", bundle: nil).instantiateViewController(withIdentifier: "register2") as! Register2ViewController
-                vc.phone = wself.phoneTextField.text!
+                let vc = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "fotgotpwd2") as! FotgotPwd2ViewController
+                vc.tel = wself.phoneTextField.text!
                 wself.navigationController?.pushViewController(vc, animated: true)
             } else {
                 Log.e("error = \(error!.localizedDescription)")
@@ -136,8 +140,7 @@ class FotgotPwdViewController: UIViewController {
     
     /// 下一步
     @IBAction func onNextButtonClicked(_ sender: UIButton) {
-        let vc = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "fotgotpwd2")
-        navigationController?.pushViewController(vc, animated: true)
+        next()
     }
     
     /// 点击发送验证码
@@ -146,7 +149,7 @@ class FotgotPwdViewController: UIViewController {
             sender.isEnabled = false
             current = 60
             
-            SMSSDK.getVerificationCode(by: SMSGetCodeMethod.SMS, phoneNumber: phoneTextField.text!, zone: "86", template: "123456", result: {[weak self](error) in
+            SMSSDK.getVerificationCode(by: SMSGetCodeMethod.SMS, phoneNumber: phoneTextField.text!, zone: "86", template: "", result: {[weak self](error) in
                 guard let wself = self else {
                     return
                 }
@@ -161,5 +164,20 @@ class FotgotPwdViewController: UIViewController {
         } else {
             UIHelper.tip(message: "手机号为空或输入错误")
         }
+    }
+}
+
+extension FotgotPwdViewController : UITextFieldDelegate {
+    // 点击软键盘Next、go处理
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        if textField == phoneTextField {
+            codeTextField.becomeFirstResponder()
+        } /*else if textField == pwdTextField {
+             authCodeTextField.becomeFirstResponder()
+         }*/ else {
+            next()
+        }
+        return true
     }
 }
