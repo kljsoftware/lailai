@@ -89,7 +89,8 @@ extension ProfileSettingViewController : UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch ProfileSettingType(rawValue: indexPath.row)! {
         case .pwd:
-            break
+            let vc = UIStoryboard.init(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "profile_setting_pwd")
+            navigationController?.pushViewController(vc, animated: true)
         case .language:
             break
         case .faq:

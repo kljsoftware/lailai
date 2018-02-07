@@ -58,8 +58,22 @@ class ProfileSettingPwdViewController: UIViewController {
         saveButton.isEnabled  = isValidPwd && isValidPwd2
     }
     
-    /// 点击保存密码按钮
-    @IBAction func onSaveButtonClicked(_ sender: UIButton) {
+    fileprivate func save() {
+        guard let pwd1 = pwdTextField.text else {
+            UIHelper.tip(message: "密码不能为空")
+            return
+        }
+        
+        guard let pwd2 = pwd2TextField.text else {
+            UIHelper.tip(message: "密码不能为空")
+            return
+        }
+        
+        if pwd1 != pwd2 {
+            UIHelper.tip(message: "密码输入不一致")
+            return
+        }
+        
         let oldpwd = UserDefaults.standard.value(forKey: UserDefaultUserPwd) as? String ?? ""
         viewModel.modityPassword(newpwd: pwdTextField.text!, oldpwd: oldpwd)
         viewModel.setCompletion(onSuccess: { [weak self](resultModel) in
@@ -68,8 +82,14 @@ class ProfileSettingPwdViewController: UIViewController {
             }
             UserDefaults.standard.set(wself.pwdTextField.text!, forKey: UserDefaultUserPwd)
             UIHelper.tip(message: "修改成功")
+            wself.navigationController?.popViewController(animated: true)
         }) { (error) in
             UIHelper.tip(message: error)
         }
+    }
+    
+    /// 点击保存密码按钮
+    @IBAction func onSaveButtonClicked(_ sender: UIButton) {
+        save()
     }
 }

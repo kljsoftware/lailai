@@ -68,12 +68,27 @@ class FotgotPwd2ViewController: UIViewController {
     
     /// 点击保存密码按钮
     @IBAction func onSaveButtonClicked(_ sender: UIButton) {
-        LoginViewModel().login(tel: tel, pwd: pwdTextField.text!)
+        save()
     }
     
     /// 保存密码并登录
     fileprivate func save() {
+        guard let pwd1 = pwdTextField.text else {
+            UIHelper.tip(message: "密码不能为空")
+            return
+        }
         
+        guard let pwd2 = pwd2TextField.text else {
+            UIHelper.tip(message: "密码不能为空")
+            return
+        }
+        
+        if pwd1 != pwd2 {
+            UIHelper.tip(message: "密码输入不一致")
+            return
+        }
+        
+        LoginViewModel().login(tel: tel, pwd: pwdTextField.text!)
     }
 }
 

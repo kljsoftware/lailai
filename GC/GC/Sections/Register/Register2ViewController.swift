@@ -43,7 +43,11 @@ class Register2ViewController: UIViewController {
     
     /// 点击注册按钮
     @IBAction func onRegisterButtonClicked(_ sender: UIButton) {
-        
+        register()
+    }
+    
+    /// 注册
+    fileprivate func register() {
         guard let pwd1 = pwdTextField.text else {
             UIHelper.tip(message: "密码不能为空")
             return
@@ -65,5 +69,20 @@ class Register2ViewController: UIViewController {
         }) { (error) in
             self.navigationController?.popViewController(animated: true)
         }
+    }
+}
+
+extension Register2ViewController : UITextFieldDelegate {
+    // 点击软键盘Next、go处理
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        if textField == pwdTextField {
+            pwd2TextField.becomeFirstResponder()
+        } /*else if textField == pwdTextField {
+             authCodeTextField.becomeFirstResponder()
+         }*/ else {
+            register()
+        }
+        return true
     }
 }
