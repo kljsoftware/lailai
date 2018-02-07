@@ -35,7 +35,7 @@ class BusinessCell: UITableViewCell {
     func udpate(model:BusinessModel) {
         
         /// logo
-        logoImageView.setImage(urlStr: NetworkImg.getUrl(name: model.logo), placeholderStr: "", radius: 30)
+        logoImageView.setImage(urlStr: NetworkImgOrWeb.getUrl(name: model.logo), placeholderStr: "", radius: 30)
         
         /// 商家名
         nameLabel.text = model.name

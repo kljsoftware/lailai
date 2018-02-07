@@ -10,15 +10,21 @@ import UIKit
 
 class ProfileCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    /// 头像
+    @IBOutlet weak var avatarImageView: UIImageView!
+   
+    /// 用户名
+    @IBOutlet weak var userNameLabel: UILabel!
+    
+    /// 联系方式
+    @IBOutlet weak var telLabel: UILabel!
+    
+    
+    // MARK: - public methods
+    func update(model:ProfileUserInfoModel) {
+        avatarImageView.setImage(urlStr: NetworkImgOrWeb.getUrl(name: model.logo), placeholderStr: "avatar", radius: 30)
+        userNameLabel.text = model.short_name
+        telLabel.text = model.tel
     }
     
 }

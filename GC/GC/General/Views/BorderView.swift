@@ -1,9 +1,9 @@
 //
 //  BorderView.swift
-//  Music
+//  GC
 //
-//  Created by hzg on 2017/12/5.
-//  Copyright © 2017年 demo. All rights reserved.
+//  Created by hzg on 2018/2/3.
+//  Copyright © 2018年 demo. All rights reserved.
 //
 
 // 默认画笔宽度、默认框颜色

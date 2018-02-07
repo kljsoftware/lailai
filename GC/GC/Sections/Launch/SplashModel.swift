@@ -8,6 +8,5 @@
 
 // 2.4 获取闪屏页广告: 结果模型
 class SplashModel : BaseResultModel {
-    var cover = "" // 广告封面
-    var link  = "" // 广告链接
+    var data = AdModel()
 }

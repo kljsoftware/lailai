@@ -29,6 +29,12 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6EE-v9-iPv">
+                        <rect key="frame" x="271" y="13" width="37" height="17"/>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LdU-C5-wjc">
                         <rect key="frame" x="0.0" y="42.5" width="320" height="1"/>
                         <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -44,13 +50,19 @@
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="6EE-v9-iPv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4aO-A9-joA"/>
                     <constraint firstItem="Ql9-kr-JAF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7Pl-0Q-Nfr"/>
                     <constraint firstAttribute="bottom" secondItem="LdU-C5-wjc" secondAttribute="bottom" id="FRu-Jg-uTP"/>
+                    <constraint firstAttribute="trailing" secondItem="6EE-v9-iPv" secondAttribute="trailing" constant="12" id="Ni9-QP-Cs5"/>
                     <constraint firstAttribute="trailing" secondItem="LdU-C5-wjc" secondAttribute="trailing" id="Ojz-dj-3c1"/>
                     <constraint firstItem="LdU-C5-wjc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="bfK-jb-ySB"/>
                     <constraint firstItem="Ql9-kr-JAF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="eqG-9M-lTx"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="contentLabel" destination="6EE-v9-iPv" id="4nn-Zo-kl2"/>
+                <outlet property="nameLabel" destination="Ql9-kr-JAF" id="ttX-CV-UFo"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

@@ -10,15 +10,12 @@ import UIKit
 
 class ProfileDetailAvatarCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    @IBOutlet weak var photoLabel: UILabel!
+    @IBOutlet weak var avatarImageView: UIImageView!
     
+    // MARK: - public methods
+    func update(name:String, content:String)  {
+        photoLabel.text = name
+        avatarImageView.setImage(urlStr: content, placeholderStr: "avatar", radius: 30)
+    }
 }

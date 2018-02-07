@@ -75,6 +75,11 @@
                     <constraint firstItem="QAD-qw-BOi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="pG6-cP-I6n"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarImageView" destination="IDS-Tz-4Ap" id="spx-VQ-QUx"/>
+                <outlet property="telLabel" destination="51m-on-Q96" id="Oz5-bf-fOO"/>
+                <outlet property="userNameLabel" destination="nuG-9G-nsy" id="xmh-RY-3Mu"/>
+            </connections>
             <point key="canvasLocation" x="34" y="168.5"/>
         </tableViewCell>
     </objects>

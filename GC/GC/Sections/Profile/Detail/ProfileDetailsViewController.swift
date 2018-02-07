@@ -23,6 +23,13 @@ private enum ProfileDetailsCellType : Int {
 
 class ProfileDetailsViewController: UIViewController {
     
+    /// 用户信息
+    var userInfo = ProfileUserInfoModel() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
     /// 列表
     @IBOutlet weak var tableView: UITableView!
     
@@ -40,6 +47,35 @@ class ProfileDetailsViewController: UIViewController {
     func onSaveButtonClicked(sender:UIButton) {
         
     }
+    
+    // MARK: - private methods
+    fileprivate func getLabelName(type:ProfileDetailsCellType) -> (labelName:String, content:String) {
+        var tuple = ("", "")
+        switch type {
+        case .avatar:
+            tuple.0 = LanguageKey.photo.value
+            tuple.1 = NetworkImgOrWeb.getUrl(name: userInfo.logo)
+        case .nick:
+            tuple.0 = LanguageKey.nick.value
+            tuple.1 = userInfo.short_name
+        case .tel:    // 手机号
+            tuple.0 = LanguageKey.phoneNum.value
+            tuple.1 = userInfo.tel
+        case .gender: // 性别
+            tuple.0 = LanguageKey.gender.value
+            tuple.1 = userInfo.sex == 2 ? LanguageKey.woman.value : LanguageKey.man.value
+        case .region: // 地区
+            tuple.0 = LanguageKey.region.value
+            tuple.1 = userInfo.city
+        case .email:  // 邮箱
+            tuple.0 = LanguageKey.email.value
+            tuple.1 = userInfo.email
+        case .desc:   // 个人描述
+            tuple.0 = LanguageKey.desc.value
+            tuple.1 = userInfo.desc
+        }
+        return tuple
+    }
 }
 
 // MARK:  UITableViewDataSource&UITableViewDelegate
@@ -52,15 +88,20 @@ extension ProfileDetailsViewController : UITableViewDataSource, UITableViewDeleg
     
     // 单元(cell)视图
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch ProfileDetailsCellType(rawValue: indexPath.row)! {
+        let type = ProfileDetailsCellType(rawValue: indexPath.row)!
+        let tuple = getLabelName(type: type)
+        switch type {
         case .avatar:
             let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileDetailAvatarCell", for: indexPath) as! ProfileDetailAvatarCell
+            cell.update(name: tuple.labelName, content: tuple.content)
             return cell
         case .desc:
             let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileDetailDescCell", for: indexPath) as! ProfileDetailDescCell
+            cell.update(name: tuple.labelName, content: tuple.content)
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileDetailOtherCell", for: indexPath) as! ProfileDetailOtherCell
+            cell.update(name: tuple.labelName, content: tuple.content)
             return cell
         }
     }
@@ -79,6 +120,6 @@ extension ProfileDetailsViewController : UITableViewDataSource, UITableViewDeleg
     
     /// 单元点击
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        
     }
 }

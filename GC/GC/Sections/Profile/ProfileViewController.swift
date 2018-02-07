@@ -23,6 +23,9 @@ private enum ProfileCellType : Int {
 /// 个人详情设置界面
 class ProfileViewController: UIViewController {
 
+    /// 业务模块
+    let viewModel = ProfileViewModel()
+    
     /// 列表视图
     @IBOutlet weak var tableView: UITableView!
    
@@ -30,6 +33,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        setupViewModel()
     }
     
     // MARK: - private methods
@@ -39,6 +43,15 @@ class ProfileViewController: UIViewController {
         tableView.register(UINib(nibName: "ProfileCell", bundle: nil), forCellReuseIdentifier: "kProfileCell")
         tableView.register(UINib(nibName: "ProfielSettingCell", bundle: nil), forCellReuseIdentifier: "kProfielSettingCell")
         tableView.register(UINib(nibName: "ProfileQuitCell", bundle: nil), forCellReuseIdentifier: "kProfileQuitCell")
+    }
+    
+    private func setupViewModel() {
+        viewModel.getUserInfo()
+        viewModel.setCompletion(onSuccess: { [weak self](resultModel) in
+            self?.tableView.reloadData()
+        }) { (error) in
+            
+        }
     }
 }
 
@@ -55,6 +68,7 @@ extension ProfileViewController : UITableViewDataSource, UITableViewDelegate {
         switch ProfileCellType(rawValue: indexPath.row)! {
         case .profile:
             let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileCell", for: indexPath) as! ProfileCell
+            cell.update(model: viewModel.userInfo)
             return cell
         case .setting:
             let cell = tableView.dequeueReusableCell(withIdentifier: "kProfielSettingCell", for: indexPath) as! ProfielSettingCell

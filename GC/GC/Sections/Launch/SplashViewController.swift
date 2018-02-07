@@ -17,8 +17,8 @@ class SplashViewController: UIViewController {
     @IBOutlet weak var skipLabel: UILabel!
     @IBOutlet weak var countDownTimeLabel: UILabel!
     
-    /// 广告页面
-    @IBOutlet weak var adImageView: UIImageView!
+    /// 广告展示区域
+    @IBOutlet weak var adView: UIView!
    
     /// 计时器
     private var timer:Timer? = nil
@@ -28,7 +28,7 @@ class SplashViewController: UIViewController {
         super.viewDidLoad()
         viewModel.getPointsScAd()
         viewModel.setCompletion(onSuccess: {[weak self] (resultModel) in
-            self?.setup(model: resultModel as! SplashModel)
+            self?.setup()
         }) { (error) in
             Log.e(error)
         }
@@ -44,9 +44,26 @@ class SplashViewController: UIViewController {
         finished()
     }
     
+    /// 点击使用浏览器打开网页
+    @IBAction func onAdButtonClicked(_ sender: UIButton) {
+        guard let url = URL(string: NetworkImgOrWeb.getUrl(name: viewModel.adModel.link)) else {
+            return
+        }
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.openURL(url)
+        }
+    }
+    
     // MARK: - private methods
     /// 初始化
-    private func setup(model:SplashModel) {
+    private func setup() {
+        adView.isHidden = false
+        let spashView = Bundle.main.loadNibNamed("AdView", owner: nil, options: nil)?[0] as! AdView
+        spashView.model = viewModel.adModel
+        adView.insertSubview(spashView, at: 0)
+        spashView.snp.makeConstraints { (maker) in
+            maker.left.right.top.bottom.equalTo(adView)
+        }
         skipLabel.text = LanguageKey.splash_skip.value
         duration = 5
         current = duration

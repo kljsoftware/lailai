@@ -29,7 +29,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="wkL-jh-ErU">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wkL-jh-ErU">
                     <rect key="frame" x="12" y="22" width="60" height="60"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="60" id="ngL-hK-ZJl"/>
@@ -41,14 +41,14 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="霸天虎" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rmo-hb-UKC">
-                    <rect key="frame" x="84" y="34.5" width="45" height="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rmo-hb-UKC">
+                    <rect key="frame" x="84" y="43" width="0.0" height="0.0"/>
                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="积分捐赠达人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KrN-Hx-jok">
-                    <rect key="frame" x="84" y="55.5" width="60" height="11.5"/>
+                    <rect key="frame" x="84" y="47" width="60" height="11.5"/>
                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="10"/>
                     <color key="textColor" red="0.63529411764705879" green="0.63529411764705879" blue="0.63529411764705879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -113,13 +113,15 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="avatarImageView" destination="wkL-jh-ErU" id="TQM-fz-E60"/>
+                <outlet property="breedLabel" destination="RFQ-kK-sRp" id="F3C-CF-IYa"/>
+                <outlet property="integralSumLabel" destination="EhL-2O-baz" id="grK-3E-p6Z"/>
                 <outlet property="nameLabel" destination="Rmo-hb-UKC" id="gm4-Gf-dqs"/>
+                <outlet property="rankLabel" destination="KrN-Hx-jok" id="1mF-nt-zki"/>
             </connections>
             <point key="canvasLocation" x="27" y="-8"/>
         </view>
     </objects>
     <resources>
-        <image name="avatar.png" width="60" height="60"/>
         <image name="img_frame.png" width="180" height="56"/>
     </resources>
 </document>

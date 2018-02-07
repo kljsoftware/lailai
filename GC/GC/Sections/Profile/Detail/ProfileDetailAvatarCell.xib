@@ -65,6 +65,10 @@
                     <constraint firstItem="lS8-kl-iLA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ws9-kO-zKE"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarImageView" destination="8xT-9A-9SQ" id="Fqb-pt-X5R"/>
+                <outlet property="photoLabel" destination="LFH-3G-H2x" id="ref-g2-ZGY"/>
+            </connections>
             <point key="canvasLocation" x="34" y="114"/>
         </tableViewCell>
     </objects>

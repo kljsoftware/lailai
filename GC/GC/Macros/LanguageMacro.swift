@@ -42,6 +42,8 @@ enum LanguageKey : String {
     case region  // 地区
     case email   // 邮箱
     case desc    // 个人描述
+    case man     // 男
+    case woman   // 女
 
     case map             // 地图
     case balance         // 捐赠积分额

@@ -14,6 +14,11 @@ class WalletBaseResultModel : BaseResultModel {
     
     /// 广告信息
     var adItems = [AdModel]()
+    
+    /// 指定数组元素类型
+    override class func mj_objectClassInArray() -> [AnyHashable: Any]! {
+        return ["adItems" : AdModel.self]
+    }
 }
 
 /// 用户信息
@@ -27,8 +32,8 @@ class WalletUserInfoModel : NSObject {
 
 /// 广告模型
 class AdModel : NSObject {
-    var image = "" // 广告图片
-    var url = ""   // 广告页点击要跳转的网址
+    var cover = ""  // 广告图片
+    var link  = ""   // 广告页点击要跳转的网址
 }
 
 /// 3.2 获取积分钱包商家数据

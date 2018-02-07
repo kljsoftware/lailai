@@ -64,6 +64,10 @@
                     <constraint firstItem="Qde-at-B07" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="x2a-G4-Uaf"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="contentLabel" destination="pzm-kb-yJZ" id="hx9-MY-hHP"/>
+                <outlet property="nameLabel" destination="Qde-at-B07" id="WCu-7J-7JM"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>

@@ -16,4 +16,14 @@ class UIHelper {
         let window = (UIApplication.shared.delegate as! AppDelegate).window
         window?.makeToast(message, duration: 1, position: position)
     }
+    
+    /// 调转至广告页
+    class func pushToAdView(model:AdModel) {
+        guard let url = URL(string: NetworkImgOrWeb.getUrl(name: model.link)) else {
+            return
+        }
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.openURL(url)
+        }
+    }
 }

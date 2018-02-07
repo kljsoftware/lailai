@@ -33,8 +33,8 @@ class WalletCollectionViewCell: UICollectionViewCell {
     // MARK: - public methods
     func update(model:WalletModel) {
         backImageView.backgroundColor = UIColor.hexStringToColor(model.color)
-        logoImageView.setImage(urlStr: NetworkImg.getUrl(name: model.dealerLogo), placeholderStr: "", radius: 30)
-        nameLabel.text = model.dealerName
+        logoImageView.setImage(urlStr: NetworkImgOrWeb.getUrl(name: model.logo), placeholderStr: "", radius: 30)
+        nameLabel.text = model.name
         balanceLabel.text = "\(model.balance)"
         balance.text = LanguageKey.balance.value
         memberNameLabel.text = model.memberDeaName

@@ -30,10 +30,10 @@ class Token {
     }
 }
 
-/// 图片地址
-class NetworkImg {
+/// 图片/web地址
+class NetworkImgOrWeb {
     class func getUrl(name:String) -> String {
-        return "\(HTTP_ADDRESS)/img/\(name)"
+        return "https://\(name)"
     }
 }
 
@@ -51,6 +51,7 @@ enum NetworkURL {
     case getAbout       // 3.9关于
     case getContributionHistory // 3.11捐赠记录
     case getDealers             // 3.12绿色地图
+    case getUserInfo    // 7.1 获取个人信息
     
     /// url地址
     var url : String {
@@ -80,6 +81,8 @@ enum NetworkURL {
             api = "\(Token.shared.value)/getContributionHistory"
         case .getDealers:
             api = "\(Token.shared.value)/getDealers"
+        case .getUserInfo:
+            api = "\(Token.shared.value)/getUserInfo"
         }
         return "\(HTTP_ADDRESS)/v2/\(api)"
     }

@@ -32,7 +32,7 @@ class WalletViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        requestData()
+        setupViewModel()
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,20 +50,33 @@ class WalletViewController: UIViewController {
         tableTopLayoutConstraint.constant = tableTopMargin
     }
     
-    /// 设置广告
-    private func setupBanner() {
+    /// 更新基本数据
+    private func setupBase() {
+        
+        /// banner
         let banner = BannnerView(frame: CGRect(x: 0, y: 0, width: DEVICE_SCREEN_WIDTH, height: bannerHeight))
         bannerContainerView.addSubview(banner)
-        banner.setup(banners: [NetworkImg.getUrl(name: "Starbuckslogo.png"),
-                               NetworkImg.getUrl(name: "ddicon02.png")])
+        banner.setup(banners: viewModel.walletBaseModel.adItems)
+        
+        /// userInfo
+        let userInfoView = tableView.tableHeaderView!.subviews[0] as! PersonalDonateView
+        userInfoView.update(model: viewModel.walletBaseModel.userInfo)
     }
     
-    /// 请求数据
-    private func requestData() {
+    /// 初始化业务模块
+    private func setupViewModel() {
         viewModel.getPoints()
+        viewModel.getPointsBase()
         viewModel.setCompletion(onSuccess: { [weak self](resultModel) in
-            self?.tableView.reloadData()
-            self?.setupBanner()
+            guard let wself = self else {
+                return
+            }
+            
+            if resultModel.isKind(of: WalletBaseResultModel.self) {
+                wself.setupBase()
+            } else {
+                wself.tableView.reloadData()
+            }
         }) { (error) in
             UIHelper.tip(message: error)
         }
@@ -112,7 +125,7 @@ extension WalletViewController : UITableViewDataSource, UITableViewDelegate {
     
     // 单元(cell)的高度
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let count = viewModel.walletModel.data.count
+        let count = viewModel.walletModel.shopItems.count
         let row = count % 2 == 0 ? count / 2 : (count + 1)/2
         let height = collectionCellHeight * CGFloat(row) + CGFloat(row + 1)*blank
         return height

@@ -12,7 +12,7 @@ import UIKit
 class BannnerView: UIView {
     
     /// 广告数据
-    var banners = [String]()
+    var banners = Array<AdModel>()
     
     /// 滚动视图
     lazy var scrollView:UIScrollView = {
@@ -26,10 +26,9 @@ class BannnerView: UIView {
         _scrollView.contentSize = CGSize(width: CGFloat(self.banners.count) * self.frame.width, height: self.frame.height)
         _scrollView.setContentOffset(CGPoint(x: self.frame.width, y: 0), animated: false)
         for i in 0..<self.banners.count {
-            let banner = UIImageView()
+            let banner = Bundle.main.loadNibNamed("AdView", owner: nil, options: nil)?[0] as! AdView
+            banner.model = self.banners[i]
             banner.frame = CGRect(x: CGFloat(i) * self.frame.width, y: 0, width: self.frame.width, height: self.frame.height)
-            banner.contentMode = .scaleAspectFill
-            banner.setImage(urlStr: self.banners[i], placeholderStr: "news_header.png", radius: 0)
             _scrollView.addSubview(banner)
         }
         return _scrollView
@@ -48,7 +47,7 @@ class BannnerView: UIView {
     
     // MARK: - public methods
     /// 初始化
-    func setup(banners:[String]) {
+    func setup(banners:[AdModel]) {
         if banners.count > 0 {
             self.banners = banners
             scrollView.contentOffset = CGPoint.zero

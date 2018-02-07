@@ -1,9 +1,9 @@
 //
 //  Date+Extension.swift
-//  Music
+//  GC
 //
-//  Created by hzg on 2017/12/12.
-//  Copyright © 2017年 demo. All rights reserved.
+//  Created by hzg on 2018/2/3.
+//  Copyright © 2018年 demo. All rights reserved.
 //
 
 import Foundation

@@ -9,11 +9,15 @@
 /// 启动业务模块
 class LaunchViewModel : BaseViewModel {
     
+    /// 广告model
+    var adModel = AdModel()
+    
     /// 获取闪屏页广告
     func getPointsScAd() {
         HTTPSessionManager.shared.request(method: .GET, urlString: NetworkURL.getPointsScAd.url, parameters: nil) { [weak self] (josn, success) in
             let model = SplashModel.mj_object(withKeyValues: josn)
             if success && model != nil && model!.code == 0 {
+                self?.adModel = model!.data
                 self?.successCallback?(model!)
             } else {
                 let msg = model != nil ? model!.msg : "error"
