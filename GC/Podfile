@@ -7,7 +7,7 @@ target 'GC' do
 
   # Pods for GC
   pod 'AFNetworking', '3.1.0’
-  pod 'MJRefresh', '3.1.15'
+  pod 'MJRefresh', '3.1.15.3'
   pod 'MJExtension', '3.0.13'
   pod 'SDWebImage', '4.2.2'
   pod 'SnapKit', '3.2.0'

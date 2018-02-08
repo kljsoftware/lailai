@@ -19,7 +19,12 @@ class UIHelper {
     
     /// 调转至广告页
     class func pushToAdView(model:AdModel) {
-        guard let url = URL(string: NetworkImgOrWeb.getUrl(name: model.link)) else {
+        pushToWeb(urlString: model.link)
+    }
+    
+    /// 调整至网页
+    class func pushToWeb(urlString:String) {
+        guard let url = URL(string: urlString) else {
             return
         }
         if UIApplication.shared.canOpenURL(url) {

@@ -71,7 +71,6 @@ extension WalletCell :  UICollectionViewDataSource, UICollectionViewDelegateFlow
     
     /// 点击单元
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = UIStoryboard(name: "Wallet", bundle: nil).instantiateViewController(withIdentifier: "donate_record")
         didSelectItemClosure?(walletModel.shopItems[indexPath.row])
     }
 }

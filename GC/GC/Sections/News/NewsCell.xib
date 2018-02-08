@@ -82,6 +82,12 @@
                     <constraint firstItem="5yX-KY-579" firstAttribute="leading" secondItem="VhO-6E-l80" secondAttribute="trailing" constant="12" id="sFK-Fo-dc5"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="coverImageView" destination="VhO-6E-l80" id="Orh-3b-y1h"/>
+                <outlet property="nameLabel" destination="5M5-XM-20l" id="LEI-IG-V4c"/>
+                <outlet property="sourceLabel" destination="5yX-KY-579" id="vg6-Gw-lU9"/>
+                <outlet property="timeLabel" destination="iWh-9O-45G" id="he7-6h-ZYK"/>
+            </connections>
             <point key="canvasLocation" x="34" y="33"/>
         </tableViewCell>
     </objects>

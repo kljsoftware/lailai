@@ -10,15 +10,19 @@ import UIKit
 
 class NewsCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    @IBOutlet weak var coverImageView: UIImageView!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var sourceLabel: UILabel!
+    
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    func update(model:NewsItemModel) {
+        coverImageView.setImage(urlStr: NetworkImgOrWeb.getUrl(name: model.newsCover), placeholderStr: "", radius: 8)
+        sourceLabel.text = model.newsSource
+        nameLabel.text = model.newsTag
+        timeLabel.text = model.createdDate.transferFormat()
     }
     
 }

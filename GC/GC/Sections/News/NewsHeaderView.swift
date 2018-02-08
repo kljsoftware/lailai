@@ -10,4 +10,13 @@ import UIKit
 
 class NewsHeaderView: UIView {
     
+    @IBOutlet weak var coverImageView: UIImageView!
+    
+    @IBOutlet weak var tagLabel: UILabel!
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    func update(model:NewsTopModel) {
+        
+    }
 }

@@ -27,19 +27,19 @@ class NewsResultModel : BaseResultModel {
 }
 
 class NewsTopModel : NSObject {
-    var id    = 1    // 新闻id
-    var tag   = ""   // 新闻标签
-    var cover = ""   // 新闻封面
-    var link  = ""   // 新闻链接
-    var source = ""  // 来源
-    var create_date = "" //新闻时间
+    var id          = 1    // 新闻id
+    var newsTag     = ""   // 新闻标签
+    var newsCover   = ""   // 新闻封面
+    var newsLink    = ""   // 新闻链接
+    var newsSource  = ""   // 来源
+    var createdDate:Double = 0   //新闻时间
 }
 
 class NewsItemModel : NSObject {
-    var id = 1           // 新闻id
-    var tag = ""         // 新闻标签
-    var cover = ""       // 新闻封面
-    var link = ""        // 新闻链接
-    var source = ""      // 来源
-    var create_date = "" //新闻时间
+    var id          = 1    // 新闻id
+    var newsTag     = ""   // 新闻标签
+    var newsCover   = ""   // 新闻封面
+    var newsLink    = ""   // 新闻链接
+    var newsSource  = ""   // 来源
+    var createdDate:Double = 0   //新闻时间
 }

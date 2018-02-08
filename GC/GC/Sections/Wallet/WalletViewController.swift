@@ -48,6 +48,24 @@ class WalletViewController: UIViewController {
         tableView.register(UINib(nibName: "WalletCell", bundle: nil), forCellReuseIdentifier: "kWalletCell")
         tableView.tableHeaderView = tableViewHeaderView()
         tableTopLayoutConstraint.constant = tableTopMargin
+        tableView.mj_header = MJRefreshStateHeader(refreshingBlock: {
+            self.tableHeaderRefreshing()
+        })
+        tableView.mj_footer = MJRefreshBackStateFooter(refreshingBlock: {
+            self.tableFooterRefreshing()
+        })
+    }
+    
+    // 列表下拉刷新
+    func tableHeaderRefreshing() {
+        tableView.mj_header.beginRefreshing()
+        tableView.mj_header.endRefreshing()
+    }
+    
+    // 列表尾部上拉刷新
+    func tableFooterRefreshing() {
+        tableView.mj_footer.beginRefreshing()
+        tableView.mj_footer.endRefreshing()
     }
     
     /// 更新基本数据
@@ -113,7 +131,8 @@ extension WalletViewController : UITableViewDataSource, UITableViewDelegate {
             guard let wself = self else {
                 return
             }
-            let vc = UIStoryboard(name: "Wallet", bundle: nil).instantiateViewController(withIdentifier: "donate_record")
+            let vc = UIStoryboard(name: "Wallet", bundle: nil).instantiateViewController(withIdentifier: "donate_record") as! DonateRecordViewController
+            vc.id = model.id
             wself.navigationController?.pushViewController(vc, animated: true)
         }
         return cell

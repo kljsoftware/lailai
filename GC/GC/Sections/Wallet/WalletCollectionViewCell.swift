@@ -32,7 +32,9 @@ class WalletCollectionViewCell: UICollectionViewCell {
 
     // MARK: - public methods
     func update(model:WalletModel) {
-        backImageView.backgroundColor = UIColor.hexStringToColor(model.color)
+        let color = UIColor.hexStringToColor(model.color)
+        backImageView.backgroundColor = color
+        memberNameLabel.textColor = color
         logoImageView.setImage(urlStr: NetworkImgOrWeb.getUrl(name: model.logo), placeholderStr: "", radius: 30)
         nameLabel.text = model.name
         balanceLabel.text = "\(model.balance)"

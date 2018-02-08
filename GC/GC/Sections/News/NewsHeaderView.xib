@@ -82,6 +82,11 @@
                 <constraint firstItem="aVi-jK-bZD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pBP-Ob-Aow"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="coverImageView" destination="7hX-r6-Qx4" id="vcB-UT-kSu"/>
+                <outlet property="tagLabel" destination="Hu4-vA-oKA" id="FIc-Sv-fds"/>
+                <outlet property="titleLabel" destination="42v-VL-j15" id="4yF-Bj-ncn"/>
+            </connections>
             <point key="canvasLocation" x="12" y="66"/>
         </view>
     </objects>

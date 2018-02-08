@@ -20,13 +20,13 @@ extension UIColor {
     }
     
     // 字符串转颜色
-    class func hexStringToColor(_ hexString: String) -> UIColor{
+    class func hexStringToColor(_ hexString: String, defaultColor:UIColor = COLOR_5A848A) -> UIColor{
         var cString: String = hexString.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         
-        if cString.characters.count < 6 {return UIColor.black}
+        if cString.characters.count < 6 {return defaultColor}
         if cString.hasPrefix("0X") {cString = cString.substring(from: cString.characters.index(cString.startIndex, offsetBy: 2))}
         if cString.hasPrefix("#") {cString = cString.substring(from: cString.characters.index(cString.startIndex, offsetBy: 1))}
-        if cString.characters.count != 6 {return UIColor.black}
+        if cString.characters.count != 6 {return defaultColor}
         
         var range: NSRange = NSMakeRange(0, 2)
         

@@ -50,6 +50,8 @@ enum LanguageKey : String {
 
     case map             // 地图
     case balance         // 捐赠积分额
+    case points          // 积分:
+    
     case sendCode        // 发送验证码
     case sendAgain       // 重新发送
     case donate_record   // 积分捐赠记录

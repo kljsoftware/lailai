@@ -51,6 +51,7 @@ enum NetworkURL {
     case getAbout       // 3.9关于
     case getContributionHistory // 3.11捐赠记录
     case getDealers             // 3.12绿色地图
+    case getNews        // 5.1获取新闻列表
     case getUserInfo    // 7.1 获取个人信息
     
     /// url地址
@@ -81,6 +82,8 @@ enum NetworkURL {
             api = "\(Token.shared.value)/getContributionHistory"
         case .getDealers:
             api = "\(Token.shared.value)/getDealers"
+        case .getNews:
+            api = "\(Token.shared.value)/getNews"
         case .getUserInfo:
             api = "\(Token.shared.value)/getUserInfo"
         }

@@ -13,15 +13,47 @@ private let cellHeight:CGFloat = 80
 
 /// 绿色新闻
 class NewsViewController: UIViewController {
+    
+    fileprivate var viewModel = NewsViewModel()
 
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+        setupViewModel()
+    }
+    
+    private func setup() {
         navigationItem.title = LanguageKey.tab_news.value
         automaticallyAdjustsScrollViewInsets = false
         tableView.register(UINib(nibName: "NewsCell", bundle: nil), forCellReuseIdentifier: "kNewsCell")
         tableView.tableHeaderView = tableViewHeaderView()
+        tableView.mj_header = MJRefreshStateHeader(refreshingBlock: {
+            self.tableHeaderRefreshing()
+        })
+        tableView.mj_footer = MJRefreshBackStateFooter(refreshingBlock: {
+            self.tableFooterRefreshing()
+        })
+    }
+    
+    private func setupViewModel() {
+        viewModel.getNews()
+        viewModel.setCompletion(onSuccess: {[weak self] (resultModel) in
+            self?.tableView.reloadData()
+        }) { (error) in
+            Log.e(error)
+        }
+    }
+    
+    func tableFooterRefreshing() {
+        tableView.mj_footer.beginRefreshing()
+        tableView.mj_footer.endRefreshing()
+    }
+    
+    func tableHeaderRefreshing() {
+        tableView.mj_header.beginRefreshing()
+        tableView.mj_header.endRefreshing()
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,12 +78,13 @@ extension NewsViewController : UITableViewDataSource, UITableViewDelegate {
     
     // 各个分区的单元(Cell)个数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.newsItems.count
     }
     
     // 单元(cell)视图
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "kNewsCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "kNewsCell", for: indexPath) as! NewsCell
+        cell.update(model: viewModel.newsItems[indexPath.row])
         return cell
     }
     
@@ -62,6 +95,6 @@ extension NewsViewController : UITableViewDataSource, UITableViewDelegate {
     
     // 单元(cell)选中事件
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        UIHelper.pushToWeb(urlString: viewModel.newsItems[indexPath.row].newsLink)
     }
 }
