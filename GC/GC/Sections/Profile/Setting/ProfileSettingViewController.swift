@@ -94,9 +94,11 @@ extension ProfileSettingViewController : UITableViewDataSource, UITableViewDeleg
         case .language:
             break
         case .faq:
-            break
+            let vc = UIStoryboard.init(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "profile_setting_faq")
+            navigationController?.pushViewController(vc, animated: true)
         case .about:
-            break
+            let vc = UIStoryboard.init(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "profile_setting_about")
+            navigationController?.pushViewController(vc, animated: true)
         case .quit:
             NotificationCenter.default.post(name: NoticationUserLogout, object: nil)
         }

@@ -68,7 +68,6 @@
 		3CB4D0FC202A033200AB70B9 /* DonateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4D0FB202A033200AB70B9 /* DonateModel.swift */; };
 		3CB4D0FF202A044A00AB70B9 /* DonateDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4D0FE202A044A00AB70B9 /* DonateDetailsModel.swift */; };
 		3CB4D101202A05AF00AB70B9 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4D100202A05AF00AB70B9 /* ProfileModel.swift */; };
-		3CB4D107202A085C00AB70B9 /* BlockChainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4D106202A085C00AB70B9 /* BlockChainModel.swift */; };
 		3CB4D10E202AF8D000AB70B9 /* AdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB4D10C202AF8D000AB70B9 /* AdView.xib */; };
 		3CB4D10F202AF8D000AB70B9 /* AdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4D10D202AF8D000AB70B9 /* AdView.swift */; };
 		3CB4D111202B093600AB70B9 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4D110202B093600AB70B9 /* ProfileViewModel.swift */; };
@@ -77,6 +76,12 @@
 		3CB4D11D202C241700AB70B9 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4D11C202C241700AB70B9 /* Double+Extension.swift */; };
 		3CB4D11F202C293300AB70B9 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4D11E202C293300AB70B9 /* NewsViewModel.swift */; };
 		3CB4D121202C4BB900AB70B9 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4D120202C4BB900AB70B9 /* Upload.swift */; };
+		3CB4D127202C7BFC00AB70B9 /* SettingFAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4D126202C7BFC00AB70B9 /* SettingFAQViewController.swift */; };
+		3CB4D129202C821500AB70B9 /* SettingAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4D128202C821500AB70B9 /* SettingAboutViewController.swift */; };
+		3CB4D12B202C8DBD00AB70B9 /* General.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CB4D12A202C8DBD00AB70B9 /* General.storyboard */; };
+		3CB4D12D202C8E0500AB70B9 /* BlockChainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4D12C202C8E0500AB70B9 /* BlockChainViewController.swift */; };
+		3CB4D12F202C8EE400AB70B9 /* GeneralViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4D12E202C8EE400AB70B9 /* GeneralViewModel.swift */; };
+		3CB4D131202C8F0D00AB70B9 /* GeneralModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4D130202C8F0D00AB70B9 /* GeneralModel.swift */; };
 		3CB55393201CB73F009AC1CD /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB5537A201CB73F009AC1CD /* Log.swift */; };
 		3CB55394201CB73F009AC1CD /* OnePixelConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB5537B201CB73F009AC1CD /* OnePixelConstraint.swift */; };
 		3CB55395201CB73F009AC1CD /* PortraitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB5537C201CB73F009AC1CD /* PortraitViewController.swift */; };
@@ -221,7 +226,6 @@
 		3CB4D0FB202A033200AB70B9 /* DonateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateModel.swift; sourceTree = "<group>"; };
 		3CB4D0FE202A044A00AB70B9 /* DonateDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateDetailsModel.swift; sourceTree = "<group>"; };
 		3CB4D100202A05AF00AB70B9 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
-		3CB4D106202A085C00AB70B9 /* BlockChainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockChainModel.swift; sourceTree = "<group>"; };
 		3CB4D10C202AF8D000AB70B9 /* AdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdView.xib; sourceTree = "<group>"; };
 		3CB4D10D202AF8D000AB70B9 /* AdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdView.swift; sourceTree = "<group>"; };
 		3CB4D110202B093600AB70B9 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -230,6 +234,12 @@
 		3CB4D11C202C241700AB70B9 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		3CB4D11E202C293300AB70B9 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		3CB4D120202C4BB900AB70B9 /* Upload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upload.swift; sourceTree = "<group>"; };
+		3CB4D126202C7BFC00AB70B9 /* SettingFAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingFAQViewController.swift; sourceTree = "<group>"; };
+		3CB4D128202C821500AB70B9 /* SettingAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAboutViewController.swift; sourceTree = "<group>"; };
+		3CB4D12A202C8DBD00AB70B9 /* General.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = General.storyboard; sourceTree = "<group>"; };
+		3CB4D12C202C8E0500AB70B9 /* BlockChainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockChainViewController.swift; sourceTree = "<group>"; };
+		3CB4D12E202C8EE400AB70B9 /* GeneralViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewModel.swift; sourceTree = "<group>"; };
+		3CB4D130202C8F0D00AB70B9 /* GeneralModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralModel.swift; sourceTree = "<group>"; };
 		3CB55370201CB5FD009AC1CD /* GC-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GC-Bridging-Header.h"; sourceTree = "<group>"; };
 		3CB5537A201CB73F009AC1CD /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		3CB5537B201CB73F009AC1CD /* OnePixelConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnePixelConstraint.swift; sourceTree = "<group>"; };
@@ -381,6 +391,8 @@
 			children = (
 				3C7E26D62026960100ED4B56 /* ProfileSettingViewController.swift */,
 				3CB4D118202B488200AB70B9 /* ProfileSettingPwdViewController.swift */,
+				3CB4D126202C7BFC00AB70B9 /* SettingFAQViewController.swift */,
+				3CB4D128202C821500AB70B9 /* SettingAboutViewController.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -701,7 +713,10 @@
 				3CF365202022D9AB003179E8 /* BaseViewModel.swift */,
 				3CF365222022DA86003179E8 /* BaseRequestModel.swift */,
 				3CF365242022DAAF003179E8 /* BaseResultModel.swift */,
-				3CB4D106202A085C00AB70B9 /* BlockChainModel.swift */,
+				3CB4D12A202C8DBD00AB70B9 /* General.storyboard */,
+				3CB4D12C202C8E0500AB70B9 /* BlockChainViewController.swift */,
+				3CB4D130202C8F0D00AB70B9 /* GeneralModel.swift */,
+				3CB4D12E202C8EE400AB70B9 /* GeneralViewModel.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -904,6 +919,7 @@
 				3C8DCEED201D76C400C9F40E /* tab_business_nor@3x.png in Resources */,
 				3CF364F82022A916003179E8 /* Donate.storyboard in Resources */,
 				3C65505B20243B8600FE0504 /* WalletCell.xib in Resources */,
+				3CB4D12B202C8DBD00AB70B9 /* General.storyboard in Resources */,
 				3CFD84F7201C9B5900F9E7E5 /* Info.plist in Resources */,
 				3C91FC28201F21C500BB492D /* news_header.png in Resources */,
 				3C8DCEF6201D76C400C9F40E /* tab_news_sel@3x.png in Resources */,
@@ -1018,6 +1034,7 @@
 				3C7E26D72026960100ED4B56 /* ProfileSettingViewController.swift in Sources */,
 				3CF3650A2022A916003179E8 /* NewsCell.swift in Sources */,
 				3CB4D11B202C194300AB70B9 /* DonateRecordViewModel.swift in Sources */,
+				3CB4D12F202C8EE400AB70B9 /* GeneralViewModel.swift in Sources */,
 				3CB5539A201CB73F009AC1CD /* UIView+Extension.swift in Sources */,
 				3CF365182022A916003179E8 /* FotgotPwd2ViewController.swift in Sources */,
 				3CF364FA2022A916003179E8 /* SplashViewController.swift in Sources */,
@@ -1042,22 +1059,25 @@
 				3CB4D0FC202A033200AB70B9 /* DonateModel.swift in Sources */,
 				3CF3653120231DA8003179E8 /* BusinessModel.swift in Sources */,
 				3C65507A2025DF7C00FE0504 /* DonateRecordViewController.swift in Sources */,
+				3CB4D129202C821500AB70B9 /* SettingAboutViewController.swift in Sources */,
 				3CF3652D2022EE8B003179E8 /* LaunchViewModel.swift in Sources */,
 				3CB55393201CB73F009AC1CD /* Log.swift in Sources */,
 				3CB553A4201CB73F009AC1CD /* NotificationMacro.swift in Sources */,
 				3CB4D10F202AF8D000AB70B9 /* AdView.swift in Sources */,
+				3CB4D127202C7BFC00AB70B9 /* SettingFAQViewController.swift in Sources */,
 				3CFD84F4201C9B5900F9E7E5 /* AppDelegate.swift in Sources */,
 				3CF3652B2022EB19003179E8 /* UIHelper.swift in Sources */,
+				3CB4D12D202C8E0500AB70B9 /* BlockChainViewController.swift in Sources */,
 				3CB553A3201CB73F009AC1CD /* LanguageMacro.swift in Sources */,
 				3CB4D121202C4BB900AB70B9 /* Upload.swift in Sources */,
 				3CB4D0FF202A044A00AB70B9 /* DonateDetailsModel.swift in Sources */,
 				3CB4D11F202C293300AB70B9 /* NewsViewModel.swift in Sources */,
+				3CB4D131202C8F0D00AB70B9 /* GeneralModel.swift in Sources */,
 				3CB4D111202B093600AB70B9 /* ProfileViewModel.swift in Sources */,
 				3CF365192022A916003179E8 /* LoginViewController.swift in Sources */,
 				3C7E26D9202698B000ED4B56 /* ProfileBusinessViewController.swift in Sources */,
 				3C7E26D12026930400ED4B56 /* ProfileDetailOtherCell.swift in Sources */,
 				3C7E26CF2026930400ED4B56 /* ProfileDetailAvatarCell.swift in Sources */,
-				3CB4D107202A085C00AB70B9 /* BlockChainModel.swift in Sources */,
 				3CF365062022A916003179E8 /* RegisterViewController.swift in Sources */,
 				3CB55399201CB73F009AC1CD /* UIButton+Extension.swift in Sources */,
 				3CF3653320232377003179E8 /* BusinessViewModel.swift in Sources */,

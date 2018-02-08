@@ -80,6 +80,11 @@ extension DonateRecordViewController : UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "kDonateRecordCell", for: indexPath) as! DonateRecordCell
         cell.update(model: viewModel.recordResultModel.recordItems[indexPath.row])
+        cell.queryBlockChainClosure = { [weak self](model) in
+            let vc = UIStoryboard.init(name: "General", bundle: nil).instantiateViewController(withIdentifier: "block_chain") as! BlockChainViewController
+            vc.id = model.id
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }
         return cell
     }
     

@@ -49,6 +49,8 @@
 // 我
 "setting" = "设置";
 "business_link" = "商家API链接设置";
+"blockchain_setting" = "区块链设置";
+"blockchain" = "区块链";
 "profile_setting" = "个人设置";
 "photo" = "照片";
 "nick"  = "昵称";

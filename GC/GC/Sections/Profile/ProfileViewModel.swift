@@ -43,4 +43,35 @@ class ProfileViewModel: BaseViewModel {
             }
         }
     }
+    
+    /// 7.4 反馈信息
+    func feedBack(info:String) {
+        let reqModel = PutFeedbackRequestModel()
+        reqModel.info = info
+        HTTPSessionManager.shared.request(method: .POST, urlString: NetworkURL.putFeedback.url, parameters: reqModel.mj_keyValues()) { (json, success) in
+            let resultModel = BaseResultModel.mj_object(withKeyValues: json)
+            if success && resultModel != nil && resultModel!.code == 0 {
+                self.successCallback?(resultModel!)
+            } else {
+                let msg = resultModel != nil ? resultModel!.msg : "error"
+                Log.e(msg)
+                self.failureCallback?(msg)
+            }
+        }
+    }
+    
+    /// 7.3 获取关于内容
+    func getAbout() {
+        HTTPSessionManager.shared.request(urlString: NetworkURL.getAbout.url, parameters: nil) { (json, success) in
+            let resultModel = AboutResultModel.mj_object(withKeyValues: json)
+            if success && resultModel != nil && resultModel!.code == 0 {
+                self.successCallback?(resultModel!)
+            } else {
+                let msg = resultModel != nil ? resultModel!.msg : "error"
+                Log.e(msg)
+                self.failureCallback?(msg)
+            }
+        }
+    }
+
 }

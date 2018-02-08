@@ -71,15 +71,26 @@
                         <constraint firstItem="42v-VL-j15" firstAttribute="leading" secondItem="4Pf-rJ-Xj2" secondAttribute="trailing" constant="6" id="jss-0z-bHa"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ml8-00-mmM">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <action selector="onNewsTopButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="U64-Cf-l1I"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="7hX-r6-Qx4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1Mb-8F-LMu"/>
+                <constraint firstItem="ml8-00-mmM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="67j-1R-Wb7"/>
+                <constraint firstAttribute="bottom" secondItem="ml8-00-mmM" secondAttribute="bottom" id="WVh-0o-S3M"/>
                 <constraint firstItem="aVi-jK-bZD" firstAttribute="top" secondItem="7hX-r6-Qx4" secondAttribute="bottom" id="Wdv-I1-vLv"/>
                 <constraint firstAttribute="trailing" secondItem="7hX-r6-Qx4" secondAttribute="trailing" id="b4c-KI-559"/>
                 <constraint firstAttribute="trailing" secondItem="aVi-jK-bZD" secondAttribute="trailing" id="f5X-nL-W8x"/>
                 <constraint firstItem="7hX-r6-Qx4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gT6-LN-MoM"/>
+                <constraint firstAttribute="trailing" secondItem="ml8-00-mmM" secondAttribute="trailing" id="o5z-uT-cS3"/>
                 <constraint firstItem="aVi-jK-bZD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pBP-Ob-Aow"/>
+                <constraint firstItem="ml8-00-mmM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ppy-Tg-N8Z"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

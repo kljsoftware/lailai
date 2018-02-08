@@ -49,31 +49,40 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVn-yK-hzy">
-                        <rect key="frame" x="230.5" y="46" width="29.5" height="13.5"/>
+                        <rect key="frame" x="230.5" y="14" width="29.5" height="13.5"/>
                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
                         <color key="textColor" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKg-hK-4Al">
-                        <rect key="frame" x="264" y="46" width="29.5" height="13.5"/>
+                        <rect key="frame" x="264" y="14" width="29.5" height="13.5"/>
                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
                         <color key="textColor" red="0.96078431372549022" green="0.66274509803921566" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5y0-TP-p1C">
+                        <rect key="frame" x="216.5" y="46" width="77" height="30"/>
+                        <state key="normal" title="查看区块链"/>
+                        <connections>
+                            <action selector="onQueryBlockChainButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="2Hc-Ii-pU5"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="HYG-d3-XUL" firstAttribute="leading" secondItem="UI8-o4-ygM" secondAttribute="leading" id="3lb-cT-vKl"/>
                     <constraint firstItem="3jf-WF-6QI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="EMB-uy-LzV"/>
                     <constraint firstAttribute="trailing" secondItem="SVn-yK-hzy" secondAttribute="trailing" constant="60" id="Ew5-og-WAF"/>
+                    <constraint firstItem="5y0-TP-p1C" firstAttribute="centerY" secondItem="HYG-d3-XUL" secondAttribute="centerY" id="K5E-Pm-UES"/>
                     <constraint firstItem="2PD-1G-KqE" firstAttribute="top" secondItem="UI8-o4-ygM" secondAttribute="bottom" constant="8" id="MmF-bi-ibp"/>
                     <constraint firstItem="2PD-1G-KqE" firstAttribute="leading" secondItem="UI8-o4-ygM" secondAttribute="leading" id="P0B-6j-0Zu"/>
                     <constraint firstItem="HYG-d3-XUL" firstAttribute="top" secondItem="2PD-1G-KqE" secondAttribute="bottom" constant="4" id="RwE-oH-VDg"/>
                     <constraint firstItem="tKg-hK-4Al" firstAttribute="leading" secondItem="SVn-yK-hzy" secondAttribute="trailing" constant="4" id="YNz-4t-YZR"/>
                     <constraint firstItem="UI8-o4-ygM" firstAttribute="top" secondItem="3jf-WF-6QI" secondAttribute="top" id="ZRi-pw-Ptq"/>
                     <constraint firstItem="3jf-WF-6QI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="ZUF-hm-akq"/>
-                    <constraint firstItem="tKg-hK-4Al" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="grp-4u-qJq"/>
+                    <constraint firstItem="SVn-yK-hzy" firstAttribute="centerY" secondItem="UI8-o4-ygM" secondAttribute="centerY" id="c3q-8x-UGR"/>
+                    <constraint firstItem="5y0-TP-p1C" firstAttribute="trailing" secondItem="tKg-hK-4Al" secondAttribute="trailing" id="cXd-fD-bfy"/>
                     <constraint firstItem="UI8-o4-ygM" firstAttribute="leading" secondItem="3jf-WF-6QI" secondAttribute="trailing" constant="12" id="oVb-UJ-USB"/>
-                    <constraint firstItem="SVn-yK-hzy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="tze-4W-ZOc"/>
+                    <constraint firstItem="tKg-hK-4Al" firstAttribute="centerY" secondItem="SVn-yK-hzy" secondAttribute="centerY" id="yxW-1g-cQd"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

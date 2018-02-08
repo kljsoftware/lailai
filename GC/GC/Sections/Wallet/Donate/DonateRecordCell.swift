@@ -10,6 +10,8 @@ import UIKit
 
 class DonateRecordCell: UITableViewCell {
     
+    var queryBlockChainClosure:((_ model:DonateRecordModel) -> Void)?
+    
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var logoImageView: UIImageView!
@@ -22,13 +24,23 @@ class DonateRecordCell: UITableViewCell {
     
     @IBOutlet weak var pointsLabel: UILabel!
     
+    private var model:DonateRecordModel?
+    
     // MARK: - public methods
     func update(model:DonateRecordModel) {
+        self.model = model
         nameLabel.text = model.name
         logoImageView.setImage(urlStr: NetworkImgOrWeb.getUrl(name: model.logo), placeholderStr: "", radius: 30)
         memerLabel.text = model.memberDeaName
         pointLabel.text = "积分："
         pointsLabel.text = "\(model.balance)"
         timeLabel.text = model.create_date.transferFormat()
+    }
+    
+    /// 查看区块链
+    @IBAction func onQueryBlockChainButtonClicked(_ sender: UIButton) {
+        if nil != model {
+            queryBlockChainClosure?(model!)
+        }
     }
 }

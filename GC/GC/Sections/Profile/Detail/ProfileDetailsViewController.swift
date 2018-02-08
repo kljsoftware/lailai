@@ -60,7 +60,7 @@ class ProfileDetailsViewController: UIViewController {
             tuple.1 = NetworkImgOrWeb.getUrl(name: userInfo.logo)
         case .nick:
             tuple.0 = LanguageKey.nick.value
-            tuple.1 = userInfo.short_name
+            tuple.1 = userInfo.shortName
         case .tel:    // 手机号
             tuple.0 = LanguageKey.phoneNum.value
             tuple.1 = userInfo.tel

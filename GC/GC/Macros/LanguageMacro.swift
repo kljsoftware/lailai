@@ -35,6 +35,8 @@ enum LanguageKey : String {
    
     case setting         // 设置
     case business_link   // 商家API链接设置
+    case blockchain_setting  // 区块链设置
+    case blockchain   // 区块链
     case profile_setting // 个人设置
     case photo // 照片
     case nick  // 昵称

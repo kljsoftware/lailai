@@ -47,12 +47,13 @@ enum NetworkURL {
     case getPoints      // 3.2 获取积分钱包商家数据
     case modityUserInfo // 3.5个人信息修改
     case modityPassword // 3.6密码修改
-    case putFeedback    // 3.7反馈信息
     case getAbout       // 3.9关于
     case getContributionHistory // 3.11捐赠记录
     case getDealers             // 3.12绿色地图
     case getNews        // 5.1获取新闻列表
     case getUserInfo    // 7.1 获取个人信息
+    case putFeedback    // 7.4 反馈信息
+    case getBlockChainInfo // 8.1 获取区块链信息
     case uploadFile     //
     
     /// url地址
@@ -75,8 +76,6 @@ enum NetworkURL {
             api = "\(Token.shared.value)/modityUserInfo"
         case .modityPassword:
             api = "\(Token.shared.value)/modityPassword"
-        case .putFeedback:
-            api = "\(Token.shared.value)/putFeedback"
         case .getAbout:
             api = "getAbout"
         case .getContributionHistory:
@@ -87,6 +86,10 @@ enum NetworkURL {
             api = "\(Token.shared.value)/getNews"
         case .getUserInfo:
             api = "\(Token.shared.value)/getUserInfo"
+        case .putFeedback:
+            api = "\(Token.shared.value)/putFeedback"
+        case .getBlockChainInfo:
+            api = "\(Token.shared.value)/getBlockChainInfo"
         case .uploadFile:
             api = "\(Token.shared.value)/uploadFile"
         }

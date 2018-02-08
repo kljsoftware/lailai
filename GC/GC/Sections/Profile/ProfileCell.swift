@@ -23,7 +23,7 @@ class ProfileCell: UITableViewCell {
     // MARK: - public methods
     func update(model:ProfileUserInfoModel) {
         avatarImageView.setImage(urlStr: NetworkImgOrWeb.getUrl(name: model.logo), placeholderStr: "avatar", radius: 30)
-        userNameLabel.text = model.short_name
+        userNameLabel.text = model.shortName
         telLabel.text = model.tel
     }
     

@@ -15,9 +15,10 @@ private enum ProfileCellType : Int {
     case profile
     case setting
     case business_link
+    case blockchain_setting
     case quit
     
-    static var count = 4
+    static var count = 5
 }
 
 /// 个人详情设置界面
@@ -53,6 +54,22 @@ class ProfileViewController: UIViewController {
             
         }
     }
+    
+    // MARK: - private methods
+    fileprivate func getLabelName(type:ProfileCellType) -> String {
+        var labelName = ""
+        switch type {
+        case .setting:
+            labelName = LanguageKey.setting.value
+        case .business_link:
+            labelName = LanguageKey.business_link.value
+        case .blockchain_setting:    // 手机号
+            labelName = LanguageKey.blockchain_setting.value
+        default:
+            break
+        }
+        return labelName
+    }
 }
 
 // MARK:  UITableViewDataSource&UITableViewDelegate
@@ -65,21 +82,18 @@ extension ProfileViewController : UITableViewDataSource, UITableViewDelegate {
     
     // 单元(cell)视图
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch ProfileCellType(rawValue: indexPath.row)! {
+        let type = ProfileCellType(rawValue: indexPath.row)!
+        switch type {
         case .profile:
             let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileCell", for: indexPath) as! ProfileCell
             cell.update(model: viewModel.userInfo)
             return cell
-        case .setting:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "kProfielSettingCell", for: indexPath) as! ProfielSettingCell
-            cell.update(name: LanguageKey.setting.value)
-            return cell
-        case .business_link:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "kProfielSettingCell", for: indexPath) as! ProfielSettingCell
-            cell.update(name: LanguageKey.business_link.value)
-            return cell
         case .quit:
             let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileQuitCell", for: indexPath) as! ProfileQuitCell
+            return cell
+        default:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "kProfielSettingCell", for: indexPath) as! ProfielSettingCell
+            cell.update(name: getLabelName(type: type))
             return cell
         }
     }
@@ -89,12 +103,10 @@ extension ProfileViewController : UITableViewDataSource, UITableViewDelegate {
         switch ProfileCellType(rawValue: indexPath.row)! {
         case .profile:
             return profileHeight
-        case .setting:
-            return settingCellHeight
-        case .business_link:
-            return settingCellHeight
         case .quit:
             return quitCellHeight
+        default:
+            return settingCellHeight
         }
     }
     
@@ -110,6 +122,8 @@ extension ProfileViewController : UITableViewDataSource, UITableViewDelegate {
         case .business_link:
             let vc = UIStoryboard.init(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ProfileBusiness")
             navigationController?.pushViewController(vc, animated: true)
+        case .blockchain_setting:
+            break
         case .quit:
             NotificationCenter.default.post(name: NoticationUserLogout, object: nil)
         }
