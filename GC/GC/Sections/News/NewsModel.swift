@@ -16,7 +16,7 @@ class NewsResultModel : BaseResultModel {
     
     var has_more = true               // 是否有更多页
     
-    var topNews = NewsTopModel()      // 置顶新闻项 page等于0时返回此项  page非0 反空
+    var topNews:NewsTopModel?      // 置顶新闻项 page等于0时返回此项  page非0 反空
     
     var newsItems = [NewsItemModel]() // 新闻项
     
@@ -29,6 +29,7 @@ class NewsResultModel : BaseResultModel {
 class NewsTopModel : NSObject {
     var id          = 1    // 新闻id
     var newsTag     = ""   // 新闻标签
+    var newsTitle   = ""   // 新闻标题
     var newsCover   = ""   // 新闻封面
     var newsLink    = ""   // 新闻链接
     var newsSource  = ""   // 来源
@@ -38,6 +39,7 @@ class NewsTopModel : NSObject {
 class NewsItemModel : NSObject {
     var id          = 1    // 新闻id
     var newsTag     = ""   // 新闻标签
+    var newsTitle   = ""   // 新闻标题
     var newsCover   = ""   // 新闻封面
     var newsLink    = ""   // 新闻链接
     var newsSource  = ""   // 来源

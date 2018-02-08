@@ -17,6 +17,8 @@ class NewsHeaderView: UIView {
     @IBOutlet weak var titleLabel: UILabel!
     
     func update(model:NewsTopModel) {
-        
+        coverImageView.setImage(urlStr: NetworkImgOrWeb.getUrl(name: model.newsCover), placeholderStr: "news_header", radius: 0)
+        tagLabel.text = model.newsTag
+        titleLabel.text = model.newsTitle
     }
 }

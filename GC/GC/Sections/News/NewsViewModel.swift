@@ -9,7 +9,7 @@
 
 class NewsViewModel: BaseViewModel {
     
-    var topNewsModel = NewsTopModel()
+    var topNewsModel:NewsTopModel?
     
     var newsItems = [NewsItemModel]()
     
@@ -20,6 +20,10 @@ class NewsViewModel: BaseViewModel {
         HTTPSessionManager.shared.request(urlString: NetworkURL.getNews.url, parameters: reqeustModel.mj_keyValues()) { (json, success) in
             let resultModel = NewsResultModel.mj_object(withKeyValues: json)
             if success && resultModel != nil && resultModel!.code == 0 {
+                if self.topNewsModel == nil && resultModel!.topNews != nil {
+                    self.topNewsModel = resultModel?.topNews
+                }
+                self.newsItems.append(contentsOf: resultModel!.newsItems)
                 self.successCallback?(resultModel!)
             } else {
                 let msg = resultModel != nil ? resultModel!.msg : "error"

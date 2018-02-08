@@ -19,9 +19,9 @@ class NewsCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     
     func update(model:NewsItemModel) {
-        coverImageView.setImage(urlStr: NetworkImgOrWeb.getUrl(name: model.newsCover), placeholderStr: "", radius: 8)
+        coverImageView.setImage(urlStr: NetworkImgOrWeb.getUrl(name: model.newsCover), placeholderStr: "news_header", radius: 8)
         sourceLabel.text = model.newsSource
-        nameLabel.text = model.newsTag
+        nameLabel.text = model.newsTitle
         timeLabel.text = model.createdDate.transferFormat()
     }
     

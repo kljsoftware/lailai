@@ -40,7 +40,7 @@ class NewsViewController: UIViewController {
     private func setupViewModel() {
         viewModel.getNews()
         viewModel.setCompletion(onSuccess: {[weak self] (resultModel) in
-            self?.tableView.reloadData()
+            self?.tableReload()
         }) { (error) in
             Log.e(error)
         }
@@ -55,9 +55,13 @@ class NewsViewController: UIViewController {
         tableView.mj_header.beginRefreshing()
         tableView.mj_header.endRefreshing()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    
+    /// 更新界面
+    private func tableReload() {
+        if viewModel.topNewsModel != nil {
+            (tableView.tableHeaderView?.subviews[0] as! NewsHeaderView).update(model: viewModel.topNewsModel!)
+        }
+        tableView.reloadData()
     }
     
     /// 列表头部视图
