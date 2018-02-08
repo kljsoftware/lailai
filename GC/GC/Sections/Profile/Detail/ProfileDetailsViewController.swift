@@ -151,6 +151,17 @@ extension ProfileDetailsViewController : UIImagePickerControllerDelegate, UINavi
                 image = info[UIImagePickerControllerOriginalImage] as? UIImage
             }
             self?.image = image
+            if image != nil {
+                let data = UIImagePNGRepresentation(image!)
+                if data != nil {
+                    Upload.uploadFile(NetworkURL.uploadFile.url, parameters: ["type":0], data: data!, success: { (dict) in
+                        Log.e(dict)
+                    }, failure: { (error) in
+                        
+                    })
+                }
+            }
+
             self?.tableView.reloadData()
         }
     }

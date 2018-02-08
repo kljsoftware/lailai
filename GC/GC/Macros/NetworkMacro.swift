@@ -53,6 +53,7 @@ enum NetworkURL {
     case getDealers             // 3.12绿色地图
     case getNews        // 5.1获取新闻列表
     case getUserInfo    // 7.1 获取个人信息
+    case uploadFile     //
     
     /// url地址
     var url : String {
@@ -86,6 +87,8 @@ enum NetworkURL {
             api = "\(Token.shared.value)/getNews"
         case .getUserInfo:
             api = "\(Token.shared.value)/getUserInfo"
+        case .uploadFile:
+            api = "\(Token.shared.value)/uploadFile"
         }
         return "\(HTTP_ADDRESS)/v2/\(api)"
     }
