@@ -30,8 +30,11 @@ class WalletViewModel: BaseViewModel {
     }
     
     /// 积分捐赠
-    func getPoints() {
-        HTTPSessionManager.shared.request(urlString: NetworkURL.getPoints.url, parameters: nil) { (json, success) in
+    func getPoints(page:Int = 0, size:Int = 10) {
+        let reqeustModel = WalletRequestModel()
+        reqeustModel.page = page
+        reqeustModel.size = size
+        HTTPSessionManager.shared.request(urlString: NetworkURL.getPoints.url, parameters: reqeustModel.mj_keyValues()) { (json, success) in
             let resultModel = WalletResultModel.mj_object(withKeyValues: json)
             if success && resultModel != nil && resultModel!.code == 0 {
                 self.walletModel = resultModel!

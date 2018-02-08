@@ -37,6 +37,11 @@ class AdModel : NSObject {
 }
 
 /// 3.2 获取积分钱包商家数据
+class WalletRequestModel : BaseRequestModel {
+    var page = 0  // 第几页 从0开始
+    var size = 10 // 每页显示数
+}
+
 class WalletResultModel: BaseResultModel {
     
     var has_more = true

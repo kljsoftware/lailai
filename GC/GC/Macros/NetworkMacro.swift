@@ -68,7 +68,7 @@ enum NetworkURL {
         case .getPointsBase:
             api = "\(Token.shared.value)/getPointsBase"
         case .getPoints:
-            api = "\(Token.shared.value)/getPoints"
+            api = "\(Token.shared.value)/getPointsShop"
         case .modityUserInfo:
             api = "\(Token.shared.value)/modityUserInfo"
         case .modityPassword:

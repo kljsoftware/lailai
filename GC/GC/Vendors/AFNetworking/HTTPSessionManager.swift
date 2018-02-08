@@ -24,7 +24,7 @@ class HTTPSessionManager: AFHTTPSessionManager {
         manager.requestSerializer = AFJSONRequestSerializer()
         manager.requestSerializer.setValue("application/json", forHTTPHeaderField: "Content-Type")
         manager.responseSerializer = AFHTTPResponseSerializer()
-        manager.responseSerializer.acceptableContentTypes = NSSet(objects: ["text/html","application/json"]) as? Set<String>
+        manager.responseSerializer.acceptableContentTypes = NSSet(objects: ["application/json"]) as? Set<String>
         return manager
     }()
     
