@@ -37,6 +37,12 @@ class MapView: UIView {
         return _locationManager
     }()
     
+    /// 搜索栏
+    fileprivate var searchBar:UISearchBar = {
+        let _searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: DEVICE_SCREEN_WIDTH, height: 44))
+        return _searchBar
+    }()
+    
     /// 地图
     fileprivate lazy var mkMapView:MKMapView = {
         let _mkMapView = MKMapView(frame:self.bounds)
@@ -45,10 +51,31 @@ class MapView: UIView {
         return _mkMapView
     }()
     
+    /// 当前定位位置
+    fileprivate var currentLocation:CLLocation?
+    
+    /// map around view
+    fileprivate lazy var aroundView : MapAroundView = {
+        let _aroundView = Bundle.main.loadNibNamed("MapAroundView", owner: nil, options: nil)![0] as! MapAroundView
+        self.addSubview(_aroundView)
+        _aroundView.snp.makeConstraints({ (maker) in
+            maker.left.right.bottom.equalTo(self)
+            maker.height.equalTo(50)
+        })
+        _aroundView.aroundButtonClosure = { [weak self] in
+            
+        }
+        return _aroundView
+    }()
+    
     // MARK: - override methods
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(mkMapView)
+        addSubview(searchBar)
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -134,7 +161,12 @@ extension MapView : CLLocationManagerDelegate {
             return
         }
         locationManager.stopUpdatingLocation() // 取到定位即可停止刷新，没有必要一直刷新，耗电
-        setRegion(center: location.coordinate)
+       // setRegion(center: location.coordinate)
+        currentLocation = location
+        CLGeocoder().reverseGeocodeLocation(location) { [weak self](placemakes, error) in
+            guard let placemark = placemakes?.first else { return }
+            self?.aroundView.aroundLabel.text = "发现\(placemark.subLocality ?? "")周边的绿色商家"
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
