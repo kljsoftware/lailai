@@ -25,7 +25,7 @@ class AdView: UIView {
     
     /// 初始化
     private func setup() {
-        bannerImageView.setImage(urlStr: NetworkImgOrWeb.getUrl(name: model!.cover), placeholderStr: "", radius: 0)
+        bannerImageView.setImage(urlStr: NetworkImgOrWeb.getUrl(name: model!.cover), placeholderStr: "news_header", radius: 0)
     }
     
     /// 点击广告
