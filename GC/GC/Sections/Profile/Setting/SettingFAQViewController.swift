@@ -25,6 +25,12 @@ class SettingFAQViewController: BaseViewController {
         }
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if textView.isFirstResponder {
+            textView.resignFirstResponder()
+        }
+    }
+    
     @IBAction func onFeedBackButtonClicked(_ sender: UIButton) {
         if !textView.text.isBlank() {
             viewModel.feedBack(info: textView.text)

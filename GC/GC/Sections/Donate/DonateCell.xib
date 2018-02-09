@@ -56,7 +56,7 @@
                             </constraint>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ar5-lF-vwR">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ar5-lF-vwR">
                         <rect key="frame" x="12" y="45" width="296" height="120"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="120" id="mdR-QX-qEr"/>

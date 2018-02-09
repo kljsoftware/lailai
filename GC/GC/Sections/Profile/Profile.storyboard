@@ -103,10 +103,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g2V-Bm-wQ8">
-                                <rect key="frame" x="12" y="108" width="351" height="100"/>
+                                <rect key="frame" x="12" y="108" width="351" height="200"/>
                                 <color key="backgroundColor" red="0.92156862745098034" green="0.92549019607843142" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="yUK-Su-9Hu"/>
+                                    <constraint firstAttribute="height" constant="200" id="yUK-Su-9Hu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="go"/>
@@ -174,12 +174,169 @@
                     <view key="view" contentMode="scaleToFill" id="q5Q-Ni-XpU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TzS-tc-ZY0">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="oKL-br-MNH" id="ufO-5F-cIA"/>
+                                    <outlet property="delegate" destination="oKL-br-MNH" id="wDF-f5-PYF"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TzS-tc-ZY0" firstAttribute="leading" secondItem="q5Q-Ni-XpU" secondAttribute="leading" id="7hA-UQ-UKP"/>
+                            <constraint firstItem="TzS-tc-ZY0" firstAttribute="top" secondItem="7Yb-Ee-rk3" secondAttribute="bottom" id="SeO-nt-Yih"/>
+                            <constraint firstAttribute="trailing" secondItem="TzS-tc-ZY0" secondAttribute="trailing" id="cVr-e5-a0s"/>
+                            <constraint firstItem="IGj-yM-FLZ" firstAttribute="top" secondItem="TzS-tc-ZY0" secondAttribute="bottom" id="wlE-gF-i8f"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="TzS-tc-ZY0" id="ul3-1F-Wob"/>
+                        <segue destination="teP-TU-743" kind="show" id="hBQ-22-gPv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XLb-t9-F1J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1361" y="974"/>
+        </scene>
+        <!--Business Auth View Controller-->
+        <scene sceneID="bVf-G9-9Wx">
+            <objects>
+                <viewController storyboardIdentifier="business_auth" useStoryboardIdentifierAsRestorationIdentifier="YES" id="teP-TU-743" customClass="BusinessAuthViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9FF-6H-BAG"/>
+                        <viewControllerLayoutGuide type="bottom" id="FWP-FJ-Bnt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UVg-oi-mkD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OSO-DS-oiv">
+                                <rect key="frame" x="24" y="88" width="327" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lN3-50-f6j">
+                                        <rect key="frame" x="12" y="0.0" width="303" height="49"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOv-BW-bpg">
+                                        <rect key="frame" x="0.0" y="49" width="327" height="1"/>
+                                        <color key="backgroundColor" red="0.92156862750000001" green="0.92941176469999998" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="yVS-tZ-jyf" customClass="OnePixelConstraint" customModule="GC" customModuleProvider="target">
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="onePixelConstant">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </constraint>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="IOv-BW-bpg" secondAttribute="trailing" id="CfP-SZ-0kn"/>
+                                    <constraint firstItem="IOv-BW-bpg" firstAttribute="leading" secondItem="OSO-DS-oiv" secondAttribute="leading" id="R1Z-n6-pAd"/>
+                                    <constraint firstItem="lN3-50-f6j" firstAttribute="leading" secondItem="OSO-DS-oiv" secondAttribute="leading" constant="12" id="YV7-EM-eez"/>
+                                    <constraint firstAttribute="trailing" secondItem="lN3-50-f6j" secondAttribute="trailing" constant="12" id="dNH-Zt-BW3"/>
+                                    <constraint firstItem="lN3-50-f6j" firstAttribute="top" secondItem="OSO-DS-oiv" secondAttribute="top" id="kp8-mf-6Y9"/>
+                                    <constraint firstItem="IOv-BW-bpg" firstAttribute="top" secondItem="lN3-50-f6j" secondAttribute="bottom" id="oUu-Tt-ukE"/>
+                                    <constraint firstAttribute="bottom" secondItem="IOv-BW-bpg" secondAttribute="bottom" id="pnB-uv-f9O"/>
+                                    <constraint firstAttribute="height" constant="50" id="y3R-dc-nO2"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OM0-6S-3o9">
+                                <rect key="frame" x="24" y="138" width="327" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C1B-SC-817">
+                                        <rect key="frame" x="12" y="0.0" width="303" height="50"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4NC-sv-48j">
+                                        <rect key="frame" x="0.0" y="49" width="327" height="1"/>
+                                        <color key="backgroundColor" red="0.92156862750000001" green="0.92941176469999998" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="dLj-Ee-f6q" customClass="OnePixelConstraint" customModule="GC" customModuleProvider="target">
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="onePixelConstant">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </constraint>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="C1B-SC-817" firstAttribute="leading" secondItem="OM0-6S-3o9" secondAttribute="leading" constant="12" id="1W7-he-6X4"/>
+                                    <constraint firstItem="C1B-SC-817" firstAttribute="top" secondItem="OM0-6S-3o9" secondAttribute="top" id="6de-9S-I8Y"/>
+                                    <constraint firstAttribute="height" constant="50" id="IO7-ES-8A5"/>
+                                    <constraint firstAttribute="bottom" secondItem="4NC-sv-48j" secondAttribute="bottom" id="KpV-O5-ZAx"/>
+                                    <constraint firstAttribute="bottom" secondItem="C1B-SC-817" secondAttribute="bottom" id="LVo-fy-vXV"/>
+                                    <constraint firstAttribute="trailing" secondItem="4NC-sv-48j" secondAttribute="trailing" id="mzc-ME-UhY"/>
+                                    <constraint firstItem="4NC-sv-48j" firstAttribute="leading" secondItem="OM0-6S-3o9" secondAttribute="leading" id="ttR-0b-58R"/>
+                                    <constraint firstAttribute="trailing" secondItem="C1B-SC-817" secondAttribute="trailing" constant="12" id="usm-Wj-aSc"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oqD-MK-std" customClass="BorderView" customModule="GC" customModuleProvider="target">
+                                <rect key="frame" x="24" y="573" width="327" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCy-qs-UVx">
+                                        <rect key="frame" x="0.0" y="-0.5" width="327" height="44"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="MCy-qs-UVx" firstAttribute="leading" secondItem="oqD-MK-std" secondAttribute="leading" id="8uT-SP-ouD"/>
+                                    <constraint firstAttribute="trailing" secondItem="MCy-qs-UVx" secondAttribute="trailing" id="Huv-nW-UdG"/>
+                                    <constraint firstItem="MCy-qs-UVx" firstAttribute="top" secondItem="oqD-MK-std" secondAttribute="top" id="bAx-hC-acZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="MCy-qs-UVx" secondAttribute="bottom" id="nW0-Hk-iQu"/>
+                                    <constraint firstAttribute="height" constant="44" id="vgn-zZ-TdT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fill">
+                                        <color key="value" red="0.14901960780000001" green="0.45098039220000002" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="stroke">
+                                        <color key="value" red="0.14901960780000001" green="0.45098039220000002" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OSO-DS-oiv" secondAttribute="trailing" constant="24" id="Mrx-60-LIY"/>
+                            <constraint firstItem="OSO-DS-oiv" firstAttribute="leading" secondItem="UVg-oi-mkD" secondAttribute="leading" constant="24" id="Okg-D5-x5J"/>
+                            <constraint firstItem="OM0-6S-3o9" firstAttribute="top" secondItem="OSO-DS-oiv" secondAttribute="bottom" id="POu-n3-MOj"/>
+                            <constraint firstItem="OSO-DS-oiv" firstAttribute="top" secondItem="9FF-6H-BAG" secondAttribute="bottom" constant="24" id="QNw-wN-DdF"/>
+                            <constraint firstAttribute="trailing" secondItem="OM0-6S-3o9" secondAttribute="trailing" constant="24" id="SIq-0b-x72"/>
+                            <constraint firstItem="OM0-6S-3o9" firstAttribute="leading" secondItem="UVg-oi-mkD" secondAttribute="leading" constant="24" id="axN-Wb-mmA"/>
+                            <constraint firstAttribute="trailing" secondItem="oqD-MK-std" secondAttribute="trailing" constant="24" id="h70-dj-EYd"/>
+                            <constraint firstItem="FWP-FJ-Bnt" firstAttribute="top" secondItem="oqD-MK-std" secondAttribute="bottom" constant="50" id="ltY-ty-VqQ"/>
+                            <constraint firstItem="oqD-MK-std" firstAttribute="leading" secondItem="UVg-oi-mkD" secondAttribute="leading" constant="24" id="xhV-lX-emL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="authButton" destination="MCy-qs-UVx" id="b5F-Jx-mVn"/>
+                        <outlet property="pwdTextField" destination="C1B-SC-817" id="8TM-dZ-5fR"/>
+                        <outlet property="userTextField" destination="lN3-50-f6j" id="ajj-gJ-77O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cIO-EA-2Kv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1361" y="1680"/>
         </scene>
         <!--Setting About View Controller-->
         <scene sceneID="3Ew-yN-Alk">

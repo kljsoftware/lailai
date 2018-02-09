@@ -16,6 +16,15 @@
 		3C1B0B42202D6BAC00E059BD /* DonateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1B0B40202D6BAC00E059BD /* DonateCell.xib */; };
 		3C1B0B44202D6FAB00E059BD /* DonateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B0B43202D6FAB00E059BD /* DonateViewModel.swift */; };
 		3C1B0B46202D747000E059BD /* DonateDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B0B45202D747000E059BD /* DonateDetailsViewController.swift */; };
+		3C1B0B49202D786500E059BD /* ProfileBusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B0B47202D786500E059BD /* ProfileBusinessCell.swift */; };
+		3C1B0B4A202D786500E059BD /* ProfileBusinessCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1B0B48202D786500E059BD /* ProfileBusinessCell.xib */; };
+		3C1B0B4C202D7D3700E059BD /* BusinessAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B0B4B202D7D3700E059BD /* BusinessAuthViewController.swift */; };
+		3C1B0B4E202D82E600E059BD /* NewsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B0B4D202D82E600E059BD /* NewsDetailsViewController.swift */; };
+		3C1B0B50202D952C00E059BD /* CLLocationCoordinate2D+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B0B4F202D952C00E059BD /* CLLocationCoordinate2D+Extension.swift */; };
+		3C1B0B53202D9B0100E059BD /* TextInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1B0B51202D9B0100E059BD /* TextInputView.xib */; };
+		3C1B0B54202D9B0100E059BD /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B0B52202D9B0100E059BD /* TextInputView.swift */; };
+		3C1B0B56202DA18000E059BD /* ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B0B55202DA18000E059BD /* ActionSheet.swift */; };
+		3C1B0B58202DA92100E059BD /* ProfileDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B0B57202DA92100E059BD /* ProfileDetailViewModel.swift */; };
 		3C25DA3E201CC286003E4BFB /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C25DA3D201CC286003E4BFB /* UIImageView+Extension.swift */; };
 		3C374618201DB866000FD752 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C374617201DB866000FD752 /* splash.png */; };
 		3C37461A201DBA14000FD752 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C374619201DBA14000FD752 /* BorderView.swift */; };
@@ -184,6 +193,15 @@
 		3C1B0B40202D6BAC00E059BD /* DonateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonateCell.xib; sourceTree = "<group>"; };
 		3C1B0B43202D6FAB00E059BD /* DonateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateViewModel.swift; sourceTree = "<group>"; };
 		3C1B0B45202D747000E059BD /* DonateDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateDetailsViewController.swift; sourceTree = "<group>"; };
+		3C1B0B47202D786500E059BD /* ProfileBusinessCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBusinessCell.swift; sourceTree = "<group>"; };
+		3C1B0B48202D786500E059BD /* ProfileBusinessCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileBusinessCell.xib; sourceTree = "<group>"; };
+		3C1B0B4B202D7D3700E059BD /* BusinessAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessAuthViewController.swift; sourceTree = "<group>"; };
+		3C1B0B4D202D82E600E059BD /* NewsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsViewController.swift; sourceTree = "<group>"; };
+		3C1B0B4F202D952C00E059BD /* CLLocationCoordinate2D+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Extension.swift"; sourceTree = "<group>"; };
+		3C1B0B51202D9B0100E059BD /* TextInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextInputView.xib; sourceTree = "<group>"; };
+		3C1B0B52202D9B0100E059BD /* TextInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
+		3C1B0B55202DA18000E059BD /* ActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheet.swift; sourceTree = "<group>"; };
+		3C1B0B57202DA92100E059BD /* ProfileDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewModel.swift; sourceTree = "<group>"; };
 		3C25DA3D201CC286003E4BFB /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		3C374617201DB866000FD752 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		3C374619201DBA14000FD752 /* BorderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
@@ -408,6 +426,7 @@
 				3C7E26CB2026930400ED4B56 /* ProfileDetailOtherCell.xib */,
 				3C7E26CC2026930400ED4B56 /* ProfileDetailDescCell.swift */,
 				3C7E26CA2026930400ED4B56 /* ProfileDetailDescCell.xib */,
+				3C1B0B57202DA92100E059BD /* ProfileDetailViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -427,6 +446,9 @@
 			isa = PBXGroup;
 			children = (
 				3C7E26D8202698B000ED4B56 /* ProfileBusinessViewController.swift */,
+				3C1B0B47202D786500E059BD /* ProfileBusinessCell.swift */,
+				3C1B0B48202D786500E059BD /* ProfileBusinessCell.xib */,
+				3C1B0B4B202D7D3700E059BD /* BusinessAuthViewController.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -553,6 +575,7 @@
 				3CB55385201CB73F009AC1CD /* String+Extension.swift */,
 				3CB55386201CB73F009AC1CD /* Dictionary+Extension.swift */,
 				3CB4D11C202C241700AB70B9 /* Double+Extension.swift */,
+				3C1B0B4F202D952C00E059BD /* CLLocationCoordinate2D+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -560,6 +583,9 @@
 		3CB55388201CB73F009AC1CD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3C1B0B55202DA18000E059BD /* ActionSheet.swift */,
+				3C1B0B52202D9B0100E059BD /* TextInputView.swift */,
+				3C1B0B51202D9B0100E059BD /* TextInputView.xib */,
 				3C374619201DBA14000FD752 /* BorderView.swift */,
 			);
 			path = Views;
@@ -699,6 +725,7 @@
 				3CF364E42022A916003179E8 /* NewsHeaderView.xib */,
 				3CF364E22022A916003179E8 /* NewsCell.swift */,
 				3CF364E62022A916003179E8 /* NewsCell.xib */,
+				3C1B0B4D202D82E600E059BD /* NewsDetailsViewController.swift */,
 				3CB4D0F9202A011600AB70B9 /* NewsModel.swift */,
 				3CB4D11E202C293300AB70B9 /* NewsViewModel.swift */,
 			);
@@ -959,6 +986,7 @@
 				3C8DCEED201D76C400C9F40E /* tab_business_nor@3x.png in Resources */,
 				3CF364F82022A916003179E8 /* Donate.storyboard in Resources */,
 				3C65505B20243B8600FE0504 /* WalletCell.xib in Resources */,
+				3C1B0B53202D9B0100E059BD /* TextInputView.xib in Resources */,
 				3CB4D12B202C8DBD00AB70B9 /* General.storyboard in Resources */,
 				3CFD84F7201C9B5900F9E7E5 /* Info.plist in Resources */,
 				3C91FC28201F21C500BB492D /* news_header.png in Resources */,
@@ -992,6 +1020,7 @@
 				3C91FC2D201F3A9E00BB492D /* avatar@2x.png in Resources */,
 				3CF3650C2022A916003179E8 /* NewsHeaderView.xib in Resources */,
 				3C8DCEFB201D76C400C9F40E /* tab_news_sel@2x.png in Resources */,
+				3C1B0B4A202D786500E059BD /* ProfileBusinessCell.xib in Resources */,
 				3C8DCEFC201D76C400C9F40E /* tab_profile_nor@2x.png in Resources */,
 				3C6550752025934400FE0504 /* tab_donate_sel@2x.png in Resources */,
 			);
@@ -1071,6 +1100,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C1B0B4E202D82E600E059BD /* NewsDetailsViewController.swift in Sources */,
 				3CA33DA1202CAB17003032A4 /* MapAroundView.swift in Sources */,
 				3CB5539D201CB73F009AC1CD /* String+Extension.swift in Sources */,
 				3CB4D119202B488300AB70B9 /* ProfileSettingPwdViewController.swift in Sources */,
@@ -1099,12 +1129,14 @@
 				3CF364F72022A916003179E8 /* DonateViewController.swift in Sources */,
 				3C7E26D22026930400ED4B56 /* ProfileDetailsViewController.swift in Sources */,
 				3CF365132022A916003179E8 /* WalletCollectionViewCell.swift in Sources */,
+				3C1B0B4C202D7D3700E059BD /* BusinessAuthViewController.swift in Sources */,
 				3CF3651A2022A916003179E8 /* FotgotPwdViewController.swift in Sources */,
 				3CB55394201CB73F009AC1CD /* OnePixelConstraint.swift in Sources */,
 				3CF3652F2022FADA003179E8 /* WalletViewModel.swift in Sources */,
 				3CB4D0FC202A033200AB70B9 /* DonateModel.swift in Sources */,
 				3CF3653120231DA8003179E8 /* BusinessModel.swift in Sources */,
 				3C1B0B41202D6BAC00E059BD /* DonateCell.swift in Sources */,
+				3C1B0B58202DA92100E059BD /* ProfileDetailViewModel.swift in Sources */,
 				3C65507A2025DF7C00FE0504 /* DonateRecordViewController.swift in Sources */,
 				3CB4D129202C821500AB70B9 /* SettingAboutViewController.swift in Sources */,
 				3CF3652D2022EE8B003179E8 /* LaunchViewModel.swift in Sources */,
@@ -1116,6 +1148,8 @@
 				3CF3652B2022EB19003179E8 /* UIHelper.swift in Sources */,
 				3CB4D12D202C8E0500AB70B9 /* BlockChainViewController.swift in Sources */,
 				3CB553A3201CB73F009AC1CD /* LanguageMacro.swift in Sources */,
+				3C1B0B50202D952C00E059BD /* CLLocationCoordinate2D+Extension.swift in Sources */,
+				3C1B0B54202D9B0100E059BD /* TextInputView.swift in Sources */,
 				3CB4D121202C4BB900AB70B9 /* Upload.swift in Sources */,
 				3CB4D0FF202A044A00AB70B9 /* DonateDetailsModel.swift in Sources */,
 				3CB4D11F202C293300AB70B9 /* NewsViewModel.swift in Sources */,
@@ -1125,6 +1159,7 @@
 				3C7E26D9202698B000ED4B56 /* ProfileBusinessViewController.swift in Sources */,
 				3C7E26D12026930400ED4B56 /* ProfileDetailOtherCell.swift in Sources */,
 				3C7E26CF2026930400ED4B56 /* ProfileDetailAvatarCell.swift in Sources */,
+				3C1B0B49202D786500E059BD /* ProfileBusinessCell.swift in Sources */,
 				3CF365062022A916003179E8 /* RegisterViewController.swift in Sources */,
 				3C1B0B44202D6FAB00E059BD /* DonateViewModel.swift in Sources */,
 				3CB55399201CB73F009AC1CD /* UIButton+Extension.swift in Sources */,
@@ -1139,6 +1174,7 @@
 				3C65507D2025E50E00FE0504 /* DonateRecordCell.swift in Sources */,
 				3CB5539B201CB73F009AC1CD /* UIImage+Extension.swift in Sources */,
 				3C65505A20243B8600FE0504 /* WalletCell.swift in Sources */,
+				3C1B0B56202DA18000E059BD /* ActionSheet.swift in Sources */,
 				3CB553A2201CB73F009AC1CD /* NetworkMacro.swift in Sources */,
 				3C655061202445B000FE0504 /* WalletModel.swift in Sources */,
 				3CB55397201CB73F009AC1CD /* UIColor+Extension.swift in Sources */,

@@ -51,6 +51,7 @@ class BusinessModel : NSObject {
     var name = ""  /// 商家名
     var desc = ""  /// 商家描述
     var color = ""
+    var dealerTel = "" /// 商家电话
     var logo = ""  /// 商家logo
     var coordinate = "" /// 商家定位坐标
     var address = ""    /// 商家地址
@@ -58,7 +59,7 @@ class BusinessModel : NSObject {
     var link  = 0  ///
     var createdDate = 0 /// 创建日期
     var del = 0    ///
-    var blockchain_id = 0 /// 区块链id
+    var blockchainId = 0 /// 区块链id
 
     /// 将属性名换为其他key去字典中取值
     override class func mj_replacedKeyFromPropertyName() -> [AnyHashable : Any]! {

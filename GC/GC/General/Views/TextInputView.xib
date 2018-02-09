@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FZLanTingHei.TTF">
+            <string>FZLTHJW--GB1-0</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TextInputView" customModule="GC" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hy1-D3-yjg">
+                    <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bep-lW-0ra">
+                            <rect key="frame" x="10" y="8" width="355" height="33"/>
+                            <subviews>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tnn-bO-Ihc">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="33"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+                                    <color key="textColor" red="0.30980392156862746" green="0.31764705882352939" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="FZLTHJW--GB1-0" family="FZLanTingHeiS-R-GB" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="iN0-l3-epB" id="GBf-Uq-oI9"/>
+                                    </connections>
+                                </textView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入文字评语" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EiP-yl-LhC">
+                                    <rect key="frame" x="6" y="8" width="98" height="17"/>
+                                    <fontDescription key="fontDescription" name="FZLTHJW--GB1-0" family="FZLanTingHeiS-R-GB" pointSize="14"/>
+                                    <color key="textColor" red="0.85098039215686272" green="0.85490196078431369" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="Tnn-bO-Ihc" secondAttribute="trailing" id="8uJ-0v-mat"/>
+                                <constraint firstItem="EiP-yl-LhC" firstAttribute="top" secondItem="bep-lW-0ra" secondAttribute="top" constant="8" id="CL9-xV-9mY"/>
+                                <constraint firstItem="Tnn-bO-Ihc" firstAttribute="leading" secondItem="bep-lW-0ra" secondAttribute="leading" id="HtJ-WH-TZt"/>
+                                <constraint firstAttribute="bottom" secondItem="Tnn-bO-Ihc" secondAttribute="bottom" id="R74-2z-C06"/>
+                                <constraint firstItem="EiP-yl-LhC" firstAttribute="leading" secondItem="bep-lW-0ra" secondAttribute="leading" constant="6" id="Z27-Qo-2v0"/>
+                                <constraint firstItem="Tnn-bO-Ihc" firstAttribute="top" secondItem="bep-lW-0ra" secondAttribute="top" id="cUf-Ow-zVp"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.92156862745098034" green="0.92549019607843142" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="49" id="6aC-iy-qJH"/>
+                        <constraint firstItem="bep-lW-0ra" firstAttribute="leading" secondItem="Hy1-D3-yjg" secondAttribute="leading" constant="10" id="AoH-zU-jZA"/>
+                        <constraint firstAttribute="trailing" secondItem="bep-lW-0ra" secondAttribute="trailing" constant="10" id="Tod-f9-rvc"/>
+                        <constraint firstItem="bep-lW-0ra" firstAttribute="top" secondItem="Hy1-D3-yjg" secondAttribute="top" constant="8" id="VnU-t7-O15"/>
+                        <constraint firstAttribute="bottom" secondItem="bep-lW-0ra" secondAttribute="bottom" constant="8" id="YlG-DH-vIb"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="llP-vb-XFA">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.64000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="llP-vb-XFA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="AVg-d0-aTN"/>
+                <constraint firstAttribute="bottom" secondItem="Hy1-D3-yjg" secondAttribute="bottom" id="B5C-0z-4Aq"/>
+                <constraint firstAttribute="trailing" secondItem="Hy1-D3-yjg" secondAttribute="trailing" id="KM8-dZ-YJQ"/>
+                <constraint firstItem="llP-vb-XFA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Kb4-qM-ScF"/>
+                <constraint firstAttribute="trailing" secondItem="llP-vb-XFA" secondAttribute="trailing" id="dhZ-kF-HSb"/>
+                <constraint firstItem="Hy1-D3-yjg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jLg-fn-WlL"/>
+                <constraint firstItem="Hy1-D3-yjg" firstAttribute="top" secondItem="llP-vb-XFA" secondAttribute="bottom" id="x8e-y6-Qgq"/>
+            </constraints>
+            <connections>
+                <outlet property="blackCoverView" destination="llP-vb-XFA" id="pAL-5i-qdq"/>
+                <outlet property="placeholderLabel" destination="EiP-yl-LhC" id="qDi-Un-jCz"/>
+                <outlet property="writingAreaViewHeightLayoutConstraint" destination="6aC-iy-qJH" id="Rtg-DJ-IXb"/>
+                <outlet property="writingTVLeftConstraint" destination="AoH-zU-jZA" id="v30-wi-nqV"/>
+                <outlet property="writingTVRightConstraint" destination="Tod-f9-rvc" id="zsb-cj-kJ2"/>
+                <outlet property="writingTextView" destination="Tnn-bO-Ihc" id="Zg7-dT-vn9"/>
+            </connections>
+        </view>
+    </objects>
+</document>

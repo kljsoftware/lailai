@@ -41,7 +41,7 @@ class BusinessCell: UITableViewCell {
         nameLabel.text = model.name
         
         /// 号码
-        phoneLabel.text = "—— ——"
+        phoneLabel.text = model.dealerTel
         
         /// 星级评价显示
         let stars = [star1, star2, star3, star4, star5]

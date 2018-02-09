@@ -128,6 +128,7 @@ class MapView: UIView {
     
     /// 设置中心位置
     func setRegion(center:CLLocationCoordinate2D) {
+        if !center.isValid() { return }
         //创建一个MKCoordinateSpan对象，设置地图的范围（越小越精确）
         let latDelta = 0.05
         let longDelta = 0.05

@@ -59,7 +59,7 @@ class NewsViewController: UIViewController {
     /// 更新界面
     private func tableReload() {
         if viewModel.topNewsModel != nil {
-            (tableView.tableHeaderView?.subviews[0] as! NewsHeaderView).update(model: viewModel.topNewsModel!)
+            (tableView.tableHeaderView?.subviews[0] as! NewsHeaderView).update(model: viewModel.topNewsModel!, navConroller: navigationController)
         }
         tableView.reloadData()
     }
@@ -99,6 +99,8 @@ extension NewsViewController : UITableViewDataSource, UITableViewDelegate {
     
     // 单元(cell)选中事件
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        UIHelper.pushToWeb(urlString: viewModel.newsItems[indexPath.row].newsLink)
+        let vc = UIStoryboard.init(name: "News", bundle: nil).instantiateViewController(withIdentifier: "news_details") as! NewsDetailsViewController
+        vc.news = (viewModel.newsItems[indexPath.row].newsTitle, viewModel.newsItems[indexPath.row].newsLink)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

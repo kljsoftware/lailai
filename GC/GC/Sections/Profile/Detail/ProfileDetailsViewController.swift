@@ -26,15 +26,26 @@ class ProfileDetailsViewController: BaseViewController {
     /// 用户信息
     var userInfo = ProfileUserInfoModel() {
         didSet {
-            tableView.reloadData()
+            perform(#selector(delay), with: nil, afterDelay: 0.1)
         }
     }
     
+    fileprivate let viewModel = ProfileDetailViewModel()
+    
     /// 选取头像
-    var image:UIImage?
+    fileprivate var image:UIImage?
+    
+    /// 列表数据
+    fileprivate var dict = [ProfileDetailsCellType:String]()
     
     /// 列表
     @IBOutlet weak var tableView: UITableView!
+    
+    /// 文字输入
+    fileprivate var textInputView:TextInputView?
+    
+    /// 当前cell类型
+    fileprivate var type = ProfileDetailsCellType.nick
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,32 +63,56 @@ class ProfileDetailsViewController: BaseViewController {
     }
     
     // MARK: - private methods
-    fileprivate func getLabelName(type:ProfileDetailsCellType) -> (labelName:String, content:String) {
-        var tuple = ("", "")
+    @objc private func delay() {
+        dict[.avatar] = userInfo.logo
+        dict[.nick] = userInfo.shortName
+        dict[.tel] = userInfo.tel
+        dict[.gender] = userInfo.sex == 1 ? "男" : "女"
+        dict[.region] = userInfo.city
+        dict[.email] = userInfo.email
+        dict[.desc] = userInfo.desc
+        tableView.reloadData()
+    }
+    
+    /// 显示文字编辑界面
+    func showEditView(text:String) {
+        if nil == textInputView {
+            textInputView = Bundle.main.loadNibNamed("TextInputView", owner: nil, options: nil)![0] as? TextInputView
+            self.view.addSubview(textInputView!)
+            textInputView?.snp.makeConstraints({ (maker) in
+                maker.left.right.top.bottom.equalTo(self.view)
+            })
+            textInputView?.inputConfirmClosure = { [weak self](result) in
+                guard let wself = self else {
+                    return
+                }
+                wself.dict[wself.type] = result
+                wself.tableView.reloadData()
+            }
+        }
+        textInputView?.show(text)
+    }
+    
+    /// 获取标签名字
+    fileprivate func getLabelName(type:ProfileDetailsCellType) -> String {
+        var labelName = ""
         switch type {
         case .avatar:
-            tuple.0 = LanguageKey.photo.value
-            tuple.1 = NetworkImgOrWeb.getUrl(name: userInfo.logo)
+            labelName = LanguageKey.photo.value
         case .nick:
-            tuple.0 = LanguageKey.nick.value
-            tuple.1 = userInfo.shortName
+            labelName = LanguageKey.nick.value
         case .tel:    // 手机号
-            tuple.0 = LanguageKey.phoneNum.value
-            tuple.1 = userInfo.tel
+            labelName = LanguageKey.phoneNum.value
         case .gender: // 性别
-            tuple.0 = LanguageKey.gender.value
-            tuple.1 = userInfo.sex == 2 ? LanguageKey.woman.value : LanguageKey.man.value
+            labelName = LanguageKey.gender.value
         case .region: // 地区
-            tuple.0 = LanguageKey.region.value
-            tuple.1 = userInfo.city
+            labelName = LanguageKey.region.value
         case .email:  // 邮箱
-            tuple.0 = LanguageKey.email.value
-            tuple.1 = userInfo.email
+            labelName = LanguageKey.email.value
         case .desc:   // 个人描述
-            tuple.0 = LanguageKey.desc.value
-            tuple.1 = userInfo.desc
+            labelName = LanguageKey.desc.value
         }
-        return tuple
+        return labelName
     }
 }
 
@@ -92,19 +127,20 @@ extension ProfileDetailsViewController : UITableViewDataSource, UITableViewDeleg
     // 单元(cell)视图
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let type = ProfileDetailsCellType(rawValue: indexPath.row)!
-        let tuple = getLabelName(type: type)
+        let labelName = getLabelName(type: type)
+        let content = dict[type] ?? ""
         switch type {
         case .avatar:
             let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileDetailAvatarCell", for: indexPath) as! ProfileDetailAvatarCell
-            cell.update(name: tuple.labelName, content: tuple.content, image: image)
+            cell.update(name: labelName, content: NetworkImgOrWeb.getUrl(name: content), image: image)
             return cell
         case .desc:
             let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileDetailDescCell", for: indexPath) as! ProfileDetailDescCell
-            cell.update(name: tuple.labelName, content: tuple.content)
+            cell.update(name: labelName, content: content)
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileDetailOtherCell", for: indexPath) as! ProfileDetailOtherCell
-            cell.update(name: tuple.labelName, content: tuple.content)
+            cell.update(name: labelName, content: content)
             return cell
         }
     }
@@ -133,11 +169,18 @@ extension ProfileDetailsViewController : UITableViewDataSource, UITableViewDeleg
                 picker.sourceType = .savedPhotosAlbum
                 self.present(picker, animated: true, completion:nil)
             }
-        case .desc:
-            break
+        case .gender:
+            ActionSheet.show(items: [LanguageKey.man.value, LanguageKey.woman.value], selectedIndex: {[weak self] (index) in
+                guard let wself = self else {
+                    return
+                }
+                wself.dict[wself.type] = index == 0 ? LanguageKey.man.value : LanguageKey.woman.value
+                wself.tableView.reloadData()
+            })
         default:
-            break
+            showEditView(text: dict[type] ?? "")
         }
+        self.type = type
     }
 }
 
@@ -154,11 +197,7 @@ extension ProfileDetailsViewController : UIImagePickerControllerDelegate, UINavi
             if image != nil {
                 let data = UIImagePNGRepresentation(image!)
                 if data != nil {
-                    Upload.uploadFile(NetworkURL.uploadFile.url, parameters: ["type":0], data: data!, success: { (dict) in
-                        Log.e(dict)
-                    }, failure: { (error) in
-                        
-                    })
+                    
                 }
             }
 

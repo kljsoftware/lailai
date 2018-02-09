@@ -17,9 +17,11 @@ class NewsHeaderView: UIView {
     @IBOutlet weak var titleLabel: UILabel!
     
     private var model:NewsTopModel?
+    private var navConroller:UINavigationController?
     
-    func update(model:NewsTopModel) {
+    func update(model:NewsTopModel, navConroller:UINavigationController?) {
         self.model = model
+        self.navConroller = navConroller
         coverImageView.setImage(urlStr: NetworkImgOrWeb.getUrl(name: model.newsCover), placeholderStr: "news_header", radius: 0)
         tagLabel.text = model.newsTag
         titleLabel.text = model.newsTitle
@@ -27,7 +29,10 @@ class NewsHeaderView: UIView {
     
     @IBAction func onNewsTopButtonClicked(_ sender: UIButton) {
         if nil != model {
-            UIHelper.pushToWeb(urlString: model!.newsLink)
+           // UIHelper.pushToWeb(urlString: model!.newsLink)
+            let vc = UIStoryboard.init(name: "News", bundle: nil).instantiateViewController(withIdentifier: "news_details") as! NewsDetailsViewController
+            vc.news = (model!.newsTitle, model!.newsLink)
+            self.navConroller?.pushViewController(vc, animated: true)
         }
     }
 }
