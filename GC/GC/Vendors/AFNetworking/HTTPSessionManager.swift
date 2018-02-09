@@ -22,7 +22,7 @@ class HTTPSessionManager: AFHTTPSessionManager {
     static let shared: HTTPSessionManager = {
         let manager = HTTPSessionManager()
         manager.requestSerializer = AFJSONRequestSerializer()
-        manager.requestSerializer.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        manager.requestSerializer.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         manager.responseSerializer = AFHTTPResponseSerializer()
         manager.responseSerializer.acceptableContentTypes = NSSet(objects: ["application/json"]) as? Set<String>
         return manager

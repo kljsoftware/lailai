@@ -13,3 +13,6 @@ let NoticationUserLogin     = Notification.Name("NoticationUserLogin")
 let NoticationUserLogout    = Notification.Name("NoticationUserLogout")
 let NoticationUserRegister  = Notification.Name("NoticationUserRegister")
 let NoticationUserLoginSuccess = Notification.Name("NoticationUserLoginSuccess")
+
+/// 通知个人信息更新
+let NoticationUserInfoUpdate = Notification.Name("NoticationUserInfoUpdate")

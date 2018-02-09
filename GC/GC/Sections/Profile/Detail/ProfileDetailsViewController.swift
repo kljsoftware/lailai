@@ -62,6 +62,7 @@ class ProfileDetailsViewController: BaseViewController {
                 wself.tableView.reloadData()
             }
             UIHelper.tip(message: "保存成功")
+            NotificationCenter.default.post(name: NoticationUserInfoUpdate, object: nil)
             wself.navigationController?.popViewController(animated: true)
         }) { (error) in
             UIHelper.tip(message: error)
@@ -72,7 +73,7 @@ class ProfileDetailsViewController: BaseViewController {
     func onSaveButtonClicked(sender:UIButton) {
         let reqModel = ModityUserInfoRequestModel()
         reqModel.name = userInfo.name
-        reqModel.shortName = dict[.nick] ?? ""
+        reqModel.shortName = (dict[.nick] ?? "")
         reqModel.email = dict[.email] ?? ""
         reqModel.sex = (dict[.gender] ?? "男") == "男" ? "1" : "2"
         reqModel.city = dict[.region] ?? ""
@@ -95,7 +96,7 @@ class ProfileDetailsViewController: BaseViewController {
     }
     
     /// 显示文字编辑界面
-    func showEditView(text:String) {
+    func showEditView(text:String, placeholer:String = "") {
         if nil == textInputView {
             textInputView = Bundle.main.loadNibNamed("TextInputView", owner: nil, options: nil)![0] as? TextInputView
             self.view.addSubview(textInputView!)
@@ -110,6 +111,7 @@ class ProfileDetailsViewController: BaseViewController {
                 wself.tableView.reloadData()
             }
         }
+        textInputView?.placeholder = placeholer
         textInputView?.show(text)
     }
     
@@ -133,6 +135,26 @@ class ProfileDetailsViewController: BaseViewController {
             labelName = LanguageKey.desc.value
         }
         return labelName
+    }
+    
+    /// 获取提示语
+    fileprivate func getPlaceholder(type:ProfileDetailsCellType) -> String {
+        var placeholder = ""
+        switch type {
+        case .nick:
+            placeholder = "昵称"
+        case .tel:    // 手机号
+            placeholder = "手机号"
+        case .region: // 地区
+            placeholder = "地区"
+        case .email:  // 邮箱
+            placeholder = "邮箱"
+        case .desc:   // 个人描述
+            placeholder = "个人描述"
+        default:
+            break
+        }
+        return placeholder
     }
 }
 
@@ -198,7 +220,7 @@ extension ProfileDetailsViewController : UITableViewDataSource, UITableViewDeleg
                 wself.tableView.reloadData()
             })
         default:
-            showEditView(text: dict[type] ?? "")
+            showEditView(text: dict[type] ?? "", placeholer: getPlaceholder(type: type))
         }
         self.type = type
     }

@@ -98,6 +98,7 @@ class TextInputView: UIView {
     // 注册通知
     func registerNotification() {
         NotificationCenter.default.addObserver(self, selector: #selector(receiveKeyboardWillShowNotification(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(receiveKeyboardWillShowNotification(_:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(receiveKeyboardWillHideNotification(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     

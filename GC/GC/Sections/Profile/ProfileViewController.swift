@@ -35,6 +35,11 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         setup()
         setupViewModel()
+        registerNotification()
+    }
+    
+    deinit {
+        unregisterNotification()
     }
     
     // MARK: - private methods
@@ -53,6 +58,21 @@ class ProfileViewController: UIViewController {
         }) { (error) in
             
         }
+    }
+    
+    /// 注册通知
+    fileprivate func registerNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(notifyUserInfoUpdate(_:)), name: NoticationUserInfoUpdate, object: nil)
+    }
+    
+    /// 销毁通知
+    fileprivate func unregisterNotification() {
+        NotificationCenter.default.removeObserver(self, name: NoticationUserInfoUpdate, object: nil)
+    }
+    
+    /// 通知用户注册
+    @objc private func notifyUserInfoUpdate(_ notify:Notification) {
+        viewModel.getUserInfo()
     }
     
     // MARK: - private methods
