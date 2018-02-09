@@ -20,13 +20,51 @@
                     <view key="view" contentMode="scaleToFill" id="qex-Dz-WXQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xMM-TS-bbZ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Af0-so-33S" id="Nn6-Lj-Rck"/>
+                                    <outlet property="delegate" destination="Af0-so-33S" id="9KF-Ox-iqy"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xMM-TS-bbZ" firstAttribute="leading" secondItem="qex-Dz-WXQ" secondAttribute="leading" id="FGR-Dw-H2O"/>
+                            <constraint firstItem="emQ-rg-y91" firstAttribute="top" secondItem="xMM-TS-bbZ" secondAttribute="bottom" id="Pr0-nw-Wbf"/>
+                            <constraint firstAttribute="trailing" secondItem="xMM-TS-bbZ" secondAttribute="trailing" id="l7g-Nh-aLQ"/>
+                            <constraint firstItem="xMM-TS-bbZ" firstAttribute="top" secondItem="bnF-CU-kSa" secondAttribute="bottom" id="vjw-9N-WVA"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XVf-t6-Twk"/>
+                    <connections>
+                        <outlet property="tableView" destination="xMM-TS-bbZ" id="kaX-Sa-p5C"/>
+                        <segue destination="30N-P3-KC5" kind="show" id="l0T-aU-kkX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLF-MU-c14" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="448.80000000000001" y="137.18140929535232"/>
+        </scene>
+        <!--Donate Details View Controller-->
+        <scene sceneID="EkE-oN-tqj">
+            <objects>
+                <viewController storyboardIdentifier="donate_details" useStoryboardIdentifierAsRestorationIdentifier="YES" id="30N-P3-KC5" customClass="DonateDetailsViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x1r-cQ-2Hb"/>
+                        <viewControllerLayoutGuide type="bottom" id="vX5-Gq-ueN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wT6-Mj-R5Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jvc-Gf-jSV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1201" y="139"/>
         </scene>
         <!--Base Navigation Controller-->
         <scene sceneID="8Qa-1B-Rc2">

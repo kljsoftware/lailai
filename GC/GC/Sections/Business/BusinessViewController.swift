@@ -75,7 +75,7 @@ class BusinessViewController: PortraitViewController {
         mapView.navController = navigationController
         scrollView.addSubview(businessView)
         scrollView.addSubview(mapView)
-        scrollView.contentSize = CGSize(width: 2 * scrollView.frame.width, height: APP_CONTENT_HEIGHT)
+        scrollView.contentSize = CGSize(width: 2 * DEVICE_SCREEN_WIDTH, height: APP_CONTENT_HEIGHT)
     }
     
     /// 请求网络数据

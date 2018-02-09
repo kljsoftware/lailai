@@ -9,7 +9,7 @@
 class GeneralViewModel: BaseViewModel {
 
     /// 8.1 获取区块链信息
-    func getBlockChainInfo(id:Int) {
+    func getBlockChainInfo(id:String) {
         let reqModel = BlockChainRequestModel()
         reqModel.id = id
         HTTPSessionManager.shared.request(urlString: NetworkURL.getBlockChainInfo.url, parameters: reqModel.mj_keyValues()) { (json, success) in

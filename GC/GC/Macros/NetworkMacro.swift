@@ -52,6 +52,7 @@ enum NetworkURL {
     case getDealers             // 4.1 获取绿色商家位置列表
     case searchDealers          // 4.2 搜索商家
     case getNews        // 5.1获取新闻列表
+    case getDonations   // 6.1 获取公益捐赠列表
     case getUserInfo    // 7.1 获取个人信息
     case putFeedback    // 7.4 反馈信息
     case getBlockChainInfo // 8.1 获取区块链信息
@@ -87,6 +88,8 @@ enum NetworkURL {
             api = "\(Token.shared.value)/searchDealers"
         case .getNews:
             api = "\(Token.shared.value)/getNews"
+        case .getDonations:
+            api = "\(Token.shared.value)/getDonations"
         case .getUserInfo:
             api = "\(Token.shared.value)/getUserInfo"
         case .putFeedback:

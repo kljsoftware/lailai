@@ -23,7 +23,7 @@ class DonateReusltModel : BaseResultModel {
 }
 
 class DonationItemModel : NSObject {
-    var id = 0 //捐赠id
+    var id = "" //捐赠id
     var orgName = "" //组织名称
     var cover = "" // 捐赠封面
     var title = "" // 标题

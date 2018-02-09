@@ -48,6 +48,7 @@ class BannnerView: UIView {
     // MARK: - public methods
     /// 初始化
     func setup(banners:[AdModel]) {
+        pageControl.isHidden = banners.count == 0
         if banners.count > 0 {
             self.banners = banners
             scrollView.contentOffset = CGPoint.zero

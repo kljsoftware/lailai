@@ -8,7 +8,7 @@
 
 /// 8.1 获取区块链信息
 class BlockChainRequestModel : BaseRequestModel {
-    var id = 0 /// 区块链id
+    var id = "" /// 区块链id
 }
 
 class BlockChainResultModel : BaseResultModel {

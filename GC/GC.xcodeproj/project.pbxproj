@@ -12,6 +12,10 @@
 		3C1B0B3B202D324100E059BD /* common_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1B0B39202D324100E059BD /* common_back@2x.png */; };
 		3C1B0B3C202D324100E059BD /* common_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1B0B3A202D324100E059BD /* common_back@3x.png */; };
 		3C1B0B3E202D332F00E059BD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B0B3D202D332F00E059BD /* BaseViewController.swift */; };
+		3C1B0B41202D6BAC00E059BD /* DonateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B0B3F202D6BAC00E059BD /* DonateCell.swift */; };
+		3C1B0B42202D6BAC00E059BD /* DonateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1B0B40202D6BAC00E059BD /* DonateCell.xib */; };
+		3C1B0B44202D6FAB00E059BD /* DonateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B0B43202D6FAB00E059BD /* DonateViewModel.swift */; };
+		3C1B0B46202D747000E059BD /* DonateDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B0B45202D747000E059BD /* DonateDetailsViewController.swift */; };
 		3C25DA3E201CC286003E4BFB /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C25DA3D201CC286003E4BFB /* UIImageView+Extension.swift */; };
 		3C374618201DB866000FD752 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C374617201DB866000FD752 /* splash.png */; };
 		3C37461A201DBA14000FD752 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C374619201DBA14000FD752 /* BorderView.swift */; };
@@ -176,6 +180,10 @@
 		3C1B0B39202D324100E059BD /* common_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_back@2x.png"; sourceTree = "<group>"; };
 		3C1B0B3A202D324100E059BD /* common_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_back@3x.png"; sourceTree = "<group>"; };
 		3C1B0B3D202D332F00E059BD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		3C1B0B3F202D6BAC00E059BD /* DonateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateCell.swift; sourceTree = "<group>"; };
+		3C1B0B40202D6BAC00E059BD /* DonateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DonateCell.xib; sourceTree = "<group>"; };
+		3C1B0B43202D6FAB00E059BD /* DonateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateViewModel.swift; sourceTree = "<group>"; };
+		3C1B0B45202D747000E059BD /* DonateDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateDetailsViewController.swift; sourceTree = "<group>"; };
 		3C25DA3D201CC286003E4BFB /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		3C374617201DB866000FD752 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		3C374619201DBA14000FD752 /* BorderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
@@ -491,6 +499,7 @@
 			isa = PBXGroup;
 			children = (
 				3CB4D0FE202A044A00AB70B9 /* DonateDetailsModel.swift */,
+				3C1B0B45202D747000E059BD /* DonateDetailsViewController.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -609,7 +618,10 @@
 				3CB4D0FD202A043A00AB70B9 /* Details */,
 				3CF364CB2022A916003179E8 /* Donate.storyboard */,
 				3CF364CA2022A916003179E8 /* DonateViewController.swift */,
+				3C1B0B3F202D6BAC00E059BD /* DonateCell.swift */,
+				3C1B0B40202D6BAC00E059BD /* DonateCell.xib */,
 				3CB4D0FB202A033200AB70B9 /* DonateModel.swift */,
+				3C1B0B43202D6FAB00E059BD /* DonateViewModel.swift */,
 			);
 			path = Donate;
 			sourceTree = "<group>";
@@ -936,6 +948,7 @@
 				3CF364FC2022A916003179E8 /* Business.storyboard in Resources */,
 				3CF364FB2022A916003179E8 /* Launch.storyboard in Resources */,
 				3CD6AA1F2025EE4900EAEECA /* ProfileCell.xib in Resources */,
+				3C1B0B42202D6BAC00E059BD /* DonateCell.xib in Resources */,
 				3CD6AA232025F05F00EAEECA /* ProfielSettingCell.xib in Resources */,
 				3C6550772025A3BA00FE0504 /* img_frame.png in Resources */,
 				3C374618201DB866000FD752 /* splash.png in Resources */,
@@ -1078,6 +1091,7 @@
 				3C7E26D52026930500ED4B56 /* ProfileDetailDescCell.swift in Sources */,
 				3C1B0B3E202D332F00E059BD /* BaseViewController.swift in Sources */,
 				3CB4D0F82029FE5100AB70B9 /* DonateRecordModel.swift in Sources */,
+				3C1B0B46202D747000E059BD /* DonateDetailsViewController.swift in Sources */,
 				3CF3650B2022A916003179E8 /* NewsViewController.swift in Sources */,
 				3CF365092022A916003179E8 /* ProfileViewController.swift in Sources */,
 				3CF364FF2022A916003179E8 /* BusinessView.swift in Sources */,
@@ -1090,6 +1104,7 @@
 				3CF3652F2022FADA003179E8 /* WalletViewModel.swift in Sources */,
 				3CB4D0FC202A033200AB70B9 /* DonateModel.swift in Sources */,
 				3CF3653120231DA8003179E8 /* BusinessModel.swift in Sources */,
+				3C1B0B41202D6BAC00E059BD /* DonateCell.swift in Sources */,
 				3C65507A2025DF7C00FE0504 /* DonateRecordViewController.swift in Sources */,
 				3CB4D129202C821500AB70B9 /* SettingAboutViewController.swift in Sources */,
 				3CF3652D2022EE8B003179E8 /* LaunchViewModel.swift in Sources */,
@@ -1111,6 +1126,7 @@
 				3C7E26D12026930400ED4B56 /* ProfileDetailOtherCell.swift in Sources */,
 				3C7E26CF2026930400ED4B56 /* ProfileDetailAvatarCell.swift in Sources */,
 				3CF365062022A916003179E8 /* RegisterViewController.swift in Sources */,
+				3C1B0B44202D6FAB00E059BD /* DonateViewModel.swift in Sources */,
 				3CB55399201CB73F009AC1CD /* UIButton+Extension.swift in Sources */,
 				3CF3653320232377003179E8 /* BusinessViewModel.swift in Sources */,
 				3CB553A1201CB73F009AC1CD /* UserDefaultMacro.swift in Sources */,

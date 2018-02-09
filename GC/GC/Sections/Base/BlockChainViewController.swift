@@ -11,7 +11,7 @@ import UIKit
 class BlockChainViewController: BaseViewController {
 
     /// 区块链id
-    var id = 0 {
+    var id = "" {
         didSet {
             viewModel.getBlockChainInfo(id: id)
         }
