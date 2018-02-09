@@ -32,9 +32,6 @@ class ProfileDetailsViewController: BaseViewController {
     
     fileprivate let viewModel = ProfileDetailViewModel()
     
-    /// 选取头像
-    fileprivate var image:UIImage?
-    
     /// 列表数据
     fileprivate var dict = [ProfileDetailsCellType:String]()
     
@@ -55,11 +52,34 @@ class ProfileDetailsViewController: BaseViewController {
         tableView.register(UINib(nibName: "ProfileDetailAvatarCell", bundle: nil), forCellReuseIdentifier: "kProfileDetailAvatarCell")
         tableView.register(UINib(nibName: "ProfileDetailOtherCell", bundle: nil), forCellReuseIdentifier: "kProfileDetailOtherCell")
         tableView.register(UINib(nibName: "ProfileDetailDescCell", bundle: nil), forCellReuseIdentifier: "kProfileDetailDescCell")
+        viewModel.setCompletion(onSuccess: {[weak self] (resultModel) in
+            guard let wself = self else {
+                return
+            }
+            if resultModel.isKind(of: UploadFileResultModel.self) {
+                let model = resultModel as! UploadFileResultModel
+                wself.dict[.avatar] = model.data.name
+                wself.tableView.reloadData()
+            }
+            UIHelper.tip(message: "保存成功")
+            wself.navigationController?.popViewController(animated: true)
+        }) { (error) in
+            UIHelper.tip(message: error)
+        }
     }
     
     // MARK: - action methods
     func onSaveButtonClicked(sender:UIButton) {
-        
+        let reqModel = ModityUserInfoRequestModel()
+        reqModel.name = userInfo.name
+        reqModel.shortName = dict[.nick] ?? ""
+        reqModel.email = dict[.email] ?? ""
+        reqModel.sex = (dict[.gender] ?? "男") == "男" ? "1" : "2"
+        reqModel.city = dict[.region] ?? ""
+        reqModel.tel = dict[.tel] ?? ""
+        reqModel.logo = dict[.avatar] ?? ""
+        reqModel.desc = dict[.desc] ?? ""
+        viewModel.modityUserInfo(info: reqModel)
     }
     
     // MARK: - private methods
@@ -132,7 +152,7 @@ extension ProfileDetailsViewController : UITableViewDataSource, UITableViewDeleg
         switch type {
         case .avatar:
             let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileDetailAvatarCell", for: indexPath) as! ProfileDetailAvatarCell
-            cell.update(name: labelName, content: NetworkImgOrWeb.getUrl(name: content), image: image)
+            cell.update(name: labelName, content: NetworkImgOrWeb.getUrl(name: content))
             return cell
         case .desc:
             let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileDetailDescCell", for: indexPath) as! ProfileDetailDescCell
@@ -193,11 +213,10 @@ extension ProfileDetailsViewController : UIImagePickerControllerDelegate, UINavi
             if nil == image {
                 image = info[UIImagePickerControllerOriginalImage] as? UIImage
             }
-            self?.image = image
             if image != nil {
                 let data = UIImagePNGRepresentation(image!)
                 if data != nil {
-                    
+                    self?.viewModel.upload(data: data!)
                 }
             }
 

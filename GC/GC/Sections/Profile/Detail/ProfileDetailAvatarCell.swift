@@ -14,12 +14,8 @@ class ProfileDetailAvatarCell: UITableViewCell {
     @IBOutlet weak var avatarImageView: UIImageView!
     
     // MARK: - public methods
-    func update(name:String, content:String, image:UIImage?)  {
+    func update(name:String, content:String)  {
         photoLabel.text = name
-        if image != nil {
-            avatarImageView.image = image
-        } else {
-            avatarImageView.setImage(urlStr: content, placeholderStr: "avatar", radius: 30)
-        }
+        avatarImageView.setImage(urlStr: content, placeholderStr: "avatar", radius: 30)
     }
 }
