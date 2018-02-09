@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileBusinessViewController: UIViewController {
+class ProfileBusinessViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

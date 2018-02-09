@@ -6,7 +6,7 @@
 //  Copyright © 2018年 demo. All rights reserved.
 //
 
-class SettingAboutViewController: UIViewController {
+class SettingAboutViewController: BaseViewController {
 
     var viewModel = ProfileViewModel()
     

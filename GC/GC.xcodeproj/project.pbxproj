@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3C19391520207E1800E7D007 /* points.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C19391420207E1700E7D007 /* points.png */; };
+		3C1B0B38202D248500E059BD /* BusinessListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B0B37202D248500E059BD /* BusinessListViewController.swift */; };
+		3C1B0B3B202D324100E059BD /* common_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1B0B39202D324100E059BD /* common_back@2x.png */; };
+		3C1B0B3C202D324100E059BD /* common_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1B0B3A202D324100E059BD /* common_back@3x.png */; };
+		3C1B0B3E202D332F00E059BD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B0B3D202D332F00E059BD /* BaseViewController.swift */; };
 		3C25DA3E201CC286003E4BFB /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C25DA3D201CC286003E4BFB /* UIImageView+Extension.swift */; };
 		3C374618201DB866000FD752 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C374617201DB866000FD752 /* splash.png */; };
 		3C37461A201DBA14000FD752 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C374619201DBA14000FD752 /* BorderView.swift */; };
@@ -168,6 +172,10 @@
 
 /* Begin PBXFileReference section */
 		3C19391420207E1700E7D007 /* points.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = points.png; sourceTree = "<group>"; };
+		3C1B0B37202D248500E059BD /* BusinessListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessListViewController.swift; sourceTree = "<group>"; };
+		3C1B0B39202D324100E059BD /* common_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_back@2x.png"; sourceTree = "<group>"; };
+		3C1B0B3A202D324100E059BD /* common_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_back@3x.png"; sourceTree = "<group>"; };
+		3C1B0B3D202D332F00E059BD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3C25DA3D201CC286003E4BFB /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		3C374617201DB866000FD752 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		3C374619201DBA14000FD752 /* BorderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
@@ -471,6 +479,8 @@
 		3C91FC2E201F3C7C00BB492D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3C1B0B39202D324100E059BD /* common_back@2x.png */,
+				3C1B0B3A202D324100E059BD /* common_back@3x.png */,
 				3C91FC2F201F3C7C00BB492D /* common_forward@3x.png */,
 				3C91FC30201F3C7C00BB492D /* common_forward@2x.png */,
 			);
@@ -631,6 +641,7 @@
 				3CF364D22022A916003179E8 /* MapView.swift */,
 				3CA33DA0202CAB17003032A4 /* MapAroundView.swift */,
 				3CA33D9E202CAAFE003032A4 /* MapAroundView.xib */,
+				3C1B0B37202D248500E059BD /* BusinessListViewController.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -721,6 +732,7 @@
 			children = (
 				3CB4D10D202AF8D000AB70B9 /* AdView.swift */,
 				3CB4D10C202AF8D000AB70B9 /* AdView.xib */,
+				3C1B0B3D202D332F00E059BD /* BaseViewController.swift */,
 				3CD6AA282025F9D900EAEECA /* BaseNavigationController.swift */,
 				3CF365202022D9AB003179E8 /* BaseViewModel.swift */,
 				3CF365222022DA86003179E8 /* BaseRequestModel.swift */,
@@ -906,6 +918,7 @@
 				3C8DCEF1201D76C400C9F40E /* tab_profile_sel@2x.png in Resources */,
 				3C6550732025934400FE0504 /* tab_donate_nor@2x.png in Resources */,
 				3CF365102022A916003179E8 /* WalletCollectionViewCell.xib in Resources */,
+				3C1B0B3C202D324100E059BD /* common_back@3x.png in Resources */,
 				3C8DCEF2201D76C400C9F40E /* tab_news_nor@2x.png in Resources */,
 				3C8DCEEE201D76C400C9F40E /* tab_wallet_sel@2x.png in Resources */,
 				3C8DCEF7201D76C400C9F40E /* tab_wallet_nor@2x.png in Resources */,
@@ -917,6 +930,7 @@
 				3CA33DA5202CABAA003032A4 /* discover@2x.png in Resources */,
 				3CFD84F5201C9B5900F9E7E5 /* Assets.xcassets in Resources */,
 				3C91FC32201F3C7C00BB492D /* common_forward@2x.png in Resources */,
+				3C1B0B3B202D324100E059BD /* common_back@2x.png in Resources */,
 				3C7E26D32026930400ED4B56 /* ProfileDetailDescCell.xib in Resources */,
 				3C19391520207E1800E7D007 /* points.png in Resources */,
 				3CF364FC2022A916003179E8 /* Business.storyboard in Resources */,
@@ -1056,11 +1070,13 @@
 				3CF364FA2022A916003179E8 /* SplashViewController.swift in Sources */,
 				3CF365212022D9AB003179E8 /* BaseViewModel.swift in Sources */,
 				3CF364C42022A3ED003179E8 /* HTTPSessionManager.swift in Sources */,
+				3C1B0B38202D248500E059BD /* BusinessListViewController.swift in Sources */,
 				3CF364F62022A916003179E8 /* HomeTabBarController.swift in Sources */,
 				3C65505E20243D0300FE0504 /* WalletSectionCell.swift in Sources */,
 				3CD6AA1E2025EE4900EAEECA /* ProfileCell.swift in Sources */,
 				3CF365292022E672003179E8 /* LoginViewModel.swift in Sources */,
 				3C7E26D52026930500ED4B56 /* ProfileDetailDescCell.swift in Sources */,
+				3C1B0B3E202D332F00E059BD /* BaseViewController.swift in Sources */,
 				3CB4D0F82029FE5100AB70B9 /* DonateRecordModel.swift in Sources */,
 				3CF3650B2022A916003179E8 /* NewsViewController.swift in Sources */,
 				3CF365092022A916003179E8 /* ProfileViewController.swift in Sources */,

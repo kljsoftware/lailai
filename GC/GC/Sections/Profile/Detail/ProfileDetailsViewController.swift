@@ -21,7 +21,7 @@ private enum ProfileDetailsCellType : Int {
     static var count = 7
 }
 
-class ProfileDetailsViewController: UIViewController {
+class ProfileDetailsViewController: BaseViewController {
     
     /// 用户信息
     var userInfo = ProfileUserInfoModel() {

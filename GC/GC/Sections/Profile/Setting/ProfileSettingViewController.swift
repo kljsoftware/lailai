@@ -20,7 +20,7 @@ private enum ProfileSettingType : Int {
     static var count = 5
 }
 
-class ProfileSettingViewController: UIViewController {
+class ProfileSettingViewController: BaseViewController {
 
     /// 列表视图
     @IBOutlet weak var tableView: UITableView!

@@ -13,7 +13,7 @@ import SnapKit
 private let businessTitleWidth:CGFloat = 140, businessTitleHeight:CGFloat = 44
 
 /// 绿色商家
-class BusinessViewController: UIViewController {
+class BusinessViewController: PortraitViewController {
     
     private let viewModel = BusinessViewModel()
     
@@ -69,9 +69,10 @@ class BusinessViewController: UIViewController {
             wself.businessTitleView.update(isSelectBusiness: false)
             wself.fristDefautLocation = false
             wself.scrollView.contentOffset.x = DEVICE_SCREEN_WIDTH
-            wself.mapView.loaction(model: model)
+            wself.mapView.loaction(models: [model])
         }
         mapView = MapView(frame: CGRect(x: DEVICE_SCREEN_WIDTH, y: 0, width: DEVICE_SCREEN_WIDTH, height: APP_CONTENT_HEIGHT))
+        mapView.navController = navigationController
         scrollView.addSubview(businessView)
         scrollView.addSubview(mapView)
         scrollView.contentSize = CGSize(width: 2 * scrollView.frame.width, height: APP_CONTENT_HEIGHT)
@@ -92,7 +93,7 @@ class BusinessViewController: UIViewController {
     fileprivate func fristMapLoaction() {
         if viewModel.businessResultModel.data.count > 0 && fristDefautLocation {
             let model = viewModel.businessResultModel.data.first!
-            mapView.loaction(model: model)
+            mapView.loaction(models: [model])
             fristDefautLocation = false
         }
     }

@@ -49,7 +49,8 @@ enum NetworkURL {
     case modityPassword // 3.6密码修改
     case getAbout       // 3.9关于
     case getContributionHistory // 3.11捐赠记录
-    case getDealers             // 3.12绿色地图
+    case getDealers             // 4.1 获取绿色商家位置列表
+    case searchDealers          // 4.2 搜索商家
     case getNews        // 5.1获取新闻列表
     case getUserInfo    // 7.1 获取个人信息
     case putFeedback    // 7.4 反馈信息
@@ -82,6 +83,8 @@ enum NetworkURL {
             api = "\(Token.shared.value)/getContributionHistory"
         case .getDealers:
             api = "\(Token.shared.value)/getDealers"
+        case .searchDealers:
+            api = "\(Token.shared.value)/searchDealers"
         case .getNews:
             api = "\(Token.shared.value)/getNews"
         case .getUserInfo:

@@ -16,21 +16,21 @@ class Upload {
         let request = AFHTTPRequestSerializer().multipartFormRequest(withMethod: "POST", urlString: url, parameters: parameters as? [String : AnyObject], constructingBodyWith: { (formData) in
             formData.appendPart(withFileData: data, name: "file", fileName: ".png", mimeType: "image/png")
         }, error: &error)
-        Log.e("YJYAFNetworkingWrapper | error = \(String(describing: error?.description))")
+        Log.e("error = \(String(describing: error?.description))")
         
         // 上传
         let manager = AFURLSessionManager(sessionConfiguration: URLSessionConfiguration.default)
         manager.responseSerializer = AFHTTPResponseSerializer()
         
         let uploadTask = manager.uploadTask(withStreamedRequest: request as URLRequest, progress: { (progress) in
-            Log.e("YJYAFNetworkingWrapper | uploadFileWithData progress = \(progress.fractionCompleted)")
+            Log.e("uploadFileWithData progress = \(progress.fractionCompleted)")
         })  { (response, responseObject, error) in
             if error == nil {
                 do {
                     let dic = try JSONSerialization.jsonObject(with: (responseObject as? Data)!, options: JSONSerialization.ReadingOptions.mutableLeaves)
                     success(dic as? NSDictionary)
                 } catch {
-                    Log.e("YJYAFNetworkingWrapper | uploadFileWithData error")
+                    Log.e("uploadFileWithData error")
                     success(nil)
                 }
             } else {

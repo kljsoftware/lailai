@@ -39,11 +39,49 @@
                     <navigationItem key="navigationItem" id="XtR-ri-bh6"/>
                     <connections>
                         <outlet property="scrollView" destination="819-ni-068" id="AAC-4u-Hmo"/>
+                        <segue destination="gPJ-6s-Wdg" kind="show" id="JkX-Bb-HHT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wdd-jb-TbE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="468" y="134.48275862068968"/>
+        </scene>
+        <!--Business List View Controller-->
+        <scene sceneID="kfg-3y-2kU">
+            <objects>
+                <viewController storyboardIdentifier="business_list" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gPJ-6s-Wdg" customClass="BusinessListViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mBd-Yk-xpU"/>
+                        <viewControllerLayoutGuide type="bottom" id="V1R-mv-vjf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Z2-Q0-a3X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yqd-ca-Vgj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="gPJ-6s-Wdg" id="Zus-Hm-PNK"/>
+                                    <outlet property="delegate" destination="gPJ-6s-Wdg" id="e8B-mh-fNz"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Yqd-ca-Vgj" firstAttribute="leading" secondItem="2Z2-Q0-a3X" secondAttribute="leading" id="KVQ-l0-IZ8"/>
+                            <constraint firstItem="V1R-mv-vjf" firstAttribute="top" secondItem="Yqd-ca-Vgj" secondAttribute="bottom" id="OST-ZM-YZF"/>
+                            <constraint firstAttribute="trailing" secondItem="Yqd-ca-Vgj" secondAttribute="trailing" id="q3i-iK-fw1"/>
+                            <constraint firstItem="Yqd-ca-Vgj" firstAttribute="top" secondItem="mBd-Yk-xpU" secondAttribute="bottom" id="vnx-gB-Ba7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Yqd-ca-Vgj" id="lMk-lm-MNR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kvb-XE-69u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1262" y="134"/>
         </scene>
         <!--Base Navigation Controller-->
         <scene sceneID="hzy-3F-nAT">

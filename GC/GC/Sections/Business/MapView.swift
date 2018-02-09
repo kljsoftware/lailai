@@ -13,6 +13,11 @@ import CoreLocation
 // 地图视图
 class MapView: UIView {
     
+    var navController:UINavigationController?
+    
+    /// 业务模块
+    fileprivate let viewModel = BusinessViewModel()
+    
     // 定位管理器
     fileprivate lazy var locationManager : CLLocationManager = {
         
@@ -38,8 +43,10 @@ class MapView: UIView {
     }()
     
     /// 搜索栏
-    fileprivate var searchBar:UISearchBar = {
+    fileprivate lazy var searchBar:UISearchBar = {
         let _searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: DEVICE_SCREEN_WIDTH, height: 44))
+        _searchBar.delegate = self
+        _searchBar.placeholder = "搜索绿色商家"
         return _searchBar
     }()
     
@@ -63,7 +70,17 @@ class MapView: UIView {
             maker.height.equalTo(50)
         })
         _aroundView.aroundButtonClosure = { [weak self] in
-            
+            guard let wself = self else {
+                return
+            }
+            if wself.currentLocation != nil {
+                let vc = UIStoryboard.init(name: "Business", bundle: nil).instantiateViewController(withIdentifier: "business_list") as! BusinessListViewController
+                vc.loaction = ("\(wself.currentLocation!.coordinate.latitude)", "\(wself.currentLocation!.coordinate.longitude)")
+                vc.didSelectClosure = { [weak self] (model) in
+                    self?.loaction(models: [model])
+                }
+                wself.navController?.pushViewController(vc, animated: true)
+            }
         }
         return _aroundView
     }()
@@ -73,6 +90,14 @@ class MapView: UIView {
         super.init(frame: frame)
         addSubview(mkMapView)
         addSubview(searchBar)
+        viewModel.setCompletion(onSuccess: { [weak self](resultModel) in
+            guard let wself = self else {
+                return
+            }
+            wself.loaction(models: wself.viewModel.businessResultModel.data)
+        }) { (error) in
+            UIHelper.tip(message: error)
+        }
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
         }
@@ -83,14 +108,22 @@ class MapView: UIView {
     }
     
     /// 定位位置
-    func loaction(model:BusinessModel) {
-        let coordinate = model.coordinate.split(separator: ",")
+    func loaction(models:[BusinessModel]) {
+        if models.count == 0 { return }
+        let coordinate = models[0].coordinate.split(separator: ",")
         let log = Double(coordinate[0]) ?? 0
         let lat = Double(coordinate[1]) ?? 1
         let coor = CLLocationCoordinate2D(latitude: lat, longitude: log)
         mkMapView.removeAnnotations(mkMapView.annotations)
         setRegion(center: coor)
-        addAnnotion(model: model, coor: coor)
+        
+        for model in models {
+            let coordinate1 = model.coordinate.split(separator: ",")
+            let log1 = Double(coordinate1[0]) ?? 0
+            let lat1 = Double(coordinate1[1]) ?? 1
+            let coor1 = CLLocationCoordinate2D(latitude: lat1, longitude: log1)
+            addAnnotion(model: model, coor: coor1)
+        }
     }
     
     /// 设置中心位置
@@ -186,5 +219,23 @@ extension MapView : CLLocationManagerDelegate {
         case .authorizedWhenInUse:
             Log.e("获得前台授权")
         }
+    }
+}
+
+extension MapView : UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        Log.e("searchBarTextDidBeginEditing#")
+        searchBar.showsCancelButton = true
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        viewModel.searchDealers()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        searchBar.showsCancelButton = false
+        searchBar.resignFirstResponder()
     }
 }

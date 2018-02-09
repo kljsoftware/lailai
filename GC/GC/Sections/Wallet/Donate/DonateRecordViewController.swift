@@ -9,7 +9,7 @@
 /// 常量定义
 private let cellHeight:CGFloat = 80
 
-class DonateRecordViewController: UIViewController {
+class DonateRecordViewController: BaseViewController {
 
     /// 商家id
     var id = 0 {

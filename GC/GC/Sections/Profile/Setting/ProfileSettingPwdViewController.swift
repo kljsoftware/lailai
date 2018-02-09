@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileSettingPwdViewController: UIViewController {
+class ProfileSettingPwdViewController: BaseViewController {
     
     /// 业务模块
     let viewModel = ProfileViewModel()

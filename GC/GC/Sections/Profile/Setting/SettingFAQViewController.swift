@@ -7,7 +7,7 @@
 //
 
 /// 帮助与反馈
-class SettingFAQViewController: UIViewController {
+class SettingFAQViewController: BaseViewController {
 
     let viewModel = ProfileViewModel()
     

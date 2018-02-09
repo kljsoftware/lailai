@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BlockChainViewController: UIViewController {
+class BlockChainViewController: BaseViewController {
 
     /// 区块链id
     var id = 0 {

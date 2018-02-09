@@ -25,4 +25,25 @@ class BusinessViewModel: BaseViewModel {
             }
         }
     }
+    
+    /// 4.2 搜索商家
+    func searchDealers(x:String = "", y:String = "", name:String = "", range:String = "", page:Int = 0, size:Int = 10) {
+        let reqModel = BusinessDealersRequestModel()
+        reqModel.x = x
+        reqModel.y = y
+        reqModel.name = name
+        reqModel.page = page
+        reqModel.size = size
+        HTTPSessionManager.shared.request(urlString: NetworkURL.searchDealers.url, parameters: reqModel.mj_keyValues()) { (json, success) in
+            let resultModel = BusinessResultModel.mj_object(withKeyValues: json)
+            if success && resultModel != nil && resultModel!.code == 0 {
+                self.businessResultModel = resultModel!
+                self.successCallback?(resultModel!)
+            } else {
+                let msg = resultModel != nil ? resultModel!.msg : "error"
+                Log.e(msg)
+                self.failureCallback?(msg)
+            }
+        }
+    }
 }
