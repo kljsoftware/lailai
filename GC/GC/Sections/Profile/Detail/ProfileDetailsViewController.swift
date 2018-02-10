@@ -60,10 +60,11 @@ class ProfileDetailsViewController: BaseViewController {
                 let model = resultModel as! UploadFileResultModel
                 wself.dict[.avatar] = model.data.name
                 wself.tableView.reloadData()
+            } else {
+                UIHelper.tip(message: "保存成功")
+                NotificationCenter.default.post(name: NoticationUserInfoUpdate, object: nil)
+                wself.navigationController?.popViewController(animated: true)
             }
-            UIHelper.tip(message: "保存成功")
-            NotificationCenter.default.post(name: NoticationUserInfoUpdate, object: nil)
-            wself.navigationController?.popViewController(animated: true)
         }) { (error) in
             UIHelper.tip(message: error)
         }
