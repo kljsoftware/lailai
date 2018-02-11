@@ -44,14 +44,18 @@ class WalletViewController: UIViewController {
     /// 初始化
     private func setup() {
         navigationItem.title = LanguageKey.tab_wallet.value
-        automaticallyAdjustsScrollViewInsets = false
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = .never
+        } else {
+            automaticallyAdjustsScrollViewInsets = false
+        }
         tableView.register(UINib(nibName: "WalletSectionCell", bundle: nil), forCellReuseIdentifier: "kWalletSectionCell")
         tableView.register(UINib(nibName: "WalletCell", bundle: nil), forCellReuseIdentifier: "kWalletCell")
         tableView.tableHeaderView = tableViewHeaderView()
         tableTopLayoutConstraint.constant = tableTopMargin
-        tableView.mj_header = MJRefreshStateHeader(refreshingBlock: {
-            self.tableHeaderRefreshing()
-        })
+//        tableView.mj_header = MJRefreshStateHeader(refreshingBlock: {
+//            self.tableHeaderRefreshing()
+//        })
         tableView.mj_footer = MJRefreshBackStateFooter(refreshingBlock: {
             self.tableFooterRefreshing()
         })
@@ -75,6 +79,9 @@ class WalletViewController: UIViewController {
         /// banner
         let banner = BannnerView(frame: CGRect(x: 0, y: 0, width: DEVICE_SCREEN_WIDTH, height: bannerHeight))
         bannerContainerView.addSubview(banner)
+        banner.snp.makeConstraints { (maker) in
+            maker.left.right.top.bottom.equalTo(bannerContainerView)
+        }
         banner.setup(banners: viewModel.walletBaseModel.adItems)
         
         /// userInfo
@@ -175,7 +182,7 @@ extension WalletViewController : UITableViewDataSource, UITableViewDelegate {
 extension WalletViewController : UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let dy = scrollView.contentOffset.y
-        tableTopLayoutConstraint.constant -= dy
+        tableTopLayoutConstraint.constant =  tableTopMargin - dy
         if tableTopLayoutConstraint.constant < 0 {
             tableTopLayoutConstraint.constant = 0
         }
@@ -183,6 +190,7 @@ extension WalletViewController : UIScrollViewDelegate {
         if tableTopLayoutConstraint.constant > tableTopMargin {
             tableTopLayoutConstraint.constant = tableTopMargin
         }
+        tableView.layoutIfNeeded()
     }
 }
 

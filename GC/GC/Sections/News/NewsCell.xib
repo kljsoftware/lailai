@@ -23,7 +23,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="85.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news_header.png" translatesAutoresizingMaskIntoConstraints="NO" id="VhO-6E-l80">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VhO-6E-l80">
                         <rect key="frame" x="12" y="13" width="80" height="60"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="60" id="LJT-mV-CJv"/>
@@ -91,7 +91,4 @@
             <point key="canvasLocation" x="34" y="33"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="news_header.png" width="533" height="300"/>
-    </resources>
 </document>

@@ -38,10 +38,19 @@ class NewsViewController: UIViewController {
     }
     
     private func setupViewModel() {
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         viewModel.getNews()
         viewModel.setCompletion(onSuccess: {[weak self] (resultModel) in
-            self?.tableReload()
-        }) { (error) in
+            guard let wself = self else {
+                return
+            }
+            MBProgressHUD.hide(for: wself.view, animated: false)
+            wself.tableReload()
+        }) { [weak self](error) in
+            guard let wself = self else {
+                return
+            }
+            MBProgressHUD.hide(for: wself.view, animated: false)
             Log.e(error)
         }
     }

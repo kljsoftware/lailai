@@ -34,41 +34,12 @@ class BannnerView: UIView {
         return _scrollView
     }()
     
-    /// 轮播间隔时间、页码控制
-    private var timeInterval:TimeInterval = 3
-    private lazy var pageControl:UIPageControl = {
-        let _pageControl = UIPageControl(frame: CGRect.init(x: DEVICE_SCREEN_WIDTH - 100, y: 80, width: 100, height: 20))
-        _pageControl.numberOfPages = self.banners.count
-        _pageControl.pageIndicatorTintColor = UIColor.gray
-        _pageControl.currentPageIndicatorTintColor = COLOR_2673FD
-        self.addSubview(_pageControl)
-        return _pageControl
-    }()
-    
     // MARK: - public methods
     /// 初始化
     func setup(banners:[AdModel]) {
-        pageControl.isHidden = banners.count == 0
         if banners.count > 0 {
             self.banners = banners
             scrollView.contentOffset = CGPoint.zero
-            pageControl.currentPage = 0
-            if banners.count > 1 { /// 如果大于1，开始轮播显示图片
-                delayPerform()
-            }
-        }
-    }
-    
-    // MARK: - private methods
-    /// 循环执行
-    private func delayPerform() {
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + timeInterval) { [weak self] in
-            guard let wself = self else {
-                return
-            }
-            wself.pageControl.currentPage = (wself.pageControl.currentPage + 1) % wself.banners.count
-            wself.scrollView.contentOffset = CGPoint(x: wself.frame.width * CGFloat(wself.pageControl.currentPage), y: 0)
-            wself.delayPerform()
         }
     }
 }

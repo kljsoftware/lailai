@@ -60,7 +60,11 @@ class BusinessViewController: PortraitViewController {
             wself.scrollView.contentOffset.x = DEVICE_SCREEN_WIDTH
             wself.fristMapLoaction()
         }
-        automaticallyAdjustsScrollViewInsets = false
+        if #available(iOS 11.0, *) {
+            scrollView.contentInsetAdjustmentBehavior = .never
+        } else {
+            automaticallyAdjustsScrollViewInsets = false
+        }
         businessView = BusinessView(frame: CGRect(x: 0, y: 0, width: DEVICE_SCREEN_WIDTH, height: APP_CONTENT_HEIGHT))
         businessView.didSelectClosure = {[weak self] (model) in
             guard let wself = self else {
@@ -75,15 +79,17 @@ class BusinessViewController: PortraitViewController {
         mapView.navController = navigationController
         scrollView.addSubview(businessView)
         scrollView.addSubview(mapView)
-        scrollView.contentSize = CGSize(width: 2 * DEVICE_SCREEN_WIDTH, height: APP_CONTENT_HEIGHT)
+        scrollView.contentSize = CGSize(width: 2 * DEVICE_SCREEN_WIDTH, height: 0)
     }
     
     /// 请求网络数据
     private func requestData() {
-
         viewModel.getDealers()
         viewModel.setCompletion(onSuccess: { [weak self](resultModel) in
-            self?.businessView.model = self?.viewModel.businessResultModel
+            guard let wself = self else {
+                return
+            }
+            wself.businessView.model = wself.viewModel.businessResultModel
         }) { (error) in
             UIHelper.tip(message: error)
         }

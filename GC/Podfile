@@ -13,5 +13,6 @@ target 'GC' do
   pod 'SnapKit', '3.2.0'
   pod 'Toast-Swift', '3.0.1'
   pod 'mob_smssdk'
+  pod 'MBProgressHUD', '1.1.0'
 
 end

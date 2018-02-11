@@ -20,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news_header.png" translatesAutoresizingMaskIntoConstraints="NO" id="7hX-r6-Qx4">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7hX-r6-Qx4">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="168"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="168" id="eIT-38-423"/>
@@ -30,10 +30,10 @@
                     <rect key="frame" x="0.0" y="168" width="375" height="32"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Pf-rJ-Xj2" customClass="BorderView" customModule="GC" customModuleProvider="target">
-                            <rect key="frame" x="12" y="4" width="39" height="24.5"/>
+                            <rect key="frame" x="12" y="10.5" width="12" height="12"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hu4-vA-oKA">
-                                    <rect key="frame" x="6" y="6" width="27" height="12.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hu4-vA-oKA">
+                                    <rect key="frame" x="6" y="6" width="0.0" height="0.0"/>
                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="11"/>
                                     <color key="textColor" red="0.9882352941176471" green="0.5725490196078431" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -55,8 +55,8 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42v-VL-j15">
-                            <rect key="frame" x="57" y="7.5" width="37" height="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42v-VL-j15">
+                            <rect key="frame" x="30" y="16" width="0.0" height="0.0"/>
                             <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
                             <color key="textColor" red="0.11764705882352941" green="0.11372549019607843" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -101,7 +101,4 @@
             <point key="canvasLocation" x="12" y="66"/>
         </view>
     </objects>
-    <resources>
-        <image name="news_header.png" width="533" height="300"/>
-    </resources>
 </document>

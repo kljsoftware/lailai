@@ -231,7 +231,12 @@ extension MapView : UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-        viewModel.searchDealers()
+        var x = "", y = ""
+        if currentLocation != nil {
+            x = "\(currentLocation!.coordinate.longitude)"
+            y = "\(currentLocation!.coordinate.latitude)"
+        }
+        viewModel.searchDealers(x: x, y: y, name:searchBar.text ?? "")
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
