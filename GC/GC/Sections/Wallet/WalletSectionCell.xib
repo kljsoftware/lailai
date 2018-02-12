@@ -52,6 +52,7 @@
                     <constraint firstItem="05A-if-oP4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="NhV-nd-OrF"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="donateLabel" destination="lZj-Sc-tvE" id="GGK-lF-Ijq"/>
             </connections>

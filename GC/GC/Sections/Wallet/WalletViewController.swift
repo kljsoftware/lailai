@@ -12,8 +12,7 @@ import UIKit
 /// 单元间隔空白、单元宽高、列表头距导航栏初始位置
 private let blank:CGFloat = 12, sectionHeight:CGFloat = 32, collectionCellHeight:CGFloat = 100
 private let personalDonateViewHeight:CGFloat = 100
-private let tableTopMargin:CGFloat = 100
-private let bannerHeight:CGFloat = 200
+private let headerHeight:CGFloat = 262
 
 /// 积分钱包
 class WalletViewController: UIViewController {
@@ -21,11 +20,7 @@ class WalletViewController: UIViewController {
     /// 业务模块
     fileprivate let viewModel = WalletViewModel()
     
-    /// 条幅广告容器
-    @IBOutlet weak var bannerContainerView: UIView!
-    
     /// 列表视图距上约束及列表视图
-    @IBOutlet weak var tableTopLayoutConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - override methods
@@ -52,10 +47,9 @@ class WalletViewController: UIViewController {
         tableView.register(UINib(nibName: "WalletSectionCell", bundle: nil), forCellReuseIdentifier: "kWalletSectionCell")
         tableView.register(UINib(nibName: "WalletCell", bundle: nil), forCellReuseIdentifier: "kWalletCell")
         tableView.tableHeaderView = tableViewHeaderView()
-        tableTopLayoutConstraint.constant = tableTopMargin
-//        tableView.mj_header = MJRefreshStateHeader(refreshingBlock: {
-//            self.tableHeaderRefreshing()
-//        })
+        tableView.mj_header = MJRefreshStateHeader(refreshingBlock: {
+            self.tableHeaderRefreshing()
+        })
         tableView.mj_footer = MJRefreshBackStateFooter(refreshingBlock: {
             self.tableFooterRefreshing()
         })
@@ -75,18 +69,8 @@ class WalletViewController: UIViewController {
     
     /// 更新基本数据
     private func setupBase() {
-        
-        /// banner
-        let banner = BannnerView(frame: CGRect(x: 0, y: 0, width: DEVICE_SCREEN_WIDTH, height: bannerHeight))
-        bannerContainerView.addSubview(banner)
-        banner.snp.makeConstraints { (maker) in
-            maker.left.right.top.bottom.equalTo(bannerContainerView)
-        }
-        banner.setup(banners: viewModel.walletBaseModel.adItems)
-        
-        /// userInfo
-        let userInfoView = tableView.tableHeaderView!.subviews[0] as! PersonalDonateView
-        userInfoView.update(model: viewModel.walletBaseModel.userInfo)
+        let headerView = tableView.tableHeaderView!.subviews[0] as! WalletHeaderView
+        headerView.update(model:viewModel.walletBaseModel)
     }
     
     /// 初始化业务模块
@@ -125,14 +109,12 @@ class WalletViewController: UIViewController {
     
     /// 列表头部视图
     private func tableViewHeaderView() -> UIView {
-        let containerView = UIView(frame:CGRect(x: 0, y: 0, width: DEVICE_SCREEN_WIDTH, height: personalDonateViewHeight))
-        containerView.backgroundColor = UIColor.clear
+        let containerView = UIView(frame:CGRect(x: 0, y: 0, width: DEVICE_SCREEN_WIDTH, height: headerHeight))
         containerView.clipsToBounds = true
-        let headerView = Bundle.main.loadNibNamed("PersonalDonateView", owner: nil, options: nil)?[0] as! PersonalDonateView
+        let headerView = Bundle.main.loadNibNamed("WalletHeaderView", owner: nil, options: nil)?[0] as! WalletHeaderView
         containerView.addSubview(headerView)
         headerView.snp.makeConstraints { (maker) in
-            maker.left.top.equalTo(blank)
-            maker.right.bottom.equalTo(-blank)
+            maker.left.top.right.bottom.equalTo(containerView)
         }
         return containerView
     }
@@ -177,21 +159,4 @@ extension WalletViewController : UITableViewDataSource, UITableViewDelegate {
         return sectionHeight
     }
 }
-
-// MARK: - UIScrollViewDelegate
-extension WalletViewController : UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let dy = scrollView.contentOffset.y
-        tableTopLayoutConstraint.constant =  tableTopMargin - dy
-        if tableTopLayoutConstraint.constant < 0 {
-            tableTopLayoutConstraint.constant = 0
-        }
-
-        if tableTopLayoutConstraint.constant > tableTopMargin {
-            tableTopLayoutConstraint.constant = tableTopMargin
-        }
-        tableView.layoutIfNeeded()
-    }
-}
-
 

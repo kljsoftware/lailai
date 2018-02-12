@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C0383AF2031170C007D911B /* WalletHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0383AE2031170C007D911B /* WalletHeaderView.xib */; };
+		3C0383B120311B35007D911B /* WalletHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0383B020311B35007D911B /* WalletHeaderView.swift */; };
 		3C19391520207E1800E7D007 /* points.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C19391420207E1700E7D007 /* points.png */; };
 		3C1B0B38202D248500E059BD /* BusinessListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B0B37202D248500E059BD /* BusinessListViewController.swift */; };
 		3C1B0B3B202D324100E059BD /* common_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1B0B39202D324100E059BD /* common_back@2x.png */; };
@@ -184,6 +186,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C0383AE2031170C007D911B /* WalletHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletHeaderView.xib; sourceTree = "<group>"; };
+		3C0383B020311B35007D911B /* WalletHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletHeaderView.swift; sourceTree = "<group>"; };
 		3C19391420207E1700E7D007 /* points.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = points.png; sourceTree = "<group>"; };
 		3C1B0B37202D248500E059BD /* BusinessListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessListViewController.swift; sourceTree = "<group>"; };
 		3C1B0B39202D324100E059BD /* common_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_back@2x.png"; sourceTree = "<group>"; };
@@ -749,6 +753,8 @@
 				3CF364E92022A916003179E8 /* WalletCollectionViewCell.xib */,
 				3C655060202445B000FE0504 /* WalletModel.swift */,
 				3CF3652E2022FADA003179E8 /* WalletViewModel.swift */,
+				3C0383B020311B35007D911B /* WalletHeaderView.swift */,
+				3C0383AE2031170C007D911B /* WalletHeaderView.xib */,
 			);
 			path = Wallet;
 			sourceTree = "<group>";
@@ -1004,6 +1010,7 @@
 				3C7E26D42026930500ED4B56 /* ProfileDetailOtherCell.xib in Resources */,
 				3CF3650D2022A916003179E8 /* News.storyboard in Resources */,
 				3CA33D9F202CAAFE003032A4 /* MapAroundView.xib in Resources */,
+				3C0383AF2031170C007D911B /* WalletHeaderView.xib in Resources */,
 				3C65507E2025E50E00FE0504 /* DonateRecordCell.xib in Resources */,
 				3CF364F52022A916003179E8 /* Home.storyboard in Resources */,
 				3C8DCEEC201D76C400C9F40E /* launch.png in Resources */,
@@ -1136,6 +1143,7 @@
 				3CB55394201CB73F009AC1CD /* OnePixelConstraint.swift in Sources */,
 				3CF3652F2022FADA003179E8 /* WalletViewModel.swift in Sources */,
 				3CB4D0FC202A033200AB70B9 /* DonateModel.swift in Sources */,
+				3C0383B120311B35007D911B /* WalletHeaderView.swift in Sources */,
 				3CF3653120231DA8003179E8 /* BusinessModel.swift in Sources */,
 				3C1B0B41202D6BAC00E059BD /* DonateCell.swift in Sources */,
 				3C1B0B58202DA92100E059BD /* ProfileDetailViewModel.swift in Sources */,
