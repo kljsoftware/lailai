@@ -74,6 +74,7 @@ class BusinessView: UIView {
         tableView.mj_header.beginRefreshing()
         businessModels.removeAll()
         tableView.mj_footer.resetNoMoreData()
+        page = 0
         refreshingClosure?(0)
     }
     
