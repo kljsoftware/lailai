@@ -38,31 +38,56 @@ class NewsViewController: UIViewController {
     }
     
     private func setupViewModel() {
-        MBProgressHUD.showAdded(to: self.view, animated: true)
-        viewModel.getNews()
         viewModel.setCompletion(onSuccess: {[weak self] (resultModel) in
             guard let wself = self else {
                 return
             }
             MBProgressHUD.hide(for: wself.view, animated: false)
+            wself.stopRefreshing()
             wself.tableReload()
         }) { [weak self](error) in
             guard let wself = self else {
                 return
             }
             MBProgressHUD.hide(for: wself.view, animated: false)
+            wself.stopRefreshing()
             Log.e(error)
         }
+        viewModel.page = 0
+        getNews()
+    }
+    
+    ///
+    private func getNews() {
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        viewModel.getNews(page: viewModel.page)
     }
     
     func tableFooterRefreshing() {
         tableView.mj_footer.beginRefreshing()
-        tableView.mj_footer.endRefreshing()
+        if viewModel.has_more {
+            viewModel.page += 1
+            getNews()
+        } else {
+            tableView.mj_footer.endRefreshingWithNoMoreData()
+        }
+
     }
     
     func tableHeaderRefreshing() {
         tableView.mj_header.beginRefreshing()
-        tableView.mj_header.endRefreshing()
+        tableView.mj_footer.resetNoMoreData()
+        viewModel.page = 0
+        getNews()
+    }
+    
+    func stopRefreshing() {
+        if tableView.mj_footer.isRefreshing {
+            tableView.mj_footer.endRefreshing()
+        }
+        if tableView.mj_header.isRefreshing {
+            tableView.mj_header.endRefreshing()
+        }
     }
     
     /// 更新界面

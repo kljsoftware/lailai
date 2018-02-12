@@ -11,7 +11,7 @@ class NewsViewModel: BaseViewModel {
     
     var topNewsModel:NewsTopModel?
     
-    var newsItems = [NewsItemModel]()
+    var newsItems = [NewsItemModel](), page = 0, has_more = false
     
     func getNews(page:Int = 0, size:Int = 10) {
         let reqeustModel = NewsRequestModel()
@@ -23,6 +23,7 @@ class NewsViewModel: BaseViewModel {
                 if self.topNewsModel == nil && resultModel!.topNews != nil {
                     self.topNewsModel = resultModel?.topNews
                 }
+                self.has_more = resultModel!.has_more
                 self.newsItems.append(contentsOf: resultModel!.newsItems)
                 self.successCallback?(resultModel!)
             } else {

@@ -75,7 +75,7 @@ class MapView: UIView {
             }
             if wself.currentLocation != nil {
                 let vc = UIStoryboard.init(name: "Business", bundle: nil).instantiateViewController(withIdentifier: "business_list") as! BusinessListViewController
-                vc.loaction = ("\(wself.currentLocation!.coordinate.latitude)", "\(wself.currentLocation!.coordinate.longitude)")
+                vc.loaction = ("\(wself.currentLocation!.coordinate.longitude)", "\(wself.currentLocation!.coordinate.latitude)")
                 vc.didSelectClosure = { [weak self] (model) in
                     self?.loaction(models: [model])
                 }

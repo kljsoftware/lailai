@@ -29,10 +29,19 @@ class BlockChainViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = LanguageKey.blockchain.value
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         viewModel.setCompletion(onSuccess: {[weak self] (resultModel) in
-            self?.update(model: resultModel as! BlockChainResultModel)
-        }) { (error) in
+            guard let wself = self else {
+                return
+            }
+            MBProgressHUD.hide(for: wself.view, animated: true)
+            wself.update(model: resultModel as! BlockChainResultModel)
+        }) { [weak self] (error) in
+            guard let wself = self else {
+                return
+            }
             UIHelper.tip(message: error)
+            MBProgressHUD.hide(for: wself.view, animated: true)
         }
     }
     

@@ -55,5 +55,5 @@ class DonateRecordModel : NSObject {
     var create_date:Double = 0
     
     /// 区块链id
-    var blockchain_id = 0
+    var blockchain_id = ""
 }

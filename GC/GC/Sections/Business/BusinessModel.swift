@@ -19,7 +19,7 @@ class BusinessDealersRequestModel : BaseRequestModel {
     var x = ""
     var y = ""         //位置坐标 如果是关键字搜索 此参数传当前位置
     var name = ""         //搜索关键字 按位置搜索时 此参数为空
-    var range = 500      //搜索范围 上传参数为空 则后台去默认值 目前约定是500m  如果是按关键字搜索时  暂时定 此参数传入10000
+    var range = 5000      //搜索范围 上传参数为空 则后台去默认值 目前约定是500m  如果是按关键字搜索时  暂时定 此参数传入10000
     var page = 0         //第几页 从0开始
     var size = 10         //每页显示数
 }
@@ -59,7 +59,7 @@ class BusinessModel : NSObject {
     var link  = 0  ///
     var createdDate = 0 /// 创建日期
     var del = 0    ///
-    var blockchainId = 0 /// 区块链id
+    var blockchainId = "" /// 区块链id
 
     /// 将属性名换为其他key去字典中取值
     override class func mj_replacedKeyFromPropertyName() -> [AnyHashable : Any]! {

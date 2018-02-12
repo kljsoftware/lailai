@@ -35,11 +35,20 @@ class DonateViewController: UIViewController {
     }
     
     private func setupViewModel() {
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         viewModel.getDonations()
         viewModel.setCompletion(onSuccess: { [weak self] (resultModel) in
-            self?.tableView.reloadData()
-        }) { (error) in
+            guard let wself = self else {
+                return
+            }
+            wself.tableView.reloadData()
+            MBProgressHUD.hide(for: wself.view, animated: true)
+        }) {[weak self] (error) in
+            guard let wself = self else {
+                return
+            }
             UIHelper.tip(message: error)
+            MBProgressHUD.hide(for: wself.view, animated: true)
         }
     }
     

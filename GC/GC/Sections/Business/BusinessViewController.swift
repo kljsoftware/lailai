@@ -75,6 +75,12 @@ class BusinessViewController: PortraitViewController {
             wself.scrollView.contentOffset.x = DEVICE_SCREEN_WIDTH
             wself.mapView.loaction(models: [model])
         }
+        businessView.refreshingClosure = { [weak self] (page) in
+            guard let wself = self else {
+                return
+            }
+            wself.requestData(page: page)
+        }
         mapView = MapView(frame: CGRect(x: DEVICE_SCREEN_WIDTH, y: 0, width: DEVICE_SCREEN_WIDTH, height: APP_CONTENT_HEIGHT))
         mapView.navController = navigationController
         scrollView.addSubview(businessView)
@@ -83,15 +89,23 @@ class BusinessViewController: PortraitViewController {
     }
     
     /// 请求网络数据
-    private func requestData() {
-        viewModel.getDealers()
+    private func requestData(page:Int = 0) {
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        viewModel.getDealers(page: page)
         viewModel.setCompletion(onSuccess: { [weak self](resultModel) in
             guard let wself = self else {
                 return
             }
             wself.businessView.model = wself.viewModel.businessResultModel
-        }) { (error) in
+            wself.businessView.stopRefreshing()
+            MBProgressHUD.hide(for: wself.view, animated: true)
+        }) { [weak self] (error) in
+            guard let wself = self else {
+                return
+            }
+            wself.businessView.stopRefreshing()
             UIHelper.tip(message: error)
+            MBProgressHUD.hide(for: wself.view, animated: true)
         }
     }
     

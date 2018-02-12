@@ -82,7 +82,7 @@ extension DonateRecordViewController : UITableViewDataSource, UITableViewDelegat
         cell.update(model: viewModel.recordResultModel.recordItems[indexPath.row])
         cell.queryBlockChainClosure = { [weak self](model) in
             let vc = UIStoryboard.init(name: "General", bundle: nil).instantiateViewController(withIdentifier: "block_chain") as! BlockChainViewController
-            vc.id = "\(model.id)"
+            vc.id = model.blockchain_id
             self?.navigationController?.pushViewController(vc, animated: true)
         }
         return cell

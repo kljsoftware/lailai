@@ -12,8 +12,11 @@ class BusinessViewModel: BaseViewModel {
     var businessResultModel = BusinessResultModel()
     
     /// 获取绿色商家
-    func getDealers() {
-        HTTPSessionManager.shared.request(urlString: NetworkURL.getDealers.url, parameters: nil) { (json, success) in
+    func getDealers(page:Int = 0, size:Int = 10) {
+        let reqModel = BusinessRequestModel()
+        reqModel.page = page
+        reqModel.size = size
+        HTTPSessionManager.shared.request(urlString: NetworkURL.getDealers.url, parameters: reqModel.mj_keyValues()) { (json, success) in
             let resultModel = BusinessResultModel.mj_object(withKeyValues: json)
             if success && resultModel != nil && resultModel!.code == 0 {
                 self.businessResultModel = resultModel!
