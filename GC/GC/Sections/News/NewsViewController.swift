@@ -77,6 +77,7 @@ class NewsViewController: UIViewController {
     func tableHeaderRefreshing() {
         tableView.mj_header.beginRefreshing()
         tableView.mj_footer.resetNoMoreData()
+        viewModel.newsItems.removeAll()
         viewModel.page = 0
         getNews()
     }

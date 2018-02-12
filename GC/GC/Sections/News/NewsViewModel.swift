@@ -20,7 +20,7 @@ class NewsViewModel: BaseViewModel {
         HTTPSessionManager.shared.request(urlString: NetworkURL.getNews.url, parameters: reqeustModel.mj_keyValues()) { (json, success) in
             let resultModel = NewsResultModel.mj_object(withKeyValues: json)
             if success && resultModel != nil && resultModel!.code == 0 {
-                if self.topNewsModel == nil && resultModel!.topNews != nil {
+                if resultModel!.topNews != nil {
                     self.topNewsModel = resultModel?.topNews
                 }
                 self.has_more = resultModel!.has_more
