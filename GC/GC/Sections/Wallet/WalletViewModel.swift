@@ -14,6 +14,9 @@ class WalletViewModel: BaseViewModel {
     /// 积分钱包基础数据
     var walletBaseModel = WalletBaseResultModel()
     
+    /// 分页
+    var page = 0
+    
     /// 3.1 获取积分钱包基础数据
     func getPointsBase() {
         HTTPSessionManager.shared.request(urlString: NetworkURL.getPointsBase.url, parameters: nil) { (json, success) in
@@ -30,10 +33,10 @@ class WalletViewModel: BaseViewModel {
     }
     
     /// 积分捐赠
-    func getPoints(page:Int = 0, size:Int = 10) {
+    func getPoints() {
         let reqeustModel = WalletRequestModel()
         reqeustModel.page = page
-        reqeustModel.size = size
+        reqeustModel.size = 10
         HTTPSessionManager.shared.request(urlString: NetworkURL.getPoints.url, parameters: reqeustModel.mj_keyValues()) { (json, success) in
             let resultModel = WalletResultModel.mj_object(withKeyValues: json)
             if success && resultModel != nil && resultModel!.code == 0 {

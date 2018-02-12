@@ -58,13 +58,33 @@ class WalletViewController: UIViewController {
     // 列表下拉刷新
     func tableHeaderRefreshing() {
         tableView.mj_header.beginRefreshing()
-        tableView.mj_header.endRefreshing()
+        tableView.mj_footer.resetNoMoreData()
+        viewModel.page = 0
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        viewModel.getPoints()
     }
     
     // 列表尾部上拉刷新
     func tableFooterRefreshing() {
         tableView.mj_footer.beginRefreshing()
-        tableView.mj_footer.endRefreshing()
+        if viewModel.walletModel.has_more {
+            MBProgressHUD.showAdded(to: self.view, animated: true)
+            viewModel.page += 1
+            viewModel.getPoints()
+        } else {
+            tableView.mj_footer.endRefreshingWithNoMoreData()
+        }
+    }
+    
+    /// 停止刷新
+    func stopRefreshing() {
+        if tableView.mj_header.isRefreshing {
+            tableView.mj_header.endRefreshing()
+        }
+        if tableView.mj_footer.isRefreshing {
+            tableView.mj_footer.endRefreshing()
+        }
+        MBProgressHUD.hide(for: self.view, animated: true)
     }
     
     /// 更新基本数据
@@ -75,6 +95,7 @@ class WalletViewController: UIViewController {
     
     /// 初始化业务模块
     private func setupViewModel() {
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         viewModel.getPoints()
         viewModel.getPointsBase()
         viewModel.setCompletion(onSuccess: { [weak self](resultModel) in
@@ -87,8 +108,13 @@ class WalletViewController: UIViewController {
             } else {
                 wself.tableView.reloadData()
             }
-        }) { (error) in
+            wself.stopRefreshing()
+        }) {[weak self] (error) in
+            guard let wself = self else {
+                return
+            }
             UIHelper.tip(message: error)
+            wself.stopRefreshing()
         }
     }
     

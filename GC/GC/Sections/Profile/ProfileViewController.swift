@@ -52,11 +52,19 @@ class ProfileViewController: UIViewController {
     }
     
     private func setupViewModel() {
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         viewModel.getUserInfo()
         viewModel.setCompletion(onSuccess: { [weak self](resultModel) in
-            self?.tableView.reloadData()
-        }) { (error) in
-            
+            guard let wself = self else {
+                return
+            }
+            wself.tableView.reloadData()
+            MBProgressHUD.hide(for: wself.view, animated: true)
+        }) { [weak self] (error) in
+            guard let wself = self else {
+                return
+            }
+            MBProgressHUD.hide(for: wself.view, animated: true)
         }
     }
     

@@ -21,9 +21,12 @@ class WalletCell: UITableViewCell {
     /// 积分捐赠模型
     var walletModel = WalletResultModel() {
         didSet {
+            shopItems.append(contentsOf: walletModel.shopItems)
             collectionView.reloadData()
         }
     }
+    
+    fileprivate var shopItems = [WalletModel]()
     
     /// 捐赠项点击回调闭包
     var didSelectItemClosure:((_ model: WalletModel) -> Void)?
@@ -43,13 +46,13 @@ extension WalletCell :  UICollectionViewDataSource, UICollectionViewDelegateFlow
     /// 网格分区
     /// 总共网格单元的个数
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return walletModel.shopItems.count
+        return shopItems.count
     }
     
     // 网格单元
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "kWalletCollectionViewCell", for: indexPath) as! WalletCollectionViewCell
-        cell.update(model: walletModel.shopItems[indexPath.row])
+        cell.update(model: shopItems[indexPath.row])
         return cell
     }
     
@@ -71,6 +74,6 @@ extension WalletCell :  UICollectionViewDataSource, UICollectionViewDelegateFlow
     
     /// 点击单元
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        didSelectItemClosure?(walletModel.shopItems[indexPath.row])
+        didSelectItemClosure?(shopItems[indexPath.row])
     }
 }
