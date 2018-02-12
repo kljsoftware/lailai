@@ -156,12 +156,10 @@
 		3CF3650E2022A916003179E8 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF364E62022A916003179E8 /* NewsCell.xib */; };
 		3CF3650F2022A916003179E8 /* NewsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF364E72022A916003179E8 /* NewsHeaderView.swift */; };
 		3CF365102022A916003179E8 /* WalletCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF364E92022A916003179E8 /* WalletCollectionViewCell.xib */; };
-		3CF365112022A916003179E8 /* PersonalDonateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF364EA2022A916003179E8 /* PersonalDonateView.swift */; };
 		3CF365122022A916003179E8 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF364EB2022A916003179E8 /* WalletViewController.swift */; };
 		3CF365132022A916003179E8 /* WalletCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF364EC2022A916003179E8 /* WalletCollectionViewCell.swift */; };
 		3CF365142022A916003179E8 /* BannnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF364ED2022A916003179E8 /* BannnerView.swift */; };
 		3CF365152022A916003179E8 /* Wallet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF364EE2022A916003179E8 /* Wallet.storyboard */; };
-		3CF365162022A916003179E8 /* PersonalDonateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF364EF2022A916003179E8 /* PersonalDonateView.xib */; };
 		3CF365172022A916003179E8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF364F12022A916003179E8 /* Login.storyboard */; };
 		3CF365182022A916003179E8 /* FotgotPwd2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF364F22022A916003179E8 /* FotgotPwd2ViewController.swift */; };
 		3CF365192022A916003179E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF364F32022A916003179E8 /* LoginViewController.swift */; };
@@ -338,12 +336,10 @@
 		3CF364E62022A916003179E8 /* NewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		3CF364E72022A916003179E8 /* NewsHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsHeaderView.swift; sourceTree = "<group>"; };
 		3CF364E92022A916003179E8 /* WalletCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WalletCollectionViewCell.xib; sourceTree = "<group>"; };
-		3CF364EA2022A916003179E8 /* PersonalDonateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalDonateView.swift; sourceTree = "<group>"; };
 		3CF364EB2022A916003179E8 /* WalletViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		3CF364EC2022A916003179E8 /* WalletCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletCollectionViewCell.swift; sourceTree = "<group>"; };
 		3CF364ED2022A916003179E8 /* BannnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannnerView.swift; sourceTree = "<group>"; };
 		3CF364EE2022A916003179E8 /* Wallet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Wallet.storyboard; sourceTree = "<group>"; };
-		3CF364EF2022A916003179E8 /* PersonalDonateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalDonateView.xib; sourceTree = "<group>"; };
 		3CF364F12022A916003179E8 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		3CF364F22022A916003179E8 /* FotgotPwd2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FotgotPwd2ViewController.swift; sourceTree = "<group>"; };
 		3CF364F32022A916003179E8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -743,8 +739,8 @@
 				3CF364EE2022A916003179E8 /* Wallet.storyboard */,
 				3CF364EB2022A916003179E8 /* WalletViewController.swift */,
 				3CF364ED2022A916003179E8 /* BannnerView.swift */,
-				3CF364EA2022A916003179E8 /* PersonalDonateView.swift */,
-				3CF364EF2022A916003179E8 /* PersonalDonateView.xib */,
+				3C0383B020311B35007D911B /* WalletHeaderView.swift */,
+				3C0383AE2031170C007D911B /* WalletHeaderView.xib */,
 				3C65505C20243D0300FE0504 /* WalletSectionCell.swift */,
 				3C65505D20243D0300FE0504 /* WalletSectionCell.xib */,
 				3C65505820243B8600FE0504 /* WalletCell.swift */,
@@ -753,8 +749,6 @@
 				3CF364E92022A916003179E8 /* WalletCollectionViewCell.xib */,
 				3C655060202445B000FE0504 /* WalletModel.swift */,
 				3CF3652E2022FADA003179E8 /* WalletViewModel.swift */,
-				3C0383B020311B35007D911B /* WalletHeaderView.swift */,
-				3C0383AE2031170C007D911B /* WalletHeaderView.xib */,
 			);
 			path = Wallet;
 			sourceTree = "<group>";
@@ -1021,7 +1015,6 @@
 				3C8DCEF8201D76C400C9F40E /* tab_business_sel@3x.png in Resources */,
 				3CA33DA4202CABAA003032A4 /* discover@3x.png in Resources */,
 				3C91FC2C201F3A9E00BB492D /* avatar@3x.png in Resources */,
-				3CF365162022A916003179E8 /* PersonalDonateView.xib in Resources */,
 				3CF365042022A916003179E8 /* Register.storyboard in Resources */,
 				3CF365152022A916003179E8 /* Wallet.storyboard in Resources */,
 				3C91FC2D201F3A9E00BB492D /* avatar@2x.png in Resources */,
@@ -1176,7 +1169,6 @@
 				3CF3653320232377003179E8 /* BusinessViewModel.swift in Sources */,
 				3CB553A1201CB73F009AC1CD /* UserDefaultMacro.swift in Sources */,
 				3CF365272022E52E003179E8 /* LoginModel.swift in Sources */,
-				3CF365112022A916003179E8 /* PersonalDonateView.swift in Sources */,
 				3CD6AA222025F05F00EAEECA /* ProfielSettingCell.swift in Sources */,
 				3CF3650F2022A916003179E8 /* NewsHeaderView.swift in Sources */,
 				3CB553A0201CB73F009AC1CD /* LanguageHelper.swift in Sources */,
