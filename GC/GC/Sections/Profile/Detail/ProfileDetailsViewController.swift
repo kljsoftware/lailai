@@ -237,7 +237,7 @@ extension ProfileDetailsViewController : UIImagePickerControllerDelegate, UINavi
                 image = info[UIImagePickerControllerOriginalImage] as? UIImage
             }
             if image != nil {
-                let data = UIImagePNGRepresentation(image!)
+                let data = UIImageJPEGRepresentation(image!, 0.8)
                 if data != nil {
                     self?.viewModel.upload(data: data!)
                 }
