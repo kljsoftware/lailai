@@ -27,13 +27,23 @@ class WalletHeaderView: UIView {
     /// 积分种类
     @IBOutlet weak var breedLabel: UILabel!
     
+    /// 页码
+    @IBOutlet weak var pageControl: PageControl!
+    
     /// 更新
     func update(model:WalletBaseResultModel) {
         bannerView.setup(banners: model.adItems)
+        bannerView.didPageChangedClosure = { [weak self] (page) in
+            guard let wself = self else {
+                return
+            }
+            wself.pageControl.setCurrentPage(current: page)
+        }
         avatarImageView.setImage(urlStr: NetworkImgOrWeb.getUrl(name: model.userInfo.avatar), placeholderStr: "avatar", radius: 30)
         nameLabel.text = model.userInfo.name
         rankLabel.text = model.userInfo.rank
         integralSumLabel.text = "捐赠积分数量: \(model.userInfo.integralSum)"
         breedLabel.text = "积分种类: \(model.userInfo.breed)种"
+        pageControl.setup(total: model.adItems.count, current: 0)
     }
 }

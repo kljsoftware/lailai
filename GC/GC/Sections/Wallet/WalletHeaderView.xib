@@ -22,9 +22,21 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVK-Zu-H8P" customClass="BannnerView" customModule="GC" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OBO-W4-497" customClass="PageControl" customModule="GC" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="138" width="375" height="6"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="6" id="G4r-C5-Tts"/>
+                            </constraints>
+                        </view>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="OBO-W4-497" firstAttribute="leading" secondItem="CVK-Zu-H8P" secondAttribute="leading" id="1NP-F0-cJN"/>
+                        <constraint firstAttribute="bottom" secondItem="OBO-W4-497" secondAttribute="bottom" constant="6" id="GXf-cd-jJH"/>
                         <constraint firstAttribute="height" constant="150" id="IVV-IW-P4H"/>
+                        <constraint firstAttribute="trailing" secondItem="OBO-W4-497" secondAttribute="trailing" id="fXe-zm-9yz"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QxP-bM-SQa">
@@ -127,6 +139,7 @@
                 <outlet property="breedLabel" destination="U5o-eV-6lI" id="xpb-AL-ntA"/>
                 <outlet property="integralSumLabel" destination="ijl-gO-gjD" id="f8j-OE-pQQ"/>
                 <outlet property="nameLabel" destination="H6X-nK-9uI" id="ksY-2g-H6p"/>
+                <outlet property="pageControl" destination="OBO-W4-497" id="k8h-D1-OST"/>
                 <outlet property="rankLabel" destination="CjR-0x-zQh" id="i0r-bF-VIx"/>
             </connections>
             <point key="canvasLocation" x="-34.5" y="-98"/>

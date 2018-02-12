@@ -17,7 +17,7 @@ class BusinessListViewController: BaseViewController {
     /// 位置
     var loaction = (x:"", y:"") {
         didSet {
-            viewModel.searchDealers()//(x: loaction.x, y: loaction.y)
+            viewModel.searchDealers(x: loaction.x, y: loaction.y)
         }
     }
     
