@@ -58,7 +58,7 @@
 
 // 我
 "setting"               = "设置";
-"accept_busniss"        = "我的授权商家";
+"accept_busniss"        = "授权商家";
 "secret_key_address"    = "我的秘钥地址";
 "blockchain"            = "区块链";
 "profile_setting"       = "个人设置";

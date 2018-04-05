@@ -59,6 +59,7 @@ enum NetworkURL {
     case getBlockChainInfo      // 8.1 获取区块链信息
     case uploadFile             //
     case getDealerList          // 2.1 我的商家
+    case putMemberDeaRelKey     // 2.3 手动输入秘钥
     
     /// url地址
     var url : String {
@@ -104,6 +105,8 @@ enum NetworkURL {
             api = "\(Token.shared.value)/uploadFile"
         case .getDealerList:
             api = "\(Token.shared.value)/getDealerList"
+        case .putMemberDeaRelKey:
+            api = "\(Token.shared.value)/putMemberDeaRelKey"
         }
         return "\(HTTP_ADDRESS)/v2/\(api)"
     }

@@ -37,6 +37,7 @@ let APP_CONTENT_HEIGHT:CGFloat = DEVICE_SCREEN_HEIGHT - DEVICE_STATUS_BAR_HEIGHT
 
 /// 常用字体定义
 let ARIAL_FONT_16 = UIFont(name: "Arial", size: 16)!
+let PINGFANG_FONT_12 = UIFont(name: "PingFangSC-Regular", size: 12)!
 
 /// 常用颜色定义
 let COLOR_2673FD = UIColor.hexToColor(0x2673FD)

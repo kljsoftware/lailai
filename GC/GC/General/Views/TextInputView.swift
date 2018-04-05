@@ -185,6 +185,7 @@ class TextInputView: UIView {
     func show(_ str:String? = nil) {
         placeholderLabel.text = placeholder
         if str != nil && str != "" {
+            writingTextView.text = str!
             placeholderLabel.isHidden = true
         } else {
             // 文字清空处理

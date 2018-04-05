@@ -142,17 +142,18 @@ extension ProfileViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch ProfileCellType(rawValue: indexPath.row)! {
         case .profile:
-            let vc = UIStoryboard.init(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ProfileDetails") as! ProfileDetailsViewController
+            let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ProfileDetails") as! ProfileDetailsViewController
             vc.userInfo = viewModel.userInfo
             navigationController?.pushViewController(vc, animated: true)
         case .setting:
-            let vc = UIStoryboard.init(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ProfileSetting")
+            let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ProfileSetting")
             navigationController?.pushViewController(vc, animated: true)
         case .accept_busniss:
-            let vc = UIStoryboard.init(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ProfileBusiness")
+            let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ProfileBusiness")
             navigationController?.pushViewController(vc, animated: true)
         case .secret_key_address:
-            break
+            let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "secretkey_address")
+            navigationController?.pushViewController(vc, animated: true)
         case .quit:
             NotificationCenter.default.post(name: NoticationUserLogout, object: nil)
         }

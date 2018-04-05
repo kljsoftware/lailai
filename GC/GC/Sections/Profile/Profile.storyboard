@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile View Controller-->
+        <!--我-->
         <scene sceneID="O1F-Kp-ynh">
             <objects>
-                <viewController id="kp2-vt-oL5" customClass="ProfileViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kp2-vt-oL5" userLabel="我" customClass="ProfileViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bDa-cI-hLY"/>
                         <viewControllerLayoutGuide type="bottom" id="sDR-eD-fh0"/>
@@ -44,16 +44,17 @@
                         <segue destination="UG2-Uf-XYr" kind="show" id="XgS-pg-k3s"/>
                         <segue destination="oTC-ux-9yt" kind="show" id="sq5-8F-qdA"/>
                         <segue destination="oKL-br-MNH" kind="show" id="5HR-Zt-8Qi"/>
+                        <segue destination="EaK-Ai-Zvu" kind="show" id="hl9-sj-xJO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1A-Mi-XWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="544.79999999999995" y="201.94902548725639"/>
+            <point key="canvasLocation" x="-246" y="877"/>
         </scene>
-        <!--Profile Setting View Controller-->
+        <!--设置-->
         <scene sceneID="JXU-xi-o5Z">
             <objects>
-                <viewController storyboardIdentifier="ProfileSetting" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oTC-ux-9yt" customClass="ProfileSettingViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileSetting" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oTC-ux-9yt" userLabel="设置" customClass="ProfileSettingViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CGc-XG-TAc"/>
                         <viewControllerLayoutGuide type="bottom" id="unA-UG-lt8"/>
@@ -88,12 +89,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GLc-aY-kng" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1361" y="202"/>
+            <point key="canvasLocation" x="1361" y="731"/>
         </scene>
-        <!--SettingFAQ View Controller-->
+        <!--帮助与反馈-->
         <scene sceneID="f8M-ZA-idN">
             <objects>
-                <viewController storyboardIdentifier="profile_setting_faq" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6x5-fh-FHl" customClass="SettingFAQViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profile_setting_faq" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6x5-fh-FHl" userLabel="帮助与反馈" customClass="SettingFAQViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NtJ-lA-nCF"/>
                         <viewControllerLayoutGuide type="bottom" id="nK5-1Z-zAo"/>
@@ -161,12 +162,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bNz-uM-s6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2174" y="202"/>
+            <point key="canvasLocation" x="3686" y="629"/>
         </scene>
-        <!--Profile Business View Controller-->
+        <!--授权商家-->
         <scene sceneID="eAR-SQ-xTs">
             <objects>
-                <viewController storyboardIdentifier="ProfileBusiness" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oKL-br-MNH" customClass="ProfileBusinessViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileBusiness" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oKL-br-MNH" userLabel="授权商家" customClass="ProfileBusinessViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Yb-Ee-rk3"/>
                         <viewControllerLayoutGuide type="bottom" id="IGj-yM-FLZ"/>
@@ -199,12 +200,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XLb-t9-F1J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1361" y="974"/>
+            <point key="canvasLocation" x="1361" y="1661"/>
         </scene>
-        <!--Business Auth View Controller-->
+        <!--我的秘钥地址-->
+        <scene sceneID="Gc4-60-6hc">
+            <objects>
+                <viewController storyboardIdentifier="secretkey_address" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EaK-Ai-Zvu" userLabel="我的秘钥地址" customClass="SecretKeyViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wQn-2m-j74"/>
+                        <viewControllerLayoutGuide type="bottom" id="VS9-jq-Xzo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7cX-fB-nNm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hno-FJ-ZiR">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="EaK-Ai-Zvu" id="VO0-Zj-2dl"/>
+                                    <outlet property="delegate" destination="EaK-Ai-Zvu" id="Qed-Ce-Zeu"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Hno-FJ-ZiR" firstAttribute="leading" secondItem="7cX-fB-nNm" secondAttribute="leading" id="CjE-6O-4J9"/>
+                            <constraint firstItem="Hno-FJ-ZiR" firstAttribute="top" secondItem="wQn-2m-j74" secondAttribute="bottom" id="Of6-NS-ZBN"/>
+                            <constraint firstItem="VS9-jq-Xzo" firstAttribute="top" secondItem="Hno-FJ-ZiR" secondAttribute="bottom" id="ZJA-YW-3Da"/>
+                            <constraint firstAttribute="trailing" secondItem="Hno-FJ-ZiR" secondAttribute="trailing" id="eMb-e5-YzN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Hno-FJ-ZiR" id="49k-g7-AR8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oyi-gf-byV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1361" y="2624"/>
+        </scene>
+        <!--接口授权-->
         <scene sceneID="bVf-G9-9Wx">
             <objects>
-                <viewController storyboardIdentifier="business_auth" useStoryboardIdentifierAsRestorationIdentifier="YES" id="teP-TU-743" customClass="BusinessAuthViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="business_auth" useStoryboardIdentifierAsRestorationIdentifier="YES" id="teP-TU-743" userLabel="接口授权" customClass="BusinessAuthViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9FF-6H-BAG"/>
                         <viewControllerLayoutGuide type="bottom" id="FWP-FJ-Bnt"/>
@@ -336,12 +374,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cIO-EA-2Kv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1361" y="1680"/>
+            <point key="canvasLocation" x="2516" y="1660"/>
         </scene>
-        <!--Setting About View Controller-->
+        <!--关于绿积分-->
         <scene sceneID="3Ew-yN-Alk">
             <objects>
-                <viewController storyboardIdentifier="profile_setting_about" useStoryboardIdentifierAsRestorationIdentifier="YES" id="I0k-qS-DPm" customClass="SettingAboutViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profile_setting_about" useStoryboardIdentifierAsRestorationIdentifier="YES" id="I0k-qS-DPm" userLabel="关于绿积分" customClass="SettingAboutViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QWn-il-bGj"/>
                         <viewControllerLayoutGuide type="bottom" id="Dia-12-fyd"/>
@@ -370,12 +408,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKm-cQ-bHv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2174" y="974"/>
+            <point key="canvasLocation" x="3686" y="1308"/>
         </scene>
-        <!--Profile Details View Controller-->
+        <!--个人设置-->
         <scene sceneID="enM-fY-On1">
             <objects>
-                <viewController storyboardIdentifier="ProfileDetails" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UG2-Uf-XYr" customClass="ProfileDetailsViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileDetails" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UG2-Uf-XYr" userLabel="个人设置" customClass="ProfileDetailsViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eXz-QP-O33"/>
                         <viewControllerLayoutGuide type="bottom" id="C2y-i9-bMe"/>
@@ -408,7 +446,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rN5-CE-MIo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1361" y="-533"/>
+            <point key="canvasLocation" x="1361" y="-138"/>
         </scene>
         <!--Base Navigation Controller-->
         <scene sceneID="5sf-ZS-4YE">
@@ -426,12 +464,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjK-oM-ofk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-265" y="202"/>
+            <point key="canvasLocation" x="-1356" y="877"/>
         </scene>
-        <!--Profile Setting Pwd View Controller-->
+        <!--设置密码-->
         <scene sceneID="9x1-Wx-qxp">
             <objects>
-                <viewController storyboardIdentifier="profile_setting_pwd" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wyx-fn-bgx" customClass="ProfileSettingPwdViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profile_setting_pwd" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wyx-fn-bgx" userLabel="设置密码" customClass="ProfileSettingPwdViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eAR-2T-JDP"/>
                         <viewControllerLayoutGuide type="bottom" id="fDZ-ss-dwX"/>
@@ -511,7 +549,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wOT-o3-l1y" customClass="BorderView" customModule="GC" customModuleProvider="target">
-                                <rect key="frame" x="24" y="311" width="327" height="44"/>
+                                <rect key="frame" x="24" y="311.5" width="327" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaN-BL-qc8">
                                         <rect key="frame" x="0.0" y="-0.5" width="327" height="44"/>
@@ -566,7 +604,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T77-j2-Bbe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2174" y="-534"/>
+            <point key="canvasLocation" x="3686" y="-42"/>
         </scene>
     </scenes>
 </document>

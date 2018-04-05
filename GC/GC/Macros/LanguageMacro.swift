@@ -37,7 +37,7 @@ enum LanguageKey : String {
     case wallet_donate      // 积分捐赠
    
     case setting            // 设置
-    case accept_busniss     // 我的授权商家
+    case accept_busniss     // 授权商家
     case secret_key_address // 我的秘钥地址
     case blockchain         // 区块链
     case profile_setting    // 个人设置
@@ -51,7 +51,7 @@ enum LanguageKey : String {
     case woman              // 女
     case language           // 语言
     case faq                // 帮助与反馈
-    case about              // 关于绿积分"
+    case about              // 关于绿积分
 
     case map                // 地图
     case balance            // 捐赠积分额

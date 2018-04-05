@@ -38,6 +38,16 @@ class BusinessInfoModel: NSObject {
     
     /// 用户在该商家的公钥地址
     var memberPublicKey = ""
-    
 }
+
+/// 手动输入密钥
+class InputPublicKeyRequestModel: BaseRequestModel {
+    
+    /// 商家名称
+    var DealerName = ""
+    
+    /// 公钥地址
+    var MemberPublicKey = ""
+}
+
 

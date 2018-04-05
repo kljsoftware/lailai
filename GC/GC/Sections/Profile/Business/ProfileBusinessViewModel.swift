@@ -38,4 +38,20 @@ class ProfileBusinessViewModel: BaseViewModel {
             }
         }
     }
+    
+    /// 手动输入秘钥
+    func inputPublicKey(dealerName: String, memberPublicKey: String) {
+        let reqeustModel = InputPublicKeyRequestModel()
+        reqeustModel.DealerName = dealerName
+        reqeustModel.MemberPublicKey = memberPublicKey
+        HTTPSessionManager.shared.request(method: .POST, urlString: NetworkURL.putMemberDeaRelKey.url, parameters: reqeustModel.mj_keyValues()) { (json, success) in
+            let model = BaseResultModel.mj_object(withKeyValues: json)
+            if success && model != nil && model!.code == 0 {
+                self.successCallback?(model!)
+            } else {
+                let msg = model != nil ? model!.msg : "error"
+                self.failureCallback?(msg)
+            }
+        }
+    }
 }
