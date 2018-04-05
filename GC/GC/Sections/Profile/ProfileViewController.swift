@@ -14,8 +14,8 @@ private let profileHeight:CGFloat = 116, settingCellHeight:CGFloat = 50, quitCel
 private enum ProfileCellType : Int {
     case profile
     case setting
-    case business_link
-    case blockchain_setting
+    case accept_busniss
+    case secret_key_address
     case quit
     
     static var count = 5
@@ -89,10 +89,10 @@ class ProfileViewController: UIViewController {
         switch type {
         case .setting:
             labelName = LanguageKey.setting.value
-        case .business_link:
-            labelName = LanguageKey.business_link.value
-        case .blockchain_setting:    // 手机号
-            labelName = LanguageKey.blockchain_setting.value
+        case .accept_busniss:
+            labelName = LanguageKey.accept_busniss.value
+        case .secret_key_address:    // 手机号
+            labelName = LanguageKey.secret_key_address.value
         default:
             break
         }
@@ -148,10 +148,10 @@ extension ProfileViewController : UITableViewDataSource, UITableViewDelegate {
         case .setting:
             let vc = UIStoryboard.init(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ProfileSetting")
             navigationController?.pushViewController(vc, animated: true)
-        case .business_link:
+        case .accept_busniss:
             let vc = UIStoryboard.init(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ProfileBusiness")
             navigationController?.pushViewController(vc, animated: true)
-        case .blockchain_setting:
+        case .secret_key_address:
             break
         case .quit:
             NotificationCenter.default.post(name: NoticationUserLogout, object: nil)

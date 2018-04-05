@@ -23,6 +23,13 @@ class DonateRecordViewController: BaseViewController {
     /// 列表
     @IBOutlet weak var tableView: UITableView!
     
+    // 通过区块链查看
+    @IBOutlet weak var lookBtn: UIButton!
+    
+    // 总额积分
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -61,10 +68,18 @@ class DonateRecordViewController: BaseViewController {
     /// 初始化viewModel
     private func setupViewModel() {
         viewModel.setCompletion(onSuccess: {[weak self] (resultModel) in
+            self?.scoreLabel.text = "累计总额：\(self!.viewModel.recordResultModel.data.balance) 分"
             self?.tableView.reloadData()
         }) { (error) in
             Log.e(error)
         }
+    }
+    
+    // 通过区块链查看
+    @IBAction func lookClicked(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "Wallet", bundle: nil).instantiateViewController(withIdentifier: "trade_record") as! TradeRecordViewController
+        vc.params = TradeRecordParams(dealerPublicKey: viewModel.recordResultModel.data.dealerPublicKey, memberPublicKey: viewModel.recordResultModel.data.memberPublicKey)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -81,9 +96,11 @@ extension DonateRecordViewController : UITableViewDataSource, UITableViewDelegat
         let cell = tableView.dequeueReusableCell(withIdentifier: "kDonateRecordCell", for: indexPath) as! DonateRecordCell
         cell.update(model: viewModel.recordResultModel.recordItems[indexPath.row])
         cell.queryBlockChainClosure = { [weak self](model) in
-            let vc = UIStoryboard.init(name: "General", bundle: nil).instantiateViewController(withIdentifier: "block_chain") as! BlockChainViewController
-            vc.id = model.blockchain_id
-            self?.navigationController?.pushViewController(vc, animated: true)
+            let okAction = UIAlertAction(title: LanguageKey.ok.rawValue, style: .default, handler: { (action) in
+            })
+            let alert = UIAlertController(title: "交易哈希", message: model.blockchain_id, preferredStyle: .alert)
+            alert.addAction(okAction)
+            self?.present(alert, animated: true, completion: nil)
         }
         return cell
     }

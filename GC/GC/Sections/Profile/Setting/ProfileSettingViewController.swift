@@ -42,11 +42,11 @@ class ProfileSettingViewController: BaseViewController {
             labelName = LanguageKey.pwd.value
         case .language:
             labelName = LanguageKey.language.value
-        case .faq:    // 手机号
+        case .faq:      // 手机号
             labelName = LanguageKey.faq.value
-        case .about: // 性别
+        case .about:    // 性别
             labelName = LanguageKey.about.value
-        case .quit: // 地区
+        case .quit:     // 地区
             labelName = LanguageKey.logout.value
         }
         return labelName

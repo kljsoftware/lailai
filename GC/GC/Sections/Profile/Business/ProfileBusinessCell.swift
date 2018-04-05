@@ -14,9 +14,10 @@ class ProfileBusinessCell: UITableViewCell {
     
     @IBOutlet weak var businesslinkLabel: UILabel!
     
-    func update(name:String, isAuthorized:Bool = false) {
-        businessnameLabel.text = name
-        businesslinkLabel.text = isAuthorized ? "已授权连接" : ""
+    /// 刷新数据
+    func update(model: BusinessInfoModel) {
+        businessnameLabel.text = model.dealerName
+        businesslinkLabel.text =  model.memberPublicKey != "" ? "已授权连接" : ""
     }
     
 }

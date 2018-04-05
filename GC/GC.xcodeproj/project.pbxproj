@@ -183,6 +183,12 @@
 		3CFD84F4201C9B5900F9E7E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFD84E7201C9B5800F9E7E5 /* AppDelegate.swift */; };
 		3CFD84F5201C9B5900F9E7E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CFD84E9201C9B5900F9E7E5 /* Assets.xcassets */; };
 		3CFD84F7201C9B5900F9E7E5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CFD84EE201C9B5900F9E7E5 /* Info.plist */; };
+		A3290AE12075D80900874351 /* raw.png in Resources */ = {isa = PBXBuildFile; fileRef = A3290AE02075D80800874351 /* raw.png */; };
+		A3290AE42075DC7F00874351 /* TradeRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3290AE32075DC7F00874351 /* TradeRecordViewController.swift */; };
+		A3290AE62075EE4700874351 /* TradeRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3290AE52075EE4700874351 /* TradeRecordViewModel.swift */; };
+		A3290AE82075F06E00874351 /* TradeRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3290AE72075F06E00874351 /* TradeRecordModel.swift */; };
+		A3290AEA2075FE6100874351 /* ProfileBusinessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3290AE92075FE6100874351 /* ProfileBusinessViewModel.swift */; };
+		A3290AEC2075FE9500874351 /* ProfileBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3290AEB2075FE9500874351 /* ProfileBusinessModel.swift */; };
 		A43A50E4E7F53329C5B11904 /* Pods_GC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19EB8A19ED869E797BC1EDA /* Pods_GC.framework */; };
 /* End PBXBuildFile section */
 
@@ -368,6 +374,12 @@
 		3CFD84E7201C9B5800F9E7E5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CFD84E9201C9B5900F9E7E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CFD84EE201C9B5900F9E7E5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3290AE02075D80800874351 /* raw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = raw.png; sourceTree = "<group>"; };
+		A3290AE32075DC7F00874351 /* TradeRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeRecordViewController.swift; sourceTree = "<group>"; };
+		A3290AE52075EE4700874351 /* TradeRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeRecordViewModel.swift; sourceTree = "<group>"; };
+		A3290AE72075F06E00874351 /* TradeRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeRecordModel.swift; sourceTree = "<group>"; };
+		A3290AE92075FE6100874351 /* ProfileBusinessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBusinessViewModel.swift; sourceTree = "<group>"; };
+		A3290AEB2075FE9500874351 /* ProfileBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBusinessModel.swift; sourceTree = "<group>"; };
 		BBEE1DAB0CF91082AD1F3A01 /* Pods-GC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GC.release.xcconfig"; path = "Pods/Target Support Files/Pods-GC/Pods-GC.release.xcconfig"; sourceTree = "<group>"; };
 		C19EB8A19ED869E797BC1EDA /* Pods_GC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43E3385E1A3FF1553B1E9E5 /* Pods-GC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GC/Pods-GC.debug.xcconfig"; sourceTree = "<group>"; };
@@ -403,6 +415,7 @@
 		3C4B0708201EF7CA00856698 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				A3290AE02075D80800874351 /* raw.png */,
 				3CF5D66C2031470A0021961B /* dot_sel.png */,
 				3CF5D66B2031470A0021961B /* dot.png */,
 				3C6550762025A3B900FE0504 /* img_frame.png */,
@@ -456,6 +469,8 @@
 				3C7E26D8202698B000ED4B56 /* ProfileBusinessViewController.swift */,
 				3C1B0B47202D786500E059BD /* ProfileBusinessCell.swift */,
 				3C1B0B48202D786500E059BD /* ProfileBusinessCell.xib */,
+				A3290AEB2075FE9500874351 /* ProfileBusinessModel.swift */,
+				A3290AE92075FE6100874351 /* ProfileBusinessViewModel.swift */,
 				3C1B0B4B202D7D3700E059BD /* BusinessAuthViewController.swift */,
 			);
 			path = Business;
@@ -744,6 +759,7 @@
 			isa = PBXGroup;
 			children = (
 				3C6550782025DF5000FE0504 /* Donate */,
+				A3290AE22075DC4400874351 /* Trade */,
 				3CF364EE2022A916003179E8 /* Wallet.storyboard */,
 				3CF364EB2022A916003179E8 /* WalletViewController.swift */,
 				3C0383B020311B35007D911B /* WalletHeaderView.swift */,
@@ -899,6 +915,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A3290AE22075DC4400874351 /* Trade */ = {
+			isa = PBXGroup;
+			children = (
+				A3290AE32075DC7F00874351 /* TradeRecordViewController.swift */,
+				A3290AE72075F06E00874351 /* TradeRecordModel.swift */,
+				A3290AE52075EE4700874351 /* TradeRecordViewModel.swift */,
+			);
+			path = Trade;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -999,6 +1025,7 @@
 				3CB4D12B202C8DBD00AB70B9 /* General.storyboard in Resources */,
 				3CFD84F7201C9B5900F9E7E5 /* Info.plist in Resources */,
 				3C91FC28201F21C500BB492D /* news_header.png in Resources */,
+				A3290AE12075D80900874351 /* raw.png in Resources */,
 				3C8DCEF6201D76C400C9F40E /* tab_news_sel@3x.png in Resources */,
 				3CF365072022A916003179E8 /* Profile.storyboard in Resources */,
 				3C6550742025934400FE0504 /* tab_donate_sel@3x.png in Resources */,
@@ -1121,6 +1148,7 @@
 				3CF3650A2022A916003179E8 /* NewsCell.swift in Sources */,
 				3CB4D11B202C194300AB70B9 /* DonateRecordViewModel.swift in Sources */,
 				3CB4D12F202C8EE400AB70B9 /* GeneralViewModel.swift in Sources */,
+				A3290AE42075DC7F00874351 /* TradeRecordViewController.swift in Sources */,
 				3CB5539A201CB73F009AC1CD /* UIView+Extension.swift in Sources */,
 				3CF365182022A916003179E8 /* FotgotPwd2ViewController.swift in Sources */,
 				3CF364FA2022A916003179E8 /* SplashViewController.swift in Sources */,
@@ -1134,9 +1162,11 @@
 				3C7E26D52026930500ED4B56 /* ProfileDetailDescCell.swift in Sources */,
 				3C1B0B3E202D332F00E059BD /* BaseViewController.swift in Sources */,
 				3CB4D0F82029FE5100AB70B9 /* DonateRecordModel.swift in Sources */,
+				A3290AE82075F06E00874351 /* TradeRecordModel.swift in Sources */,
 				3C1B0B46202D747000E059BD /* DonateDetailsViewController.swift in Sources */,
 				3CF3650B2022A916003179E8 /* NewsViewController.swift in Sources */,
 				3CF365092022A916003179E8 /* ProfileViewController.swift in Sources */,
+				A3290AEA2075FE6100874351 /* ProfileBusinessViewModel.swift in Sources */,
 				3CF364FF2022A916003179E8 /* BusinessView.swift in Sources */,
 				3CF3651C2022A98D003179E8 /* RegisterModel.swift in Sources */,
 				3CF364F72022A916003179E8 /* DonateViewController.swift in Sources */,
@@ -1164,6 +1194,7 @@
 				3CB553A3201CB73F009AC1CD /* LanguageMacro.swift in Sources */,
 				3C1B0B50202D952C00E059BD /* CLLocationCoordinate2D+Extension.swift in Sources */,
 				3C1B0B54202D9B0100E059BD /* TextInputView.swift in Sources */,
+				A3290AEC2075FE9500874351 /* ProfileBusinessModel.swift in Sources */,
 				3CB4D121202C4BB900AB70B9 /* Upload.swift in Sources */,
 				3CB4D0FF202A044A00AB70B9 /* DonateDetailsModel.swift in Sources */,
 				3CB4D11F202C293300AB70B9 /* NewsViewModel.swift in Sources */,
@@ -1199,6 +1230,7 @@
 				3CD6AA292025F9D900EAEECA /* BaseNavigationController.swift in Sources */,
 				3CB4D0FA202A011600AB70B9 /* NewsModel.swift in Sources */,
 				3CF365232022DA86003179E8 /* BaseRequestModel.swift in Sources */,
+				A3290AE62075EE4700874351 /* TradeRecordViewModel.swift in Sources */,
 				3CB553A5201CB73F009AC1CD /* GlobalMacro.swift in Sources */,
 				3CF3651E2022A9F2003179E8 /* RegiserViewModel.swift in Sources */,
 				3CB4D11D202C241700AB70B9 /* Double+Extension.swift in Sources */,

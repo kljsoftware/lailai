@@ -7,29 +7,29 @@
 */
 
 /// 首页
-"tab_wallet"   = "Wallet";
-"tab_business" = "Business";
-"tab_news"     = "News";
-"tab_donate"   = "Donation";
-"tab_profile"  = "Mine";
+"tab_wallet"        = "Wallet";
+"tab_business"      = "Business";
+"tab_news"          = "News";
+"tab_donate"        = "Donation";
+"tab_profile"       = "Mine";
 
 //登录注册
-"splash_skip"  = "Skip";
-"register"     = "Register";
-"pwd"          = "Password";
-"input_pwd"    = "Input password";
-"input_pwd_again" = "Enter the password again";
-"phoneNum"     = "Phone Number";
-"authCode"     = "Verification Code";
-"nextStep"     = "Next step";
-"login"        = "Sign in";
-"logout"       = "Sign out";
-"rememberpwd"  = "Remember the password";
-"forgotpwd"    = "Forget the account or password";
-"settingpwd"   = "Set the password";
-"save"         = "Save";
-"sendCode" = "Send authentication code";
-"sendAgain" = "Resend";
+"splash_skip"       = "Skip";
+"register"          = "Register";
+"pwd"               = "Password";
+"input_pwd"         = "Input password";
+"input_pwd_again"   = "Enter the password again";
+"phoneNum"          = "Phone Number";
+"authCode"          = "Verification Code";
+"nextStep"          = "Next step";
+"login"             = "Sign in";
+"logout"            = "Sign out";
+"rememberpwd"       = "Remember the password";
+"forgotpwd"         = "Forget the account or password";
+"settingpwd"        = "Set the password";
+"save"              = "Save";
+"sendCode"          = "Send authentication code";
+"sendAgain"         = "Resend";
 
 // 通用
 
@@ -37,8 +37,8 @@
 "wallet_donate" = "Donation";
 
 //积分商家
-"map" = "Map";
-"balance" = "Endowment amount";
+"map"       = "Map";
+"balance"   = "Endowment amount";
 
 //绿色新闻
 

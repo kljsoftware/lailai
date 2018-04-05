@@ -22,6 +22,9 @@ class DonateRecordRequestModel : BaseRequestModel {
 /// 结果模型
 class DonateRecordResultModel : BaseResultModel {
     
+    /// 商家数据
+    var data = ShopInfoModel()
+    
     /// 是否有更多页
     var has_more = true
     
@@ -35,7 +38,7 @@ class DonateRecordResultModel : BaseResultModel {
 
 /// 捐赠记录模型
 class DonateRecordModel : NSObject {
-   
+    
     /// 商家id
     var id = 0
     
@@ -45,15 +48,28 @@ class DonateRecordModel : NSObject {
     /// 商家名
     var name = ""
     
-    /// 用户在该商家注册的昵称
-    var memberDeaName = ""
-    
     /// 余额
     var balance = 0
+    
+    /// 用户在该商家注册的昵称
+    var memberDeaName = ""
     
     /// 捐赠时间
     var create_date:Double = 0
     
     /// 区块链id
     var blockchain_id = ""
+}
+
+/// 商家信息
+class ShopInfoModel : NSObject {
+    
+    /// 在该商家的积分总额
+    var balance = 0
+    
+    /// 商家公钥
+    var dealerPublicKey = ""
+    
+    /// 会员公钥
+    var memberPublicKey = ""
 }

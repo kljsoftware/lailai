@@ -37,7 +37,7 @@ class DonateRecordCell: UITableViewCell {
         timeLabel.text = model.create_date.transferFormat()
     }
     
-    /// 查看区块链
+    /// 交易Hash
     @IBAction func onQueryBlockChainButtonClicked(_ sender: UIButton) {
         if nil != model {
             queryBlockChainClosure?(model!)

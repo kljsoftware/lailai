@@ -40,23 +40,25 @@ class NetworkImgOrWeb {
 /// api地址
 enum NetworkURL {
     case register // 2.1注册
-    case login    // 2.2登录
-    case checkToken     // 2.3检查token是否过期
-    case getPointsScAd  // 2.4 获取闪屏页广告
-    case getPointsBase  // 3.1 获取积分钱包基础数据
-    case getPoints      // 3.2 获取积分钱包商家数据
-    case modityUserInfo // 3.5个人信息修改
-    case modityPassword // 3.6密码修改
-    case getAbout       // 3.9关于
-    case getContributionHistory // 3.11捐赠记录
+    case login                  // 2.2 登录
+    case checkToken             // 2.3 检查token是否过期
+    case getPointsScAd          // 2.4 获取闪屏页广告
+    case getPointsBase          // 3.1 获取积分钱包基础数据
+    case getPoints              // 3.2 获取积分钱包商家数据
+    case modityUserInfo         // 3.5 个人信息修改
+    case modityPassword         // 3.6 密码修改
+    case getAbout               // 3.9 关于
+    case getContributionHistory // 1.1 捐赠记录
+    case getContributeNum       // 1.2 通过区块链查看捐赠总额
     case getDealers             // 4.1 获取绿色商家位置列表
     case searchDealers          // 4.2 搜索商家
-    case getNews        // 5.1获取新闻列表
-    case getDonations   // 6.1 获取公益捐赠列表
-    case getUserInfo    // 7.1 获取个人信息
-    case putFeedback    // 7.4 反馈信息
-    case getBlockChainInfo // 8.1 获取区块链信息
-    case uploadFile     //
+    case getNews                // 5.1 获取新闻列表
+    case getDonations           // 6.1 获取公益捐赠列表
+    case getUserInfo            // 7.1 获取个人信息
+    case putFeedback            // 7.4 反馈信息
+    case getBlockChainInfo      // 8.1 获取区块链信息
+    case uploadFile             //
+    case getDealerList          // 2.1 我的商家
     
     /// url地址
     var url : String {
@@ -82,6 +84,8 @@ enum NetworkURL {
             api = "getAbout"
         case .getContributionHistory:
             api = "\(Token.shared.value)/getContributionHistory"
+        case .getContributeNum:
+            api = "\(Token.shared.value)/getContributeNum"
         case .getDealers:
             api = "\(Token.shared.value)/getDealers"
         case .searchDealers:
@@ -98,6 +102,8 @@ enum NetworkURL {
             api = "\(Token.shared.value)/getBlockChainInfo"
         case .uploadFile:
             api = "\(Token.shared.value)/uploadFile"
+        case .getDealerList:
+            api = "\(Token.shared.value)/getDealerList"
         }
         return "\(HTTP_ADDRESS)/v2/\(api)"
     }

@@ -13,7 +13,7 @@ class DonateRecordViewModel: BaseViewModel {
     var recordResultModel = DonateRecordResultModel()
     
     /// 积分捐赠
-    func getContributionHistory(id:Int, page:Int = 0, size:Int = 10) {
+    func getContributionHistory(id: Int, page: Int = 0, size: Int = 10) {
         let reqeustModel = DonateRecordRequestModel()
         reqeustModel.id = id
         reqeustModel.page = page
