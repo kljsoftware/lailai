@@ -155,7 +155,14 @@ extension ProfileViewController : UITableViewDataSource, UITableViewDelegate {
             let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "secretkey_address")
             navigationController?.pushViewController(vc, animated: true)
         case .quit:
-            NotificationCenter.default.post(name: NoticationUserLogout, object: nil)
+            let cancelAction = UIAlertAction(title: LanguageKey.cancel.value, style: .cancel, handler: nil)
+            let okAction = UIAlertAction(title: LanguageKey.ok.value, style: .default) { (action) in
+                NotificationCenter.default.post(name: NoticationUserLogout, object: nil)
+            }
+            let alert = UIAlertController(title: "确定要退出登录吗？", message: nil, preferredStyle: .alert)
+            alert.addAction(cancelAction)
+            alert.addAction(okAction)
+            self.present(alert, animated: true, completion: nil)
         }
     }
 }

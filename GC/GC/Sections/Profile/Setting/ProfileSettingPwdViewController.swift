@@ -12,10 +12,11 @@ class ProfileSettingPwdViewController: BaseViewController {
     
     /// 业务模块
     let viewModel = ProfileViewModel()
-
-    /// 输入密码，再次输入密码，注册按钮
-    @IBOutlet weak var pwdTextField: UITextField!
-    @IBOutlet weak var pwd2TextField: UITextField!
+    
+    /// 旧密码，输入密码，再次输入密码，注册按钮
+    @IBOutlet weak var oldPwdTF: UITextField!
+    @IBOutlet weak var newPwdTF: UITextField!
+    @IBOutlet weak var newPwdTF1: UITextField!
     @IBOutlet weak var saveButton: UIButton!
     
     override func viewDidLoad() {
@@ -30,8 +31,9 @@ class ProfileSettingPwdViewController: BaseViewController {
     
     private func setup() {
         navigationItem.title = LanguageKey.settingpwd.value
-        pwdTextField.placeholder = LanguageKey.input_pwd.value
-        pwd2TextField.placeholder = LanguageKey.input_pwd_again.value
+        oldPwdTF.placeholder = LanguageKey.inut_pwd_old.value
+        newPwdTF.placeholder = LanguageKey.input_pwd.value
+        newPwdTF1.placeholder = LanguageKey.input_pwd_again.value
         saveButton.setTitle(LanguageKey.save.value, for: .normal)
         setNextEnabled()
     }
@@ -53,18 +55,26 @@ class ProfileSettingPwdViewController: BaseViewController {
     
     /// 设置下一步按钮使能
     private func setNextEnabled() {
-        let isValidPwd = pwdTextField.text != nil && !pwdTextField.text!.isBlank()
-        let isValidPwd2  = pwd2TextField.text != nil && !pwd2TextField!.text!.isBlank()
+        let isValidPwd = newPwdTF.text != nil && !newPwdTF.text!.isBlank()
+        let isValidPwd2  = newPwdTF1.text != nil && !newPwdTF1.text!.isBlank()
         saveButton.isEnabled  = isValidPwd && isValidPwd2
     }
     
     fileprivate func save() {
-        guard let pwd1 = pwdTextField.text else {
+        
+        let oldpwd = UserDefaults.standard.value(forKey: UserDefaultUserPwd) as? String ?? ""
+        
+        if oldPwdTF.text != oldpwd {
+            UIHelper.tip(message: "旧密码错误")
+            return
+        }
+        
+        guard let pwd1 = newPwdTF.text else {
             UIHelper.tip(message: "密码不能为空")
             return
         }
         
-        guard let pwd2 = pwd2TextField.text else {
+        guard let pwd2 = newPwdTF1.text else {
             UIHelper.tip(message: "密码不能为空")
             return
         }
@@ -74,13 +84,12 @@ class ProfileSettingPwdViewController: BaseViewController {
             return
         }
         
-        let oldpwd = UserDefaults.standard.value(forKey: UserDefaultUserPwd) as? String ?? ""
-        viewModel.modityPassword(newpwd: pwdTextField.text!, oldpwd: oldpwd)
+        viewModel.modityPassword(newpwd: newPwdTF.text!, oldpwd: oldpwd)
         viewModel.setCompletion(onSuccess: { [weak self](resultModel) in
             guard let wself = self else {
                 return
             }
-            UserDefaults.standard.set(wself.pwdTextField.text!, forKey: UserDefaultUserPwd)
+            UserDefaults.standard.set(wself.newPwdTF.text!, forKey: UserDefaultUserPwd)
             UIHelper.tip(message: "修改成功")
             wself.navigationController?.popViewController(animated: true)
         }) { (error) in

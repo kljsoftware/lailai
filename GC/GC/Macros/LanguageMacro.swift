@@ -19,6 +19,7 @@ enum LanguageKey : String {
     case splash_skip        // 跳过
     case register           // 注册
     case pwd                // 密码
+    case inut_pwd_old       // 输入旧密码
     case input_pwd          // 输入密码
     case input_pwd_again    // 再次输入密码
     case phoneNum           // 手机号

@@ -89,15 +89,15 @@ extension ProfileSettingViewController : UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch ProfileSettingType(rawValue: indexPath.row)! {
         case .pwd:
-            let vc = UIStoryboard.init(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "profile_setting_pwd")
+            let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "profile_setting_pwd")
             navigationController?.pushViewController(vc, animated: true)
         case .language:
             break
         case .faq:
-            let vc = UIStoryboard.init(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "profile_setting_faq")
+            let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "profile_setting_faq")
             navigationController?.pushViewController(vc, animated: true)
         case .about:
-            let vc = UIStoryboard.init(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "profile_setting_about")
+            let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "profile_setting_about")
             navigationController?.pushViewController(vc, animated: true)
         case .quit:
             NotificationCenter.default.post(name: NoticationUserLogout, object: nil)

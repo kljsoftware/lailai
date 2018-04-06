@@ -114,7 +114,7 @@ extension ProfileBusinessViewController : UITableViewDataSource, UITableViewDele
         if businessModel.memberPublicKey != "" {
             let openAction = UIAlertAction(title: LanguageKey.open.value, style: .default, handler: { (action) in
             })
-            let cancelAction = UIAlertAction(title: LanguageKey.cancel.rawValue, style: .cancel, handler: nil)
+            let cancelAction = UIAlertAction(title: LanguageKey.cancel.value, style: .cancel, handler: nil)
             let alert = UIAlertController(title: "“绿城积分”想要打开“\(businessModel.dealerName)”", message: "", preferredStyle: .alert)
             alert.addAction(cancelAction)
             alert.addAction(openAction)

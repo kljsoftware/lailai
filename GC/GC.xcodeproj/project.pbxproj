@@ -189,6 +189,12 @@
 		A3290AE82075F06E00874351 /* TradeRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3290AE72075F06E00874351 /* TradeRecordModel.swift */; };
 		A3290AEA2075FE6100874351 /* ProfileBusinessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3290AE92075FE6100874351 /* ProfileBusinessViewModel.swift */; };
 		A3290AEC2075FE9500874351 /* ProfileBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3290AEB2075FE9500874351 /* ProfileBusinessModel.swift */; };
+		A376355F20762408007A7BC6 /* SecretKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A376355E20762408007A7BC6 /* SecretKeyViewController.swift */; };
+		A3763562207624A1007A7BC6 /* SecretKeyInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3763560207624A1007A7BC6 /* SecretKeyInputCell.swift */; };
+		A3763563207624A1007A7BC6 /* SecretKeyInputCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3763561207624A1007A7BC6 /* SecretKeyInputCell.xib */; };
+		A3A728C12077661100846993 /* AreaPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A728C02077661100846993 /* AreaPickerView.swift */; };
+		A3A728C72077A89A00846993 /* Area.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3A728C62077A89A00846993 /* Area.plist */; };
+		A3A728C92077A8D500846993 /* AreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A728C82077A8D500846993 /* AreaModel.swift */; };
 		A43A50E4E7F53329C5B11904 /* Pods_GC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19EB8A19ED869E797BC1EDA /* Pods_GC.framework */; };
 /* End PBXBuildFile section */
 
@@ -380,6 +386,12 @@
 		A3290AE72075F06E00874351 /* TradeRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeRecordModel.swift; sourceTree = "<group>"; };
 		A3290AE92075FE6100874351 /* ProfileBusinessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBusinessViewModel.swift; sourceTree = "<group>"; };
 		A3290AEB2075FE9500874351 /* ProfileBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBusinessModel.swift; sourceTree = "<group>"; };
+		A376355E20762408007A7BC6 /* SecretKeyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretKeyViewController.swift; sourceTree = "<group>"; };
+		A3763560207624A1007A7BC6 /* SecretKeyInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretKeyInputCell.swift; sourceTree = "<group>"; };
+		A3763561207624A1007A7BC6 /* SecretKeyInputCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecretKeyInputCell.xib; sourceTree = "<group>"; };
+		A3A728C02077661100846993 /* AreaPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaPickerView.swift; sourceTree = "<group>"; };
+		A3A728C62077A89A00846993 /* Area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Area.plist; sourceTree = "<group>"; };
+		A3A728C82077A8D500846993 /* AreaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaModel.swift; sourceTree = "<group>"; };
 		BBEE1DAB0CF91082AD1F3A01 /* Pods-GC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GC.release.xcconfig"; path = "Pods/Target Support Files/Pods-GC/Pods-GC.release.xcconfig"; sourceTree = "<group>"; };
 		C19EB8A19ED869E797BC1EDA /* Pods_GC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43E3385E1A3FF1553B1E9E5 /* Pods-GC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GC/Pods-GC.debug.xcconfig"; sourceTree = "<group>"; };
@@ -471,6 +483,9 @@
 				3C1B0B48202D786500E059BD /* ProfileBusinessCell.xib */,
 				A3290AEB2075FE9500874351 /* ProfileBusinessModel.swift */,
 				A3290AE92075FE6100874351 /* ProfileBusinessViewModel.swift */,
+				A376355E20762408007A7BC6 /* SecretKeyViewController.swift */,
+				A3763560207624A1007A7BC6 /* SecretKeyInputCell.swift */,
+				A3763561207624A1007A7BC6 /* SecretKeyInputCell.xib */,
 				3C1B0B4B202D7D3700E059BD /* BusinessAuthViewController.swift */,
 			);
 			path = Business;
@@ -606,6 +621,7 @@
 		3CB55388201CB73F009AC1CD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A3A728BF207765BC00846993 /* AreaPickerView */,
 				3C1B0B55202DA18000E059BD /* ActionSheet.swift */,
 				3C1B0B52202D9B0100E059BD /* TextInputView.swift */,
 				3C1B0B51202D9B0100E059BD /* TextInputView.xib */,
@@ -925,6 +941,16 @@
 			path = Trade;
 			sourceTree = "<group>";
 		};
+		A3A728BF207765BC00846993 /* AreaPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				A3A728C02077661100846993 /* AreaPickerView.swift */,
+				A3A728C82077A8D500846993 /* AreaModel.swift */,
+				A3A728C62077A89A00846993 /* Area.plist */,
+			);
+			path = AreaPickerView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1045,8 +1071,10 @@
 				3C0383AF2031170C007D911B /* WalletHeaderView.xib in Resources */,
 				3C65507E2025E50E00FE0504 /* DonateRecordCell.xib in Resources */,
 				3CF364F52022A916003179E8 /* Home.storyboard in Resources */,
+				A3763563207624A1007A7BC6 /* SecretKeyInputCell.xib in Resources */,
 				3C8DCEEC201D76C400C9F40E /* launch.png in Resources */,
 				3CF365012022A916003179E8 /* BusinessTitleView.xib in Resources */,
+				A3A728C72077A89A00846993 /* Area.plist in Resources */,
 				3C4B070B201EF7CA00856698 /* wallet_donate@3x.png in Resources */,
 				3C8DCEF3201D76C400C9F40E /* tab_wallet_sel@3x.png in Resources */,
 				3C7E26D02026930400ED4B56 /* ProfileDetailAvatarCell.xib in Resources */,
@@ -1174,11 +1202,13 @@
 				3CF365132022A916003179E8 /* WalletCollectionViewCell.swift in Sources */,
 				3C1B0B4C202D7D3700E059BD /* BusinessAuthViewController.swift in Sources */,
 				3CF3651A2022A916003179E8 /* FotgotPwdViewController.swift in Sources */,
+				A376355F20762408007A7BC6 /* SecretKeyViewController.swift in Sources */,
 				3CB55394201CB73F009AC1CD /* OnePixelConstraint.swift in Sources */,
 				3CF3652F2022FADA003179E8 /* WalletViewModel.swift in Sources */,
 				3CB4D0FC202A033200AB70B9 /* DonateModel.swift in Sources */,
 				3C0383B120311B35007D911B /* WalletHeaderView.swift in Sources */,
 				3CF3653120231DA8003179E8 /* BusinessModel.swift in Sources */,
+				A3763562207624A1007A7BC6 /* SecretKeyInputCell.swift in Sources */,
 				3C1B0B41202D6BAC00E059BD /* DonateCell.swift in Sources */,
 				3C1B0B58202DA92100E059BD /* ProfileDetailViewModel.swift in Sources */,
 				3C65507A2025DF7C00FE0504 /* DonateRecordViewController.swift in Sources */,
@@ -1223,6 +1253,7 @@
 				3CB553A2201CB73F009AC1CD /* NetworkMacro.swift in Sources */,
 				3C655061202445B000FE0504 /* WalletModel.swift in Sources */,
 				3CB55397201CB73F009AC1CD /* UIColor+Extension.swift in Sources */,
+				A3A728C12077661100846993 /* AreaPickerView.swift in Sources */,
 				3C37461A201DBA14000FD752 /* BorderView.swift in Sources */,
 				3CF364FD2022A916003179E8 /* MapView.swift in Sources */,
 				3CF365142022A916003179E8 /* BannnerView.swift in Sources */,
@@ -1230,6 +1261,7 @@
 				3CD6AA292025F9D900EAEECA /* BaseNavigationController.swift in Sources */,
 				3CB4D0FA202A011600AB70B9 /* NewsModel.swift in Sources */,
 				3CF365232022DA86003179E8 /* BaseRequestModel.swift in Sources */,
+				A3A728C92077A8D500846993 /* AreaModel.swift in Sources */,
 				A3290AE62075EE4700874351 /* TradeRecordViewModel.swift in Sources */,
 				3CB553A5201CB73F009AC1CD /* GlobalMacro.swift in Sources */,
 				3CF3651E2022A9F2003179E8 /* RegiserViewModel.swift in Sources */,

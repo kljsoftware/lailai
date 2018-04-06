@@ -72,27 +72,27 @@ class ProfileDetailsViewController: BaseViewController {
     
     // MARK: - action methods
     func onSaveButtonClicked(sender:UIButton) {
-        let reqModel = ModityUserInfoRequestModel()
-        reqModel.name = userInfo.name
-        reqModel.shortName = (dict[.nick] ?? "")
-        reqModel.email = dict[.email] ?? ""
-        reqModel.sex = (dict[.gender] ?? "男") == "男" ? "1" : "2"
-        reqModel.city = dict[.region] ?? ""
-        reqModel.tel = dict[.tel] ?? ""
-        reqModel.logo = dict[.avatar] ?? ""
-        reqModel.desc = dict[.desc] ?? ""
+        let reqModel        = ModityUserInfoRequestModel()
+        reqModel.name       = userInfo.name
+        reqModel.shortName  = (dict[.nick] ?? "")
+        reqModel.email      = dict[.email] ?? ""
+        reqModel.sex        = (dict[.gender] ?? "男") == "男" ? "1" : "2"
+        reqModel.city       = dict[.region] ?? ""
+        reqModel.tel        = dict[.tel] ?? ""
+        reqModel.logo       = dict[.avatar] ?? ""
+        reqModel.desc       = dict[.desc] ?? ""
         viewModel.modityUserInfo(info: reqModel)
     }
     
     // MARK: - private methods
     @objc private func delay() {
-        dict[.avatar] = userInfo.logo
-        dict[.nick] = userInfo.shortName
-        dict[.tel] = userInfo.tel
-        dict[.gender] = userInfo.sex == 1 ? "男" : "女"
-        dict[.region] = userInfo.city
-        dict[.email] = userInfo.email
-        dict[.desc] = userInfo.desc
+        dict[.avatar]   = userInfo.logo
+        dict[.nick]     = userInfo.shortName
+        dict[.tel]      = userInfo.tel
+        dict[.gender]   = userInfo.sex == 1 ? "男" : "女"
+        dict[.region]   = userInfo.city
+        dict[.email]    = userInfo.email
+        dict[.desc]     = userInfo.desc
         tableView.reloadData()
     }
     
@@ -220,6 +220,14 @@ extension ProfileDetailsViewController : UITableViewDataSource, UITableViewDeleg
                 wself.dict[wself.type] = index == 0 ? LanguageKey.man.value : LanguageKey.woman.value
                 wself.tableView.reloadData()
             })
+        case .region:
+            let arr         = (dict[type] ?? "").components(separatedBy: "-")
+            let city        = arr.count > 1 ? arr[1] : ""
+            let district    = arr.count > 2 ? arr[2] : ""
+            AreaPickerView.show(province: arr.first, city: city, district: district) { [weak self](province, city, district) in
+                self?.dict[self!.type] = "\(province)-\(city)" + (district != nil ? "-\(district!)" : "")
+                self?.tableView.reloadData()
+            }
         default:
             showEditView(text: dict[type] ?? "", placeholer: getPlaceholder(type: type))
         }
@@ -229,6 +237,7 @@ extension ProfileDetailsViewController : UITableViewDataSource, UITableViewDeleg
 
 /// 图像选取委托事件
 extension ProfileDetailsViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         picker.dismiss(animated: false) { [weak self] in
@@ -242,7 +251,6 @@ extension ProfileDetailsViewController : UIImagePickerControllerDelegate, UINavi
                     self?.viewModel.upload(data: data!)
                 }
             }
-
             self?.tableView.reloadData()
         }
     }

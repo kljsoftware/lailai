@@ -16,6 +16,7 @@
 "splash_skip"       = "跳过";
 "register"          = "注册";
 "pwd"               = "密码";
+"inut_pwd_old"      = "输入旧密码";
 "input_pwd"         = "输入密码";
 "input_pwd_again"   = "再次输入密码";
 "phoneNum"          = "手机号";
