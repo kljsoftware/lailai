@@ -11,23 +11,23 @@ import UIKit
 /// 地区选择
 class AreaPickerView: UIView {
 
-    // 数据源
+    /// 数据源
     fileprivate var dataArr = [ProvinceModel]()
-    // 当前省
+    /// 当前省
     fileprivate var curProvinceModel: ProvinceModel!
-    // 当前市
+    /// 当前市
     fileprivate var curCityModel: CityModel!
-    // 当前区
+    /// 当前区
     fileprivate var district: String?
 
-    // 内容视图
-    private var contentView: UIView!
-    // pickerView
+    /// 内容视图
+    fileprivate var contentView: UIView!
+    /// pickerView
     private var pickerView: UIPickerView!
-    // 按钮区域视图
-    fileprivate var buttonAreaView: UIView!
+    /// 按钮区域视图
+    private var buttonAreaView: UIView!
     
-    // 申明选中行闭包
+    /// 申明选中行闭包
     fileprivate var selectedClosure: ((String, String, String?) -> Void)?
     
     
@@ -158,10 +158,9 @@ class AreaPickerView: UIView {
         })
     }
     
-    // 隐藏pickerView点击手势
+    /// 隐藏pickerView点击手势
     @objc private func hidePicker() {
         
-        // 隐藏动画
         UIView.animate(withDuration: 0.3, animations: {
             self.contentView.frame.origin.y = DEVICE_SCREEN_HEIGHT
             self.backgroundColor            = UIColor.clear
@@ -169,11 +168,6 @@ class AreaPickerView: UIView {
         }, completion: { (finished) in
             self.removeFromSuperview()
         })
-    }
-    
-    // 刷新数据
-    private func reloadData() {
-        pickerView.reloadAllComponents()
     }
     
     // 取消/确定按钮点击事件
@@ -228,21 +222,25 @@ extension AreaPickerView: UIPickerViewDelegate, UIPickerViewDataSource {
         return pickerLabel!
     }
     
-    // 选中行
+    /// 选中行
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         if component == 0 {
-            curProvinceModel = dataArr[row]
-            curCityModel = curProvinceModel.citys.first!
-            district = curCityModel.districts.first
-            pickerView.selectRow(0, inComponent: 1, animated: true)
-            pickerView.selectRow(0, inComponent: 2, animated: true)
-            
+            if curProvinceModel.province != dataArr[row].province {
+                curProvinceModel = dataArr[row]
+                curCityModel = curProvinceModel.citys.first!
+                district = curCityModel.districts.first
+                pickerView.selectRow(0, inComponent: 1, animated: false)
+                pickerView.selectRow(0, inComponent: 2, animated: false)
+            }
             
         } else if component == 1 {
-            curCityModel = curProvinceModel.citys[row]
-            district = curCityModel.districts.first
-            pickerView.selectRow(0, inComponent: 2, animated: true)
+            if curCityModel.city != curProvinceModel.citys[row].city {
+                curCityModel = curProvinceModel.citys[row]
+                district = curCityModel.districts.first
+                pickerView.selectRow(0, inComponent: 2, animated: false)
+            }
+            
         } else {
             district = curCityModel.districts[row]
         }
@@ -254,8 +252,9 @@ extension AreaPickerView: UIPickerViewDelegate, UIPickerViewDataSource {
 extension AreaPickerView: UIGestureRecognizerDelegate {
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        
         // 子视图上禁止父视图的手势
-        if touch.view!.isDescendant(of: buttonAreaView) {
+        if touch.view!.isDescendant(of: contentView) {
             return false
         }
         return true

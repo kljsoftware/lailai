@@ -46,6 +46,7 @@ class ProfileDetailsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationItem.title = LanguageKey.profile_setting.value
         let saveButtonItem = UIBarButtonItem(title: LanguageKey.save.value, style: UIBarButtonItemStyle.done, target: self, action: #selector(onSaveButtonClicked))
         navigationItem.rightBarButtonItem = saveButtonItem
@@ -74,7 +75,7 @@ class ProfileDetailsViewController: BaseViewController {
     func onSaveButtonClicked(sender:UIButton) {
         let reqModel        = ModityUserInfoRequestModel()
         reqModel.name       = userInfo.name
-        reqModel.shortName  = (dict[.nick] ?? "")
+        reqModel.shortName  = dict[.nick] ?? ""
         reqModel.email      = dict[.email] ?? ""
         reqModel.sex        = (dict[.gender] ?? "男") == "男" ? "1" : "2"
         reqModel.city       = dict[.region] ?? ""
