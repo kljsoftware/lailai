@@ -98,7 +98,7 @@ class AreaPickerView: UIView {
         for i in 0 ..< 2 {
             let button = UIButton(type: .custom)
             button.frame = CGRect(x: CGFloat(i)*(buttonAreaView.frame.size.width - 80), y: 0, width: 80, height: 40)
-            button.setTitle(i == 0 ? "取消" : "确定", for: .normal)
+            button.setTitle(i == 0 ? LanguageKey.cancel.value : LanguageKey.ok.value, for: .normal)
             button.setTitleColor(UIColor(red: 60/255.0, green: 60/255.0, blue: 80/255.0, alpha: 1), for: .normal)
             button.tag = i+1
             button.addTarget(self, action: #selector(AreaPickerView.buttonClicked(_:)), for: .touchUpInside)

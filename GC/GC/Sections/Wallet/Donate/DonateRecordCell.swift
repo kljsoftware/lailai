@@ -32,7 +32,7 @@ class DonateRecordCell: UITableViewCell {
         nameLabel.text = model.name
         logoImageView.setImage(urlStr: NetworkImgOrWeb.getUrl(name: model.logo), placeholderStr: "", radius: 30)
         memerLabel.text = model.memberDeaName
-        pointLabel.text = "积分："
+        pointLabel.text = "\(LanguageKey.points.value)："
         pointsLabel.text = "\(model.balance)"
         timeLabel.text = model.create_date.transferFormat()
     }

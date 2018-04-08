@@ -12,7 +12,7 @@ import UIKit
 class TextInputView: UIView {
     
     // 提示文字
-    var placeholder : String = "请输入文字评语"
+    var placeholder : String = ""
     
     /// 键盘显示
     var keyboardType = UIKeyboardType.default

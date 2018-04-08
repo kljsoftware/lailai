@@ -70,17 +70,17 @@ class ProfileSettingPwdViewController: BaseViewController {
         }
         
         guard let pwd1 = newPwdTF.text else {
-            UIHelper.tip(message: "密码不能为空")
+            UIHelper.tip(message: LanguageKey.pwd_null.value)
             return
         }
         
         guard let pwd2 = newPwdTF1.text else {
-            UIHelper.tip(message: "密码不能为空")
+            UIHelper.tip(message: LanguageKey.pwd_null.value)
             return
         }
         
         if pwd1 != pwd2 {
-            UIHelper.tip(message: "密码输入不一致")
+            UIHelper.tip(message: LanguageKey.pwd_different.value)
             return
         }
         

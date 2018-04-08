@@ -44,6 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(notifyUserLogin(_:)), name: NoticationUserLogin, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(notifyUserLogin(_:)), name: NoticationUserLogout, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(notifyUserLoginSuccess(_:)), name: NoticationUserLoginSuccess, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(notifyUserLoginSuccess(_:)), name: NoticationLanguageUpdate, object: nil)
     }
     
     /// 销毁通知
@@ -52,6 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationCenter.default.removeObserver(self, name: NoticationUserLogin, object: nil)
         NotificationCenter.default.removeObserver(self, name: NoticationUserLogout, object: nil)
         NotificationCenter.default.removeObserver(self, name: NoticationUserLoginSuccess, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NoticationLanguageUpdate, object: nil)
     }
     
     /// 通知用户注册

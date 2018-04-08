@@ -42,7 +42,10 @@ class DonateRecordViewController: BaseViewController {
     
     /// 初始化
     private func setup() {
+        
         navigationItem.title = LanguageKey.donate_record.value
+        lookBtn.setTitle(LanguageKey.viewbyblock.value, for: .normal)
+        
         automaticallyAdjustsScrollViewInsets = false
         tableView.register(UINib(nibName: "DonateRecordCell", bundle: nil), forCellReuseIdentifier: "kDonateRecordCell")
         tableView.mj_header = MJRefreshStateHeader(refreshingBlock: {
@@ -68,7 +71,7 @@ class DonateRecordViewController: BaseViewController {
     /// 初始化viewModel
     private func setupViewModel() {
         viewModel.setCompletion(onSuccess: {[weak self] (resultModel) in
-            self?.scoreLabel.text = "累计总额：\(self!.viewModel.recordResultModel.data.balance) 分"
+            self?.scoreLabel.text = "\(LanguageKey.total.value)：\(self!.viewModel.recordResultModel.data.balance) \(LanguageKey.points_unit.value)"
             self?.tableView.reloadData()
         }) { (error) in
             Log.e(error)
@@ -98,7 +101,7 @@ extension DonateRecordViewController : UITableViewDataSource, UITableViewDelegat
         cell.queryBlockChainClosure = { [weak self](model) in
             let okAction = UIAlertAction(title: LanguageKey.ok.rawValue, style: .default, handler: { (action) in
             })
-            let alert = UIAlertController(title: "交易哈希", message: model.blockchain_id, preferredStyle: .alert)
+            let alert = UIAlertController(title: LanguageKey.hash.value, message: model.blockchain_id, preferredStyle: .alert)
             alert.addAction(okAction)
             self?.present(alert, animated: true, completion: nil)
         }

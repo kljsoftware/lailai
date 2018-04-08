@@ -162,7 +162,7 @@ class FotgotPwdViewController: UIViewController {
                 }
             })
         } else {
-            UIHelper.tip(message: "手机号为空或输入错误")
+            UIHelper.tip(message: LanguageKey.phone_null.value)
         }
     }
 }

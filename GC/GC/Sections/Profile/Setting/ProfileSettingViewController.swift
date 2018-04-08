@@ -28,6 +28,7 @@ class ProfileSettingViewController: BaseViewController {
     // MARK: - override methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationItem.title = LanguageKey.setting.value
         automaticallyAdjustsScrollViewInsets = false
         tableView.register(UINib(nibName: "ProfielSettingCell", bundle: nil), forCellReuseIdentifier: "kProfielSettingCell")
@@ -92,7 +93,8 @@ extension ProfileSettingViewController : UITableViewDataSource, UITableViewDeleg
             let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "profile_setting_pwd")
             navigationController?.pushViewController(vc, animated: true)
         case .language:
-            break
+            let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "setting_language")
+            navigationController?.pushViewController(vc, animated: true)
         case .faq:
             let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "profile_setting_faq")
             navigationController?.pushViewController(vc, animated: true)

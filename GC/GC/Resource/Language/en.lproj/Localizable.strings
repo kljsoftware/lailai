@@ -33,29 +33,20 @@
 "sendCode"          = "Send authentication code";
 "sendAgain"         = "Resend";
 
-// 通用
-"ok"        = "OK";
-"cancel"    = "Cancel";
-"open"      = "Open";
-
 //积分钱包
-"wallet_donate" = "Donation";
-"donate_record" = "Donation record";
-"total" = "Cumulative total：";
-"points" = "points";
-"viewbyblock" = "View by block chain";
-"hash" = "Trading hash";
-"trade_record" = "Transaction record";
-"my_donate_total" = "My total amount of donations";
+"wallet_donate"     = "Donation";
+"donate_record"     = "Donation record";
+"total"             = "Cumulative total";
+"points"            = "points";
+"viewbyblock"       = "View by block chain";
+"hash"              = "Trading hash";
+"trade_record"      = "Transaction record";
+"my_donate_total"   = "My total amount of donations";
 
 //积分商家
 "map"       = "Map";
 "balance"   = "Endowment amount";
-"points"    = "Points：";
-
-//绿色新闻
-
-//公益捐赠
+"points"    = "Points";
 
 // 我
 "setting"               = "Settings";
@@ -74,3 +65,28 @@
 "language"              = "Language";
 "faq"                   = "Help and feedback";
 "about"                 = "About";
+
+// 通用
+"ok"        = "OK";
+"cancel"    = "Cancel";
+"open"      = "Open";
+
+// 新加的
+"phone_null"            = "手机号为空或输入错误";
+"pwd_null"              = "密码不能为空";
+"pwd_different"         = "密码输入不一致";
+"balance_points"        = "捐赠积分数量";
+"points_type"           = "积分种类";
+"kinds_unit"            = "种";
+"faq_success"           = "反馈成功";
+"green_city_points"     = "绿城积分";
+"want_open"             = "想要打开";
+"auth_line"             = "已授权连接";
+"input_public_key"      = "输入公钥地址（可在对应商家平台查看）";
+"no_auth_business"      = "尚未授权商";
+"port_auth"             = "接口授权";
+"login_name"            = "登录名";
+"login_pwd"             = "登录密码";
+"auth_green_points_get" = "授权绿色积分钱包获取";
+"points_data"           = "积分数据";
+"input"                 = "Input";

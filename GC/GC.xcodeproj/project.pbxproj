@@ -196,6 +196,7 @@
 		E5A2A0322079B419000B20F0 /* TradeRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A2A02F2079B418000B20F0 /* TradeRecordViewModel.swift */; };
 		E5A2A0332079B419000B20F0 /* TradeRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A2A0302079B418000B20F0 /* TradeRecordModel.swift */; };
 		E5A2A0342079B419000B20F0 /* TradeRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A2A0312079B418000B20F0 /* TradeRecordViewController.swift */; };
+		E5D019A0207A083B001BCFC4 /* SettingLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D0199F207A083B001BCFC4 /* SettingLanguageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -394,6 +395,7 @@
 		E5A2A02F2079B418000B20F0 /* TradeRecordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeRecordViewModel.swift; sourceTree = "<group>"; };
 		E5A2A0302079B418000B20F0 /* TradeRecordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeRecordModel.swift; sourceTree = "<group>"; };
 		E5A2A0312079B418000B20F0 /* TradeRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeRecordViewController.swift; sourceTree = "<group>"; };
+		E5D0199F207A083B001BCFC4 /* SettingLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingLanguageViewController.swift; sourceTree = "<group>"; };
 		F43E3385E1A3FF1553B1E9E5 /* Pods-GC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GC/Pods-GC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -471,6 +473,7 @@
 				3CB4D118202B488200AB70B9 /* ProfileSettingPwdViewController.swift */,
 				3CB4D126202C7BFC00AB70B9 /* SettingFAQViewController.swift */,
 				3CB4D128202C821500AB70B9 /* SettingAboutViewController.swift */,
+				E5D0199F207A083B001BCFC4 /* SettingLanguageViewController.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -1221,6 +1224,7 @@
 				3CF3652B2022EB19003179E8 /* UIHelper.swift in Sources */,
 				3CB4D12D202C8E0500AB70B9 /* BlockChainViewController.swift in Sources */,
 				3CB553A3201CB73F009AC1CD /* LanguageMacro.swift in Sources */,
+				E5D019A0207A083B001BCFC4 /* SettingLanguageViewController.swift in Sources */,
 				3C1B0B50202D952C00E059BD /* CLLocationCoordinate2D+Extension.swift in Sources */,
 				3C1B0B54202D9B0100E059BD /* TextInputView.swift in Sources */,
 				A3290AEC2075FE9500874351 /* ProfileBusinessModel.swift in Sources */,

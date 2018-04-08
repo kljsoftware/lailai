@@ -12,13 +12,14 @@ class HomeTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         addChildVC(tabName: LanguageKey.tab_wallet.value, storyName: "Wallet", imageName: "wallet")
         addChildVC(tabName: LanguageKey.tab_business.value, storyName: "Business", imageName: "business")
         addChildVC(tabName: LanguageKey.tab_news.value, storyName: "News", imageName: "news")
         addChildVC(tabName: LanguageKey.tab_donate.value, storyName: "Donate", imageName: "donate")
         addChildVC(tabName: LanguageKey.tab_profile.value, storyName: "Profile", imageName: "profile")
     }
-
+    
     // 禁止转屏
     override var shouldAutorotate : Bool {
         return false

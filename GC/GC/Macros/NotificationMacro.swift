@@ -16,3 +16,7 @@ let NoticationUserLoginSuccess = Notification.Name("NoticationUserLoginSuccess")
 
 /// 通知个人信息更新
 let NoticationUserInfoUpdate = Notification.Name("NoticationUserInfoUpdate")
+
+/// 通知更新语言
+let NoticationLanguageUpdate = Notification.Name("NoticationLanguageUpdate")
+

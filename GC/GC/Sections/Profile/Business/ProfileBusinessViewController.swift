@@ -110,19 +110,15 @@ extension ProfileBusinessViewController : UITableViewDataSource, UITableViewDele
     
     // 单元(cell)选中事件
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let businessModel = viewModel.profileBusinessModel.data[indexPath.row]
+        
         if businessModel.memberPublicKey != "" {
-            let openAction = UIAlertAction(title: LanguageKey.open.value, style: .default, handler: { (action) in
-                let url = URL(string: "https://itunes.apple.com/us/app/阅卷易/id1140002355?l=zh&ls=1&mt=8")!
-                if UIApplication.shared.canOpenURL(url) {
-                    UIApplication.shared.openURL(url)
-                }
-            })
-            let cancelAction = UIAlertAction(title: LanguageKey.cancel.value, style: .cancel, handler: nil)
-            let alert = UIAlertController(title: "“绿城积分”想要打开“\(businessModel.dealerName)”", message: "", preferredStyle: .alert)
-            alert.addAction(cancelAction)
-            alert.addAction(openAction)
-            self.present(alert, animated: true, completion: nil)
+            let url = URL(string: "didtaxi://")!
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.openURL(url)
+            }
+        
         } else {
             let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "business_auth") as! BusinessAuthViewController
             vc.businessname = businessModel.dealerName

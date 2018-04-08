@@ -85,11 +85,49 @@
                         <segue destination="Wyx-fn-bgx" kind="show" id="tr2-nM-dRW"/>
                         <segue destination="6x5-fh-FHl" kind="show" id="oph-sU-dcC"/>
                         <segue destination="I0k-qS-DPm" kind="show" id="gZz-wh-eRP"/>
+                        <segue destination="ki5-8E-zpl" kind="show" id="kAq-ad-ycy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GLc-aY-kng" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1361" y="731"/>
+        </scene>
+        <!--语言-->
+        <scene sceneID="52l-BY-mhp">
+            <objects>
+                <viewController storyboardIdentifier="setting_language" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ki5-8E-zpl" userLabel="语言" customClass="SettingLanguageViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8HO-or-1Wc"/>
+                        <viewControllerLayoutGuide type="bottom" id="dNi-ma-Ch5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VzH-7o-cMG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CPM-fO-eT9">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ki5-8E-zpl" id="XAj-9d-cbW"/>
+                                    <outlet property="delegate" destination="ki5-8E-zpl" id="5ap-1u-pdg"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CPM-fO-eT9" firstAttribute="top" secondItem="8HO-or-1Wc" secondAttribute="bottom" id="Cpo-rm-UxY"/>
+                            <constraint firstItem="dNi-ma-Ch5" firstAttribute="top" secondItem="CPM-fO-eT9" secondAttribute="bottom" id="Wj0-je-vrI"/>
+                            <constraint firstAttribute="trailing" secondItem="CPM-fO-eT9" secondAttribute="trailing" id="oe2-gc-DQh"/>
+                            <constraint firstItem="CPM-fO-eT9" firstAttribute="leading" secondItem="VzH-7o-cMG" secondAttribute="leading" id="w74-UL-K8o"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="CPM-fO-eT9" id="gbm-zK-E7Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c9u-D2-4GE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3686" y="308"/>
         </scene>
         <!--帮助与反馈-->
         <scene sceneID="f8M-ZA-idN">
@@ -157,12 +195,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="faqBtn" destination="X5R-wI-bAw" id="saN-sk-RSB"/>
                         <outlet property="textView" destination="g2V-Bm-wQ8" id="kAX-4h-6Gg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bNz-uM-s6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3686" y="629"/>
+            <point key="canvasLocation" x="3686" y="1037"/>
         </scene>
         <!--授权商家-->
         <scene sceneID="eAR-SQ-xTs">
@@ -414,7 +453,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKm-cQ-bHv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3686" y="1308"/>
+            <point key="canvasLocation" x="3686" y="1824"/>
         </scene>
         <!--个人设置-->
         <scene sceneID="enM-fY-On1">
@@ -658,7 +697,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T77-j2-Bbe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3686" y="-42"/>
+            <point key="canvasLocation" x="3686" y="-432"/>
         </scene>
     </scenes>
 </document>

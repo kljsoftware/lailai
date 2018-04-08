@@ -203,6 +203,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="2tY-n9-2Al"/>
                     <connections>
+                        <outlet property="okBtn" destination="D6e-Mu-382" id="iWb-A1-os7"/>
                         <outlet property="scoreLabel" destination="Lzt-BY-URf" id="b51-bl-cYZ"/>
                     </connections>
                 </viewController>

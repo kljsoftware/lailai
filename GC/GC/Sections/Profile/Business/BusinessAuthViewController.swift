@@ -21,10 +21,10 @@ class BusinessAuthViewController: BaseViewController {
     @IBOutlet weak var authButton: UIButton!
     
     @objc private func delay() {
-        navigationItem.title = "\(businessname)接口授权"
-        userTextField.placeholder = "\(businessname)登录名"
-        pwdTextField.placeholder = "\(businessname)登录密码"
-        authButton.setTitle("授权绿色积分钱包获取\(businessname)积分数据", for: .normal)
+        navigationItem.title = "\(businessname)\(LanguageKey.port_auth.value)"
+        userTextField.placeholder = "\(businessname)\(LanguageKey.login_name.value)"
+        pwdTextField.placeholder = "\(businessname)\(LanguageKey.login_pwd.value)"
+        authButton.setTitle("\(LanguageKey.auth_green_points_get.value)\(businessname)\(LanguageKey.points_data.value)", for: .normal)
     }
 
 }

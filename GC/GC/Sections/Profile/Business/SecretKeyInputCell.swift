@@ -18,6 +18,8 @@ class SecretKeyInputCell: UITableViewCell {
     @IBOutlet weak var businessnameLabel: UILabel!
     
     @IBOutlet weak var secretKeyLabel: UILabel!
+    // 手动输入
+    @IBOutlet weak var inputBtn: UIButton!
     
     var indexPath: IndexPath!
     
@@ -27,7 +29,8 @@ class SecretKeyInputCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        inputBtn.setTitle(LanguageKey.input.value, for: .normal)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -48,7 +51,7 @@ class SecretKeyInputCell: UITableViewCell {
             secretKeyLabel.text =  model.memberPublicKey
             secretKeyLabel.font = UIFont.systemFont(ofSize: 8)
         } else {
-            secretKeyLabel.text =  "尚未授权商"
+            secretKeyLabel.text =  LanguageKey.no_auth_business.value
             secretKeyLabel.font = PINGFANG_FONT_12
         }
     }

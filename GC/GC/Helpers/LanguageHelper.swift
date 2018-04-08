@@ -32,18 +32,18 @@ class LanguageHelper {
     /// 构造
     private init() {
         
-//        /// 获取应用当前设置的语言
-//        let lang = UserDefaults.standard.value(forKey: UserDefaultLanguage) as? String
-//
-//        /// 若本地没有存储则获取系统语言作为默认语言
-//        if nil == lang {
-//            let systemLanguages = UserDefaults.standard.value(forKey: "AppleLanguages") as! NSArray
-//            let systemLanguage = systemLanguages.firstObject as! String
-//            type = getSystemLanguage(systemLanguage)
-//            UserDefaults.standard.set(type.rawValue, forKey: UserDefaultLanguage)
-//        } else {
-//            type = getSystemLanguage(lang!)
-//        }
+        /// 获取应用当前设置的语言
+        let lang = UserDefaults.standard.value(forKey: UserDefaultLanguage) as? String
+
+        /// 若本地没有存储则获取系统语言作为默认语言
+        if nil == lang {
+            let systemLanguages = UserDefaults.standard.value(forKey: "AppleLanguages") as! NSArray
+            let systemLanguage = systemLanguages.firstObject as! String
+            type = getSystemLanguage(systemLanguage)
+            UserDefaults.standard.set(type.rawValue, forKey: UserDefaultLanguage)
+        } else {
+            type = getSystemLanguage(lang!)
+        }
         guard let path = Bundle.main.path(forResource: type.rawValue, ofType: "lproj") else {
             Log.e("language \(type.rawValue) 不存在")
             return

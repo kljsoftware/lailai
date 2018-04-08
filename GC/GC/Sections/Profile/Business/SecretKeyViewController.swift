@@ -148,6 +148,6 @@ extension SecretKeyViewController : SecretKeyInputCellDelegate {
     
     func inputDidSelected(at indexPath: IndexPath) {
         curModel = viewModel.profileBusinessModel.data[indexPath.row]
-        showEditView(placeholder: "输入公钥地址（可在对应商家平台查看）")
+        showEditView(placeholder: LanguageKey.input_public_key.value)
     }
 }

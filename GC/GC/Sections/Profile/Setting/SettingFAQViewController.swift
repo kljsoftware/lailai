@@ -11,13 +11,19 @@ class SettingFAQViewController: BaseViewController {
 
     let viewModel = ProfileViewModel()
     
+    // 反馈按钮
+    @IBOutlet weak var faqBtn: UIButton!
+    
     @IBOutlet weak var textView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationItem.title = LanguageKey.faq.value
+        faqBtn.setTitle(LanguageKey.faq.value, for: .normal)
+        
         viewModel.setCompletion(onSuccess: { [weak self](resultModel) in
-            UIHelper.tip(message: "反馈成功")
+            UIHelper.tip(message: LanguageKey.faq_success.value)
             self?.navigationController?.popViewController(animated: true)
         }) { (error) in
             Log.e(error)

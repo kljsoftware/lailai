@@ -17,7 +17,7 @@ class ProfileBusinessCell: UITableViewCell {
     /// 刷新数据
     func update(model: BusinessInfoModel) {
         businessnameLabel.text = model.dealerName
-        businesslinkLabel.text =  model.memberPublicKey != "" ? "已授权连接" : ""
+        businesslinkLabel.text =  model.memberPublicKey != "" ? LanguageKey.auth_line.value : ""
     }
     
 }

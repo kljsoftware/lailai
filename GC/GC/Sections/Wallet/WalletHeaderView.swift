@@ -42,8 +42,8 @@ class WalletHeaderView: UIView {
         avatarImageView.setImage(urlStr: NetworkImgOrWeb.getUrl(name: model.userInfo.avatar), placeholderStr: "avatar", radius: 30)
         nameLabel.text = model.userInfo.name
         rankLabel.text = model.userInfo.rank
-        integralSumLabel.text = "捐赠积分数量: \(model.userInfo.integralSum)"
-        breedLabel.text = "积分种类: \(model.userInfo.breed)种"
+        integralSumLabel.text = "\(LanguageKey.balance_points.value)：\(model.userInfo.integralSum)"
+        breedLabel.text = "\(LanguageKey.points_type.value)：\(model.userInfo.breed)\(LanguageKey.kinds_unit.value)"
         pageControl.setup(total: model.adItems.count, current: 0)
     }
 }

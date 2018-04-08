@@ -27,6 +27,8 @@ class TradeRecordViewController: BaseViewController {
     
     // 积分
     @IBOutlet weak var scoreLabel: UILabel!
+    // 确定按钮
+    @IBOutlet weak var okBtn: UIButton!
     
     fileprivate let viewModel = TradeRecordViewModel()
     
@@ -35,10 +37,11 @@ class TradeRecordViewController: BaseViewController {
         super.viewDidLoad()
 
         navigationItem.title = LanguageKey.trade_record.value
+        okBtn.setTitle(LanguageKey.ok.value, for: .normal)
         
         viewModel.getContributionNum(dealerPublicKey: params!.dealerPublicKey, memberPublicKey: params!.memberPublicKey)
         viewModel.setCompletion(onSuccess: {[weak self] (resultModel) in
-            self?.scoreLabel.text = "\(self!.viewModel.tradeRecordModel.num) 分"
+            self?.scoreLabel.text = "\(self!.viewModel.tradeRecordModel.num) \(LanguageKey.points.value)"
         }) { (error) in
             Log.e(error)
         }
