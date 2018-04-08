@@ -32,6 +32,9 @@
 "save"              = "Save";
 "sendCode"          = "Send authentication code";
 "sendAgain"         = "Resend";
+"phone_null"        = "Phone number is empty or input error";
+"pwd_null"          = "The password can not be empty";
+"pwd_different"     = "Inconsistency of password input";
 
 //积分钱包
 "wallet_donate"     = "Donation";
@@ -42,6 +45,9 @@
 "hash"              = "Trading hash";
 "trade_record"      = "Transaction record";
 "my_donate_total"   = "My total amount of donations";
+"balance_points"    = "Number of donations";
+"points_type"       = "Type of points";
+"kinds_unit"        = "Type";
 
 //积分商家
 "map"       = "Map";
@@ -65,28 +71,20 @@
 "language"              = "Language";
 "faq"                   = "Help and feedback";
 "about"                 = "About";
+"faq_success"           = "Feedback success";
+"green_city_points"     = "Green city points";
+"want_open"             = "Want to open";
+"auth_line"             = "Authorized connection";
+"input_public_key"      = "Enter the public key address (which can be viewed on the corresponding merchant platform).";
+"no_auth_business"      = "Unauthorized dealer";
+"port_auth"             = "Interface authorization";
+"login_name"            = "Login name";
+"login_pwd"             = "Login password";
+"auth_green_points_get" = "Authorized green point purse access";
+"points_data"           = "Points data";
+"input"                 = "Manual input";
 
 // 通用
 "ok"        = "OK";
 "cancel"    = "Cancel";
 "open"      = "Open";
-
-// 新加的
-"phone_null"            = "手机号为空或输入错误";
-"pwd_null"              = "密码不能为空";
-"pwd_different"         = "密码输入不一致";
-"balance_points"        = "捐赠积分数量";
-"points_type"           = "积分种类";
-"kinds_unit"            = "种";
-"faq_success"           = "反馈成功";
-"green_city_points"     = "绿城积分";
-"want_open"             = "想要打开";
-"auth_line"             = "已授权连接";
-"input_public_key"      = "输入公钥地址（可在对应商家平台查看）";
-"no_auth_business"      = "尚未授权商";
-"port_auth"             = "接口授权";
-"login_name"            = "登录名";
-"login_pwd"             = "登录密码";
-"auth_green_points_get" = "授权绿色积分钱包获取";
-"points_data"           = "积分数据";
-"input"                 = "Input";

@@ -32,6 +32,9 @@
 "save"              = "保存";
 "sendCode"          = "发送验证码";
 "sendAgain"         = "重新发送";
+"phone_null"        = "手机号为空或输入错误";
+"pwd_null"          = "密码不能为空";
+"pwd_different"     = "密码输入不一致";
 
 // 积分钱包
 "wallet_donate"     = "积分捐赠";
@@ -42,7 +45,9 @@
 "hash"              = "交易哈希";
 "trade_record"      = "交易记录";
 "my_donate_total"   = "我的积分捐赠总额";
-
+"balance_points"    = "捐赠积分数量";
+"points_type"       = "积分种类";
+"kinds_unit"        = "种";
 
 // 积分商家
 "map"       = "地图";
@@ -66,19 +71,6 @@
 "language"              = "语言";
 "faq"                   = "帮助与反馈";
 "about"                 = "关于绿积分";
-
-// 其他
-"ok"        = "确定";
-"cancel"    = "取消";
-"open"      = "打开";
-
-// 新加的
-"phone_null"            = "手机号为空或输入错误";
-"pwd_null"              = "密码不能为空";
-"pwd_different"         = "密码输入不一致";
-"balance_points"        = "捐赠积分数量";
-"points_type"           = "积分种类";
-"kinds_unit"            = "种";
 "faq_success"           = "反馈成功";
 "green_city_points"     = "绿城积分";
 "want_open"             = "想要打开";
@@ -91,6 +83,11 @@
 "auth_green_points_get" = "授权绿色积分钱包获取";
 "points_data"           = "积分数据";
 "input"                 = "手动输入";
+
+// 其他
+"ok"        = "确定";
+"cancel"    = "取消";
+"open"      = "打开";
 
 //================ 未做多语言处理的字串放在下面
 
