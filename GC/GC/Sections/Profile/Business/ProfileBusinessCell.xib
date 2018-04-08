@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Arial.ttf">
+            <string>ArialMT</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -33,11 +38,27 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_forward.png" translatesAutoresizingMaskIntoConstraints="NO" id="VQ0-2e-sTE">
                         <rect key="frame" x="312" y="29" width="5" height="9"/>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGT-nb-4Ea">
+                        <rect key="frame" x="0.0" y="66.5" width="329" height="1"/>
+                        <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="7Rz-45-1Oo" customClass="OnePixelConstraint" customModule="GC" customModuleProvider="target">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="onePixelConstant">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="8R3-1P-gn3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="H9s-wl-ZhC"/>
+                    <constraint firstAttribute="trailing" secondItem="HGT-nb-4Ea" secondAttribute="trailing" id="KhY-Qm-Sit"/>
                     <constraint firstItem="8R3-1P-gn3" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Kid-ri-VqX"/>
                     <constraint firstItem="VQ0-2e-sTE" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="S1F-JA-ZCI"/>
+                    <constraint firstAttribute="bottom" secondItem="HGT-nb-4Ea" secondAttribute="bottom" id="WJP-LT-gbW"/>
+                    <constraint firstItem="HGT-nb-4Ea" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="jRP-tE-qh0"/>
                     <constraint firstAttribute="trailing" secondItem="VQ0-2e-sTE" secondAttribute="trailing" constant="12" id="kHu-J2-Gym"/>
                     <constraint firstItem="Ycr-e8-rbG" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="knL-c8-erN"/>
                     <constraint firstItem="VQ0-2e-sTE" firstAttribute="leading" secondItem="Ycr-e8-rbG" secondAttribute="trailing" constant="12" id="lZr-Dg-vgt"/>
