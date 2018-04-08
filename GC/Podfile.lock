@@ -19,7 +19,7 @@ PODS:
   - MJRefresh (3.1.15.3)
   - mob_smssdk (3.1.0):
     - MOBFoundation
-  - MOBFoundation (3.1.0)
+  - MOBFoundation (3.1.2)
   - SDWebImage (4.2.2):
     - SDWebImage/Core (= 4.2.2)
   - SDWebImage/Core (4.2.2)
@@ -42,7 +42,7 @@ SPEC CHECKSUMS:
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   mob_smssdk: 50a3c764232919f78578d911a60afc142ee7a405
-  MOBFoundation: 2d0799b6ad2677fa28e4cf5bcb1de28b34788110
+  MOBFoundation: 5c7cd437320b5252ebe0ca20283cc1ffe66f7669
   SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
