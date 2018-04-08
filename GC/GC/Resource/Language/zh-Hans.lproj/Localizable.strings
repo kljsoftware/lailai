@@ -5,6 +5,7 @@
   Created by hzg on 2018/1/27.
   Copyright © 2018年 demo. All rights reserved.
 */
+
 //首页
 "tab_wallet"   = "积分钱包";
 "tab_business" = "绿色商家";
@@ -40,13 +41,12 @@
 //积分钱包
 "wallet_donate" = "积分捐赠";
 "donate_record" = "积分捐赠记录";
-"" = "累计总额：";
-"" = "分";
-"" = "通过区块链查看";
-"" = "交易哈希";
+"total" = "累计总额：";
+"points" = "分";
+"viewbyblock" = "通过区块链查看";
+"hash" = "交易哈希";
 "trade_record" = "交易记录";
-"" = "我的积分捐赠总额";
-
+"my_donate_total" = "我的积分捐赠总额";
 
 //积分商家
 "map"       = "地图";
@@ -74,5 +74,7 @@
 "language"              = "语言";
 "faq"                   = "帮助与反馈";
 "about"                 = "关于绿积分";
+
+//================ 未做多语言处理的字串放在下面
 
 
