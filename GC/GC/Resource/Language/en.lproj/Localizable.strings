@@ -17,6 +17,7 @@
 "splash_skip"       = "Skip";
 "register"          = "Register";
 "pwd"               = "Password";
+"inut_pwd_old"      = "Input old password";
 "input_pwd"         = "Input password";
 "input_pwd_again"   = "Enter the password again";
 "phoneNum"          = "Phone Number";
@@ -24,6 +25,7 @@
 "nextStep"          = "Next step";
 "login"             = "Sign in";
 "logout"            = "Sign out";
+"back_login"        = "Back to login";
 "rememberpwd"       = "Remember the password";
 "forgotpwd"         = "Forget the account or password";
 "settingpwd"        = "Set the password";
@@ -32,17 +34,43 @@
 "sendAgain"         = "Resend";
 
 // 通用
+"ok"        = "OK";
+"cancel"    = "Cancel";
+"open"      = "Open";
 
 //积分钱包
 "wallet_donate" = "Donation";
+"donate_record" = "Donation record";
+"total" = "Cumulative total：";
+"points" = "points";
+"viewbyblock" = "View by block chain";
+"hash" = "Trading hash";
+"trade_record" = "Transaction record";
+"my_donate_total" = "My total amount of donations";
 
 //积分商家
 "map"       = "Map";
 "balance"   = "Endowment amount";
+"points"    = "Points：";
 
 //绿色新闻
 
 //公益捐赠
 
 // 我
-"profile_setting" = "Personal settings";
+"setting"               = "Settings";
+"accept_busniss"        = "Authorized merchant";
+"secret_key_address"    = "The secret key";
+"blockchain"            = "Block chain";
+"profile_setting"       = "Personal settings";
+"photo"                 = "Photo";
+"nick"                  = "Nickname";
+"gender"                = "Gender";
+"region"                = "Region";
+"email"                 = "Email";
+"desc"                  = "Personal description";
+"man"                   = "Male";
+"woman"                 = "Female";
+"language"              = "Language";
+"faq"                   = "Help and feedback";
+"about"                 = "About";
