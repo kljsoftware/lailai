@@ -36,6 +36,18 @@ DEPENDENCIES:
   - SnapKit (= 3.2.0)
   - Toast-Swift (= 3.0.1)
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - MBProgressHUD
+    - MJExtension
+    - MJRefresh
+    - mob_smssdk
+    - MOBFoundation
+    - SDWebImage
+    - SnapKit
+    - Toast-Swift
+
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
@@ -49,4 +61,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: b37bfba120d3370e0a850132bdd23754507b2d8b
 
-COCOAPODS: 1.4.0.beta.2
+COCOAPODS: 1.5.0

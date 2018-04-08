@@ -966,7 +966,6 @@
 				3CFD84CD201C982E00F9E7E5 /* Frameworks */,
 				3CFD84CE201C982E00F9E7E5 /* Resources */,
 				4D138BF8B1019D2B6FAA98E0 /* [CP] Embed Pods Frameworks */,
-				A666C30AFDD6743D897F252E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1126,24 +1125,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GC/Pods-GC-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A666C30AFDD6743D897F252E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-GC/Pods-GC-resources.sh",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GC/Pods-GC-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F1502FED886835C1F7320915 /* [CP] Check Pods Manifest.lock */ = {
