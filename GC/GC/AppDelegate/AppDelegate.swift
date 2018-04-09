@@ -15,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - UIApplicationDelegate
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        IQKeyboardManager.shared().isEnableAutoToolbar = false
+        
         setup()
         addons()
         registerNotification()

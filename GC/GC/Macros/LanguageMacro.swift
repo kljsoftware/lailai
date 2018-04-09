@@ -37,15 +37,22 @@ enum LanguageKey : String {
     case save               // 保存
     case sendCode           // 发送验证码
     case sendAgain          // 重新发送
+    case phone_null         // 手机号为空或输入错误
+    case pwd_null           // 密码不能为空
+    case pwd_different      // 密码输入不一致
     
     /// 积分钱包
     case wallet_donate      // 积分捐赠
+    case donate_record      // 积分捐赠记录
     case total              // 累计总额
     case points_unit        // 分
     case viewbyblock        // 通过区块链查看
     case hash               // 交易哈希
     case trade_record       // 交易记录
     case my_donate_total    // 我的积分捐赠总额
+    case balance_points     // 捐赠积分数量
+    case points_type        // 积分种类
+    case kinds_unit         // 种
     
     /// 积分商家
     case map                // 地图
@@ -67,26 +74,12 @@ enum LanguageKey : String {
     case man                // 男
     case woman              // 女
     case language           // 语言
-    case faq                // 帮助与反馈
+    case faq                // 反馈
     case about              // 关于绿积分
-
-    case donate_record      // 积分捐赠记录
-    
-    /// 通用
-    case ok                 // 确定
-    case cancel             // 取消
-    case open               // 打开
-    
-    // 新加的
-    case phone_null         // 手机号为空或输入错误
-    case pwd_null           // 密码不能为空
-    case pwd_different      // 密码输入不一致
-    case balance_points     // 捐赠积分数量
-    case points_type        // 积分种类
-    case kinds_unit         // 种
-    case faq_success        // 反馈成功
-    case green_city_points  // 绿城积分
-    case want_open          // 想要打开
+    case faq_words_10       // 反馈字数应不小于10字
+    case faq_success        // 感谢反馈，我们将及时处理！
+//    case green_city_points  // 绿城积分
+//    case want_open          // 想要打开
     case auth_line          // 已授权连接
     case input_public_key   // 输入公钥地址（可在对应商家平台查看）
     case no_auth_business   // 尚未授权商
@@ -95,9 +88,12 @@ enum LanguageKey : String {
     case login_pwd          // 登录密码
     case auth_green_points_get // 授权绿色积分钱包获取
     case points_data        // 积分数据
-    case chinese            // 简体中文
-    case english            // 英语
     case input              // 手动输入
+    
+    /// 其他
+    case ok                 // 确定
+    case cancel             // 取消
+    case open               // 打开
     
     
     /// 获取对应的语言字串

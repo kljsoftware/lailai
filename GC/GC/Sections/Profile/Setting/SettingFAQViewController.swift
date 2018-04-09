@@ -24,7 +24,9 @@ class SettingFAQViewController: BaseViewController {
         
         viewModel.setCompletion(onSuccess: { [weak self](resultModel) in
             UIHelper.tip(message: LanguageKey.faq_success.value)
-            self?.navigationController?.popViewController(animated: true)
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: { [weak self] in
+                self?.navigationController?.popViewController(animated: true)
+            })
         }) { (error) in
             Log.e(error)
             UIHelper.tip(message: error)
@@ -38,9 +40,10 @@ class SettingFAQViewController: BaseViewController {
     }
     
     @IBAction func onFeedBackButtonClicked(_ sender: UIButton) {
-        if !textView.text.isBlank() {
-            viewModel.feedBack(info: textView.text)
+        if textView.text.count < 10 {
+            UIHelper.tip(message: LanguageKey.faq_words_10.value)
         }
+        viewModel.feedBack(info: textView.text)
     }
 }
 

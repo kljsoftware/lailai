@@ -101,4 +101,24 @@ class ProfileSettingPwdViewController: BaseViewController {
     @IBAction func onSaveButtonClicked(_ sender: UIButton) {
         save()
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        hideKeyboard()
+    }
+    
+    fileprivate func hideKeyboard() {
+        oldPwdTF.resignFirstResponder()
+        newPwdTF.resignFirstResponder()
+        newPwdTF1.resignFirstResponder()
+    }
 }
+
+// MARK: - UITextFieldDelegate
+extension ProfileSettingPwdViewController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        hideKeyboard()
+        return true
+    }
+}
+

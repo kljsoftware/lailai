@@ -69,11 +69,12 @@
 "man"                   = "Male";
 "woman"                 = "Female";
 "language"              = "Language";
-"faq"                   = "Help and feedback";
+"faq"                   = "Feedback";
 "about"                 = "About";
-"faq_success"           = "Feedback success";
-"green_city_points"     = "Green city points";
-"want_open"             = "Want to open";
+"faq_words_10"          = "Feedback words should not be less than 10 words";
+"faq_success"           = "Thank you for your feedback, we will handle it in a timely manner!";
+//"green_city_points"     = "Green city points";
+//"want_open"             = "Want to open";
 "auth_line"             = "Authorized connection";
 "input_public_key"      = "Enter the public key address (which can be viewed on the corresponding merchant platform).";
 "no_auth_business"      = "Unauthorized dealer";

@@ -197,6 +197,7 @@
 		E5A2A0332079B419000B20F0 /* TradeRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A2A0302079B418000B20F0 /* TradeRecordModel.swift */; };
 		E5A2A0342079B419000B20F0 /* TradeRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A2A0312079B418000B20F0 /* TradeRecordViewController.swift */; };
 		E5D019A0207A083B001BCFC4 /* SettingLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D0199F207A083B001BCFC4 /* SettingLanguageViewController.swift */; };
+		E5DAEE41207B40C900AE4B90 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DAEE40207B40C900AE4B90 /* DatePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -396,6 +397,7 @@
 		E5A2A0302079B418000B20F0 /* TradeRecordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeRecordModel.swift; sourceTree = "<group>"; };
 		E5A2A0312079B418000B20F0 /* TradeRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeRecordViewController.swift; sourceTree = "<group>"; };
 		E5D0199F207A083B001BCFC4 /* SettingLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingLanguageViewController.swift; sourceTree = "<group>"; };
+		E5DAEE40207B40C900AE4B90 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		F43E3385E1A3FF1553B1E9E5 /* Pods-GC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GC/Pods-GC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -629,6 +631,7 @@
 				3C1B0B52202D9B0100E059BD /* TextInputView.swift */,
 				3C1B0B51202D9B0100E059BD /* TextInputView.xib */,
 				3C374619201DBA14000FD752 /* BorderView.swift */,
+				E5DAEE40207B40C900AE4B90 /* DatePickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -966,6 +969,7 @@
 				3CFD84CD201C982E00F9E7E5 /* Frameworks */,
 				3CFD84CE201C982E00F9E7E5 /* Resources */,
 				4D138BF8B1019D2B6FAA98E0 /* [CP] Embed Pods Frameworks */,
+				774AAA13ECDDE3E4396C8C64 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1105,6 +1109,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GC/Pods-GC-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
@@ -1115,6 +1120,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
@@ -1125,6 +1131,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GC/Pods-GC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		774AAA13ECDDE3E4396C8C64 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GC/Pods-GC-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F1502FED886835C1F7320915 /* [CP] Check Pods Manifest.lock */ = {
@@ -1203,6 +1224,7 @@
 				3CB4D127202C7BFC00AB70B9 /* SettingFAQViewController.swift in Sources */,
 				3CFD84F4201C9B5900F9E7E5 /* AppDelegate.swift in Sources */,
 				3CF3652B2022EB19003179E8 /* UIHelper.swift in Sources */,
+				E5DAEE41207B40C900AE4B90 /* DatePickerView.swift in Sources */,
 				3CB4D12D202C8E0500AB70B9 /* BlockChainViewController.swift in Sources */,
 				3CB553A3201CB73F009AC1CD /* LanguageMacro.swift in Sources */,
 				E5D019A0207A083B001BCFC4 /* SettingLanguageViewController.swift in Sources */,
@@ -1413,7 +1435,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guall.pointswallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "821afa54-d1cd-4697-94c5-bb89da25bf4b";
+				PROVISIONING_PROFILE = "58cbb2c3-de3c-4964-ba86-d4cdf6aa163a";
 				PROVISIONING_PROFILE_SPECIFIER = PointsWallet;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/GC/Config/GC-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";

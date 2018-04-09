@@ -142,6 +142,21 @@ class WalletViewController: UIViewController {
         headerView.snp.makeConstraints { (maker) in
             maker.left.top.right.bottom.equalTo(containerView)
         }
+        headerView.didSelectedInfo = { [weak self] in
+            MBProgressHUD.showAdded(to: self!.view, animated: true)
+            let viewModel = ProfileViewModel()
+            viewModel.getUserInfo()
+            viewModel.setCompletion(onSuccess: { [weak self](resultModel) in
+                MBProgressHUD.hide(for: self!.view, animated: true)
+                let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "ProfileDetails") as! ProfileDetailsViewController
+                vc.userInfo = viewModel.userInfo
+                self?.navigationController?.pushViewController(vc, animated: true)
+                
+            }, onFailure: { (error) in
+                MBProgressHUD.hide(for: self!.view, animated: true)
+                UIHelper.tip(message: error)
+            })
+        }
         return containerView
     }
 }

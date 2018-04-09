@@ -69,11 +69,12 @@
 "man"                   = "男";
 "woman"                 = "女";
 "language"              = "语言";
-"faq"                   = "帮助与反馈";
+"faq"                   = "反馈";
 "about"                 = "关于绿积分";
-"faq_success"           = "反馈成功";
-"green_city_points"     = "绿城积分";
-"want_open"             = "想要打开";
+"faq_words_10"          = "反馈字数应不小于10字";
+"faq_success"           = "感谢反馈，我们将及时处理！";
+//"green_city_points"     = "绿城积分";
+//"want_open"             = "想要打开";
 "auth_line"             = "已授权连接";
 "input_public_key"      = "输入公钥地址（可在对应商家平台查看）";
 "no_auth_business"      = "尚未授权商";

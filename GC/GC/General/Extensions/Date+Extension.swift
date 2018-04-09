@@ -11,10 +11,13 @@ import Foundation
 /// 日期
 extension Date {
     
-    /// 格式：例如：yyyy-MM-dd， HH:mm:ss
-    func getTime(format:String) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = format
-        return formatter.string(from: self)
+    /// 时间字符串转换为时间
+    static func convert(from dateStr: String, format: String) -> Date {
+        let dateFormatter           = DateFormatter()
+        dateFormatter.locale        = NSLocale.current
+        dateFormatter.timeZone      = NSTimeZone.local
+        dateFormatter.dateFormat    = format
+        let date = dateFormatter.date(from: dateStr)
+        return date!
     }
 }

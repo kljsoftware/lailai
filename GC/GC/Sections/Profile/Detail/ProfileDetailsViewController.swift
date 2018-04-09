@@ -173,16 +173,17 @@ extension ProfileDetailsViewController : UITableViewDataSource, UITableViewDeleg
         let type = ProfileDetailsCellType(rawValue: indexPath.row)!
         let labelName = getLabelName(type: type)
         let content = dict[type] ?? ""
-        switch type {
-        case .avatar:
+        if type == .avatar {
             let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileDetailAvatarCell", for: indexPath) as! ProfileDetailAvatarCell
             cell.update(name: labelName, content: NetworkImgOrWeb.getUrl(name: content))
             return cell
-        case .desc:
+            
+        } else if type == .desc || type == .tel {
             let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileDetailDescCell", for: indexPath) as! ProfileDetailDescCell
             cell.update(name: labelName, content: content)
             return cell
-        default:
+            
+        } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileDetailOtherCell", for: indexPath) as! ProfileDetailOtherCell
             cell.update(name: labelName, content: content)
             return cell
@@ -204,35 +205,37 @@ extension ProfileDetailsViewController : UITableViewDataSource, UITableViewDeleg
     /// 单元点击
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let type = ProfileDetailsCellType(rawValue: indexPath.row)!
-        switch type {
-        case .avatar:
-            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-                let picker = UIImagePickerController()
-                picker.delegate = self
-                picker.allowsEditing = true
-                picker.sourceType = .savedPhotosAlbum
-                self.present(picker, animated: true, completion:nil)
-            }
-        case .gender:
-            ActionSheet.show(items: [LanguageKey.man.value, LanguageKey.woman.value], selectedIndex: {[weak self] (index) in
-                guard let wself = self else {
-                    return
+        if type != .tel {
+            switch type {
+            case .avatar:
+                if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+                    let picker = UIImagePickerController()
+                    picker.delegate = self
+                    picker.allowsEditing = true
+                    picker.sourceType = .savedPhotosAlbum
+                    self.present(picker, animated: true, completion:nil)
                 }
-                wself.dict[wself.type] = index == 0 ? LanguageKey.man.value : LanguageKey.woman.value
-                wself.tableView.reloadData()
-            })
-        case .region:
-            let arr         = (dict[type] ?? "").components(separatedBy: "-")
-            let city        = arr.count > 1 ? arr[1] : ""
-            let district    = arr.count > 2 ? arr[2] : ""
-            AreaPickerView.show(province: arr.first, city: city, district: district) { [weak self](province, city, district) in
-                self?.dict[self!.type] = "\(province)-\(city)" + (district != nil ? "-\(district!)" : "")
-                self?.tableView.reloadData()
+            case .gender:
+                ActionSheet.show(items: [LanguageKey.man.value, LanguageKey.woman.value], selectedIndex: {[weak self] (index) in
+                    guard let wself = self else {
+                        return
+                    }
+                    wself.dict[wself.type] = index == 0 ? LanguageKey.man.value : LanguageKey.woman.value
+                    wself.tableView.reloadData()
+                })
+            case .region:
+                let arr         = (dict[type] ?? "").components(separatedBy: "-")
+                let city        = arr.count > 1 ? arr[1] : ""
+                let district    = arr.count > 2 ? arr[2] : ""
+                AreaPickerView.show(province: arr.first, city: city, district: district) { [weak self](province, city, district) in
+                    self?.dict[self!.type] = "\(province)-\(city)" + (district != nil ? "-\(district!)" : "")
+                    self?.tableView.reloadData()
+                }
+            default:
+                showEditView(text: dict[type] ?? "", placeholer: getPlaceholder(type: type))
             }
-        default:
-            showEditView(text: dict[type] ?? "", placeholer: getPlaceholder(type: type))
+            self.type = type
         }
-        self.type = type
     }
 }
 

@@ -30,6 +30,9 @@ class WalletHeaderView: UIView {
     /// 页码
     @IBOutlet weak var pageControl: PageControl!
     
+    /// 点击个人信息闭包
+    var didSelectedInfo: (() -> Void)?
+    
     /// 更新
     func update(model:WalletBaseResultModel) {
         bannerView.setup(banners: model.adItems)
@@ -45,5 +48,12 @@ class WalletHeaderView: UIView {
         integralSumLabel.text = "\(LanguageKey.balance_points.value)：\(model.userInfo.integralSum)"
         breedLabel.text = "\(LanguageKey.points_type.value)：\(model.userInfo.breed)\(LanguageKey.kinds_unit.value)"
         pageControl.setup(total: model.adItems.count, current: 0)
+    }
+    
+    /// 点击个人信息
+    @IBAction func tapInfoGes(_ sender: UITapGestureRecognizer) {
+        if didSelectedInfo != nil {
+            didSelectedInfo!()
+        }
     }
 }
