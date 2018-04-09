@@ -14,5 +14,6 @@ target 'GC' do
   pod 'Toast-Swift', '3.0.1'
   pod 'mob_smssdk'
   pod 'MBProgressHUD', '1.1.0'
+  pod 'IQKeyboardManager', '~> 5.0.8'
 
 end
