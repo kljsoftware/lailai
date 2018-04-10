@@ -11,14 +11,15 @@ private let avatarHeight:CGFloat = 84, otherCellHeight:CGFloat = 50, descCellHei
 
 /// 单元类型
 private enum ProfileDetailsCellType : Int {
-    case avatar // 头像
-    case nick   // 昵称
-    case tel    // 手机号
-    case gender // 性别
-    case region // 地区
-    case email  // 邮箱
-    case desc   // 个人描述
-    static var count = 7
+    case avatar     // 头像
+    case nick       // 昵称
+    case tel        // 手机号
+    case gender     // 性别
+    case region     // 地区
+    case email      // 邮箱
+    case birthday   // 生日
+    case desc       // 个人描述
+    static var count = 8
 }
 
 class ProfileDetailsViewController: BaseViewController {
@@ -81,6 +82,7 @@ class ProfileDetailsViewController: BaseViewController {
         reqModel.city       = dict[.region] ?? ""
         reqModel.tel        = dict[.tel] ?? ""
         reqModel.logo       = dict[.avatar] ?? ""
+        reqModel.birthday   = dict[.birthday] ?? ""
         reqModel.desc       = dict[.desc] ?? ""
         viewModel.modityUserInfo(info: reqModel)
     }
@@ -93,6 +95,7 @@ class ProfileDetailsViewController: BaseViewController {
         dict[.gender]   = userInfo.sex == 1 ? "男" : "女"
         dict[.region]   = userInfo.city
         dict[.email]    = userInfo.email
+        dict[.birthday] = userInfo.birthday
         dict[.desc]     = userInfo.desc
         tableView.reloadData()
     }
@@ -125,15 +128,17 @@ class ProfileDetailsViewController: BaseViewController {
             labelName = LanguageKey.photo.value
         case .nick:
             labelName = LanguageKey.nick.value
-        case .tel:    // 手机号
+        case .tel:      // 手机号
             labelName = LanguageKey.phoneNum.value
-        case .gender: // 性别
+        case .gender:   // 性别
             labelName = LanguageKey.gender.value
-        case .region: // 地区
+        case .region:   // 地区
             labelName = LanguageKey.region.value
-        case .email:  // 邮箱
+        case .email:    // 邮箱
             labelName = LanguageKey.email.value
-        case .desc:   // 个人描述
+        case .birthday: // 生日
+            labelName = LanguageKey.birthday.value
+        case .desc:     // 个人描述
             labelName = LanguageKey.desc.value
         }
         return labelName
@@ -145,10 +150,6 @@ class ProfileDetailsViewController: BaseViewController {
         switch type {
         case .nick:
             placeholder = "昵称"
-        case .tel:    // 手机号
-            placeholder = "手机号"
-        case .region: // 地区
-            placeholder = "地区"
         case .email:  // 邮箱
             placeholder = "邮箱"
         case .desc:   // 个人描述
@@ -231,6 +232,12 @@ extension ProfileDetailsViewController : UITableViewDataSource, UITableViewDeleg
                     self?.dict[self!.type] = "\(province)-\(city)" + (district != nil ? "-\(district!)" : "")
                     self?.tableView.reloadData()
                 }
+            case .birthday:
+                let curDate = Date.convert(from: dict[type] ?? "", format: "yyyy-MM-dd")
+                DatePickerView.show(currentDate: curDate, dateStyle: .YearMonthDay, selectedDateClosure: { [weak self](date) in
+                    self?.dict[self!.type] = date.convert(format: "yyyy-MM-dd")
+                    self?.tableView.reloadData()
+                })
             default:
                 showEditView(text: dict[type] ?? "", placeholer: getPlaceholder(type: type))
             }

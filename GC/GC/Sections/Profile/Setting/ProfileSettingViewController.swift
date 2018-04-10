@@ -14,10 +14,11 @@ private enum ProfileSettingType : Int {
     case pwd
     case language
     case faq
+    case version
     case about
     case quit
     
-    static var count = 5
+    static var count = 6
 }
 
 class ProfileSettingViewController: BaseViewController {
@@ -33,21 +34,24 @@ class ProfileSettingViewController: BaseViewController {
         automaticallyAdjustsScrollViewInsets = false
         tableView.register(UINib(nibName: "ProfielSettingCell", bundle: nil), forCellReuseIdentifier: "kProfielSettingCell")
         tableView.register(UINib(nibName: "ProfileQuitCell", bundle: nil), forCellReuseIdentifier: "kProfileQuitCell")
+        tableView.register(UINib(nibName: "ProfileDetailDescCell", bundle: nil), forCellReuseIdentifier: "kProfileDetailDescCell")
     }
 
     // MARK: - private methods
     fileprivate func getLabelName(type:ProfileSettingType) -> String {
         var labelName = ""
         switch type {
-        case .pwd:
+        case .pwd:      // 密码
             labelName = LanguageKey.pwd.value
-        case .language:
+        case .language: // 语言
             labelName = LanguageKey.language.value
         case .faq:      // 手机号
             labelName = LanguageKey.faq.value
-        case .about:    // 性别
+        case .version:  // 版本号
+            labelName = LanguageKey.version.value
+        case .about:    // 关于绿积分
             labelName = LanguageKey.about.value
-        case .quit:     // 地区
+        case .quit:     // 退出
             labelName = LanguageKey.logout.value
         }
         return labelName
@@ -66,6 +70,12 @@ extension ProfileSettingViewController : UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let type = ProfileSettingType(rawValue: indexPath.row)!
         switch type {
+        case .version:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileDetailDescCell", for: indexPath) as! ProfileDetailDescCell
+            // 当前版本号
+            let version = "V " + (Bundle.main.infoDictionary![VERSION_STRING] as! String)
+            cell.update(name: getLabelName(type: type), content: version)
+            return cell
         case .quit:
             let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileQuitCell", for: indexPath) as! ProfileQuitCell
             return cell
@@ -103,6 +113,8 @@ extension ProfileSettingViewController : UITableViewDataSource, UITableViewDeleg
             navigationController?.pushViewController(vc, animated: true)
         case .quit:
             NotificationCenter.default.post(name: NoticationUserLogout, object: nil)
+        default:
+            break
         }
     }
 }

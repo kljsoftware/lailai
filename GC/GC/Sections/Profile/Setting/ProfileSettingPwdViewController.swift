@@ -65,7 +65,7 @@ class ProfileSettingPwdViewController: BaseViewController {
         let oldpwd = UserDefaults.standard.value(forKey: UserDefaultUserPwd) as? String ?? ""
         
         if oldPwdTF.text != oldpwd {
-            UIHelper.tip(message: "旧密码错误")
+            UIHelper.tip(message: LanguageKey.pwd_old_error.value)
             return
         }
         
@@ -90,7 +90,7 @@ class ProfileSettingPwdViewController: BaseViewController {
                 return
             }
             UserDefaults.standard.set(wself.newPwdTF.text!, forKey: UserDefaultUserPwd)
-            UIHelper.tip(message: "修改成功")
+            UIHelper.tip(message: LanguageKey.modify_success.value)
             wself.navigationController?.popViewController(animated: true)
         }) { (error) in
             UIHelper.tip(message: error)

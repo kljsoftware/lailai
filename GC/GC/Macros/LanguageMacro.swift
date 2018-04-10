@@ -70,14 +70,18 @@ enum LanguageKey : String {
     case gender             // 性别
     case region             // 地区
     case email              // 邮箱
+    case birthday           // 生日
     case desc               // 个人描述
     case man                // 男
     case woman              // 女
     case language           // 语言
     case faq                // 反馈
+    case version            // 版本号
     case about              // 关于绿积分
     case faq_words_10       // 反馈字数应不小于10字
     case faq_success        // 感谢反馈，我们将及时处理！
+    case modify_success     // 修改成功
+    case pwd_old_error      // 旧密码错误
 //    case green_city_points  // 绿城积分
 //    case want_open          // 想要打开
     case auth_line          // 已授权连接

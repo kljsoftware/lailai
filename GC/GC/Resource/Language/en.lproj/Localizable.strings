@@ -40,7 +40,7 @@
 "wallet_donate"     = "Donation";
 "donate_record"     = "Donation record";
 "total"             = "Cumulative total";
-"points"            = "points";
+"points_unit"       = "Points";
 "viewbyblock"       = "View by block chain";
 "hash"              = "Trading hash";
 "trade_record"      = "Transaction record";
@@ -65,14 +65,18 @@
 "gender"                = "Gender";
 "region"                = "Region";
 "email"                 = "Email";
+"birthday"              = "Birthday";
 "desc"                  = "Personal description";
 "man"                   = "Male";
 "woman"                 = "Female";
 "language"              = "Language";
 "faq"                   = "Feedback";
+"version"               = "Version";
 "about"                 = "About";
 "faq_words_10"          = "Feedback words should not be less than 10 words";
 "faq_success"           = "Thank you for your feedback, we will handle it in a timely manner!";
+"modify_success"        = "Modification succeeded";
+"pwd_old_error"         = "Old password error";
 //"green_city_points"     = "Green city points";
 //"want_open"             = "Want to open";
 "auth_line"             = "Authorized connection";

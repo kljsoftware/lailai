@@ -68,6 +68,7 @@ class DatePickerView: UIView {
         
         super.init(frame: CGRect(x: 0, y: 0, width: DEVICE_SCREEN_WIDTH, height: DEVICE_SCREEN_HEIGHT))
         self.currentDate = currentDate ?? Date()
+        self.dateStyle = dateStyle
         self.dateFormatter = ["yyyy-MM-dd HH:mm", "MM-dd HH:mm", "yyyy-MM-dd", "yyyy-MM", "MM-dd", "HH:mm"][dateStyle.rawValue]
         self.selectedDateClosure = selectedDateClosure
         
@@ -88,16 +89,16 @@ class DatePickerView: UIView {
     private func configData() {
         
         for i in MINYEAR ... MAXYEAR {
-            yearArr.append("\(i)")
+            yearArr.append(String(format: "%02d", i))
         }
         for i in 0 ..< 60 {
             if i > 0 && i <= 12 {
-                monthArr.append("\(i)")
+                monthArr.append(String(format: "%02d", i))
             }
             if i < 24 {
-                hourArr.append("\(i)")
+                hourArr.append(String(format: "%02d", i))
             }
-            minuteArr.append("\(i)")
+            minuteArr.append(String(format: "%02d", i))
         }
         maxDate = Date.convert(from: "2099-12-31 23:59", format: "yyyy-MM-dd HH:mm")
         minDate = Date.convert(from: "1000-01-01 00:00", format: "yyyy-MM-dd HH:mm")
@@ -109,10 +110,10 @@ class DatePickerView: UIView {
         
         setDayData(from: Calendar.current.component(.day, from: date), month: Calendar.current.component(.month, from: date))
         
-        yearIndex = Calendar.current.component(.day, from: date) - MINYEAR
-        monthIndex = Calendar.current.component(.month, from: date) - 1
-        dayIndex = Calendar.current.component(.day, from: date) - 1
-        hourIndex = Calendar.current.component(.hour, from: date)
+        yearIndex   = Calendar.current.component(.year, from: date) - MINYEAR
+        monthIndex  = Calendar.current.component(.month, from: date) - 1
+        dayIndex    = Calendar.current.component(.day, from: date) - 1
+        hourIndex   = Calendar.current.component(.hour, from: date)
         minuteIndex = Calendar.current.component(.minute, from: date)
         
         var indexArr = [Int]()
@@ -252,13 +253,10 @@ extension DatePickerView: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         switch dateStyle {
         case .YearMonthDayHourMinute:
-//            [self addLabelWithName:@[@"年",@"月",@"日",@"时",@"分"]];
             return 5
         case .MonthDayHourMinute:
-//            [self addLabelWithName:@[@"月",@"日",@"时",@"分"]];
             return 4
         case .YearMonthDay:
-//            [self addLabelWithName:@[@"年",@"月",@"日"]];
             return 3
         default:
             return 2
@@ -386,16 +384,16 @@ extension DatePickerView: UIPickerViewDelegate, UIPickerViewDataSource {
         switch dateStyle {
         case .YearMonthDayHourMinute:
             if component == 0 {
-                yearIndex = row
+                yearIndex   = row
             }
             if component == 1 {
-                monthIndex = row
+                monthIndex  = row
             }
             if component == 2 {
-                dayIndex = row
+                dayIndex    = row
             }
             if component == 3 {
-                hourIndex = row
+                hourIndex   = row
             }
             if component == 4 {
                 minuteIndex = row
@@ -408,30 +406,30 @@ extension DatePickerView: UIPickerViewDelegate, UIPickerViewDataSource {
             }
         case .MonthDayHourMinute:
             if component == 1 {
-                dayIndex = row
+                dayIndex    = row
             }
             if component == 2 {
-                hourIndex = row
+                hourIndex   = row
             }
             if component == 3 {
                 minuteIndex = row
             }
             if component == 0 {
-                setDayData(from: Int(yearArr[yearIndex])!, month: Int(monthArr[monthIndex])!)
+                monthIndex  = row
+                setDayData(from: Calendar.current.component(.year, from: Date()), month: Int(monthArr[monthIndex])!)
                 if dayArr.count - 1 < dayIndex {
                     dayIndex = dayArr.count - 1
                 }
             }
-            setDayData(from: Int(yearArr[yearIndex])!, month: Int(monthArr[monthIndex])!)
         case .YearMonthDay:
             if component == 0 {
-                yearIndex = row
+                yearIndex   = row
             }
             if component == 1 {
-                monthIndex = row
+                monthIndex  = row
             }
             if component == 2 {
-                dayIndex = row
+                dayIndex    = row
             }
             if component == 0 || component == 1 {
                 setDayData(from: Int(yearArr[yearIndex])!, month: Int(monthArr[monthIndex])!)
@@ -441,25 +439,25 @@ extension DatePickerView: UIPickerViewDelegate, UIPickerViewDataSource {
             }
         case .YearMonth:
             if component == 0 {
-                yearIndex = row;
+                yearIndex   = row
             }
             if component == 1 {
-                monthIndex = row
+                monthIndex  = row
             }
         case .MonthDay:
             if component == 1 {
-                dayIndex = row
+                dayIndex    = row
             }
             if component == 0 {
-                setDayData(from: Int(yearArr[yearIndex])!, month: Int(monthArr[monthIndex])!)
+                monthIndex  = row
+                setDayData(from: Calendar.current.component(.year, from: Date()), month: Int(monthArr[monthIndex])!)
                 if dayArr.count - 1 < dayIndex {
                     dayIndex = dayArr.count - 1
                 }
             }
-            setDayData(from: Int(yearArr[yearIndex])!, month: Int(monthArr[monthIndex])!)
         case .HourMinute:
             if component == 0 {
-                hourIndex = row
+                hourIndex   = row
             }
             if component == 1 {
                 minuteIndex = row
@@ -467,14 +465,14 @@ extension DatePickerView: UIPickerViewDelegate, UIPickerViewDataSource {
         }
         pickerView.reloadAllComponents()
         
-        let dateStr = yearArr[yearIndex] + monthArr[monthIndex] + dayArr[dayIndex] + hourArr[hourIndex] + minuteArr[minuteIndex]
+        let year = dateStyle == .MonthDayHourMinute || dateStyle == .MonthDay ? "\(Calendar.current.component(.year, from: Date()))" : yearArr[yearIndex]
+        let dateStr = year + "-" + monthArr[monthIndex] + "-" + dayArr[dayIndex] + " " + hourArr[hourIndex] + ":" + minuteArr[minuteIndex]
         if currentDate < minDate {
             currentDate = minDate
-            scrollTo(date: currentDate, animated: true)
         } else if currentDate > maxDate {
             currentDate = maxDate
         } else {
-            currentDate = Date.convert(from: dateStr, format: dateFormatter)
+            currentDate = Date.convert(from: dateStr, format: "yyyy-MM-dd HH:mm")
         }
         scrollTo(date: currentDate, animated: true)
     }

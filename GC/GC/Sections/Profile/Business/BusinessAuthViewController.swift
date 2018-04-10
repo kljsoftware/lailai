@@ -27,4 +27,21 @@ class BusinessAuthViewController: BaseViewController {
         authButton.setTitle("\(LanguageKey.auth_green_points_get.value)\(businessname)\(LanguageKey.points_data.value)", for: .normal)
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        hideKeyboard()
+    }
+    
+    fileprivate func hideKeyboard() {
+        userTextField.resignFirstResponder()
+        pwdTextField.resignFirstResponder()
+    }
+}
+
+// MARK: - UITextFieldDelegate
+extension BusinessAuthViewController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        hideKeyboard()
+        return true
+    }
 }

@@ -24,15 +24,15 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ql9-kr-JAF">
-                        <rect key="frame" x="12" y="13" width="37" height="17"/>
-                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="12" y="13.5" width="34.5" height="16"/>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6EE-v9-iPv">
-                        <rect key="frame" x="271" y="13" width="37" height="17"/>
-                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="273.5" y="13.5" width="34.5" height="16"/>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LdU-C5-wjc">

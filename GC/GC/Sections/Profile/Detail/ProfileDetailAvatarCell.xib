@@ -26,7 +26,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFH-3G-H2x">
                         <rect key="frame" x="12" y="41.5" width="37" height="17"/>
                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_forward.png" translatesAutoresizingMaskIntoConstraints="NO" id="sCY-a6-cC9">

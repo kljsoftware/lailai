@@ -40,7 +40,7 @@
 "wallet_donate"     = "积分捐赠";
 "donate_record"     = "积分捐赠记录";
 "total"             = "累计总额";
-"points"            = "分";
+"points_unit"       = "分";
 "viewbyblock"       = "通过区块链查看";
 "hash"              = "交易哈希";
 "trade_record"      = "交易记录";
@@ -65,14 +65,18 @@
 "gender"                = "性别";
 "region"                = "地区";
 "email"                 = "邮箱";
+"birthday"              = "生日";
 "desc"                  = "个人描述";
 "man"                   = "男";
 "woman"                 = "女";
 "language"              = "语言";
 "faq"                   = "反馈";
+"version"               = "版本号";
 "about"                 = "关于绿积分";
 "faq_words_10"          = "反馈字数应不小于10字";
 "faq_success"           = "感谢反馈，我们将及时处理！";
+"modify_success"        = "修改成功";
+"pwd_old_error"         = "旧密码错误";
 //"green_city_points"     = "绿城积分";
 //"want_open"             = "想要打开";
 "auth_line"             = "已授权连接";

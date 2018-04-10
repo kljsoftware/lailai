@@ -13,14 +13,15 @@ class ProfileResultModel : BaseResultModel {
 }
 
 class ProfileUserInfoModel : NSObject {
-    var name = ""        // 用户名
-    var logo = ""        //头像图片地址
-    var shortName = ""  //昵称
-    var tel = ""         //手机号
-    var sex = 2          // 性别 1男 2 女
-    var city = ""        //地区
-    var email = ""       //邮箱
-    var desc = ""        //个人描述
+    var name = ""       // 用户名
+    var logo = ""       // 头像图片地址
+    var shortName = ""  // 昵称
+    var tel = ""        // 手机号
+    var sex = 2         // 性别 1男 2 女
+    var city = ""       // 地区
+    var email = ""      // 邮箱
+    var birthday = ""   // 生日
+    var desc = ""       // 个人描述
     var createdDate = ""
     
     /// 将属性名换为其他key去字典中取值

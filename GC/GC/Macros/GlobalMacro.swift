@@ -8,6 +8,9 @@
 
 import UIKit
 
+/// 版本号
+let VERSION_STRING              = "CFBundleShortVersionString"
+
 /// 日记输出使能
 let LOG_ENABLED = true
 
