@@ -27,8 +27,13 @@ class ProfileDetailViewModel: BaseViewModel {
     }
     
     // 7.2 修改个人信息
-    func modityUserInfo(info:ModityUserInfoRequestModel) {
-        HTTPSessionManager.shared.request(method: .POST, urlString: NetworkURL.modityUserInfo.url, parameters: info.mj_keyValues()) { (json, success) in
+    func modityUserInfo(info: ModityUserInfoRequestModel) {
+        let parameters = info.mj_keyValues()
+        if parameters != nil {
+            parameters!["description"] = info.desc
+            parameters?.removeObject(forKey: "desc")
+        }
+        HTTPSessionManager.shared.request(method: .POST, urlString: NetworkURL.modityUserInfo.url, parameters: parameters) { (json, success) in
             let resultModel = BaseResultModel.mj_object(withKeyValues: json)
             if success && resultModel != nil && resultModel!.code == 0 {
                 self.successCallback?(resultModel!)
@@ -61,7 +66,7 @@ class ModityUserInfoRequestModel : BaseRequestModel {
     var createdDate = ""
     var logo = ""
     var desc = ""
-    
+        
     /// 将属性名换为其他key去字典中取值
     override class func mj_replacedKeyFromPropertyName() -> [AnyHashable : Any]! {
         return ["description" : "desc"]

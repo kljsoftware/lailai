@@ -17,6 +17,10 @@ class WalletViewModel: BaseViewModel {
     /// 分页
     var page = 0
     
+    /// 标记是刷新还是加载
+    var isRefresh = true
+
+    
     /// 3.1 获取积分钱包基础数据
     func getPointsBase() {
         HTTPSessionManager.shared.request(urlString: NetworkURL.getPointsBase.url, parameters: nil) { (json, success) in
@@ -40,7 +44,13 @@ class WalletViewModel: BaseViewModel {
         HTTPSessionManager.shared.request(urlString: NetworkURL.getPoints.url, parameters: reqeustModel.mj_keyValues()) { (json, success) in
             let resultModel = WalletResultModel.mj_object(withKeyValues: json)
             if success && resultModel != nil && resultModel!.code == 0 {
-                self.walletModel = resultModel!
+                if self.isRefresh {
+                    self.walletModel.shopItems.removeAll()
+                    self.walletModel.shopItems = resultModel!.shopItems
+                } else {
+                    self.walletModel.shopItems += resultModel!.shopItems
+                }
+                self.walletModel.has_more = resultModel!.has_more
                 self.successCallback?(resultModel!)
             } else {
                 let msg = resultModel != nil ? resultModel!.msg : "error"

@@ -60,6 +60,7 @@ class WalletViewController: UIViewController {
         tableView.mj_header.beginRefreshing()
         tableView.mj_footer.resetNoMoreData()
         viewModel.page = 0
+        viewModel.isRefresh = true
         MBProgressHUD.showAdded(to: self.view, animated: true)
         viewModel.getPoints()
     }
@@ -70,6 +71,7 @@ class WalletViewController: UIViewController {
         if viewModel.walletModel.has_more {
             MBProgressHUD.showAdded(to: self.view, animated: true)
             viewModel.page += 1
+            viewModel.isRefresh = false
             viewModel.getPoints()
         } else {
             tableView.mj_footer.endRefreshingWithNoMoreData()

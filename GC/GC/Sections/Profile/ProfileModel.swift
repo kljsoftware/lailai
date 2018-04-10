@@ -26,7 +26,7 @@ class ProfileUserInfoModel : NSObject {
     
     /// 将属性名换为其他key去字典中取值
     override class func mj_replacedKeyFromPropertyName() -> [AnyHashable : Any]! {
-        return ["description" : "desc"]
+        return ["desc" : "description"]
     }
 }
 

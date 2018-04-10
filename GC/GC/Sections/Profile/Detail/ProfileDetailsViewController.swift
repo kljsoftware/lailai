@@ -39,9 +39,6 @@ class ProfileDetailsViewController: BaseViewController {
     /// 列表
     @IBOutlet weak var tableView: UITableView!
     
-    /// 文字输入
-    fileprivate var textInputView:TextInputView?
-    
     /// 当前cell类型
     fileprivate var type = ProfileDetailsCellType.nick
     
@@ -98,26 +95,6 @@ class ProfileDetailsViewController: BaseViewController {
         dict[.birthday] = userInfo.birthday
         dict[.desc]     = userInfo.desc
         tableView.reloadData()
-    }
-    
-    /// 显示文字编辑界面
-    func showEditView(text:String, placeholer:String = "") {
-        if nil == textInputView {
-            textInputView = Bundle.main.loadNibNamed("TextInputView", owner: nil, options: nil)![0] as? TextInputView
-            self.view.addSubview(textInputView!)
-            textInputView?.snp.makeConstraints({ (maker) in
-                maker.left.right.top.bottom.equalTo(self.view)
-            })
-            textInputView?.inputConfirmClosure = { [weak self](result) in
-                guard let wself = self else {
-                    return
-                }
-                wself.dict[wself.type] = result
-                wself.tableView.reloadData()
-            }
-        }
-        textInputView?.placeholder = placeholer
-        textInputView?.show(text)
     }
     
     /// 获取标签名字
@@ -239,7 +216,12 @@ extension ProfileDetailsViewController : UITableViewDataSource, UITableViewDeleg
                     self?.tableView.reloadData()
                 })
             default:
-                showEditView(text: dict[type] ?? "", placeholer: getPlaceholder(type: type))
+                AlertController.show(in: self, title: getPlaceholder(type: type), text: dict[type], placeholder: getPlaceholder(type: type), btns: [LanguageKey.cancel.value, LanguageKey.ok.value], handler: { [weak self](action, text) in
+                    if action.title != LanguageKey.cancel.value && text != nil {
+                        self?.dict[self!.type] = text!
+                        self?.tableView.reloadData()
+                    }
+                })
             }
             self.type = type
         }

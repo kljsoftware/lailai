@@ -24,7 +24,10 @@ class DonateRecordCell: UITableViewCell {
     
     @IBOutlet weak var pointsLabel: UILabel!
     
+    @IBOutlet weak var hashBtn: UIButton!
+    
     private var model:DonateRecordModel?
+    
     
     // MARK: - public methods
     func update(model:DonateRecordModel) {
@@ -35,6 +38,7 @@ class DonateRecordCell: UITableViewCell {
         pointLabel.text = "\(LanguageKey.points.value)："
         pointsLabel.text = "\(model.balance)"
         timeLabel.text = model.create_date.transferFormat()
+        hashBtn.setTitle(LanguageKey.hash.value, for: .normal)
     }
     
     /// 交易Hash

@@ -38,12 +38,19 @@ class TradeRecordViewController: BaseViewController {
 
         navigationItem.title = LanguageKey.trade_record.value
         okBtn.setTitle(LanguageKey.ok.value, for: .normal)
+        okBtn.layer.borderColor = COLOR_2673FD.cgColor
+        okBtn.layer.borderWidth = 1/UIScreen.main.scale
         
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         viewModel.getContributionNum(dealerPublicKey: params!.dealerPublicKey, memberPublicKey: params!.memberPublicKey)
+        
         viewModel.setCompletion(onSuccess: {[weak self] (resultModel) in
             self?.scoreLabel.text = "\(self!.viewModel.tradeRecordModel.num) \(LanguageKey.points.value)"
+            MBProgressHUD.hide(for: self!.view, animated: true)
+        
         }) { (error) in
             Log.e(error)
+            MBProgressHUD.hide(for: self.view, animated: true)
         }
     }
 

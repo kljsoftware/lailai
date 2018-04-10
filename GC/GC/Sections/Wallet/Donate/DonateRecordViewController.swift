@@ -45,6 +45,8 @@ class DonateRecordViewController: BaseViewController {
         
         navigationItem.title = LanguageKey.donate_record.value
         lookBtn.setTitle(LanguageKey.viewbyblock.value, for: .normal)
+        lookBtn.layer.borderColor = COLOR_2673FD.cgColor
+        lookBtn.layer.borderWidth = 1/UIScreen.main.scale
         
         automaticallyAdjustsScrollViewInsets = false
         tableView.register(UINib(nibName: "DonateRecordCell", bundle: nil), forCellReuseIdentifier: "kDonateRecordCell")
@@ -99,11 +101,9 @@ extension DonateRecordViewController : UITableViewDataSource, UITableViewDelegat
         let cell = tableView.dequeueReusableCell(withIdentifier: "kDonateRecordCell", for: indexPath) as! DonateRecordCell
         cell.update(model: viewModel.recordResultModel.recordItems[indexPath.row])
         cell.queryBlockChainClosure = { [weak self](model) in
-            let okAction = UIAlertAction(title: LanguageKey.ok.rawValue, style: .default, handler: { (action) in
+            AlertController.show(in: self!, title: LanguageKey.hash.value, message: model.blockchain_id, btns: [LanguageKey.ok.value], handler: { (action, text) in
+                
             })
-            let alert = UIAlertController(title: LanguageKey.hash.value, message: model.blockchain_id, preferredStyle: .alert)
-            alert.addAction(okAction)
-            self?.present(alert, animated: true, completion: nil)
         }
         return cell
     }

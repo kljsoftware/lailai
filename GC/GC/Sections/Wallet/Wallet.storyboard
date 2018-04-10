@@ -10,8 +10,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="PingFang.ttc">
-            <string>PingFangSC-Regular</string>
+        <array key="Arial.ttf">
+            <string>ArialMT</string>
         </array>
     </customFonts>
     <scenes>
@@ -68,7 +68,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DlE-hb-7NR">
-                                <rect key="frame" x="0.0" y="44" width="375" height="633.66666666666663"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623.66666666666663"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="FP2-wa-AcM" id="0Pn-WQ-x63"/>
@@ -92,16 +92,17 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RB8-jk-Cnu">
-                                <rect key="frame" x="11" y="692.66666666666663" width="353" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.59607843137254901" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="24" y="682.66666666666663" width="327" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="RgA-IB-Rbq"/>
+                                    <constraint firstAttribute="height" constant="40" id="RgA-IB-Rbq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
-                                <state key="normal" title="通过区块链查看"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.14901960784313725" green="0.45098039215686275" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
+                                        <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -117,11 +118,11 @@
                             <constraint firstItem="cdQ-vZ-eSf" firstAttribute="centerX" secondItem="OrB-1K-aXi" secondAttribute="centerX" id="QdC-Z5-sW6"/>
                             <constraint firstItem="RB8-jk-Cnu" firstAttribute="top" secondItem="DlE-hb-7NR" secondAttribute="bottom" constant="15" id="Vdn-u3-Qhf"/>
                             <constraint firstItem="jCx-VV-Dzt" firstAttribute="leading" secondItem="OrB-1K-aXi" secondAttribute="leading" constant="15" id="XyF-Cc-vOG"/>
-                            <constraint firstItem="RB8-jk-Cnu" firstAttribute="leading" secondItem="OrB-1K-aXi" secondAttribute="leading" constant="11" id="hQH-I7-zqu"/>
+                            <constraint firstItem="RB8-jk-Cnu" firstAttribute="leading" secondItem="OrB-1K-aXi" secondAttribute="leading" constant="24" id="hQH-I7-zqu"/>
                             <constraint firstItem="HQr-Pp-1fe" firstAttribute="top" secondItem="cdQ-vZ-eSf" secondAttribute="bottom" constant="6" id="kEy-Ki-Lcl"/>
                             <constraint firstAttribute="trailing" secondItem="DlE-hb-7NR" secondAttribute="trailing" id="n6N-nj-ATG"/>
                             <constraint firstItem="cdQ-vZ-eSf" firstAttribute="top" secondItem="jCx-VV-Dzt" secondAttribute="bottom" constant="6" id="shH-CE-nTL"/>
-                            <constraint firstAttribute="trailing" secondItem="RB8-jk-Cnu" secondAttribute="trailing" constant="11" id="ucF-PH-85x"/>
+                            <constraint firstAttribute="trailing" secondItem="RB8-jk-Cnu" secondAttribute="trailing" constant="24" id="ucF-PH-85x"/>
                             <constraint firstItem="DlE-hb-7NR" firstAttribute="leading" secondItem="OrB-1K-aXi" secondAttribute="leading" id="yBF-f2-2os"/>
                         </constraints>
                     </view>
@@ -171,16 +172,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6e-Mu-382">
-                                <rect key="frame" x="8" y="720" width="359" height="33"/>
-                                <color key="backgroundColor" red="1" green="0.59607843137254901" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="24" y="713" width="327" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="RDF-aF-jSF"/>
+                                    <constraint firstAttribute="height" constant="40" id="RDF-aF-jSF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="16"/>
-                                <state key="normal" title="确定"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.14901960784313725" green="0.45098039215686275" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
+                                        <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -191,9 +193,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mGG-T4-OAU" firstAttribute="centerX" secondItem="Dih-hx-CFp" secondAttribute="centerX" id="CSd-Od-rFW"/>
-                            <constraint firstItem="D6e-Mu-382" firstAttribute="leading" secondItem="Dih-hx-CFp" secondAttribute="leading" constant="8" id="Liq-Rd-b6h"/>
+                            <constraint firstItem="D6e-Mu-382" firstAttribute="leading" secondItem="Dih-hx-CFp" secondAttribute="leading" constant="24" id="Liq-Rd-b6h"/>
                             <constraint firstItem="nAf-CY-bjQ" firstAttribute="top" secondItem="D6e-Mu-382" secondAttribute="bottom" constant="25" id="Ljc-rh-fxX"/>
-                            <constraint firstAttribute="trailing" secondItem="D6e-Mu-382" secondAttribute="trailing" constant="8" id="YUb-1m-MGI"/>
+                            <constraint firstAttribute="trailing" secondItem="D6e-Mu-382" secondAttribute="trailing" constant="24" id="YUb-1m-MGI"/>
                             <constraint firstItem="Lzt-BY-URf" firstAttribute="top" secondItem="MyG-1M-VLP" secondAttribute="bottom" constant="7" id="Zmb-TP-LcV"/>
                             <constraint firstItem="MyG-1M-VLP" firstAttribute="top" secondItem="mGG-T4-OAU" secondAttribute="bottom" constant="60" id="Zxx-c5-3I3"/>
                             <constraint firstItem="MyG-1M-VLP" firstAttribute="centerX" secondItem="Dih-hx-CFp" secondAttribute="centerX" id="eGL-eq-por"/>

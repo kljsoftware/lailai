@@ -14,9 +14,6 @@ private let cellHeight: CGFloat = 50
 /// 我的秘钥地址
 class SecretKeyViewController: BaseViewController {
 
-    /// 文字输入
-    fileprivate var textInputView: TextInputView?
-
     /// 商家列表
     @IBOutlet weak var tableView: UITableView!
     
@@ -94,31 +91,6 @@ class SecretKeyViewController: BaseViewController {
             self.stopRefreshing()
         }
     }
-    
-    /// 手动输入秘钥
-    func showEditView(placeholder: String = "") {
-        
-        if nil == textInputView {
-            textInputView = Bundle.main.loadNibNamed("TextInputView", owner: nil, options: nil)![0] as? TextInputView
-            self.view.addSubview(textInputView!)
-            textInputView?.snp.makeConstraints({ (maker) in
-                maker.left.right.top.bottom.equalTo(self.view)
-            })
-            textInputView?.inputConfirmClosure = { [weak self](result) in
-                if result.count > 0 {
-                    self?.viewModel.inputPublicKey(dealerName: self!.curModel.dealerName, memberPublicKey: result)
-                    self?.viewModel.setCompletion(onSuccess: { (resultModel) in
-                        self?.curModel.memberPublicKey = self!.textInputView!.writingTextView.text
-                    }, onFailure: { (error) in
-                        self?.textInputView?.writingTextView.text = ""
-                        UIHelper.tip(message: error)
-                    })
-                }
-            }
-        }
-        textInputView?.placeholder = placeholder
-        textInputView?.show(curModel.memberPublicKey)
-    }
 }
 
 // MARK:  UITableViewDataSource&UITableViewDelegate
@@ -147,7 +119,24 @@ extension SecretKeyViewController : UITableViewDataSource, UITableViewDelegate {
 extension SecretKeyViewController : SecretKeyInputCellDelegate {
     
     func inputDidSelected(at indexPath: IndexPath) {
+        
         curModel = viewModel.profileBusinessModel.data[indexPath.row]
-        showEditView(placeholder: LanguageKey.input_public_key.value)
+        
+        AlertController.show(in: self, title: LanguageKey.input_public_key.value, text: curModel.memberPublicKey, placeholder: LanguageKey.input_public_key.value, btns: [LanguageKey.cancel.value, LanguageKey.ok.value]) { [weak self](action, text) in
+            
+            if action.title != LanguageKey.cancel.value && text != nil {
+                if text!.count > 0 {
+                    
+                    self?.viewModel.inputPublicKey(dealerName: self!.curModel.dealerName, memberPublicKey: text!)
+                    
+                    self?.viewModel.setCompletion(onSuccess: { (resultModel) in
+                        self?.curModel.memberPublicKey = text!
+                    
+                    }, onFailure: { (error) in
+                        UIHelper.tip(message: error)
+                    })
+                }
+            }
+        }
     }
 }
