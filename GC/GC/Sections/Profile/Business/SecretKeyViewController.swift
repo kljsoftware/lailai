@@ -122,15 +122,16 @@ extension SecretKeyViewController : SecretKeyInputCellDelegate {
         
         curModel = viewModel.profileBusinessModel.data[indexPath.row]
         
-        AlertController.show(in: self, title: LanguageKey.input_public_key.value, text: curModel.memberPublicKey, placeholder: LanguageKey.input_public_key.value, btns: [LanguageKey.cancel.value, LanguageKey.ok.value]) { [weak self](action, text) in
+        AlertController.show(in: self, title: LanguageKey.input_public_key.value, text: curModel.MemberPublicKey, placeholder: LanguageKey.input_public_key.value, btns: [LanguageKey.cancel.value, LanguageKey.ok.value]) { [weak self](action, text) in
             
             if action.title != LanguageKey.cancel.value && text != nil {
                 if text!.count > 0 {
                     
-                    self?.viewModel.inputPublicKey(dealerName: self!.curModel.dealerName, memberPublicKey: text!)
+                    self?.viewModel.inputPublicKey(dealerId: self!.curModel.dealerId, memberPublicKey: text!)
                     
                     self?.viewModel.setCompletion(onSuccess: { (resultModel) in
-                        self?.curModel.memberPublicKey = text!
+                        self?.curModel.MemberPublicKey = text!
+                        self?.tableView.reloadData()
                     
                     }, onFailure: { (error) in
                         UIHelper.tip(message: error)

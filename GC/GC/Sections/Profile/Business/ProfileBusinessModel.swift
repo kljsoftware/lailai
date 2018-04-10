@@ -33,18 +33,21 @@ class ProfileBusinessResultModel: BaseResultModel {
 /// 商家信息
 class BusinessInfoModel: NSObject {
     
+    // 商家id
+    var dealerId = 0
+    
     /// 商家名称
     var dealerName = ""
     
     /// 用户在该商家的公钥地址
-    var memberPublicKey = ""
+    var MemberPublicKey = ""
 }
 
 /// 手动输入密钥
 class InputPublicKeyRequestModel: BaseRequestModel {
     
-    /// 商家名称
-    var DealerName = ""
+    /// 商家Id
+    var DealerId = 0
     
     /// 公钥地址
     var MemberPublicKey = ""
