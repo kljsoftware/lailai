@@ -39,7 +39,7 @@ class NetworkImgOrWeb {
 
 /// api地址
 enum NetworkURL {
-    case register // 2.1注册
+    case register               // 2.1注册
     case login                  // 2.2 登录
     case checkToken             // 2.3 检查token是否过期
     case getPointsScAd          // 2.4 获取闪屏页广告
