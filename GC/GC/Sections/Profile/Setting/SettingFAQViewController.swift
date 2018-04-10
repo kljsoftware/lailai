@@ -42,6 +42,7 @@ class SettingFAQViewController: BaseViewController {
     @IBAction func onFeedBackButtonClicked(_ sender: UIButton) {
         if textView.text.count < 10 {
             UIHelper.tip(message: LanguageKey.faq_words_10.value)
+            return
         }
         viewModel.feedBack(info: textView.text)
     }
