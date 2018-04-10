@@ -57,7 +57,7 @@ class ProfileDetailsViewController: BaseViewController {
             }
             if resultModel.isKind(of: UploadFileResultModel.self) {
                 let model = resultModel as! UploadFileResultModel
-                wself.dict[.avatar] = model.data.name
+                wself.dict[.avatar] = model.name
                 wself.tableView.reloadData()
             } else {
                 UIHelper.tip(message: "保存成功")

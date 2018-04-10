@@ -47,10 +47,6 @@ class ProfileDetailViewModel: BaseViewModel {
 }
 
 class UploadFileResultModel : BaseResultModel {
-    var data = UploadFileModel()
-}
-
-class UploadFileModel : NSObject {
     var name = ""
 }
 
