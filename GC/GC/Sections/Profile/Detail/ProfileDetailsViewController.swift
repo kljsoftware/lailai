@@ -210,9 +210,9 @@ extension ProfileDetailsViewController : UITableViewDataSource, UITableViewDeleg
                     self?.tableView.reloadData()
                 }
             case .birthday:
-                let curDate = Date.convert(from: dict[type] ?? "", format: "yyyy-MM-dd")
+                let curDate = Date.convert(from: dict[type] ?? "", format: "yyyyMMdd")
                 DatePickerView.show(currentDate: curDate, dateStyle: .YearMonthDay, selectedDateClosure: { [weak self](date) in
-                    self?.dict[self!.type] = date.convert(format: "yyyy-MM-dd")
+                    self?.dict[self!.type] = date.convert(format: "yyyyMMdd")
                     self?.tableView.reloadData()
                 })
             default:

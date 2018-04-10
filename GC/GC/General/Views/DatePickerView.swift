@@ -105,6 +105,24 @@ class DatePickerView: UIView {
         scrollTo(date: currentDate, animated: true)
     }
     
+    /// 通过年求每月天数
+    fileprivate func setDayData(from year: Int, month: Int) {
+        
+        let isRunNian = year%4 == 0 ? (year%100 == 0 ? (year%400 == 0) : true) : false
+        var days = 0
+        if month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12 {
+            days = 31
+        } else if month == 4 || month == 6 || month == 9 || month == 11 {
+            days = 30
+        } else {
+            days = isRunNian ? 29 : 28
+        }
+        dayArr.removeAll()
+        for i in 1 ... days {
+            dayArr.append(String(format: "%02d", i))
+        }
+    }
+    
     /// 滚动到指定日期
     fileprivate func scrollTo(date: Date, animated: Bool) {
         
@@ -224,24 +242,6 @@ class DatePickerView: UIView {
         hidePicker()
         if sender.tag == 2 && selectedDateClosure != nil {
             selectedDateClosure!(currentDate)
-        }
-    }
-    
-    /// 通过年求每月天数
-    fileprivate func setDayData(from year: Int, month: Int) {
-        
-        let isRunNian = year%4 == 0 ? (year%100 == 0 ? (year%400 == 0) : true) : false
-        var days = 0
-        if month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12 {
-            days = 31
-        } else if month == 4 || month == 6 || month == 9 || month == 11 {
-            days = 30
-        } else {
-            days = isRunNian ? 29 : 28
-        }
-        dayArr.removeAll()
-        for i in 1 ... days {
-            dayArr.append("\(i)")
         }
     }
 }
