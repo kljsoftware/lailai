@@ -244,7 +244,6 @@ extension ProfileDetailsViewController : UIImagePickerControllerDelegate, UINavi
                     self?.viewModel.upload(data: data!)
                 }
             }
-            self?.tableView.reloadData()
         }
     }
 }
