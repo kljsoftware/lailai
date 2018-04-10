@@ -24,8 +24,6 @@
 		3C1B0B4C202D7D3700E059BD /* BusinessAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B0B4B202D7D3700E059BD /* BusinessAuthViewController.swift */; };
 		3C1B0B4E202D82E600E059BD /* NewsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B0B4D202D82E600E059BD /* NewsDetailsViewController.swift */; };
 		3C1B0B50202D952C00E059BD /* CLLocationCoordinate2D+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B0B4F202D952C00E059BD /* CLLocationCoordinate2D+Extension.swift */; };
-		3C1B0B53202D9B0100E059BD /* TextInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1B0B51202D9B0100E059BD /* TextInputView.xib */; };
-		3C1B0B54202D9B0100E059BD /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B0B52202D9B0100E059BD /* TextInputView.swift */; };
 		3C1B0B56202DA18000E059BD /* ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B0B55202DA18000E059BD /* ActionSheet.swift */; };
 		3C1B0B58202DA92100E059BD /* ProfileDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B0B57202DA92100E059BD /* ProfileDetailViewModel.swift */; };
 		3C25DA3E201CC286003E4BFB /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C25DA3D201CC286003E4BFB /* UIImageView+Extension.swift */; };
@@ -193,6 +191,7 @@
 		A3A728C72077A89A00846993 /* Area.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3A728C62077A89A00846993 /* Area.plist */; };
 		A3A728C92077A8D500846993 /* AreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A728C82077A8D500846993 /* AreaModel.swift */; };
 		A43A50E4E7F53329C5B11904 /* Pods_GC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19EB8A19ED869E797BC1EDA /* Pods_GC.framework */; };
+		E505394A207C966200551393 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5053949207C966200551393 /* AlertController.swift */; };
 		E5A2A0322079B419000B20F0 /* TradeRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A2A02F2079B418000B20F0 /* TradeRecordViewModel.swift */; };
 		E5A2A0332079B419000B20F0 /* TradeRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A2A0302079B418000B20F0 /* TradeRecordModel.swift */; };
 		E5A2A0342079B419000B20F0 /* TradeRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A2A0312079B418000B20F0 /* TradeRecordViewController.swift */; };
@@ -218,8 +217,6 @@
 		3C1B0B4B202D7D3700E059BD /* BusinessAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessAuthViewController.swift; sourceTree = "<group>"; };
 		3C1B0B4D202D82E600E059BD /* NewsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsViewController.swift; sourceTree = "<group>"; };
 		3C1B0B4F202D952C00E059BD /* CLLocationCoordinate2D+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Extension.swift"; sourceTree = "<group>"; };
-		3C1B0B51202D9B0100E059BD /* TextInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextInputView.xib; sourceTree = "<group>"; };
-		3C1B0B52202D9B0100E059BD /* TextInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 		3C1B0B55202DA18000E059BD /* ActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheet.swift; sourceTree = "<group>"; };
 		3C1B0B57202DA92100E059BD /* ProfileDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewModel.swift; sourceTree = "<group>"; };
 		3C25DA3D201CC286003E4BFB /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
@@ -393,6 +390,7 @@
 		A3A728C82077A8D500846993 /* AreaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaModel.swift; sourceTree = "<group>"; };
 		BBEE1DAB0CF91082AD1F3A01 /* Pods-GC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GC.release.xcconfig"; path = "Pods/Target Support Files/Pods-GC/Pods-GC.release.xcconfig"; sourceTree = "<group>"; };
 		C19EB8A19ED869E797BC1EDA /* Pods_GC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5053949207C966200551393 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		E5A2A02F2079B418000B20F0 /* TradeRecordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeRecordViewModel.swift; sourceTree = "<group>"; };
 		E5A2A0302079B418000B20F0 /* TradeRecordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeRecordModel.swift; sourceTree = "<group>"; };
 		E5A2A0312079B418000B20F0 /* TradeRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeRecordViewController.swift; sourceTree = "<group>"; };
@@ -628,10 +626,9 @@
 			children = (
 				A3A728BF207765BC00846993 /* AreaPickerView */,
 				3C1B0B55202DA18000E059BD /* ActionSheet.swift */,
-				3C1B0B52202D9B0100E059BD /* TextInputView.swift */,
-				3C1B0B51202D9B0100E059BD /* TextInputView.xib */,
 				3C374619201DBA14000FD752 /* BorderView.swift */,
 				E5DAEE40207B40C900AE4B90 /* DatePickerView.swift */,
+				E5053949207C966200551393 /* AlertController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1053,7 +1050,6 @@
 				3C8DCEED201D76C400C9F40E /* tab_business_nor@3x.png in Resources */,
 				3CF364F82022A916003179E8 /* Donate.storyboard in Resources */,
 				3C65505B20243B8600FE0504 /* WalletCell.xib in Resources */,
-				3C1B0B53202D9B0100E059BD /* TextInputView.xib in Resources */,
 				3CB4D12B202C8DBD00AB70B9 /* General.storyboard in Resources */,
 				3CFD84F7201C9B5900F9E7E5 /* Info.plist in Resources */,
 				3C91FC28201F21C500BB492D /* news_header.png in Resources */,
@@ -1229,10 +1225,10 @@
 				3CB553A3201CB73F009AC1CD /* LanguageMacro.swift in Sources */,
 				E5D019A0207A083B001BCFC4 /* SettingLanguageViewController.swift in Sources */,
 				3C1B0B50202D952C00E059BD /* CLLocationCoordinate2D+Extension.swift in Sources */,
-				3C1B0B54202D9B0100E059BD /* TextInputView.swift in Sources */,
 				A3290AEC2075FE9500874351 /* ProfileBusinessModel.swift in Sources */,
 				3CB4D121202C4BB900AB70B9 /* Upload.swift in Sources */,
 				3CB4D0FF202A044A00AB70B9 /* DonateDetailsModel.swift in Sources */,
+				E505394A207C966200551393 /* AlertController.swift in Sources */,
 				3CB4D11F202C293300AB70B9 /* NewsViewModel.swift in Sources */,
 				3CB4D131202C8F0D00AB70B9 /* GeneralModel.swift in Sources */,
 				3CB4D111202B093600AB70B9 /* ProfileViewModel.swift in Sources */,
