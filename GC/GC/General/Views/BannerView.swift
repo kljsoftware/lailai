@@ -190,7 +190,11 @@ class BannerView: UIView {
             for tmpView in pageControl!.subviews {
                 if tmpView is UIImageView {
                     let imageView = tmpView as! UIImageView
-                    imageView.image = currentPage == imageView.tag - 1 ? curPageImg : pageImg
+                    if currentPage == count {
+                        imageView.image = currentPage == imageView.tag ? curPageImg : pageImg
+                    } else {
+                        imageView.image = currentPage == imageView.tag - 1 ? curPageImg : pageImg
+                    }
                     imageView.frame = CGRect(x: x, y: 0, width: imageView.image!.size.width, height: imageView.image!.size.height)
                     x += imageView.image!.size.width + pageSpace
                 }
