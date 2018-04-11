@@ -17,11 +17,6 @@ class UIHelper {
         window?.makeToast(message, duration: 1, position: position)
     }
     
-    /// 调转至广告页
-    class func pushToAdView(model:AdModel) {
-        pushToWeb(urlString: NetworkImgOrWeb.getUrl(name: model.link))
-    }
-    
     /// 调整至网页
     class func pushToWeb(urlString:String) {
         guard let url = URL(string: urlString) else {

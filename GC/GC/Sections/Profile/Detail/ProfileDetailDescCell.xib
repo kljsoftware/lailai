@@ -23,14 +23,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ql9-kr-JAF">
-                        <rect key="frame" x="12" y="13.5" width="34.5" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ql9-kr-JAF">
+                        <rect key="frame" x="12" y="21.5" width="0.0" height="0.0"/>
                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6EE-v9-iPv">
-                        <rect key="frame" x="273.5" y="13.5" width="34.5" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6EE-v9-iPv">
+                        <rect key="frame" x="308" y="21.5" width="0.0" height="0.0"/>
                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -57,6 +57,7 @@
                     <constraint firstAttribute="trailing" secondItem="LdU-C5-wjc" secondAttribute="trailing" id="Ojz-dj-3c1"/>
                     <constraint firstItem="LdU-C5-wjc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="bfK-jb-ySB"/>
                     <constraint firstItem="Ql9-kr-JAF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="eqG-9M-lTx"/>
+                    <constraint firstItem="6EE-v9-iPv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ql9-kr-JAF" secondAttribute="trailing" constant="20" id="hna-0g-aIt"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

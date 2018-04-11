@@ -15,14 +15,18 @@ class SettingAboutViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = LanguageKey.about.value
+        MBProgressHUD.showAdded(to: self.view, animated: true)
         viewModel.getAbout()
-        viewModel.setCompletion(onSuccess: {[weak self] (resultModel) in
+        viewModel.setCompletion(onSuccess: { [weak self](resultModel) in
             guard let wself = self else {
                 return
             }
+            MBProgressHUD.hide(for: self!.view, animated: true)
             wself.aboutLabel.text = (resultModel as! AboutResultModel).content
+            
         }) { (error) in
             UIHelper.tip(message: error)
+            MBProgressHUD.hide(for: self.view, animated: true)
         }
     }
 

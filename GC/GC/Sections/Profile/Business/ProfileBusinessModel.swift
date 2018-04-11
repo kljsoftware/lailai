@@ -40,7 +40,7 @@ class BusinessInfoModel: NSObject {
     var dealerName = ""
     
     /// 用户在该商家的公钥地址
-    var MemberPublicKey = ""
+    var memberPublicKey = ""
 }
 
 /// 手动输入密钥

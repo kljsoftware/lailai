@@ -47,7 +47,7 @@ class ProfileDetailViewModel: BaseViewModel {
 }
 
 class UploadFileResultModel : BaseResultModel {
-    var name = ""
+    var url = ""
 }
 
 class ModityUserInfoRequestModel : BaseRequestModel {
@@ -58,8 +58,6 @@ class ModityUserInfoRequestModel : BaseRequestModel {
     var sex = ""
     var birthday = ""
     var city = ""
-    var level = ""
-    var createdDate = ""
     var logo = ""
     var desc = ""
         

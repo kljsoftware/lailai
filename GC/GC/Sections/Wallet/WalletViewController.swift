@@ -144,6 +144,9 @@ class WalletViewController: UIViewController {
         headerView.snp.makeConstraints { (maker) in
             maker.left.top.right.bottom.equalTo(containerView)
         }
+        headerView.didSelectedAd = { (adModel) in
+            UIHelper.pushToWeb(urlString: NetworkImgOrWeb.getUrl(name: adModel.link))
+        }
         headerView.didSelectedInfo = { [weak self] in
             MBProgressHUD.showAdded(to: self!.view, animated: true)
             let viewModel = ProfileViewModel()

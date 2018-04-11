@@ -156,14 +156,14 @@
                                     <constraint firstAttribute="width" secondItem="mGG-T4-OAU" secondAttribute="height" multiplier="1:1" id="kW0-MZ-Deg"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的积分捐赠总额" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyG-1M-VLP">
-                                <rect key="frame" x="130.66666666666666" y="379" width="114.33333333333334" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyG-1M-VLP">
+                                <rect key="frame" x="188" y="379" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.062745098039215685" green="0.062745098039215685" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzt-BY-URf">
-                                <rect key="frame" x="187.66666666666666" y="403" width="0.0" height="20"/>
+                                <rect key="frame" x="187.66666666666666" y="386" width="0.0" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="H3h-hM-JG2"/>
                                 </constraints>
@@ -205,6 +205,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="2tY-n9-2Al"/>
                     <connections>
+                        <outlet property="descLabel" destination="MyG-1M-VLP" id="WH4-MA-Iha"/>
                         <outlet property="okBtn" destination="D6e-Mu-382" id="iWb-A1-os7"/>
                         <outlet property="scoreLabel" destination="Lzt-BY-URf" id="b51-bl-cYZ"/>
                     </connections>

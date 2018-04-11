@@ -25,6 +25,8 @@ class TradeRecordViewController: BaseViewController {
     // 参数
     var params: TradeRecordParams?
     
+    // 我的积分捐赠总额
+    @IBOutlet weak var descLabel: UILabel!
     // 积分
     @IBOutlet weak var scoreLabel: UILabel!
     // 确定按钮
@@ -37,6 +39,7 @@ class TradeRecordViewController: BaseViewController {
         super.viewDidLoad()
 
         navigationItem.title = LanguageKey.trade_record.value
+        descLabel.text = LanguageKey.my_donate_total.value
         okBtn.setTitle(LanguageKey.ok.value, for: .normal)
         okBtn.layer.borderColor = COLOR_2673FD.cgColor
         okBtn.layer.borderWidth = 1/UIScreen.main.scale

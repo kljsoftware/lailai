@@ -51,6 +51,7 @@ let COLOR_C0C0C0 = UIColor.hexToColor(0xC0C0C0)
 let COLOR_DEDEE3 = UIColor.hexToColor(0xDEDEE3)
 let COLOR_232642 = UIColor.hexToColor(0x232642)
 let COLOR_333333 = UIColor.hexToColor(0x333333)
+let COLOR_DE51E0 = UIColor.hexToColor(0xDE51E0)
 
 
 

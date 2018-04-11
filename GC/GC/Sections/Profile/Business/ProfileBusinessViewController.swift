@@ -113,7 +113,7 @@ extension ProfileBusinessViewController : UITableViewDataSource, UITableViewDele
         
         let businessModel = viewModel.profileBusinessModel.data[indexPath.row]
         
-        if businessModel.MemberPublicKey != "" {
+        if businessModel.memberPublicKey != "" {
             let url = URL(string: "didtaxi://")!
             if UIApplication.shared.canOpenURL(url) {
                 UIApplication.shared.openURL(url)

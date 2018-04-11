@@ -10,7 +10,7 @@ import UIKit
 
 class WalletHeaderView: UIView {
 
-    @IBOutlet weak var bannerView: BannnerView!
+    private var bannerView: BannerView?
     
     /// 头文件
     @IBOutlet weak var avatarImageView: UIImageView!
@@ -27,33 +27,49 @@ class WalletHeaderView: UIView {
     /// 积分种类
     @IBOutlet weak var breedLabel: UILabel!
     
-    /// 页码
-    @IBOutlet weak var pageControl: PageControl!
-    
     /// 点击个人信息闭包
     var didSelectedInfo: (() -> Void)?
     
+    /// 点击广告闭包
+    var didSelectedAd: ((AdModel) -> Void)?
+    
+    /// 广告数据
+    fileprivate var adItems: [AdModel]!
+    
+    
     /// 更新
-    func update(model:WalletBaseResultModel) {
-        bannerView.setup(banners: model.adItems)
-        bannerView.didPageChangedClosure = { [weak self] (page) in
-            guard let wself = self else {
-                return
-            }
-            wself.pageControl.setCurrentPage(current: page)
+    func update(model: WalletBaseResultModel) {
+        
+        adItems = model.adItems
+        
+        if bannerView != nil {
+            bannerView?.removeFromSuperview()
+            bannerView = nil
         }
+        bannerView = BannerView.banner(frame: CGRect(x: 0, y: 0, width: DEVICE_SCREEN_WIDTH, height: 150), delegate: self, imageURLs: adItems.flatMap{NetworkImgOrWeb.getUrl(name: $0.cover)}, placeholderImage: "", timerInterval: 3, currentIndicatorImage: "dot_sel", pageIndicatorImage: "dot")
+        self.addSubview(bannerView!)
+
         avatarImageView.setImage(urlStr: NetworkImgOrWeb.getUrl(name: model.userInfo.avatar), placeholderStr: "avatar", radius: 30)
         nameLabel.text = model.userInfo.name
         rankLabel.text = model.userInfo.rank
         integralSumLabel.text = "\(LanguageKey.balance_points.value)：\(model.userInfo.integralSum)"
         breedLabel.text = "\(LanguageKey.points_type.value)：\(model.userInfo.breed)\(LanguageKey.kinds_unit.value)"
-        pageControl.setup(total: model.adItems.count, current: 0)
     }
     
     /// 点击个人信息
     @IBAction func tapInfoGes(_ sender: UITapGestureRecognizer) {
         if didSelectedInfo != nil {
             didSelectedInfo!()
+        }
+    }
+}
+
+// MARK: - BannerViewDelegate
+extension WalletHeaderView : BannerViewDelegate {
+
+    func bannerView(bannerView: BannerView, didSelected index: Int) {
+        if didSelectedAd != nil {
+            didSelectedAd!(adItems[index])
         }
     }
 }

@@ -31,7 +31,7 @@ class AdView: UIView {
     /// 点击广告
     @IBAction func onBannerClicked(_ sender: UIButton) {
         if nil != model {
-            UIHelper.pushToAdView(model: model!)
+            UIHelper.pushToWeb(urlString: model!.link)
         }
     }
 }

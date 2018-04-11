@@ -47,10 +47,14 @@ class SecretKeyInputCell: UITableViewCell {
     /// 刷新数据
     func update(model: BusinessInfoModel) {
         businessnameLabel.text = model.dealerName
-        if model.MemberPublicKey != "" {
-            secretKeyLabel.text =  model.MemberPublicKey
+        if model.memberPublicKey != "" {
+            inputBtn.isEnabled = false
+            inputBtn.setTitleColor(UIColor.lightGray, for: .normal)
+            secretKeyLabel.text =  model.memberPublicKey
             secretKeyLabel.font = UIFont.systemFont(ofSize: 8)
         } else {
+            inputBtn.isEnabled = true
+            inputBtn.setTitleColor(COLOR_DE51E0, for: .normal)
             secretKeyLabel.text =  LanguageKey.no_auth_business.value
             secretKeyLabel.font = PINGFANG_FONT_12
         }
