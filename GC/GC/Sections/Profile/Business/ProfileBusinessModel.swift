@@ -43,7 +43,7 @@ class BusinessInfoModel: NSObject {
     var memberPublicKey = ""
     
     /// ios应用跳转地址
-    var ios_jump_url = ""
+    var ios_jump_url: String?
 }
 
 /// 手动输入密钥
