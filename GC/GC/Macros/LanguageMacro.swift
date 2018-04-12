@@ -81,6 +81,7 @@ enum LanguageKey : String {
     case faq_words_10       // 反馈字数应不小于10字
     case faq_success        // 感谢反馈，我们将及时处理！
     case modify_success     // 修改成功
+    case save_success       // 保存成功
     case pwd_old_error      // 旧密码错误
 //    case green_city_points  // 绿城积分
 //    case want_open          // 想要打开

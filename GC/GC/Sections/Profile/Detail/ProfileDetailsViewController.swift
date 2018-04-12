@@ -39,15 +39,19 @@ class ProfileDetailsViewController: BaseViewController {
     /// 列表
     @IBOutlet weak var tableView: UITableView!
     
+    /// 保存按钮
+    fileprivate var saveItem: UIBarButtonItem!
+    
     /// 当前cell类型
     fileprivate var type = ProfileDetailsCellType.nick
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.title = LanguageKey.profile_setting.value
-        let saveButtonItem = UIBarButtonItem(title: LanguageKey.save.value, style: UIBarButtonItemStyle.done, target: self, action: #selector(onSaveButtonClicked))
-        navigationItem.rightBarButtonItem = saveButtonItem
+        saveItem = UIBarButtonItem(title: LanguageKey.save.value, style: UIBarButtonItemStyle.done, target: self, action: #selector(onSaveButtonClicked))
+        navigationItem.rightBarButtonItem = saveItem
         tableView.register(UINib(nibName: "ProfileDetailAvatarCell", bundle: nil), forCellReuseIdentifier: "kProfileDetailAvatarCell")
         tableView.register(UINib(nibName: "ProfileDetailOtherCell", bundle: nil), forCellReuseIdentifier: "kProfileDetailOtherCell")
         tableView.register(UINib(nibName: "ProfileDetailDescCell", bundle: nil), forCellReuseIdentifier: "kProfileDetailDescCell")
@@ -56,11 +60,12 @@ class ProfileDetailsViewController: BaseViewController {
                 return
             }
             if resultModel.isKind(of: UploadFileResultModel.self) {
+                self?.saveItem.isEnabled = true
                 let model = resultModel as! UploadFileResultModel
                 wself.dict[.avatar] = model.url
                 wself.tableView.reloadData()
             } else {
-                UIHelper.tip(message: "保存成功")
+                UIHelper.tip(message: LanguageKey.save_success.value)
                 NotificationCenter.default.post(name: NoticationUserInfoUpdate, object: nil)
                 wself.navigationController?.popViewController(animated: true)
             }
@@ -101,9 +106,9 @@ class ProfileDetailsViewController: BaseViewController {
     fileprivate func getLabelName(type:ProfileDetailsCellType) -> String {
         var labelName = ""
         switch type {
-        case .avatar:
+        case .avatar:   // 头像
             labelName = LanguageKey.photo.value
-        case .nick:
+        case .nick:     // 昵称
             labelName = LanguageKey.nick.value
         case .tel:      // 手机号
             labelName = LanguageKey.phoneNum.value
@@ -127,9 +132,9 @@ class ProfileDetailsViewController: BaseViewController {
         switch type {
         case .nick:
             placeholder = "昵称"
-        case .email:  // 邮箱
+        case .email:
             placeholder = "邮箱"
-        case .desc:   // 个人描述
+        case .desc:
             placeholder = "个人描述"
         default:
             break
@@ -241,6 +246,7 @@ extension ProfileDetailsViewController : UIImagePickerControllerDelegate, UINavi
             if image != nil {
                 let data = UIImageJPEGRepresentation(image!, 0.8)
                 if data != nil {
+                    self?.saveItem.isEnabled = false
                     self?.viewModel.upload(data: data!)
                 }
             }
