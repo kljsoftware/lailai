@@ -29,12 +29,12 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGV-Ji-R45">
-                        <rect key="frame" x="12" y="293" width="37.5" height="14"/>
+                        <rect key="frame" x="12" y="264" width="37.5" height="14"/>
                         <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Za-3n-yqA">
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Za-3n-yqA">
                         <rect key="frame" x="253" y="51" width="55" height="23"/>
                         <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="11"/>
                         <state key="normal" title="区块链地址">
@@ -45,7 +45,7 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9h-Oo-dPx">
-                        <rect key="frame" x="14" y="319" width="292" height="36"/>
+                        <rect key="frame" x="14" y="290" width="292" height="36"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="36" id="1Vz-hi-xuW"/>
                         </constraints>
@@ -67,7 +67,7 @@
                         </constraints>
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ar5-lF-vwR">
-                        <rect key="frame" x="12" y="80" width="296" height="201"/>
+                        <rect key="frame" x="12" y="51" width="296" height="201"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="201" id="mdR-QX-qEr"/>
                         </constraints>
@@ -82,10 +82,10 @@
                     <constraint firstAttribute="trailing" secondItem="ar5-lF-vwR" secondAttribute="trailing" constant="12" id="KEc-g1-h6T"/>
                     <constraint firstAttribute="trailing" secondItem="8Za-3n-yqA" secondAttribute="trailing" constant="12" id="W0Y-6J-dhF"/>
                     <constraint firstAttribute="trailing" secondItem="T9h-Oo-dPx" secondAttribute="trailing" constant="14" id="b36-gc-8iF"/>
-                    <constraint firstItem="ar5-lF-vwR" firstAttribute="top" secondItem="8Za-3n-yqA" secondAttribute="bottom" constant="6" id="bTG-I0-pxw"/>
                     <constraint firstItem="T9h-Oo-dPx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="bbS-Lj-Vez"/>
                     <constraint firstAttribute="bottom" secondItem="dyp-Bh-ohC" secondAttribute="bottom" id="kDG-T4-B9o"/>
                     <constraint firstItem="8Za-3n-yqA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="51" id="sd7-nU-T3v"/>
+                    <constraint firstItem="ar5-lF-vwR" firstAttribute="top" secondItem="8Za-3n-yqA" secondAttribute="top" id="uDm-aj-Edz"/>
                     <constraint firstItem="kGV-Ji-R45" firstAttribute="top" secondItem="ar5-lF-vwR" secondAttribute="bottom" constant="12" id="vTw-4M-2V4"/>
                     <constraint firstItem="SGO-G3-n1y" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="vnT-du-Znq"/>
                     <constraint firstItem="dyp-Bh-ohC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zLn-9X-PN5"/>

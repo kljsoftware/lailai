@@ -7,7 +7,7 @@
 //
 
 /// 常量定义
-private let cellHeight:CGFloat = 384
+private let cellHeight:CGFloat = 354
 
 /// 公益捐赠
 class DonateViewController: UIViewController {
