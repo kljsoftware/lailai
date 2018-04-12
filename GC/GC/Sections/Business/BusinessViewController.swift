@@ -18,7 +18,7 @@ class BusinessViewController: PortraitViewController {
     private let viewModel = BusinessViewModel()
     
     /// 导航标题视图
-    fileprivate lazy var businessTitleView:BusinessTitleView = {
+    fileprivate lazy var businessTitleView: BusinessTitleView = {
         let _businessTitleView = Bundle.main.loadNibNamed("BusinessTitleView", owner: nil, options: nil)![0] as! BusinessTitleView
         self.navigationItem.titleView = _businessTitleView
         self.navigationItem.titleView?.snp.makeConstraints({ (maker) in
@@ -33,10 +33,10 @@ class BusinessViewController: PortraitViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     
     /// 绿色商家
-    private var businessView:BusinessView!
+    private var businessView: BusinessView!
     
     /// 地图
-    fileprivate var mapView:MapView!
+    fileprivate var mapView: MapView!
     
     /// 默认第一次定位
     fileprivate var fristDefautLocation = true
@@ -52,12 +52,14 @@ class BusinessViewController: PortraitViewController {
     private func setup() {
         businessTitleView.businessButtonCallback = { [weak self] in
             self?.scrollView.contentOffset.x = 0
+            self?.mapView.stopUpdatingLocation()
         }
         businessTitleView.mapbuttonCallback = { [weak self] in
             guard let wself = self else {
                 return
             }
             wself.scrollView.contentOffset.x = DEVICE_SCREEN_WIDTH
+            self?.mapView.startUpdatingLocation()
             wself.fristMapLoaction()
         }
         if #available(iOS 11.0, *) {
@@ -73,6 +75,7 @@ class BusinessViewController: PortraitViewController {
             wself.businessTitleView.update(isSelectBusiness: false)
             wself.fristDefautLocation = false
             wself.scrollView.contentOffset.x = DEVICE_SCREEN_WIDTH
+            self?.mapView.startUpdatingLocation()
             wself.mapView.loaction(models: [model])
         }
         businessView.refreshingClosure = { [weak self] (page) in
@@ -121,6 +124,7 @@ class BusinessViewController: PortraitViewController {
 
 // MARK: - UIScrollViewDelegate
 extension BusinessViewController : UIScrollViewDelegate {
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let isMap = scrollView.contentOffset.x != 0
         businessTitleView.update(isSelectBusiness: !isMap)

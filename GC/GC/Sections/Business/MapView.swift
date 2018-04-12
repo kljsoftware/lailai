@@ -13,56 +13,21 @@ import CoreLocation
 // 地图视图
 class MapView: UIView {
     
-    var navController:UINavigationController?
+    var navController: UINavigationController?
     
     /// 业务模块
     fileprivate let viewModel = BusinessViewModel()
-    
     // 定位管理器
-    fileprivate lazy var locationManager : CLLocationManager = {
-        
-        // 1. 创建位置管理者
-        let _locationManager = CLLocationManager()
-        
-        // 2. 设置代理, 接收位置数据（其他方式：block、通知）
-        _locationManager.delegate = self
-        
-        // 3.前台定位，后台定位（在info.plist文件中配置对应的key）
-        
-        // 4. 设置过滤距离
-        // 如果当前位置, 距离上一次的位置之间的物理距离大于以下数值时, 就会通过代理, 将当前位置告诉外界
-        _locationManager.distanceFilter = 100   // 每隔100 米定位一次
-        
-        // 5. 设置定位的精确度（定位精确度越高, 越耗电, 定位的速度越慢）
-        _locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        
-        // 6. 请求前台授权
-        _locationManager.requestWhenInUseAuthorization()
-        
-        return _locationManager
-    }()
-    
+    fileprivate var locationManager: CLLocationManager!
     /// 搜索栏
-    fileprivate lazy var searchBar:UISearchBar = {
-        let _searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: DEVICE_SCREEN_WIDTH, height: 44))
-        _searchBar.delegate = self
-        _searchBar.placeholder = "搜索绿色商家"
-        return _searchBar
-    }()
-    
+    fileprivate var searchBar: UISearchBar!
     /// 地图
-    fileprivate lazy var mkMapView:MKMapView = {
-        let _mkMapView = MKMapView(frame:self.bounds)
-        _mkMapView.mapType = MKMapType.standard
-        _mkMapView.delegate = self
-        return _mkMapView
-    }()
-    
+    fileprivate var mapView: MKMapView!
     /// 当前定位位置
-    fileprivate var currentLocation:CLLocation?
+    fileprivate var currentLocation: CLLocation?
     
     /// map around view
-    fileprivate lazy var aroundView : MapAroundView = {
+    fileprivate lazy var aroundView: MapAroundView = {
         let _aroundView = Bundle.main.loadNibNamed("MapAroundView", owner: nil, options: nil)![0] as! MapAroundView
         self.addSubview(_aroundView)
         _aroundView.snp.makeConstraints({ (maker) in
@@ -88,8 +53,11 @@ class MapView: UIView {
     // MARK: - override methods
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(mkMapView)
-        addSubview(searchBar)
+        
+        initMapView()
+        initSearchBar()
+        initLocationManager()
+        
         viewModel.setCompletion(onSuccess: { [weak self](resultModel) in
             guard let wself = self else {
                 return
@@ -98,67 +66,110 @@ class MapView: UIView {
         }) { (error) in
             UIHelper.tip(message: error)
         }
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.startUpdatingLocation()
-        }
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    private func initMapView() {
+        mapView             = MKMapView(frame: CGRect(x: 0, y: 44, width: self.frame.size.width, height: self.frame.size.height-44))
+        mapView.delegate    = self
+        // 地图类型
+        mapView.mapType     = MKMapType.standard
+        // 获取用户当前位置信息
+        mapView.showsUserLocation = true
+        mapView.userTrackingMode = .followWithHeading
+        // 显示罗盘
+        if #available(iOS 9.0, *) {
+            mapView.showsCompass = true
+        }
+        self.addSubview(mapView)
+    }
+    
+    private func initSearchBar() {
+        searchBar               = UISearchBar(frame: CGRect(x: 0, y: 0, width: self.frame.size.width, height: 44))
+        searchBar.delegate      = self
+        searchBar.placeholder   = "搜索绿色商家"
+        self.addSubview(searchBar)
+    }
+    
+    private func initLocationManager() {
+        // 创建位置管理者
+        locationManager                 = CLLocationManager()
+        // 设置代理
+        locationManager.delegate        = self
+        // 每隔100 米定位一次
+        locationManager.distanceFilter  = 100
+        // 设置定位的精确度
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        // 请求前台授权
+        locationManager.requestWhenInUseAuthorization()
+    }
+    
+    /// 设置中心位置
+    private func setRegion(center: CLLocationCoordinate2D) {
+        if !center.isValid() { return }
+        //创建一个MKCoordinateSpan对象，设置地图的范围（越小越精确）
+        let latDelta            = 0.05
+        let longDelta           = 0.05
+        let currentLocationSpan = MKCoordinateSpanMake(latDelta, longDelta)
+        let currentRegion       = MKCoordinateRegion(center: center,span: currentLocationSpan)
+        mapView.setRegion(currentRegion, animated: true)
+    }
+    
+    /// 添加大头针
+    private func addAnnotion(model: BusinessModel, coor: CLLocationCoordinate2D) {
+        // 创建一个大头针对象
+        let objectAnnotation        = MKPointAnnotation()
+        // 设置大头针的显示位置
+        objectAnnotation.coordinate = coor
+        // 设置点击大头针之后显示的标题
+        objectAnnotation.title      = model.name
+        // 设置点击大头针之后显示的描述
+        objectAnnotation.subtitle   = model.address
+        // 添加大头针
+        mapView.addAnnotation(objectAnnotation)
+        // 默认显示气泡
+//        mkMapView.selectAnnotation(objectAnnotation, animated: true)
+    }
+    
+    // MARK: - public methods
     /// 定位位置
-    func loaction(models:[BusinessModel]) {
+    func loaction(models: [BusinessModel]) {
         if models.count == 0 { return }
-        let coordinate = models[0].coordinate.split(separator: ",")
-        let log = Double(coordinate[0]) ?? 0
-        let lat = Double(coordinate[1]) ?? 1
-        let coor = CLLocationCoordinate2D(latitude: lat, longitude: log)
-        mkMapView.removeAnnotations(mkMapView.annotations)
+        let coordinate  = models[0].coordinate.split(separator: ",")
+        let log         = Double(coordinate[0]) ?? 0
+        let lat         = Double(coordinate[1]) ?? 1
+        let coor        = CLLocationCoordinate2D(latitude: lat, longitude: log)
+        mapView.removeAnnotations(mapView.annotations)
         setRegion(center: coor)
         
         for model in models {
             let coordinate1 = model.coordinate.split(separator: ",")
-            let log1 = Double(coordinate1[0]) ?? 0
-            let lat1 = Double(coordinate1[1]) ?? 1
-            let coor1 = CLLocationCoordinate2D(latitude: lat1, longitude: log1)
+            let log1        = Double(coordinate1[0]) ?? 0
+            let lat1        = Double(coordinate1[1]) ?? 1
+            let coor1       = CLLocationCoordinate2D(latitude: lat1, longitude: log1)
             addAnnotion(model: model, coor: coor1)
         }
     }
     
-    /// 设置中心位置
-    func setRegion(center:CLLocationCoordinate2D) {
-        if !center.isValid() { return }
-        //创建一个MKCoordinateSpan对象，设置地图的范围（越小越精确）
-        let latDelta = 0.05
-        let longDelta = 0.05
-        let currentLocationSpan:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
-        let currentRegion:MKCoordinateRegion = MKCoordinateRegion(center: center,span: currentLocationSpan)
-        mkMapView.setRegion(currentRegion, animated: true)
+    /// 启动定位服务
+    func startUpdatingLocation() {
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+        }
     }
     
-    /// 添加大头针
-    func addAnnotion(model:BusinessModel, coor:CLLocationCoordinate2D) {
-       
-        //创建一个大头针对象
-        let objectAnnotation = MKPointAnnotation()
-        
-        //设置大头针的显示位置
-        objectAnnotation.coordinate = coor
-        
-        //设置点击大头针之后显示的标题
-        objectAnnotation.title = model.name
-        
-        //设置点击大头针之后显示的描述
-        objectAnnotation.subtitle = model.address
-        
-        //添加大头针
-        mkMapView.addAnnotation(objectAnnotation)
+    /// 关闭定位服务
+    func stopUpdatingLocation() {
+        locationManager.stopUpdatingLocation()
     }
 }
 
 // MARK: - MKMapViewDelegate
-extension MapView : MKMapViewDelegate {
+extension MapView: MKMapViewDelegate {
+    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is MKUserLocation {
             return nil
@@ -171,31 +182,33 @@ extension MapView : MKMapViewDelegate {
             //创建一个大头针视图
             pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuserId)
             pinView?.canShowCallout = true
-            pinView?.animatesDrop = true
+            pinView?.animatesDrop   = true
             //设置大头针颜色
             if #available(iOS 9.0, *) {
                 pinView?.pinTintColor = UIColor.green
             } else {
                 pinView?.pinColor = .green
             }
-            //设置大头针点击注释视图的右侧按钮样式
+            // 设置大头针点击注释视图的右侧按钮样式
             pinView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-        }else{
+        } else {
             pinView?.annotation = annotation
         }
-        
         return pinView
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        
     }
 }
 
 // MARK: - CLLocationManagerDelegate
-extension MapView : CLLocationManagerDelegate {
+extension MapView: CLLocationManagerDelegate {
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else {
             return
         }
-        locationManager.stopUpdatingLocation() // 取到定位即可停止刷新，没有必要一直刷新，耗电
-       // setRegion(center: location.coordinate)
         currentLocation = location
         CLGeocoder().reverseGeocodeLocation(location) { [weak self](placemakes, error) in
             guard let placemark = placemakes?.first else { return }
@@ -223,7 +236,9 @@ extension MapView : CLLocationManagerDelegate {
     }
 }
 
-extension MapView : UISearchBarDelegate {
+// MARK: - UISearchBarDelegate
+extension MapView: UISearchBarDelegate {
+    
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         Log.e("searchBarTextDidBeginEditing#")
         searchBar.showsCancelButton = true
