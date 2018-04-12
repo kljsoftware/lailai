@@ -41,6 +41,9 @@ class BusinessInfoModel: NSObject {
     
     /// 用户在该商家的公钥地址
     var memberPublicKey = ""
+    
+    /// ios应用跳转地址
+    var ios_jump_url = ""
 }
 
 /// 手动输入密钥

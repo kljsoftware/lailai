@@ -50,7 +50,7 @@ class SecretKeyViewController: BaseViewController {
         viewModel.page = 0
         viewModel.isRefresh = true
         MBProgressHUD.showAdded(to: self.view, animated: true)
-        viewModel.getBusinessList()
+        viewModel.getBusinessList(isAllBusiness: false)
     }
     
     // 列表尾部上拉刷新
@@ -60,7 +60,7 @@ class SecretKeyViewController: BaseViewController {
         if viewModel.profileBusinessModel.has_more {
             MBProgressHUD.showAdded(to: self.view, animated: true)
             viewModel.page += 1
-            viewModel.getBusinessList()
+            viewModel.getBusinessList(isAllBusiness: false)
         } else {
             tableView.mj_footer.endRefreshingWithNoMoreData()
         }
@@ -81,7 +81,7 @@ class SecretKeyViewController: BaseViewController {
     func setDataModel() {
         
         MBProgressHUD.showAdded(to: self.view, animated: true)
-        viewModel.getBusinessList()
+        viewModel.getBusinessList(isAllBusiness: false)
         
         viewModel.setCompletion(onSuccess: { (resultModel) in
             self.stopRefreshing()
@@ -89,6 +89,7 @@ class SecretKeyViewController: BaseViewController {
             
         }) { (error) in
             self.stopRefreshing()
+            UIHelper.tip(message: error)
         }
     }
 }

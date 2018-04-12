@@ -15,12 +15,12 @@ class ProfileBusinessViewModel: BaseViewModel {
     var page = 0
     var isRefresh = true
     
-    /// 通过区块链查看捐赠总额
-    func getBusinessList() {
+    /// 授权商家列表
+    func getBusinessList(isAllBusiness: Bool) {
         let reqeustModel = ProfileBusinessRequestModel()
         reqeustModel.page = page
         reqeustModel.size = 20
-        HTTPSessionManager.shared.request(urlString: NetworkURL.getDealerList.url, parameters: reqeustModel.mj_keyValues()) { (json, success) in
+        HTTPSessionManager.shared.request(urlString: isAllBusiness ? NetworkURL.getDealerList.url : NetworkURL.getBlockchainAddress.url, parameters: reqeustModel.mj_keyValues()) { (json, success) in
             let resultModel = ProfileBusinessResultModel.mj_object(withKeyValues: json)
             if success && resultModel != nil && resultModel!.code == 0 {
                 if self.isRefresh {

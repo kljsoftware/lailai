@@ -45,7 +45,7 @@ class ProfileBusinessViewController: BaseViewController {
         viewModel.page = 0
         viewModel.isRefresh = true
         MBProgressHUD.showAdded(to: self.view, animated: true)
-        viewModel.getBusinessList()
+        viewModel.getBusinessList(isAllBusiness: true)
     }
     
     // 列表尾部上拉刷新
@@ -55,7 +55,7 @@ class ProfileBusinessViewController: BaseViewController {
         if viewModel.profileBusinessModel.has_more {
             MBProgressHUD.showAdded(to: self.view, animated: true)
             viewModel.page += 1
-            viewModel.getBusinessList()
+            viewModel.getBusinessList(isAllBusiness: true)
         } else {
             tableView.mj_footer.endRefreshingWithNoMoreData()
         }
@@ -76,7 +76,7 @@ class ProfileBusinessViewController: BaseViewController {
     func setDataModel() {
         
         MBProgressHUD.showAdded(to: self.view, animated: true)
-        viewModel.getBusinessList()
+        viewModel.getBusinessList(isAllBusiness: true)
         
         viewModel.setCompletion(onSuccess: { (resultModel) in
             self.stopRefreshing()
@@ -114,9 +114,11 @@ extension ProfileBusinessViewController : UITableViewDataSource, UITableViewDele
         let businessModel = viewModel.profileBusinessModel.data[indexPath.row]
         
         if businessModel.memberPublicKey != "" {
-            let url = URL(string: "didtaxi://")!
+            let url = URL(string: businessModel.ios_jump_url)!
             if UIApplication.shared.canOpenURL(url) {
                 UIApplication.shared.openURL(url)
+            } else {
+                UIApplication.shared.openURL(URL(string: "didtaxi://")!)
             }
         
         } else {
