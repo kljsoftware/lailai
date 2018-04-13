@@ -1427,7 +1427,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guall.pointswallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "58cbb2c3-de3c-4964-ba86-d4cdf6aa163a";
+				PROVISIONING_PROFILE = "243cf66a-13fa-49e6-ab28-efd5cddf3408";
 				PROVISIONING_PROFILE_SPECIFIER = PointsWallet;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/GC/Config/GC-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
