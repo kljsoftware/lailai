@@ -123,8 +123,8 @@
 		3CD6AA1F2025EE4900EAEECA /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CD6AA1D2025EE4900EAEECA /* ProfileCell.xib */; };
 		3CD6AA222025F05F00EAEECA /* ProfielSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6AA202025F05F00EAEECA /* ProfielSettingCell.swift */; };
 		3CD6AA232025F05F00EAEECA /* ProfielSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CD6AA212025F05F00EAEECA /* ProfielSettingCell.xib */; };
-		3CD6AA262025F07900EAEECA /* ProfileQuitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6AA242025F07900EAEECA /* ProfileQuitCell.swift */; };
-		3CD6AA272025F07900EAEECA /* ProfileQuitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CD6AA252025F07900EAEECA /* ProfileQuitCell.xib */; };
+		3CD6AA262025F07900EAEECA /* ProfileButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6AA242025F07900EAEECA /* ProfileButtonCell.swift */; };
+		3CD6AA272025F07900EAEECA /* ProfileButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CD6AA252025F07900EAEECA /* ProfileButtonCell.xib */; };
 		3CD6AA292025F9D900EAEECA /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD6AA282025F9D900EAEECA /* BaseNavigationController.swift */; };
 		3CF364C42022A3ED003179E8 /* HTTPSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF364C32022A3ED003179E8 /* HTTPSessionManager.swift */; };
 		3CF364F52022A916003179E8 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF364C72022A916003179E8 /* Home.storyboard */; };
@@ -318,8 +318,8 @@
 		3CD6AA1D2025EE4900EAEECA /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		3CD6AA202025F05F00EAEECA /* ProfielSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfielSettingCell.swift; sourceTree = "<group>"; };
 		3CD6AA212025F05F00EAEECA /* ProfielSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfielSettingCell.xib; sourceTree = "<group>"; };
-		3CD6AA242025F07900EAEECA /* ProfileQuitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileQuitCell.swift; sourceTree = "<group>"; };
-		3CD6AA252025F07900EAEECA /* ProfileQuitCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileQuitCell.xib; sourceTree = "<group>"; };
+		3CD6AA242025F07900EAEECA /* ProfileButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButtonCell.swift; sourceTree = "<group>"; };
+		3CD6AA252025F07900EAEECA /* ProfileButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileButtonCell.xib; sourceTree = "<group>"; };
 		3CD6AA282025F9D900EAEECA /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		3CF364C32022A3ED003179E8 /* HTTPSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPSessionManager.swift; sourceTree = "<group>"; };
 		3CF364C72022A916003179E8 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -749,8 +749,8 @@
 				3CD6AA1D2025EE4900EAEECA /* ProfileCell.xib */,
 				3CD6AA202025F05F00EAEECA /* ProfielSettingCell.swift */,
 				3CD6AA212025F05F00EAEECA /* ProfielSettingCell.xib */,
-				3CD6AA242025F07900EAEECA /* ProfileQuitCell.swift */,
-				3CD6AA252025F07900EAEECA /* ProfileQuitCell.xib */,
+				3CD6AA242025F07900EAEECA /* ProfileButtonCell.swift */,
+				3CD6AA252025F07900EAEECA /* ProfileButtonCell.xib */,
 				3CB4D100202A05AF00AB70B9 /* ProfileModel.swift */,
 				3CB4D110202B093600AB70B9 /* ProfileViewModel.swift */,
 			);
@@ -1024,7 +1024,7 @@
 				3C8DCEF7201D76C400C9F40E /* tab_wallet_nor@2x.png in Resources */,
 				3CF3650E2022A916003179E8 /* NewsCell.xib in Resources */,
 				3C8DCEF5201D76C400C9F40E /* tab_profile_nor@3x.png in Resources */,
-				3CD6AA272025F07900EAEECA /* ProfileQuitCell.xib in Resources */,
+				3CD6AA272025F07900EAEECA /* ProfileButtonCell.xib in Resources */,
 				3CF365032022A916003179E8 /* BusinessCell.xib in Resources */,
 				3CF365172022A916003179E8 /* Login.storyboard in Resources */,
 				3CA33DA5202CABAA003032A4 /* discover@2x.png in Resources */,
@@ -1274,7 +1274,7 @@
 				3CB4D0F62029F03C00AB70B9 /* SplashModel.swift in Sources */,
 				E5A2A0332079B419000B20F0 /* TradeRecordModel.swift in Sources */,
 				E5A2A0342079B419000B20F0 /* TradeRecordViewController.swift in Sources */,
-				3CD6AA262025F07900EAEECA /* ProfileQuitCell.swift in Sources */,
+				3CD6AA262025F07900EAEECA /* ProfileButtonCell.swift in Sources */,
 				3CF365252022DAAF003179E8 /* BaseResultModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

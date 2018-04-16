@@ -8,7 +8,7 @@
 
 
 ///  常量定义
-private let profileHeight:CGFloat = 116, settingCellHeight:CGFloat = 50, quitCellHeight:CGFloat = 100
+private let profileHeight: CGFloat = 116, settingCellHeight: CGFloat = 50, quitCellHeight: CGFloat = 100
 
 /// 单元类型
 private enum ProfileCellType : Int {
@@ -22,7 +22,7 @@ private enum ProfileCellType : Int {
 }
 
 /// 个人详情设置界面
-class ProfileViewController: UIViewController {
+class ProfileViewController: BaseViewController {
 
     /// 业务模块
     let viewModel = ProfileViewModel()
@@ -48,7 +48,7 @@ class ProfileViewController: UIViewController {
         automaticallyAdjustsScrollViewInsets = false
         tableView.register(UINib(nibName: "ProfileCell", bundle: nil), forCellReuseIdentifier: "kProfileCell")
         tableView.register(UINib(nibName: "ProfielSettingCell", bundle: nil), forCellReuseIdentifier: "kProfielSettingCell")
-        tableView.register(UINib(nibName: "ProfileQuitCell", bundle: nil), forCellReuseIdentifier: "kProfileQuitCell")
+        tableView.register(UINib(nibName: "ProfileButtonCell", bundle: nil), forCellReuseIdentifier: "kProfileButtonCell")
     }
     
     private func setupViewModel() {
@@ -117,7 +117,8 @@ extension ProfileViewController : UITableViewDataSource, UITableViewDelegate {
             cell.update(model: viewModel.userInfo)
             return cell
         case .quit:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileQuitCell", for: indexPath) as! ProfileQuitCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileButtonCell", for: indexPath) as! ProfileButtonCell
+            cell.titleLabel.text = LanguageKey.logout.value
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "kProfielSettingCell", for: indexPath) as! ProfielSettingCell

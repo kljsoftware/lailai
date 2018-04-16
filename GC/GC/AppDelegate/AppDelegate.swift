@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         IQKeyboardManager.shared().isEnableAutoToolbar = false
+        AFNetworkReachabilityManager.shared().startMonitoring()
         
         setup()
         addons()
@@ -25,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
+        AFNetworkReachabilityManager.shared().stopMonitoring()
         unregisterNotification()
     }
     

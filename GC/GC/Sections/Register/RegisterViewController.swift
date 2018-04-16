@@ -9,7 +9,7 @@
 import UIKit
 
 /// 注册
-class RegisterViewController: UIViewController {
+class RegisterViewController: BaseViewController {
     
     /// 手机号&手机号输入
     @IBOutlet weak var phoneTextField: UITextField!

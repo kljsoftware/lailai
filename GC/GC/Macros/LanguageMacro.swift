@@ -41,6 +41,7 @@ enum LanguageKey : String {
     case pwd_null           // 密码不能为空
     case pwd_different      // 密码输入不一致
     case pwd_reset          // 重置密码
+    case no_network         // 当前无网络
     
     /// 积分钱包
     case wallet_donate      // 积分捐赠

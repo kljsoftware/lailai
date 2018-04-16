@@ -38,19 +38,6 @@ DEPENDENCIES:
   - SnapKit (= 3.2.0)
   - Toast-Swift (= 3.0.1)
 
-SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - AFNetworking
-    - IQKeyboardManager
-    - MBProgressHUD
-    - MJExtension
-    - MJRefresh
-    - mob_smssdk
-    - MOBFoundation
-    - SDWebImage
-    - SnapKit
-    - Toast-Swift
-
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   IQKeyboardManager: 266cb7b1d11f94a3e71229d77f960f9a1b538e5b
@@ -65,4 +52,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 7e33688192436883364a51ceae92678def058431
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.4.0.beta.2

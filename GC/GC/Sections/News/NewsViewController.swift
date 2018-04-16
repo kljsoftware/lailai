@@ -12,7 +12,7 @@ import UIKit
 private let cellHeight:CGFloat = 80
 
 /// 绿色新闻
-class NewsViewController: UIViewController {
+class NewsViewController: BaseViewController {
     
     fileprivate var viewModel = NewsViewModel()
 

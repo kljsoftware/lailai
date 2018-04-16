@@ -8,12 +8,11 @@
 
 import UIKit
 
-class ProfileQuitCell: UITableViewCell {
+class ProfileButtonCell: UITableViewCell {
 
-    @IBOutlet weak var quitLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        quitLabel.text = LanguageKey.logout.value
     }
 }

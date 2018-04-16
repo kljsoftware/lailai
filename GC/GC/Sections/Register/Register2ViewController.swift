@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Register2ViewController: UIViewController {
+class Register2ViewController: BaseViewController {
     
     /// 参数:电话号码
     var phone = ""

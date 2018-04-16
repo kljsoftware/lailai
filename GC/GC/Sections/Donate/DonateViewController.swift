@@ -10,7 +10,7 @@
 private let cellHeight:CGFloat = 354
 
 /// 公益捐赠
-class DonateViewController: UIViewController {
+class DonateViewController: BaseViewController {
     
     let viewModel = DonateViewModel()
 

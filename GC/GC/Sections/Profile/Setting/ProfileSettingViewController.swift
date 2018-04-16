@@ -33,7 +33,7 @@ class ProfileSettingViewController: BaseViewController {
         navigationItem.title = LanguageKey.setting.value
         automaticallyAdjustsScrollViewInsets = false
         tableView.register(UINib(nibName: "ProfielSettingCell", bundle: nil), forCellReuseIdentifier: "kProfielSettingCell")
-        tableView.register(UINib(nibName: "ProfileQuitCell", bundle: nil), forCellReuseIdentifier: "kProfileQuitCell")
+        tableView.register(UINib(nibName: "ProfileButtonCell", bundle: nil), forCellReuseIdentifier: "kProfileButtonCell")
         tableView.register(UINib(nibName: "ProfileDetailDescCell", bundle: nil), forCellReuseIdentifier: "kProfileDetailDescCell")
     }
 
@@ -77,7 +77,8 @@ extension ProfileSettingViewController : UITableViewDataSource, UITableViewDeleg
             cell.update(name: getLabelName(type: type), content: version)
             return cell
         case .quit:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileQuitCell", for: indexPath) as! ProfileQuitCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileButtonCell", for: indexPath) as! ProfileButtonCell
+            cell.titleLabel.text = LanguageKey.logout.value
             return cell
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "kProfielSettingCell", for: indexPath) as! ProfielSettingCell

@@ -15,7 +15,7 @@ private let personalDonateViewHeight:CGFloat = 100
 private let headerHeight:CGFloat = 262
 
 /// 积分钱包
-class WalletViewController: UIViewController {
+class WalletViewController: BaseViewController {
     
     /// 业务模块
     fileprivate let viewModel = WalletViewModel()

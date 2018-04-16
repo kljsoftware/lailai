@@ -7,10 +7,10 @@
 //
 
 ///  常量定义
-private let avatarHeight:CGFloat = 84, otherCellHeight:CGFloat = 50, descCellHeight:CGFloat = 50
+private let avatarHeight: CGFloat = 84, otherCellHeight: CGFloat = 50, descCellHeight: CGFloat = 50, saveCellHeight: CGFloat = 100
 
 /// 单元类型
-private enum ProfileDetailsCellType : Int {
+private enum ProfileDetailsCellType: Int {
     case avatar     // 头像
     case nick       // 昵称
     case tel        // 手机号
@@ -19,7 +19,8 @@ private enum ProfileDetailsCellType : Int {
     case email      // 邮箱
     case birthday   // 生日
     case desc       // 个人描述
-    static var count = 8
+    case save       // 保存
+    static var count = 9
 }
 
 class ProfileDetailsViewController: BaseViewController {
@@ -39,9 +40,6 @@ class ProfileDetailsViewController: BaseViewController {
     /// 列表
     @IBOutlet weak var tableView: UITableView!
     
-    /// 保存按钮
-    fileprivate var saveItem: UIBarButtonItem!
-    
     /// 当前cell类型
     fileprivate var type = ProfileDetailsCellType.nick
     
@@ -50,17 +48,17 @@ class ProfileDetailsViewController: BaseViewController {
         super.viewDidLoad()
         
         navigationItem.title = LanguageKey.profile_setting.value
-        saveItem = UIBarButtonItem(title: LanguageKey.save.value, style: UIBarButtonItemStyle.done, target: self, action: #selector(onSaveButtonClicked))
-        navigationItem.rightBarButtonItem = saveItem
         tableView.register(UINib(nibName: "ProfileDetailAvatarCell", bundle: nil), forCellReuseIdentifier: "kProfileDetailAvatarCell")
         tableView.register(UINib(nibName: "ProfileDetailOtherCell", bundle: nil), forCellReuseIdentifier: "kProfileDetailOtherCell")
         tableView.register(UINib(nibName: "ProfileDetailDescCell", bundle: nil), forCellReuseIdentifier: "kProfileDetailDescCell")
-        viewModel.setCompletion(onSuccess: {[weak self] (resultModel) in
+        tableView.register(UINib(nibName: "ProfileButtonCell", bundle: nil), forCellReuseIdentifier: "kProfileButtonCell")
+
+        viewModel.setCompletion(onSuccess: { [weak self](resultModel) in
             guard let wself = self else {
                 return
             }
             if resultModel.isKind(of: UploadFileResultModel.self) {
-                self?.saveItem.isEnabled = true
+                MBProgressHUD.hide(for: self!.view, animated: true)
                 let model = resultModel as! UploadFileResultModel
                 wself.dict[.avatar] = model.url
                 wself.tableView.reloadData()
@@ -70,12 +68,13 @@ class ProfileDetailsViewController: BaseViewController {
                 wself.navigationController?.popViewController(animated: true)
             }
         }) { (error) in
+            MBProgressHUD.hide(for: self.view, animated: true)
             UIHelper.tip(message: error)
         }
     }
     
     // MARK: - action methods
-    func onSaveButtonClicked(sender:UIButton) {
+    fileprivate func onSaveClicked() {
         let reqModel        = ModityUserInfoRequestModel()
         reqModel.name       = userInfo.name
         reqModel.shortName  = dict[.nick] ?? ""
@@ -103,7 +102,7 @@ class ProfileDetailsViewController: BaseViewController {
     }
     
     /// 获取标签名字
-    fileprivate func getLabelName(type:ProfileDetailsCellType) -> String {
+    fileprivate func getLabelName(type: ProfileDetailsCellType) -> String {
         var labelName = ""
         switch type {
         case .avatar:   // 头像
@@ -122,12 +121,14 @@ class ProfileDetailsViewController: BaseViewController {
             labelName = LanguageKey.birthday.value
         case .desc:     // 个人描述
             labelName = LanguageKey.desc.value
+        default:
+            break
         }
         return labelName
     }
     
     /// 获取提示语
-    fileprivate func getPlaceholder(type:ProfileDetailsCellType) -> String {
+    fileprivate func getPlaceholder(type: ProfileDetailsCellType) -> String {
         var placeholder = ""
         switch type {
         case .nick:
@@ -144,7 +145,7 @@ class ProfileDetailsViewController: BaseViewController {
 }
 
 // MARK:  UITableViewDataSource&UITableViewDelegate
-extension ProfileDetailsViewController : UITableViewDataSource, UITableViewDelegate {
+extension ProfileDetailsViewController: UITableViewDataSource, UITableViewDelegate {
     
     // 各个分区的单元(Cell)个数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -166,6 +167,11 @@ extension ProfileDetailsViewController : UITableViewDataSource, UITableViewDeleg
             cell.update(name: labelName, content: content)
             return cell
             
+        } else if type == .save {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileButtonCell", for: indexPath) as! ProfileButtonCell
+            cell.titleLabel.text = LanguageKey.save.value
+            return cell
+            
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "kProfileDetailOtherCell", for: indexPath) as! ProfileDetailOtherCell
             cell.update(name: labelName, content: content)
@@ -180,6 +186,8 @@ extension ProfileDetailsViewController : UITableViewDataSource, UITableViewDeleg
             return avatarHeight
         case .desc:
             return descCellHeight
+        case .save:
+            return saveCellHeight
         default:
             return otherCellHeight
         }
@@ -215,11 +223,13 @@ extension ProfileDetailsViewController : UITableViewDataSource, UITableViewDeleg
                     self?.tableView.reloadData()
                 }
             case .birthday:
-                let curDate = Date.convert(from: dict[type] ?? "", format: "yyyyMMdd")
+                let curDate = Date.convert(from: dict[type] ?? "", format: "yyyy/MM/dd")
                 DatePickerView.show(currentDate: curDate, dateStyle: .YearMonthDay, selectedDateClosure: { [weak self](date) in
-                    self?.dict[self!.type] = date.convert(format: "yyyyMMdd")
+                    self?.dict[self!.type] = date.convert(format: "yyyy/MM/dd")
                     self?.tableView.reloadData()
                 })
+            case .save:
+                onSaveClicked()
             default:
                 AlertController.show(in: self, title: getPlaceholder(type: type), text: dict[type], placeholder: getPlaceholder(type: type), btns: [LanguageKey.cancel.value, LanguageKey.ok.value], handler: { [weak self](action, text) in
                     if action.title != LanguageKey.cancel.value && text != nil {
@@ -234,7 +244,7 @@ extension ProfileDetailsViewController : UITableViewDataSource, UITableViewDeleg
 }
 
 /// 图像选取委托事件
-extension ProfileDetailsViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension ProfileDetailsViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
@@ -246,7 +256,7 @@ extension ProfileDetailsViewController : UIImagePickerControllerDelegate, UINavi
             if image != nil {
                 let data = UIImageJPEGRepresentation(image!, 0.8)
                 if data != nil {
-                    self?.saveItem.isEnabled = false
+                    MBProgressHUD.showAdded(to: self!.view, animated: true)
                     self?.viewModel.upload(data: data!)
                 }
             }

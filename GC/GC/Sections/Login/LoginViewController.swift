@@ -9,7 +9,7 @@
 import UIKit
 
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
     
     /// 业务模块
     private let viewModel = LoginViewModel()
@@ -111,6 +111,10 @@ class LoginViewController: UIViewController {
     
     /// 登陆
     fileprivate func login() {
+        if !AFNetworkReachabilityManager.shared().isReachable {
+            UIHelper.tip(message: LanguageKey.no_network.value)
+            return
+        }
         if loginButton.isEnabled {
             viewModel.login(tel: phoneTextField.text!, pwd: pwdTextField.text!)
         }
