@@ -35,9 +35,10 @@
 "phone_null"        = "手机号为空或输入错误";
 "pwd_null"          = "密码不能为空";
 "pwd_different"     = "密码输入不一致";
+"pwd_reset"               = "重置密码";
 
 // 积分钱包
-"wallet_donate"     = "积分捐赠";
+"wallet_donate"     = "捐赠记录";
 "donate_record"     = "积分捐赠记录";
 "total"             = "累计总额";
 "points_unit"       = "分";
@@ -45,7 +46,7 @@
 "hash"              = "交易哈希";
 "trade_record"      = "交易记录";
 "my_donate_total"   = "我的积分捐赠总额";
-"balance_points"    = "捐赠积分数量";
+"balance_points"    = "捐赠总额";
 "points_type"       = "积分种类";
 "kinds_unit"        = "种";
 
@@ -57,16 +58,16 @@
 // 我
 "setting"               = "设置";
 "accept_busniss"        = "授权商家";
-"secret_key_address"    = "我的秘钥地址";
+"secret_key_address"    = "我的公钥地址";
 "blockchain"            = "区块链";
 "profile_setting"       = "个人设置";
-"photo"                 = "照片";
+"photo"                 = "头像";
 "nick"                  = "昵称";
 "gender"                = "性别";
 "region"                = "地区";
 "email"                 = "邮箱";
 "birthday"              = "生日";
-"desc"                  = "个人描述";
+"desc"                  = "个人签名";
 "man"                   = "男";
 "woman"                 = "女";
 "language"              = "语言";

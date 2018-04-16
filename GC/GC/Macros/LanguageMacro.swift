@@ -40,6 +40,7 @@ enum LanguageKey : String {
     case phone_null         // 手机号为空或输入错误
     case pwd_null           // 密码不能为空
     case pwd_different      // 密码输入不一致
+    case pwd_reset          // 重置密码
     
     /// 积分钱包
     case wallet_donate      // 积分捐赠

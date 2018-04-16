@@ -42,7 +42,7 @@ class ProfileSettingViewController: BaseViewController {
         var labelName = ""
         switch type {
         case .pwd:      // 密码
-            labelName = LanguageKey.pwd.value
+            labelName = LanguageKey.pwd_reset.value
         case .language: // 语言
             labelName = LanguageKey.language.value
         case .faq:      // 手机号

@@ -35,6 +35,7 @@
 "phone_null"        = "Phone number is empty or input error";
 "pwd_null"          = "The password can not be empty";
 "pwd_different"     = "Inconsistency of password input";
+"pwd_reset"               = "Reset password";
 
 //积分钱包
 "wallet_donate"     = "Donation";
