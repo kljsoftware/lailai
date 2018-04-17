@@ -120,20 +120,20 @@ class MapView: UIView {
     
     /// 添加大头针
     private func addAnnotion(model: BusinessModel, coor: CLLocationCoordinate2D) {
-        // 创建一个大头针对象
-        let objectAnnotation        = MKPointAnnotation()
-        // 设置大头针的显示位置
-        objectAnnotation.coordinate = coor
-        // 设置点击大头针之后显示的标题
-        objectAnnotation.title      = model.name
-        // 设置点击大头针之后显示的描述
-        objectAnnotation.subtitle   = model.address
-        // 添加大头针
-        mapView.addAnnotation(objectAnnotation)
-
-//        let objectAnnotation    = CalloutAnnotation(coordinate: coor, title: model.name)
+//        // 创建一个大头针对象
+//        let objectAnnotation        = MKPointAnnotation()
+//        // 设置大头针的显示位置
+//        objectAnnotation.coordinate = coor
+//        // 设置点击大头针之后显示的标题
+//        objectAnnotation.title      = model.name
+//        // 设置点击大头针之后显示的描述
+//        objectAnnotation.subtitle   = model.address
 //        // 添加大头针
 //        mapView.addAnnotation(objectAnnotation)
+
+        let objectAnnotation    = CalloutAnnotation(coordinate: coor, title: model.name)
+        // 添加大头针
+        mapView.addAnnotation(objectAnnotation)
         // 默认显示气泡
 //        mkMapView.selectAnnotation(objectAnnotation, animated: true)
     }
@@ -179,7 +179,7 @@ extension MapView: MKMapViewDelegate {
         if annotation is MKUserLocation {
             return nil
         }
-        
+
         let reuserId = "pin"
         var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuserId)
             as? MKPinAnnotationView

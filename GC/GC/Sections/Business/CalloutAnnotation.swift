@@ -24,7 +24,7 @@ class CalloutAnnotation: NSObject, MKAnnotation {
     
     init(coordinate: CLLocationCoordinate2D, title: String) {
         self.coordinate = coordinate
-        self.title = title
+//        self.title = title
         super.init()
     }
     
@@ -46,10 +46,13 @@ class CalloutAnnotation: NSObject, MKAnnotation {
                 backgroundView.addConstraint(widthConstraint)
                 let heightConstraint = NSLayoutConstraint(item: backgroundView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 200)
                 backgroundView.addConstraint(heightConstraint)
-                annotationView?.detailCalloutAccessoryView =  backgroundView
+                annotationView?.detailCalloutAccessoryView = backgroundView
             } else {
                 annotationView?.pinColor = .green
             }
+            let logoImgView = UIView(frame: CGRect(x: 0, y: 040, width: 40, height: 40))
+            logoImgView.backgroundColor = UIColor.green
+            annotationView?.leftCalloutAccessoryView = logoImgView
         } else {
             annotationView?.annotation = annotation
         }
