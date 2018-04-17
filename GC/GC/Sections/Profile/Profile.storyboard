@@ -49,7 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1A-Mi-XWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-246" y="877"/>
+            <point key="canvasLocation" x="-354" y="1283"/>
         </scene>
         <!--设置-->
         <scene sceneID="JXU-xi-o5Z">
@@ -90,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GLc-aY-kng" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1361" y="731"/>
+            <point key="canvasLocation" x="1361" y="791"/>
         </scene>
         <!--语言-->
         <scene sceneID="52l-BY-mhp">
@@ -239,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XLb-t9-F1J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1361" y="1661"/>
+            <point key="canvasLocation" x="1361" y="1704"/>
         </scene>
         <!--我的秘钥地址-->
         <scene sceneID="Gc4-60-6hc">
@@ -419,7 +419,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cIO-EA-2Kv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2516" y="1659.2203898050975"/>
+            <point key="canvasLocation" x="2514" y="1703"/>
         </scene>
         <!--关于绿积分-->
         <scene sceneID="3Ew-yN-Alk">
@@ -509,7 +509,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjK-oM-ofk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1356" y="877"/>
+            <point key="canvasLocation" x="-1804" y="1282"/>
         </scene>
         <!--设置密码-->
         <scene sceneID="9x1-Wx-qxp">

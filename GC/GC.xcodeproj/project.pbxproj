@@ -191,6 +191,7 @@
 		A43A50E4E7F53329C5B11904 /* Pods_GC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19EB8A19ED869E797BC1EDA /* Pods_GC.framework */; };
 		E505394A207C966200551393 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5053949207C966200551393 /* AlertController.swift */; };
 		E5375E59207DA66E004F7F62 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5375E58207DA66E004F7F62 /* BannerView.swift */; };
+		E589147D2085E33900A9937A /* CalloutAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E589147C2085E33900A9937A /* CalloutAnnotation.swift */; };
 		E5A2A0322079B419000B20F0 /* TradeRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A2A02F2079B418000B20F0 /* TradeRecordViewModel.swift */; };
 		E5A2A0332079B419000B20F0 /* TradeRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A2A0302079B418000B20F0 /* TradeRecordModel.swift */; };
 		E5A2A0342079B419000B20F0 /* TradeRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A2A0312079B418000B20F0 /* TradeRecordViewController.swift */; };
@@ -389,6 +390,7 @@
 		C19EB8A19ED869E797BC1EDA /* Pods_GC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5053949207C966200551393 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		E5375E58207DA66E004F7F62 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		E589147C2085E33900A9937A /* CalloutAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalloutAnnotation.swift; sourceTree = "<group>"; };
 		E5A2A02F2079B418000B20F0 /* TradeRecordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeRecordViewModel.swift; sourceTree = "<group>"; };
 		E5A2A0302079B418000B20F0 /* TradeRecordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeRecordModel.swift; sourceTree = "<group>"; };
 		E5A2A0312079B418000B20F0 /* TradeRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeRecordViewController.swift; sourceTree = "<group>"; };
@@ -718,6 +720,7 @@
 				3CF3653220232377003179E8 /* BusinessViewModel.swift */,
 				3CF3653020231DA8003179E8 /* BusinessModel.swift */,
 				3CF364D22022A916003179E8 /* MapView.swift */,
+				E589147C2085E33900A9937A /* CalloutAnnotation.swift */,
 				3CA33DA0202CAB17003032A4 /* MapAroundView.swift */,
 				3CA33D9E202CAAFE003032A4 /* MapAroundView.xib */,
 				3C1B0B37202D248500E059BD /* BusinessListViewController.swift */,
@@ -1170,6 +1173,7 @@
 				3CA33DA1202CAB17003032A4 /* MapAroundView.swift in Sources */,
 				3CB5539D201CB73F009AC1CD /* String+Extension.swift in Sources */,
 				3CB4D119202B488300AB70B9 /* ProfileSettingPwdViewController.swift in Sources */,
+				E589147D2085E33900A9937A /* CalloutAnnotation.swift in Sources */,
 				3C7E26D72026960100ED4B56 /* ProfileSettingViewController.swift in Sources */,
 				3CF3650A2022A916003179E8 /* NewsCell.swift in Sources */,
 				E5A2A0322079B419000B20F0 /* TradeRecordViewModel.swift in Sources */,

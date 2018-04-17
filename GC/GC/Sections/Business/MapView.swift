@@ -121,13 +121,7 @@ class MapView: UIView {
     /// 添加大头针
     private func addAnnotion(model: BusinessModel, coor: CLLocationCoordinate2D) {
         // 创建一个大头针对象
-        let objectAnnotation        = MKPointAnnotation()
-        // 设置大头针的显示位置
-        objectAnnotation.coordinate = coor
-        // 设置点击大头针之后显示的标题
-        objectAnnotation.title      = model.name
-        // 设置点击大头针之后显示的描述
-        objectAnnotation.subtitle   = model.address
+        let objectAnnotation    = CalloutAnnotation(coordinate: coor, title: model.name)
         // 添加大头针
         mapView.addAnnotation(objectAnnotation)
         // 默认显示气泡
@@ -171,34 +165,35 @@ class MapView: UIView {
 extension MapView: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        if annotation is MKUserLocation {
-            return nil
-        }
         
-        let reuserId = "pin"
-        var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuserId)
-            as? MKPinAnnotationView
-        if pinView == nil {
-            //创建一个大头针视图
-            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuserId)
-            pinView?.canShowCallout = true
-            pinView?.animatesDrop   = true
-            //设置大头针颜色
-            if #available(iOS 9.0, *) {
-                pinView?.pinTintColor = UIColor.green
-            } else {
-                pinView?.pinColor = .green
+        // 自定义大头针
+        var annotaionView: MKAnnotationView?
+        // 根据模型进行分类
+        if !(annotation is MKUserLocation) {
+            if annotation is CalloutAnnotation {
+                // 适用于顶部title，底部自定义视图，ios9之后
+                annotaionView = CalloutAnnotation.createViewAnnotation(for: mapView, annotation: annotation)
+                annotaionView?.annotation = annotation
             }
-            // 设置大头针点击注释视图的右侧按钮样式
-            pinView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-        } else {
-            pinView?.annotation = annotation
         }
-        return pinView
+        return annotaionView
     }
     
+    // 选中大头针时触发
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         
+    }
+    
+    // 反选时触发
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        
+        for annotation in self.mapView.annotations {
+            if annotation is CalloutAnnotation {
+                DispatchQueue.main.async {
+                    mapView.removeAnnotation(annotation)
+                }
+            }
+        }
     }
 }
 
