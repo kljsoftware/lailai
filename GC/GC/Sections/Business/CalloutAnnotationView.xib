@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="h8i-cp-gu8" customClass="CalloutAnnotationView" customModule="GC" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="229"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U1e-KI-NK7">
+                    <rect key="frame" x="12" y="12" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="U1e-KI-NK7" secondAttribute="height" multiplier="1:1" id="2FI-Ni-jkS"/>
+                        <constraint firstAttribute="width" constant="44" id="dkw-Zg-NfT"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="肯德基" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oO6-xI-JSg">
+                    <rect key="frame" x="80" y="24.5" width="48" height="18"/>
+                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="16"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="电话：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1b-ow-ozX">
+                    <rect key="frame" x="12" y="68" width="36" height="13.5"/>
+                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="12345678123 12345678123" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TK-U2-rLo">
+                    <rect key="frame" x="48" y="61.5" width="315" height="27"/>
+                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2y-eA-HTP">
+                    <rect key="frame" x="12" y="107.5" width="36" height="13.5"/>
+                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="乌兰察布 乌兰察布" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7B-0U-3dZ">
+                    <rect key="frame" x="48" y="100.5" width="315" height="27"/>
+                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="公钥地址：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7L-8y-GfR">
+                    <rect key="frame" x="12" y="153" width="60" height="13.5"/>
+                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="sfdgdgfghhdrhhrherhtrhthtyjtysfdgdgfghhdrhhrherhtrhthtyjtysfdgdgfghhdrhhrherhtrhthtyjtysfdgdgfghhdrhhrherhtrhthtyjty" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWl-OV-p4T">
+                    <rect key="frame" x="72" y="139.5" width="291" height="40.5"/>
+                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="oO6-xI-JSg" firstAttribute="centerY" secondItem="U1e-KI-NK7" secondAttribute="centerY" id="A8L-j5-USJ"/>
+                <constraint firstItem="A7B-0U-3dZ" firstAttribute="top" secondItem="0TK-U2-rLo" secondAttribute="bottom" constant="12" id="IG3-6Z-FHr"/>
+                <constraint firstItem="A7B-0U-3dZ" firstAttribute="leading" secondItem="m2y-eA-HTP" secondAttribute="trailing" id="In9-su-vbc"/>
+                <constraint firstItem="A7B-0U-3dZ" firstAttribute="trailing" secondItem="0TK-U2-rLo" secondAttribute="trailing" id="Qod-Mv-QFd"/>
+                <constraint firstItem="0TK-U2-rLo" firstAttribute="centerY" secondItem="w1b-ow-ozX" secondAttribute="centerY" id="Sfv-fF-pJF"/>
+                <constraint firstItem="0TK-U2-rLo" firstAttribute="leading" secondItem="w1b-ow-ozX" secondAttribute="trailing" id="TgH-Ki-pko"/>
+                <constraint firstItem="U1e-KI-NK7" firstAttribute="leading" secondItem="h8i-cp-gu8" secondAttribute="leading" constant="12" id="UWR-5f-dh2"/>
+                <constraint firstItem="D7L-8y-GfR" firstAttribute="centerY" secondItem="rWl-OV-p4T" secondAttribute="centerY" id="V0f-Is-C6m"/>
+                <constraint firstItem="D7L-8y-GfR" firstAttribute="leading" secondItem="m2y-eA-HTP" secondAttribute="leading" id="Z1k-Hr-vGe"/>
+                <constraint firstItem="rWl-OV-p4T" firstAttribute="trailing" secondItem="A7B-0U-3dZ" secondAttribute="trailing" id="aYs-4a-9ak"/>
+                <constraint firstItem="m2y-eA-HTP" firstAttribute="centerY" secondItem="A7B-0U-3dZ" secondAttribute="centerY" id="af1-8E-HNw"/>
+                <constraint firstItem="w1b-ow-ozX" firstAttribute="top" secondItem="U1e-KI-NK7" secondAttribute="bottom" constant="12" id="dpm-f2-7Lc"/>
+                <constraint firstItem="rWl-OV-p4T" firstAttribute="leading" secondItem="D7L-8y-GfR" secondAttribute="trailing" id="no9-ag-nXs"/>
+                <constraint firstItem="U1e-KI-NK7" firstAttribute="top" secondItem="h8i-cp-gu8" secondAttribute="top" constant="12" id="qmG-VR-rvF"/>
+                <constraint firstItem="oO6-xI-JSg" firstAttribute="leading" secondItem="U1e-KI-NK7" secondAttribute="trailing" constant="24" id="rEb-jt-aOn"/>
+                <constraint firstItem="m2y-eA-HTP" firstAttribute="leading" secondItem="w1b-ow-ozX" secondAttribute="leading" id="rKq-SE-8th"/>
+                <constraint firstItem="w1b-ow-ozX" firstAttribute="leading" secondItem="U1e-KI-NK7" secondAttribute="leading" id="utK-Xr-50E"/>
+                <constraint firstAttribute="trailing" secondItem="0TK-U2-rLo" secondAttribute="trailing" constant="12" id="xOD-0E-3aF"/>
+                <constraint firstItem="rWl-OV-p4T" firstAttribute="top" secondItem="A7B-0U-3dZ" secondAttribute="bottom" constant="12" id="z2V-Wo-ORT"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addressLabel" destination="A7B-0U-3dZ" id="6Gn-bK-dDX"/>
+                <outlet property="logoImgView" destination="U1e-KI-NK7" id="LAN-WQ-8Qj"/>
+                <outlet property="nameLabel" destination="oO6-xI-JSg" id="Qfu-TT-lQr"/>
+                <outlet property="publicKeyLabel" destination="oO6-xI-JSg" id="Lzy-fX-nQ0"/>
+                <outlet property="telLabel" destination="A7B-0U-3dZ" id="O4B-RR-FhF"/>
+            </connections>
+            <point key="canvasLocation" x="-12.5" y="-166.5"/>
+        </view>
+    </objects>
+</document>

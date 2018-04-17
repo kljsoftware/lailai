@@ -188,10 +188,11 @@
 		A3A728C12077661100846993 /* AreaPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A728C02077661100846993 /* AreaPickerView.swift */; };
 		A3A728C72077A89A00846993 /* Area.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3A728C62077A89A00846993 /* Area.plist */; };
 		A3A728C92077A8D500846993 /* AreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A728C82077A8D500846993 /* AreaModel.swift */; };
+		A3CDF4BC208617570051048B /* CalloutAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3CDF4BB208617570051048B /* CalloutAnnotationView.xib */; };
 		A43A50E4E7F53329C5B11904 /* Pods_GC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19EB8A19ED869E797BC1EDA /* Pods_GC.framework */; };
 		E505394A207C966200551393 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5053949207C966200551393 /* AlertController.swift */; };
 		E5375E59207DA66E004F7F62 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5375E58207DA66E004F7F62 /* BannerView.swift */; };
-		E589147D2085E33900A9937A /* CalloutAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E589147C2085E33900A9937A /* CalloutAnnotation.swift */; };
+		E589147D2085E33900A9937A /* CalloutAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E589147C2085E33900A9937A /* CalloutAnnotationView.swift */; };
 		E5A2A0322079B419000B20F0 /* TradeRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A2A02F2079B418000B20F0 /* TradeRecordViewModel.swift */; };
 		E5A2A0332079B419000B20F0 /* TradeRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A2A0302079B418000B20F0 /* TradeRecordModel.swift */; };
 		E5A2A0342079B419000B20F0 /* TradeRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A2A0312079B418000B20F0 /* TradeRecordViewController.swift */; };
@@ -386,11 +387,12 @@
 		A3A728C02077661100846993 /* AreaPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaPickerView.swift; sourceTree = "<group>"; };
 		A3A728C62077A89A00846993 /* Area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Area.plist; sourceTree = "<group>"; };
 		A3A728C82077A8D500846993 /* AreaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaModel.swift; sourceTree = "<group>"; };
+		A3CDF4BB208617570051048B /* CalloutAnnotationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalloutAnnotationView.xib; sourceTree = "<group>"; };
 		BBEE1DAB0CF91082AD1F3A01 /* Pods-GC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GC.release.xcconfig"; path = "Pods/Target Support Files/Pods-GC/Pods-GC.release.xcconfig"; sourceTree = "<group>"; };
 		C19EB8A19ED869E797BC1EDA /* Pods_GC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5053949207C966200551393 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		E5375E58207DA66E004F7F62 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
-		E589147C2085E33900A9937A /* CalloutAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalloutAnnotation.swift; sourceTree = "<group>"; };
+		E589147C2085E33900A9937A /* CalloutAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalloutAnnotationView.swift; sourceTree = "<group>"; };
 		E5A2A02F2079B418000B20F0 /* TradeRecordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeRecordViewModel.swift; sourceTree = "<group>"; };
 		E5A2A0302079B418000B20F0 /* TradeRecordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeRecordModel.swift; sourceTree = "<group>"; };
 		E5A2A0312079B418000B20F0 /* TradeRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeRecordViewController.swift; sourceTree = "<group>"; };
@@ -720,7 +722,8 @@
 				3CF3653220232377003179E8 /* BusinessViewModel.swift */,
 				3CF3653020231DA8003179E8 /* BusinessModel.swift */,
 				3CF364D22022A916003179E8 /* MapView.swift */,
-				E589147C2085E33900A9937A /* CalloutAnnotation.swift */,
+				E589147C2085E33900A9937A /* CalloutAnnotationView.swift */,
+				A3CDF4BB208617570051048B /* CalloutAnnotationView.xib */,
 				3CA33DA0202CAB17003032A4 /* MapAroundView.swift */,
 				3CA33D9E202CAAFE003032A4 /* MapAroundView.xib */,
 				3C1B0B37202D248500E059BD /* BusinessListViewController.swift */,
@@ -1070,6 +1073,7 @@
 				3C7E26D42026930500ED4B56 /* ProfileDetailOtherCell.xib in Resources */,
 				3CF3650D2022A916003179E8 /* News.storyboard in Resources */,
 				3CA33D9F202CAAFE003032A4 /* MapAroundView.xib in Resources */,
+				A3CDF4BC208617570051048B /* CalloutAnnotationView.xib in Resources */,
 				3C0383AF2031170C007D911B /* WalletHeaderView.xib in Resources */,
 				3C65507E2025E50E00FE0504 /* DonateRecordCell.xib in Resources */,
 				3CF364F52022A916003179E8 /* Home.storyboard in Resources */,
@@ -1173,7 +1177,7 @@
 				3CA33DA1202CAB17003032A4 /* MapAroundView.swift in Sources */,
 				3CB5539D201CB73F009AC1CD /* String+Extension.swift in Sources */,
 				3CB4D119202B488300AB70B9 /* ProfileSettingPwdViewController.swift in Sources */,
-				E589147D2085E33900A9937A /* CalloutAnnotation.swift in Sources */,
+				E589147D2085E33900A9937A /* CalloutAnnotationView.swift in Sources */,
 				3C7E26D72026960100ED4B56 /* ProfileSettingViewController.swift in Sources */,
 				3CF3650A2022A916003179E8 /* NewsCell.swift in Sources */,
 				E5A2A0322079B419000B20F0 /* TradeRecordViewModel.swift in Sources */,

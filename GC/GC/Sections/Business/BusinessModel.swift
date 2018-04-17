@@ -47,7 +47,7 @@ class BusinessResultModel : BaseResultModel {
 
 /// 绿色商家
 class BusinessModel : NSObject {
-    var id =  1             // 商家id
+    var id = 1              // 商家id
     var name = ""           // 商家名
     var desc = ""           // 商家描述
     var color = ""

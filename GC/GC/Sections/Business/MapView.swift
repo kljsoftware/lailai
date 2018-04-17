@@ -120,22 +120,24 @@ class MapView: UIView {
     
     /// 添加大头针
     private func addAnnotion(model: BusinessModel, coor: CLLocationCoordinate2D) {
-//        // 创建一个大头针对象
-//        let objectAnnotation        = MKPointAnnotation()
-//        // 设置大头针的显示位置
-//        objectAnnotation.coordinate = coor
-//        // 设置点击大头针之后显示的标题
-//        objectAnnotation.title      = model.name
-//        // 设置点击大头针之后显示的描述
-//        objectAnnotation.subtitle   = model.address
-//        // 添加大头针
-//        mapView.addAnnotation(objectAnnotation)
-
-        let objectAnnotation    = CalloutAnnotation(coordinate: coor, title: model.name)
+        // 创建一个大头针对象
+        let annotation        = MKPointAnnotation()
+        // 设置大头针的显示位置
+        annotation.coordinate = coor
+        // 设置点击大头针之后显示的标题
+        annotation.title      = model.name
+        // 设置点击大头针之后显示的描述
+        annotation.subtitle   = model.address
         // 添加大头针
-        mapView.addAnnotation(objectAnnotation)
-        // 默认显示气泡
-//        mkMapView.selectAnnotation(objectAnnotation, animated: true)
+        mapView.addAnnotation(annotation)
+        
+//        let annotation    = CalloutAnnotation(coordinate: coor, title: model.name)
+//        // 添加大头针
+//        mapView.addAnnotation(annotation)
+        
+//        // 自定义弹出视图
+//        let calloutAnnotation = CalloutAnnotation(coordinate: coor, logo: model.logo, name: model.name, tel: model.dealerTel, address: model.address, publicKey: model.blockchainId)
+//        mapView.addAnnotation(calloutAnnotation)
     }
     
     // MARK: - public methods
@@ -175,7 +177,6 @@ class MapView: UIView {
 extension MapView: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        
         if annotation is MKUserLocation {
             return nil
         }
@@ -209,12 +210,31 @@ extension MapView: MKMapViewDelegate {
 //                annotaionView?.annotation = annotation
 //            }
 //        }
+        
+//        // 自定义大头针
+//        var annotaionView = mapView.dequeueReusableAnnotationView(withIdentifier: "CalloutAnnotationView") as? CalloutAnnotationView
+//        if annotaionView == nil {
+//            annotaionView = Bundle.main.loadNibNamed("CalloutAnnotationView", owner: nil, options: nil)![0] as? CalloutAnnotationView
+//            annotaionView?.backgroundColor = UIColor.gray
+//        }
+//        annotaionView?.annotation = annotation
 //        return annotaionView
     }
     
-    // 选中大头针时触发
+    // 选中大头针
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         
+    }
+    
+    // 反选大头针
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        for annotation in mapView.annotations {
+            if annotation is CalloutAnnotation {
+                DispatchQueue.main.async {
+                    mapView.removeAnnotation(annotation)
+                }
+            }
+        }
     }
 }
 
