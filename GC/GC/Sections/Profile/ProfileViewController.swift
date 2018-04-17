@@ -11,7 +11,7 @@
 private let profileHeight: CGFloat = 116, settingCellHeight: CGFloat = 50, quitCellHeight: CGFloat = 100
 
 /// 单元类型
-private enum ProfileCellType : Int {
+private enum ProfileCellType: Int {
     case profile
     case setting
     case accept_busniss
@@ -22,7 +22,7 @@ private enum ProfileCellType : Int {
 }
 
 /// 个人详情设置界面
-class ProfileViewController: BaseViewController {
+class ProfileViewController: PortraitViewController {
 
     /// 业务模块
     let viewModel = ProfileViewModel()
@@ -156,7 +156,7 @@ extension ProfileViewController : UITableViewDataSource, UITableViewDelegate {
             let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "secretkey_address")
             navigationController?.pushViewController(vc, animated: true)
         case .quit:
-            AlertController.show(in: self, title: "确定要退出登录吗？", btns: [LanguageKey.cancel.value, LanguageKey.ok.value], handler: { (action, text) in
+            AlertController.show(in: self, title: LanguageKey.logout_message.value, btns: [LanguageKey.cancel.value, LanguageKey.ok.value], handler: { (action, text) in
                 if action.title != LanguageKey.cancel.value {
                     NotificationCenter.default.post(name: NoticationUserLogout, object: nil)
                 }

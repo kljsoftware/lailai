@@ -9,7 +9,7 @@
 import UIKit
 
 
-class LoginViewController: BaseViewController {
+class LoginViewController: PortraitViewController {
     
     /// 业务模块
     private let viewModel = LoginViewModel()

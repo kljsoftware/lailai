@@ -85,8 +85,6 @@ enum LanguageKey : String {
     case modify_success     // 修改成功
     case save_success       // 保存成功
     case pwd_old_error      // 旧密码错误
-//    case green_city_points  // 绿城积分
-//    case want_open          // 想要打开
     case auth_line          // 已授权连接
     case input_public_key   // 输入公钥地址（可在对应商家平台查看）
     case no_auth_business   // 尚未授权商
@@ -96,6 +94,7 @@ enum LanguageKey : String {
     case auth_green_points_get // 授权绿色积分钱包获取
     case points_data        // 积分数据
     case input              // 手动输入
+    case logout_message     // 确定要退出登录吗？
     
     /// 其他
     case ok                 // 确定

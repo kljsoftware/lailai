@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 /// 常量定义
-private let businessTitleWidth:CGFloat = 140, businessTitleHeight:CGFloat = 44
+private let businessTitleWidth: CGFloat = 140, businessTitleHeight: CGFloat = 44
 
 /// 绿色商家
 class BusinessViewController: PortraitViewController {

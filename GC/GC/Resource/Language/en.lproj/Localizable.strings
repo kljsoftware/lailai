@@ -80,8 +80,6 @@
 "modify_success"        = "Modification succeeded";
 "save_success"          = "Save success";
 "pwd_old_error"         = "Old password error";
-//"green_city_points"     = "Green city points";
-//"want_open"             = "Want to open";
 "auth_line"             = "Authorized connection";
 "input_public_key"      = "Enter the public key address (which can be viewed on the corresponding merchant platform).";
 "no_auth_business"      = "Unauthorized dealer";
@@ -91,6 +89,7 @@
 "auth_green_points_get" = "Authorized green point purse access";
 "points_data"           = "Points data";
 "input"                 = "Manual input";
+"logout_message"        = "Do you decide to quit logon?";
 
 // 通用
 "ok"        = "OK";

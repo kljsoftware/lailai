@@ -18,7 +18,7 @@ private enum ProfileDetailsCellType: Int {
     case region     // 地区
     case email      // 邮箱
     case birthday   // 生日
-    case desc       // 个人描述
+    case desc       // 个性签名
     case save       // 保存
     static var count = 9
 }
@@ -119,7 +119,7 @@ class ProfileDetailsViewController: BaseViewController {
             labelName = LanguageKey.email.value
         case .birthday: // 生日
             labelName = LanguageKey.birthday.value
-        case .desc:     // 个人描述
+        case .desc:     // 个性签名
             labelName = LanguageKey.desc.value
         default:
             break
@@ -136,7 +136,7 @@ class ProfileDetailsViewController: BaseViewController {
         case .email:
             placeholder = "邮箱"
         case .desc:
-            placeholder = "个人描述"
+            placeholder = "个性签名"
         default:
             break
         }

@@ -9,10 +9,10 @@
 import UIKit
 
 /// 常量定义
-private let cellHeight:CGFloat = 80
+private let cellHeight: CGFloat = 80
 
 /// 绿色新闻
-class NewsViewController: BaseViewController {
+class NewsViewController: PortraitViewController {
     
     fileprivate var viewModel = NewsViewModel()
 

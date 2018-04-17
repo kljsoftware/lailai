@@ -10,12 +10,12 @@ import UIKit
 
 // 相关常量定义
 /// 单元间隔空白、单元宽高、列表头距导航栏初始位置
-private let blank:CGFloat = 12, sectionHeight:CGFloat = 32, collectionCellHeight:CGFloat = 100
+private let blank: CGFloat = 12, sectionHeight: CGFloat = 32, collectionCellHeight: CGFloat = 100
 private let personalDonateViewHeight:CGFloat = 100
 private let headerHeight:CGFloat = 262
 
 /// 积分钱包
-class WalletViewController: BaseViewController {
+class WalletViewController: PortraitViewController {
     
     /// 业务模块
     fileprivate let viewModel = WalletViewModel()

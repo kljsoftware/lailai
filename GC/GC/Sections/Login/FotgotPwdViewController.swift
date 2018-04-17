@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FotgotPwdViewController: BaseViewController {
+class FotgotPwdViewController: PortraitViewController {
 
     /// 手机号
     var tel = ""

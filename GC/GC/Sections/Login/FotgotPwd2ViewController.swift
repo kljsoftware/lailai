@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FotgotPwd2ViewController: BaseViewController {
+class FotgotPwd2ViewController: PortraitViewController {
 
     var tel = ""
     
