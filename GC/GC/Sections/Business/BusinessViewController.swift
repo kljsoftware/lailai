@@ -41,6 +41,7 @@ class BusinessViewController: PortraitViewController {
     /// 默认第一次定位
     fileprivate var fristDefautLocation = true
    
+    
     // MARK: - override methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,7 +93,7 @@ class BusinessViewController: PortraitViewController {
     }
     
     /// 请求网络数据
-    private func requestData(page:Int = 0) {
+    private func requestData(page: Int = 0) {
         MBProgressHUD.showAdded(to: self.view, animated: true)
         viewModel.getDealers(page: page)
         viewModel.setCompletion(onSuccess: { [weak self](resultModel) in
@@ -123,7 +124,7 @@ class BusinessViewController: PortraitViewController {
 }
 
 // MARK: - UIScrollViewDelegate
-extension BusinessViewController : UIScrollViewDelegate {
+extension BusinessViewController: UIScrollViewDelegate {
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let isMap = scrollView.contentOffset.x != 0

@@ -248,18 +248,21 @@ extension ProfileDetailsViewController: UIImagePickerControllerDelegate, UINavig
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
-        picker.dismiss(animated: false) { [weak self] in
-            var image = info[UIImagePickerControllerEditedImage] as? UIImage
-            if nil == image {
-                image = info[UIImagePickerControllerOriginalImage] as? UIImage
-            }
+        let type = info[UIImagePickerControllerMediaType] as! String
+        if type == "public.image" {
+            let image = info[UIImagePickerControllerEditedImage] as? UIImage
             if image != nil {
                 let data = UIImageJPEGRepresentation(image!, 0.8)
                 if data != nil {
-                    MBProgressHUD.showAdded(to: self!.view, animated: true)
-                    self?.viewModel.upload(data: data!)
+                    MBProgressHUD.showAdded(to: self.view, animated: true)
+                    self.viewModel.upload(data: data!)
                 }
             }
+            picker.dismiss(animated: true, completion:nil)
         }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
     }
 }

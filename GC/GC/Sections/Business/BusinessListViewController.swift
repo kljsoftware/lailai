@@ -7,8 +7,9 @@
 //
 
 /// 常量定义
-private let cellHeight:CGFloat = 104
+private let cellHeight: CGFloat = 104
 
+/// 上家列表
 class BusinessListViewController: BaseViewController {
     
     /// 回调闭包
@@ -56,7 +57,7 @@ class BusinessListViewController: BaseViewController {
     }
 }
 
-// MARK:  UITableViewDataSource&UITableViewDelegate
+// MARK: - UITableViewDataSource&UITableViewDelegate
 extension BusinessListViewController: UITableViewDataSource, UITableViewDelegate {
     
     // 各个分区的单元(Cell)个数

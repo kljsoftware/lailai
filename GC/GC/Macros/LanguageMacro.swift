@@ -56,10 +56,13 @@ enum LanguageKey : String {
     case points_type        // 积分种类
     case kinds_unit         // 种
     
-    /// 积分商家
+    /// 绿色商家
     case map                // 地图
     case balance            // 捐赠积分额
     case points             // 积分
+    case telephone          // 电话
+    case address            // 地址
+    case public_key         // 公钥地址
     
     /// 我
     case setting            // 设置

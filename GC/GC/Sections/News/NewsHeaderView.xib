@@ -32,7 +32,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Pf-rJ-Xj2" customClass="BorderView" customModule="GC" customModuleProvider="target">
                             <rect key="frame" x="12" y="10.5" width="12" height="12"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hu4-vA-oKA">
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hu4-vA-oKA">
                                     <rect key="frame" x="6" y="6" width="0.0" height="0.0"/>
                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="11"/>
                                     <color key="textColor" red="0.9882352941176471" green="0.5725490196078431" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>

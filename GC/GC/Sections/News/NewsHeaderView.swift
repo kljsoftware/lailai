@@ -16,13 +16,14 @@ class NewsHeaderView: UIView {
     
     @IBOutlet weak var titleLabel: UILabel!
     
-    private var model:NewsTopModel?
-    private var navConroller:UINavigationController?
+    private var model: NewsTopModel?
+    private var navConroller: UINavigationController?
     
-    func update(model:NewsTopModel, navConroller:UINavigationController?) {
+    func update(model: NewsTopModel, navConroller: UINavigationController?) {
         self.model = model
         self.navConroller = navConroller
         coverImageView.setImage(urlStr: NetworkImgOrWeb.getUrl(name: model.newsCover), placeholderStr: "news_header", radius: 0)
+        tagLabel.isHidden = false
         tagLabel.text = model.newsTag
         titleLabel.text = model.newsTitle
     }

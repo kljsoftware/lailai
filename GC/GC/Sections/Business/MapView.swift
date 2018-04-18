@@ -128,7 +128,7 @@ class MapView: UIView {
     private func setRegion(center: CLLocationCoordinate2D) {
         if !center.isValid() { return }
         // 创建一个MKCoordinateSpan对象，设置地图的范围（越小越精确）
-        let currentLocationSpan = MKCoordinateSpanMake(0.05, 0.05)
+        let currentLocationSpan = MKCoordinateSpanMake(0.15, 0.15)
         let currentRegion       = MKCoordinateRegion(center: center, span: currentLocationSpan)
         mapView.setRegion(currentRegion, animated: true)
     }
@@ -136,13 +136,15 @@ class MapView: UIView {
     /// 添加大头针
     private func addAnnotion(model: BusinessModel, coor: CLLocationCoordinate2D) {
         // 创建大头针
-        let annotation = CalloutAnnotation(coordinate: coor, logo: model.logo, name: model.name, tel: model.dealerTel, address: model.address, publicKey: model.blockchainId)
+        let annotation = CalloutAnnotation(coordinate: coor, logo: model.logo, name: model.name, tel: model.dealerTel, address: model.address, publicKey: model.blockchain_id)
         mapView.addAnnotation(annotation)
     }
     
     /// 点击定位按钮
     @objc private func locationClicked(sender: UIButton) {
-        viewModel.searchDealers(x: String(currentLocation!.coordinate.longitude), y: String(currentLocation!.coordinate.latitude))
+        if currentLocation != nil {
+            viewModel.searchDealers(x: String(currentLocation!.coordinate.longitude), y: String(currentLocation!.coordinate.latitude))
+        }
     }
     
     // MARK: - public methods

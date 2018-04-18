@@ -12,6 +12,12 @@ import MapKit
 /// 自定义气泡视图
 class BubbleContentView: UIView {
     
+    /// 提示文字
+    @IBOutlet weak var telTLabel: UILabel!
+    @IBOutlet weak var addressTLabel: UILabel!
+    @IBOutlet weak var publicKeyTLabel: UILabel!
+    
+    /// 内容信息
     @IBOutlet weak var logoImgView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var telLabel: UILabel!
@@ -21,6 +27,9 @@ class BubbleContentView: UIView {
     /// 初始化
     override func awakeFromNib() {
         super.awakeFromNib()
+        telTLabel.text          = LanguageKey.telephone.value + "："
+        addressTLabel.text      = LanguageKey.address.value + "："
+        publicKeyTLabel.text    = LanguageKey.public_key.value + "："
     }
     
     /// 更新数据

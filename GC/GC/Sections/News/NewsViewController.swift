@@ -134,7 +134,7 @@ extension NewsViewController : UITableViewDataSource, UITableViewDelegate {
     
     // 单元(cell)选中事件
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = UIStoryboard.init(name: "News", bundle: nil).instantiateViewController(withIdentifier: "news_details") as! NewsDetailsViewController
+        let vc = UIStoryboard(name: "News", bundle: nil).instantiateViewController(withIdentifier: "news_details") as! NewsDetailsViewController
         vc.news = (viewModel.newsItems[indexPath.row].newsTitle, viewModel.newsItems[indexPath.row].newsLink)
         navigationController?.pushViewController(vc, animated: true)
     }
