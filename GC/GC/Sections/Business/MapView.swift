@@ -23,8 +23,11 @@ class MapView: UIView {
     fileprivate var searchBar: UISearchBar!
     /// 地图
     fileprivate var mapView: MKMapView!
+    /// 定位按钮
+    fileprivate var locationBtn: UIButton!
     /// 当前定位位置
-    fileprivate var currentLocation: CLLocation?
+    var currentLocation: CLLocation?
+    
     
     /// map around view
     fileprivate lazy var aroundView: MapAroundView = {
@@ -39,10 +42,10 @@ class MapView: UIView {
                 return
             }
             if wself.currentLocation != nil {
-                let vc = UIStoryboard.init(name: "Business", bundle: nil).instantiateViewController(withIdentifier: "business_list") as! BusinessListViewController
+                let vc = UIStoryboard(name: "Business", bundle: nil).instantiateViewController(withIdentifier: "business_list") as! BusinessListViewController
                 vc.loaction = ("\(wself.currentLocation!.coordinate.longitude)", "\(wself.currentLocation!.coordinate.latitude)")
-                vc.didSelectClosure = { [weak self] (model) in
-                    self?.loaction(models: [model])
+                vc.didSelectClosure = { [weak self](model) in
+                    self?.loaction(models: [model], center: self!.currentLocation!.coordinate)
                 }
                 wself.navController?.pushViewController(vc, animated: true)
             }
@@ -56,13 +59,15 @@ class MapView: UIView {
         
         initMapView()
         initSearchBar()
+        initLocationButton()
         initLocationManager()
         
         viewModel.setCompletion(onSuccess: { [weak self](resultModel) in
             guard let wself = self else {
                 return
             }
-            wself.loaction(models: wself.viewModel.businessResultModel.data)
+            wself.loaction(models: wself.viewModel.businessResultModel.data, center: wself.currentLocation!.coordinate)
+
         }) { (error) in
             UIHelper.tip(message: error)
         }
@@ -94,6 +99,18 @@ class MapView: UIView {
         self.addSubview(searchBar)
     }
     
+    private func initLocationButton() {
+        locationBtn = UIButton(type: .custom)
+        locationBtn.setImage(UIImage(named: "location"), for: .normal)
+        locationBtn.addTarget(self, action: #selector(locationClicked(sender:)), for: .touchUpInside)
+        self.addSubview(locationBtn)
+        locationBtn.snp.makeConstraints { (maker) in
+            maker.left.equalTo(10)
+            maker.bottom.equalTo(aroundView.snp.top).offset(-10)
+            maker.width.height.equalTo(40)
+        }
+    }
+    
     private func initLocationManager() {
         // 创建位置管理者
         locationManager                 = CLLocationManager()
@@ -110,11 +127,9 @@ class MapView: UIView {
     /// 设置中心位置
     private func setRegion(center: CLLocationCoordinate2D) {
         if !center.isValid() { return }
-        //创建一个MKCoordinateSpan对象，设置地图的范围（越小越精确）
-        let latDelta            = 0.05
-        let longDelta           = 0.05
-        let currentLocationSpan = MKCoordinateSpanMake(latDelta, longDelta)
-        let currentRegion       = MKCoordinateRegion(center: center,span: currentLocationSpan)
+        // 创建一个MKCoordinateSpan对象，设置地图的范围（越小越精确）
+        let currentLocationSpan = MKCoordinateSpanMake(0.05, 0.05)
+        let currentRegion       = MKCoordinateRegion(center: center, span: currentLocationSpan)
         mapView.setRegion(currentRegion, animated: true)
     }
     
@@ -125,16 +140,26 @@ class MapView: UIView {
         mapView.addAnnotation(annotation)
     }
     
+    /// 点击定位按钮
+    @objc private func locationClicked(sender: UIButton) {
+        viewModel.searchDealers(x: String(currentLocation!.coordinate.longitude), y: String(currentLocation!.coordinate.latitude))
+    }
+    
     // MARK: - public methods
-    /// 定位位置
-    func loaction(models: [BusinessModel]) {
-        if models.count == 0 { return }
-        let coordinate  = models[0].coordinate.split(separator: ",")
+    /// 获取经纬度
+    func getCoordinate2D(model: BusinessModel) -> CLLocationCoordinate2D {
+        let coordinate  = model.coordinate.split(separator: ",")
         let log         = Double(coordinate[0]) ?? 0
         let lat         = Double(coordinate[1]) ?? 1
         let coor        = CLLocationCoordinate2D(latitude: lat, longitude: log)
+        return coor
+    }
+    
+    /// 定位位置
+    func loaction(models: [BusinessModel], center: CLLocationCoordinate2D) {
+        if models.count == 0 { return }
         mapView.removeAnnotations(mapView.annotations)
-        setRegion(center: coor)
+        setRegion(center: center)
         
         for model in models {
             let coordinate1 = model.coordinate.split(separator: ",")

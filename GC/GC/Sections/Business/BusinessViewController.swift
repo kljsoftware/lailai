@@ -76,7 +76,7 @@ class BusinessViewController: PortraitViewController {
             wself.fristDefautLocation = false
             wself.scrollView.contentOffset.x = DEVICE_SCREEN_WIDTH
             self?.mapView.startUpdatingLocation()
-            wself.mapView.loaction(models: [model])
+            wself.mapView.loaction(models: [model], center: wself.mapView.getCoordinate2D(model: model))
         }
         businessView.refreshingClosure = { [weak self] (page) in
             guard let wself = self else {
@@ -116,7 +116,7 @@ class BusinessViewController: PortraitViewController {
     fileprivate func fristMapLoaction() {
         if viewModel.businessResultModel.data.count > 0 && fristDefautLocation {
             let model = viewModel.businessResultModel.data.first!
-            mapView.loaction(models: [model])
+            mapView.loaction(models: [model], center: mapView.currentLocation!.coordinate)
             fristDefautLocation = false
         }
     }

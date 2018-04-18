@@ -193,6 +193,7 @@
 		E505394A207C966200551393 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5053949207C966200551393 /* AlertController.swift */; };
 		E5375E59207DA66E004F7F62 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5375E58207DA66E004F7F62 /* BannerView.swift */; };
 		E589147D2085E33900A9937A /* BubbleContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E589147C2085E33900A9937A /* BubbleContentView.swift */; };
+		E58C86442087191F00178D65 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = E58C86432087191F00178D65 /* location.png */; };
 		E5A2A0322079B419000B20F0 /* TradeRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A2A02F2079B418000B20F0 /* TradeRecordViewModel.swift */; };
 		E5A2A0332079B419000B20F0 /* TradeRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A2A0302079B418000B20F0 /* TradeRecordModel.swift */; };
 		E5A2A0342079B419000B20F0 /* TradeRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A2A0312079B418000B20F0 /* TradeRecordViewController.swift */; };
@@ -393,6 +394,7 @@
 		E5053949207C966200551393 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		E5375E58207DA66E004F7F62 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		E589147C2085E33900A9937A /* BubbleContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleContentView.swift; sourceTree = "<group>"; };
+		E58C86432087191F00178D65 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
 		E5A2A02F2079B418000B20F0 /* TradeRecordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeRecordViewModel.swift; sourceTree = "<group>"; };
 		E5A2A0302079B418000B20F0 /* TradeRecordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeRecordModel.swift; sourceTree = "<group>"; };
 		E5A2A0312079B418000B20F0 /* TradeRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeRecordViewController.swift; sourceTree = "<group>"; };
@@ -421,6 +423,7 @@
 		3C19391320207E1700E7D007 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				E58C86432087191F00178D65 /* location.png */,
 				3CA33DA3202CABA9003032A4 /* discover@2x.png */,
 				3CA33DA2202CABA9003032A4 /* discover@3x.png */,
 				3C19391420207E1700E7D007 /* points.png */,
@@ -1088,6 +1091,7 @@
 				3CA33DA4202CABAA003032A4 /* discover@3x.png in Resources */,
 				3C91FC2C201F3A9E00BB492D /* avatar@3x.png in Resources */,
 				3CF365042022A916003179E8 /* Register.storyboard in Resources */,
+				E58C86442087191F00178D65 /* location.png in Resources */,
 				3CF365152022A916003179E8 /* Wallet.storyboard in Resources */,
 				3C91FC2D201F3A9E00BB492D /* avatar@2x.png in Resources */,
 				3CF3650C2022A916003179E8 /* NewsHeaderView.xib in Resources */,

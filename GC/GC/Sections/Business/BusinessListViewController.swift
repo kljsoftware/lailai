@@ -57,7 +57,7 @@ class BusinessListViewController: BaseViewController {
 }
 
 // MARK:  UITableViewDataSource&UITableViewDelegate
-extension BusinessListViewController : UITableViewDataSource, UITableViewDelegate {
+extension BusinessListViewController: UITableViewDataSource, UITableViewDelegate {
     
     // 各个分区的单元(Cell)个数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

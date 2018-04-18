@@ -71,19 +71,19 @@ class CalloutAnnotation: NSObject, MKAnnotation {
             // 创建大头针视图
             annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             annotationView?.canShowCallout = true
-            if #available(iOS 9.0, *) {
-                annotationView?.pinTintColor = UIColor.green
-                // 添加约束才可以使用自定义视图
-                let contentView = Bundle.main.loadNibNamed("BubbleContentView", owner: nil, options: nil)![0] as? BubbleContentView
-                contentView?.updateData(annotation: annotation)
-                annotationView?.detailCalloutAccessoryView = contentView
-                contentView?.snp.makeConstraints({ (maker) in
-                    maker.width.equalTo(280)
-                    maker.height.equalTo(150)
-                })
-            } else {
-                annotationView?.pinColor = .green
-            }
+        }
+        if #available(iOS 9.0, *) {
+            annotationView?.pinTintColor = UIColor.green
+            // 添加约束才可以使用自定义视图
+            let contentView = Bundle.main.loadNibNamed("BubbleContentView", owner: nil, options: nil)![0] as? BubbleContentView
+            contentView?.updateData(annotation: annotation)
+            annotationView?.detailCalloutAccessoryView = contentView
+            contentView?.snp.makeConstraints({ (maker) in
+                maker.width.equalTo(240)
+                maker.height.equalTo(150)
+            })
+        } else {
+            annotationView?.pinColor = .green
         }
         return annotationView
     }

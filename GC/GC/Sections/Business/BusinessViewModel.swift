@@ -12,7 +12,7 @@ class BusinessViewModel: BaseViewModel {
     var businessResultModel = BusinessResultModel()
     
     /// 获取绿色商家
-    func getDealers(page:Int = 0, size:Int = 10) {
+    func getDealers(page: Int = 0, size: Int = 10) {
         let reqModel = BusinessRequestModel()
         reqModel.page = page
         reqModel.size = size
@@ -30,7 +30,7 @@ class BusinessViewModel: BaseViewModel {
     }
     
     /// 4.2 搜索商家
-    func searchDealers(x:String = "", y:String = "", name:String = "", range:String = "", page:Int = 0, size:Int = 10) {
+    func searchDealers(x: String = "", y: String = "", name: String = "", range: String = "", page: Int = 0, size: Int = 10) {
         let reqModel = BusinessDealersRequestModel()
         reqModel.x = x
         reqModel.y = y
