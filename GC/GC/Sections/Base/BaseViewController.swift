@@ -12,7 +12,8 @@ class BaseViewController: PortraitViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage(named:"common_back"), style: UIBarButtonItemStyle.done, target: self, action: #selector(onBackButtonClicked))
+        let backImage = UIImage(named:"common_back")?.withRenderingMode(.alwaysOriginal)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: backImage, style: .done, target: self, action: #selector(onBackButtonClicked))
     }
 
     // MARK: - action methods

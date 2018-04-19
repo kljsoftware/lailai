@@ -12,6 +12,15 @@ class BaseNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //navigationBar.barTintColor = UIColor.white
+    }
+    
+    // 栈顶控制器，控制是否转屏
+    override var shouldAutorotate : Bool {
+        return self.viewControllers.last!.shouldAutorotate
+    }
+    
+    // 栈顶控制器，控制转屏方式
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        return self.viewControllers.last!.supportedInterfaceOrientations
     }
 }

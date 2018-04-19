@@ -10,6 +10,7 @@ import UIKit
 
 class WalletHeaderView: UIView {
 
+    @IBOutlet weak var bannerBgView: UIView!
     private var bannerView: BannerView?
     
     /// 头文件
@@ -37,6 +38,10 @@ class WalletHeaderView: UIView {
     fileprivate var adItems: [AdModel]!
     
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
     /// 更新
     func update(model: WalletBaseResultModel) {
         
@@ -46,8 +51,8 @@ class WalletHeaderView: UIView {
             bannerView?.removeFromSuperview()
             bannerView = nil
         }
-        bannerView = BannerView.banner(frame: CGRect(x: 0, y: 0, width: DEVICE_SCREEN_WIDTH, height: 150), delegate: self, imageURLs: adItems.flatMap{NetworkImgOrWeb.getUrl(name: $0.cover)}, placeholderImage: "", timerInterval: 3, currentIndicatorImage: "dot_sel", pageIndicatorImage: "dot")
-        self.addSubview(bannerView!)
+        bannerView = BannerView.banner(frame: CGRect(x: 0, y: 0, width: DEVICE_SCREEN_WIDTH, height: 150), delegate: self, imageURLs: adItems.flatMap{NetworkImgOrWeb.getUrl(name: $0.cover)}, placeholderImage: "news_header", timerInterval: 3, currentIndicatorImage: "dot_sel", pageIndicatorImage: "dot")
+        bannerBgView.addSubview(bannerView!)
 
         avatarImageView.setImage(urlStr: NetworkImgOrWeb.getUrl(name: model.userInfo.avatar), placeholderStr: "avatar", radius: 30)
         nameLabel.text = model.userInfo.name

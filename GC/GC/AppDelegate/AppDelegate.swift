@@ -37,6 +37,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - private methods
     /// 初始化
     private func setup() {
+        
+        UIApplication.shared.statusBarOrientation = .portrait
+        UIApplication.shared.isStatusBarHidden    = false
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white
         window?.makeKeyAndVisible()

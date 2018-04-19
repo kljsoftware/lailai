@@ -20,6 +20,10 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zdk-7d-OfQ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QxP-bM-SQa">
                     <rect key="frame" x="0.0" y="150" width="375" height="100"/>
                     <subviews>
@@ -114,11 +118,16 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="QxP-bM-SQa" secondAttribute="trailing" id="0ia-Ee-Zvx"/>
                 <constraint firstItem="QxP-bM-SQa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="DiG-Bh-F2C"/>
+                <constraint firstItem="QxP-bM-SQa" firstAttribute="top" secondItem="zdk-7d-OfQ" secondAttribute="bottom" id="Jdo-Ko-JSP"/>
+                <constraint firstItem="zdk-7d-OfQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MtW-WS-s73"/>
                 <constraint firstItem="QxP-bM-SQa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="150" id="Ugf-Vh-ZBp"/>
+                <constraint firstAttribute="trailing" secondItem="zdk-7d-OfQ" secondAttribute="trailing" id="lGL-qZ-WsC"/>
+                <constraint firstItem="zdk-7d-OfQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="loy-va-zE9"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="avatarImageView" destination="mhN-O2-0rD" id="efi-cs-nKe"/>
+                <outlet property="bannerBgView" destination="zdk-7d-OfQ" id="1Ed-In-xnO"/>
                 <outlet property="breedLabel" destination="U5o-eV-6lI" id="xpb-AL-ntA"/>
                 <outlet property="integralSumLabel" destination="ijl-gO-gjD" id="f8j-OE-pQQ"/>
                 <outlet property="nameLabel" destination="H6X-nK-9uI" id="ksY-2g-H6p"/>

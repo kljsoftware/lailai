@@ -9,7 +9,7 @@
 import UIKit
 
 /// 闪屏页
-class SplashViewController: UIViewController {
+class SplashViewController: PortraitViewController {
     
     private let viewModel = LaunchViewModel()
 
@@ -62,7 +62,7 @@ class SplashViewController: UIViewController {
         spashView.model = viewModel.adModel
         adView.insertSubview(spashView, at: 0)
       //  spashView.backgroundColor = UIColor.red
-        spashView.frame = CGRect.init(x: 0, y: 0, width: DEVICE_SCREEN_WIDTH, height: DEVICE_SCREEN_HEIGHT - 100)
+        spashView.frame = CGRect(x: 0, y: 0, width: DEVICE_SCREEN_WIDTH, height: DEVICE_SCREEN_HEIGHT - 100)
         spashView.snp.makeConstraints { (maker) in
             maker.left.right.top.bottom.equalTo(adView)
         }
