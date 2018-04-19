@@ -117,7 +117,7 @@ class BusinessViewController: PortraitViewController {
     fileprivate func fristMapLoaction() {
         if viewModel.businessResultModel.data.count > 0 && fristDefautLocation {
             let model = viewModel.businessResultModel.data.first!
-            mapView.loaction(models: [model], center: mapView.currentLocation!.coordinate)
+            mapView.loaction(models: [model], center: mapView.currentLocation?.coordinate)
             fristDefautLocation = false
         }
     }
