@@ -32,32 +32,14 @@ class BusinessCell: UITableViewCell {
 
     // MARK: - public methods
     /// 更新
-    func udpate(model:BusinessModel) {
-        
-        /// logo
+    func udpate(model: BusinessModel) {
         logoImageView.setImage(urlStr: NetworkImgOrWeb.getUrl(name: model.logo), placeholderStr: "", radius: 30)
-        
-        /// 商家名
-        nameLabel.text = model.name
-        
-        /// 号码
-        phoneLabel.text = model.dealerTel
-        
-        /// 星级评价显示
+        nameLabel.text      = model.name
+        phoneLabel.text     = model.dealerTel
+        addressLabel.text   = model.address
         let stars = [star1, star2, star3, star4, star5]
-        for star in stars {
-            star?.isHidden = true
+        for i in 0 ..< stars.count {
+            stars[i]?.isHidden = model.level <= i
         }
-        stars[0]?.isHidden = false
-        if model.level > 0 {
-            for i in 0..<model.level {
-                stars[i]?.isHidden = false
-            }
-        }
-        
-        /// 地址
-        addressLabel.text = model.address
-        
     }
-    
 }
