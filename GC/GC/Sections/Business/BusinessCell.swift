@@ -34,7 +34,7 @@ class BusinessCell: UITableViewCell {
     /// 更新
     func udpate(model: BusinessModel) {
         logoImageView.setImage(urlStr: NetworkImgOrWeb.getUrl(name: model.logo), placeholderStr: "", radius: 30)
-        nameLabel.text      = model.dealerName
+        nameLabel.text      = model.name
         phoneLabel.text     = model.dealerTel
         publicKeyTLabel.text = LanguageKey.public_key.value + "："
         publicKeyLabel.text = model.blockchain_id

@@ -140,7 +140,7 @@ class MapView: UIView {
     /// 添加大头针
     private func addAnnotion(model: BusinessModel, coor: CLLocationCoordinate2D) {
         // 创建大头针
-        let annotation = CalloutAnnotation(coordinate: coor, logo: model.logo, dealerName: model.dealerName, dealerTel: model.dealerTel, address: model.address, publicKey: model.blockchain_id, isBranch: model.isBranch)
+        let annotation = CalloutAnnotation(coordinate: coor, model: model)
         mapView.addAnnotation(annotation)
     }
     

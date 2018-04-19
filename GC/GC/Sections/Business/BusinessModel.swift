@@ -52,8 +52,10 @@ class BusinessResultModel: BaseResultModel {
 
 /// 绿色商家
 class BusinessModel: NSObject {
-    var dealerId = 0        // 商家id
-    var dealerName = ""     // 商家名称
+    var id = 0              // 商家Id
+    var dealerId = 0        // 商家分支Id
+    var name = ""           // 商家名称
+    var dealerName = ""     // 商家分支名称
     var desc = ""           // 商家描述
     var color = ""          // 主题色
     var dealerTel = ""      // 商家电话
@@ -68,10 +70,7 @@ class BusinessModel: NSObject {
     var isBranch = false    // 标记是否是分支（本地）
     
     
-    /// 将属性名换为其他key去字典中取值
     override class func mj_replacedKeyFromPropertyName() -> [AnyHashable : Any]! {
-        return ["dealerId" : "id",
-                "desc" : "description",
-                "dealerName" : "name"]
+        return ["desc" : "description"]
     }
 }

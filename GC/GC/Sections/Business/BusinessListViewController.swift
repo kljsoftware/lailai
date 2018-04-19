@@ -90,6 +90,6 @@ extension BusinessListViewController: UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         MBProgressHUD.showAdded(to: self.view, animated: true)
         businessModel = viewModel.businessResultModel.data[indexPath.row]
-        viewModel.getDealerBranch(dealerId: businessModel.dealerId)
+        viewModel.getDealerBranch(dealerId: businessModel.id)
     }
 }

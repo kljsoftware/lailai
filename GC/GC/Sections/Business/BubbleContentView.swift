@@ -72,14 +72,14 @@ class CalloutAnnotation: NSObject, MKAnnotation {
     var isBranch = false
     
 
-    init(coordinate: CLLocationCoordinate2D, logo: String, dealerName: String, dealerTel: String, address: String, publicKey: String, isBranch: Bool) {
+    init(coordinate: CLLocationCoordinate2D, model: BusinessModel) {
         self.coordinate = coordinate
-        self.logo       = logo
-        self.dealerName = dealerName
-        self.dealerTel  = dealerTel
-        self.address    = address
-        self.publicKey  = publicKey
-        self.isBranch   = isBranch
+        self.logo       = model.logo
+        self.dealerName = model.isBranch ? model.dealerName : model.name
+        self.dealerTel  = model.dealerTel
+        self.address    = model.address
+        self.publicKey  = model.blockchain_id
+        self.isBranch   = model.isBranch
         super.init()
     }
 

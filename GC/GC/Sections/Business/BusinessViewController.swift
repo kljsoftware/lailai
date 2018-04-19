@@ -74,7 +74,7 @@ class BusinessViewController: PortraitViewController {
         businessView = BusinessView(frame: CGRect(x: 0, y: 0, width: DEVICE_SCREEN_WIDTH, height: APP_CONTENT_HEIGHT))
         businessView.didSelectClosure = {[weak self] (model) in
             self?.businessModel = model
-            self?.viewModel.getDealerBranch(dealerId: model.dealerId)
+            self?.viewModel.getDealerBranch(dealerId: model.id)
         }
         businessView.refreshingClosure = { [weak self] (page) in
             guard let wself = self else {
