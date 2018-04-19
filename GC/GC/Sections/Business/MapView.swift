@@ -25,33 +25,11 @@ class MapView: UIView {
     fileprivate var mapView: MKMapView!
     /// 定位按钮
     fileprivate var locationBtn: UIButton!
+    /// map around view
+    fileprivate var aroundView: MapAroundView!
     /// 当前定位位置
     var currentLocation: CLLocation?
     
-    
-    /// map around view
-    fileprivate lazy var aroundView: MapAroundView = {
-        let _aroundView = Bundle.main.loadNibNamed("MapAroundView", owner: nil, options: nil)![0] as! MapAroundView
-        self.addSubview(_aroundView)
-        _aroundView.snp.makeConstraints({ (maker) in
-            maker.left.right.bottom.equalTo(self)
-            maker.height.equalTo(50)
-        })
-        _aroundView.aroundButtonClosure = { [weak self] in
-            guard let wself = self else {
-                return
-            }
-            if wself.currentLocation != nil {
-                let vc = UIStoryboard(name: "Business", bundle: nil).instantiateViewController(withIdentifier: "business_list") as! BusinessListViewController
-                vc.loaction = ("\(wself.currentLocation!.coordinate.longitude)", "\(wself.currentLocation!.coordinate.latitude)")
-                vc.didSelectClosure = { [weak self](model) in
-                    self?.loaction(models: [model], center: self!.currentLocation?.coordinate)
-                }
-                wself.navController?.pushViewController(vc, animated: true)
-            }
-        }
-        return _aroundView
-    }()
     
     // MARK: - override methods
     override init(frame: CGRect) {
@@ -59,8 +37,10 @@ class MapView: UIView {
         
         initMapView()
         initSearchBar()
+        initAroundView()
         initLocationButton()
         initLocationManager()
+        
         
         viewModel.setCompletion(onSuccess: { [weak self](resultModel) in
             guard let wself = self else {
@@ -99,6 +79,30 @@ class MapView: UIView {
         self.addSubview(searchBar)
     }
     
+    private func initAroundView() {
+        aroundView = Bundle.main.loadNibNamed("MapAroundView", owner: nil, options: nil)![0] as! MapAroundView
+        self.addSubview(aroundView)
+        aroundView.snp.makeConstraints({ (maker) in
+            maker.left.right.equalTo(self)
+            maker.bottom.equalTo(50)
+            maker.height.equalTo(50)
+            
+        })
+        aroundView.aroundButtonClosure = { [weak self] in
+            guard let wself = self else {
+                return
+            }
+            if wself.currentLocation != nil {
+                let vc = UIStoryboard(name: "Business", bundle: nil).instantiateViewController(withIdentifier: "business_list") as! BusinessListViewController
+                vc.loaction = ("\(wself.currentLocation!.coordinate.longitude)", "\(wself.currentLocation!.coordinate.latitude)")
+                vc.didSelectClosure = { [weak self](model) in
+                    self?.loaction(models: [model], center: self!.currentLocation?.coordinate)
+                }
+                wself.navController?.pushViewController(vc, animated: true)
+            }
+        }
+    }
+    
     private func initLocationButton() {
         locationBtn = UIButton(type: .custom)
         locationBtn.setImage(UIImage(named: "location"), for: .normal)
@@ -112,7 +116,7 @@ class MapView: UIView {
     }
     
     private func initLocationManager() {
-        // 创建位置管理者
+        // 创建位置管理器
         locationManager                 = CLLocationManager()
         // 设置代理
         locationManager.delegate        = self
@@ -142,8 +146,12 @@ class MapView: UIView {
     
     /// 点击定位按钮
     @objc private func locationClicked(sender: UIButton) {
-        if currentLocation != nil {
-            viewModel.searchDealers(x: String(currentLocation!.coordinate.longitude), y: String(currentLocation!.coordinate.latitude))
+        if CLLocationManager.authorizationStatus() == .denied || CLLocationManager.authorizationStatus() == .restricted {
+            UIHelper.tip(message: LanguageKey.no_open_locaiton.value)
+        } else {
+            if currentLocation != nil {
+                viewModel.searchDealers(x: String(currentLocation!.coordinate.longitude), y: String(currentLocation!.coordinate.latitude))
+            }
         }
     }
     
@@ -212,6 +220,9 @@ extension MapView: CLLocationManagerDelegate {
         CLGeocoder().reverseGeocodeLocation(location) { [weak self](placemakes, error) in
             guard let placemark = placemakes?.first else { return }
             self?.aroundView.aroundLabel.text = "发现\(placemark.subLocality ?? "")周边的绿色商家"
+            self?.aroundView.snp.updateConstraints({ (maker) in
+                maker.bottom.equalTo(self!)
+            })
         }
     }
     

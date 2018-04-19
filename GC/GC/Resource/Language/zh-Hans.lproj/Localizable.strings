@@ -52,12 +52,13 @@
 "kinds_unit"        = "种";
 
 // 积分商家
-"map"           = "地图";
-"balance"       = "捐赠积分额";
-"points"        = "积分";
-"telephone"     = "电话";
-"address"       = "地址";
-"public_key"    = "公钥地址";
+"map"               = "地图";
+"balance"           = "捐赠积分额";
+"points"            = "积分";
+"telephone"         = "电话";
+"address"           = "地址";
+"public_key"        = "公钥地址";
+"no_open_locaiton"  = "没有开放定位服务";
 
 // 我
 "setting"               = "设置";

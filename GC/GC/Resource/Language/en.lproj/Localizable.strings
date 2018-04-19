@@ -52,12 +52,13 @@
 "kinds_unit"        = "Type";
 
 //积分商家
-"map"           = "Map";
-"balance"       = "Endowment amount";
-"points"        = "Points";
-"telephone"     = "Telephone";
-"address"       = "Address";
-"public_key"    = "Public key";
+"map"               = "Map";
+"balance"           = "Endowment amount";
+"points"            = "Points";
+"telephone"         = "Telephone";
+"address"           = "Address";
+"public_key"        = "Public key";
+"no_open_locaiton"  = "No open location service";
 
 // 我
 "setting"               = "Settings";

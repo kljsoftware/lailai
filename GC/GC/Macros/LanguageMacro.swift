@@ -63,6 +63,7 @@ enum LanguageKey : String {
     case telephone          // 电话
     case address            // 地址
     case public_key         // 公钥地址
+    case no_open_locaiton   // 没有开放定位服务
     
     /// 我
     case setting            // 设置
