@@ -9,7 +9,7 @@
 import UIKit
 
 /// 常量定义
-private let cellHeight:CGFloat = 104
+private let cellHeight:CGFloat = 105
 
 /// 绿色商家
 class BusinessView: UIView {

@@ -41,12 +41,12 @@ class MapView: UIView {
         initLocationButton()
         initLocationManager()
         
-        
         viewModel.setCompletion(onSuccess: { [weak self](resultModel) in
             guard let wself = self else {
                 return
             }
-            wself.loaction(models: wself.viewModel.businessResultModel.data, center: wself.currentLocation?.coordinate)
+            let center = wself.viewModel.showCurLocation ? wself.currentLocation?.coordinate : wself.getCoordinate2D(model: wself.viewModel.businessResultModel.data.first!)
+            wself.loaction(models: wself.viewModel.businessResultModel.data, center: center)
 
         }) { (error) in
             UIHelper.tip(message: error)
@@ -95,8 +95,8 @@ class MapView: UIView {
             if wself.currentLocation != nil {
                 let vc = UIStoryboard(name: "Business", bundle: nil).instantiateViewController(withIdentifier: "business_list") as! BusinessListViewController
                 vc.loaction = ("\(wself.currentLocation!.coordinate.longitude)", "\(wself.currentLocation!.coordinate.latitude)")
-                vc.didSelectClosure = { [weak self](model) in
-                    self?.loaction(models: [model], center: self!.currentLocation?.coordinate)
+                vc.didSelectClosure = { [weak self](models) in
+                    self?.loaction(models: models, center: self!.getCoordinate2D(model: models.first!))
                 }
                 wself.navController?.pushViewController(vc, animated: true)
             }
@@ -140,7 +140,7 @@ class MapView: UIView {
     /// 添加大头针
     private func addAnnotion(model: BusinessModel, coor: CLLocationCoordinate2D) {
         // 创建大头针
-        let annotation = CalloutAnnotation(coordinate: coor, logo: model.logo, name: model.name, tel: model.dealerTel, address: model.address, publicKey: model.blockchain_id)
+        let annotation = CalloutAnnotation(coordinate: coor, logo: model.logo, dealerName: model.dealerName, dealerTel: model.dealerTel, address: model.address, publicKey: model.blockchain_id, isBranch: model.isBranch)
         mapView.addAnnotation(annotation)
     }
     
@@ -150,6 +150,7 @@ class MapView: UIView {
             UIHelper.tip(message: LanguageKey.no_open_locaiton.value)
         } else {
             if currentLocation != nil {
+                viewModel.showCurLocation = true
                 viewModel.searchDealers(x: String(currentLocation!.coordinate.longitude), y: String(currentLocation!.coordinate.latitude))
             }
         }

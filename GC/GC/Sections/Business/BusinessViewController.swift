@@ -40,6 +40,9 @@ class BusinessViewController: PortraitViewController {
     
     /// 默认第一次定位
     fileprivate var fristDefautLocation = true
+    
+    /// 选中的商家
+    fileprivate var businessModel: BusinessModel!
    
     
     // MARK: - override methods
@@ -70,14 +73,8 @@ class BusinessViewController: PortraitViewController {
         }
         businessView = BusinessView(frame: CGRect(x: 0, y: 0, width: DEVICE_SCREEN_WIDTH, height: APP_CONTENT_HEIGHT))
         businessView.didSelectClosure = {[weak self] (model) in
-            guard let wself = self else {
-                return
-            }
-            wself.businessTitleView.update(isSelectBusiness: false)
-            wself.fristDefautLocation = false
-            wself.scrollView.contentOffset.x = DEVICE_SCREEN_WIDTH
-            self?.mapView.startUpdatingLocation()
-            wself.mapView.loaction(models: [model], center: wself.mapView.getCoordinate2D(model: model))
+            self?.businessModel = model
+            self?.viewModel.getDealerBranch(dealerId: model.dealerId)
         }
         businessView.refreshingClosure = { [weak self] (page) in
             guard let wself = self else {
@@ -100,16 +97,29 @@ class BusinessViewController: PortraitViewController {
             guard let wself = self else {
                 return
             }
-            wself.businessView.model = wself.viewModel.businessResultModel
-            wself.businessView.stopRefreshing()
             MBProgressHUD.hide(for: wself.view, animated: true)
+            wself.businessView.stopRefreshing()
+            
+            if wself.viewModel.isBranch {
+                wself.businessTitleView.update(isSelectBusiness: false)
+                wself.fristDefautLocation = false
+                wself.scrollView.contentOffset.x = DEVICE_SCREEN_WIDTH
+                
+                wself.viewModel.businessBranchModel.data.insert(wself.businessModel, at: 0)
+                wself.mapView.startUpdatingLocation()
+                wself.mapView.loaction(models: wself.viewModel.businessBranchModel.data, center: wself.mapView.getCoordinate2D(model: wself.businessModel))
+                
+            } else {
+                wself.businessView.model = wself.viewModel.businessResultModel
+            }
+            
         }) { [weak self] (error) in
             guard let wself = self else {
                 return
             }
             wself.businessView.stopRefreshing()
-            UIHelper.tip(message: error)
             MBProgressHUD.hide(for: wself.view, animated: true)
+            UIHelper.tip(message: error)
         }
     }
     

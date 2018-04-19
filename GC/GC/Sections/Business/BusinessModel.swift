@@ -24,11 +24,16 @@ class BusinessDealersRequestModel: BaseRequestModel {
     var size = 10       // 每页显示数
 }
 
-/// 4.3 根据关键字返回商家列表
+/// 4.2 根据关键字返回商家列表
 class BusinessNameRequestModel: BaseRequestModel {
     var name = ""   // 搜索关键字
     var page = 0    // 第几页 从0开始
     var size = 10   // 每页显示数
+}
+
+/// 4.3 获取指定商家的分支
+class BusinessBranchRequestModel: BaseRequestModel {
+    var dealerId = 0   // 商家Id
 }
 
 /// 结果模型
@@ -47,8 +52,8 @@ class BusinessResultModel: BaseResultModel {
 
 /// 绿色商家
 class BusinessModel: NSObject {
-    var id = 1              // 商家id
-    var name = ""           // 商家名
+    var dealerId = 0        // 商家id
+    var dealerName = ""     // 商家名称
     var desc = ""           // 商家描述
     var color = ""          // 主题色
     var dealerTel = ""      // 商家电话
@@ -60,10 +65,13 @@ class BusinessModel: NSObject {
     var createdDate = 0     // 创建日期
     var del = 0             //
     var blockchain_id = ""  // 区块链id
+    var isBranch = false    // 标记是否是分支（本地）
     
-
+    
     /// 将属性名换为其他key去字典中取值
     override class func mj_replacedKeyFromPropertyName() -> [AnyHashable : Any]! {
-        return ["description" : "desc"]
+        return ["dealerId" : "id",
+                "desc" : "description",
+                "dealerName" : "name"]
     }
 }

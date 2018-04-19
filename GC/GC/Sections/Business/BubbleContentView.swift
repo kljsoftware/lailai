@@ -35,10 +35,17 @@ class BubbleContentView: UIView {
     /// 更新数据
     func updateData(annotation: CalloutAnnotation) {
         logoImgView.setImage(urlStr: NetworkImgOrWeb.getUrl(name: annotation.logo), placeholderStr: "", radius: 22)
-        nameLabel.text      = annotation.name
-        telLabel.text       = annotation.tel
+        nameLabel.text      = annotation.dealerName
+        telLabel.text       = annotation.dealerTel
         addressLabel.text   = annotation.address
-        publicKeyLabel.text = annotation.publicKey
+        if annotation.isBranch {
+            publicKeyTLabel.isHidden = true
+            publicKeyLabel.isHidden = true
+        } else {
+            publicKeyTLabel.isHidden = false
+            publicKeyLabel.isHidden = false
+            publicKeyLabel.text = annotation.publicKey
+        }
     }
 }
 
@@ -54,21 +61,25 @@ class CalloutAnnotation: NSObject, MKAnnotation {
     /// logo
     var logo: String = ""
     /// 名称
-    var name: String = ""
+    var dealerName: String = ""
     /// 电话
-    var tel: String = ""
+    var dealerTel: String = ""
     /// 地址
     var address: String = ""
     /// 公钥
     var publicKey: String = ""
+    /// 是否为商家分支
+    var isBranch = false
+    
 
-    init(coordinate: CLLocationCoordinate2D, logo: String, name: String, tel: String, address: String, publicKey: String) {
+    init(coordinate: CLLocationCoordinate2D, logo: String, dealerName: String, dealerTel: String, address: String, publicKey: String, isBranch: Bool) {
         self.coordinate = coordinate
         self.logo       = logo
-        self.name       = name
-        self.tel        = tel
+        self.dealerName = dealerName
+        self.dealerTel  = dealerTel
         self.address    = address
         self.publicKey  = publicKey
+        self.isBranch   = isBranch
         super.init()
     }
 
@@ -82,17 +93,17 @@ class CalloutAnnotation: NSObject, MKAnnotation {
             annotationView?.canShowCallout = true
         }
         if #available(iOS 9.0, *) {
-            annotationView?.pinTintColor = UIColor.green
+            annotationView?.pinTintColor = annotation.isBranch ? UIColor.purple : UIColor.green
             // 添加约束才可以使用自定义视图
             let contentView = Bundle.main.loadNibNamed("BubbleContentView", owner: nil, options: nil)![0] as? BubbleContentView
             contentView?.updateData(annotation: annotation)
             annotationView?.detailCalloutAccessoryView = contentView
             contentView?.snp.makeConstraints({ (maker) in
                 maker.width.equalTo(240)
-                maker.height.equalTo(150)
+                maker.height.equalTo(annotation.isBranch ? 110 : 150)
             })
         } else {
-            annotationView?.pinColor = .green
+            annotationView?.pinColor = annotation.isBranch ? .purple : .green
         }
         return annotationView
     }

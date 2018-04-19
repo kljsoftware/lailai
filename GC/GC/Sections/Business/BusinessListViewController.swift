@@ -7,16 +7,16 @@
 //
 
 /// 常量定义
-private let cellHeight: CGFloat = 104
+private let cellHeight: CGFloat = 105
 
 /// 上家列表
 class BusinessListViewController: BaseViewController {
     
     /// 回调闭包
-    var didSelectClosure:((_ model:BusinessModel) -> Void)?
+    var didSelectClosure: (([BusinessModel]) -> Void)?
     
     /// 位置
-    var loaction = (x:"", y:"") {
+    var loaction = (x: "", y: "") {
         didSet {
             viewModel.searchDealers(x: loaction.x, y: loaction.y)
         }
@@ -24,10 +24,11 @@ class BusinessListViewController: BaseViewController {
     
     /// 业务模块
     fileprivate let viewModel = BusinessViewModel()
-    
-    
+    /// 当前商家
+    fileprivate var businessModel: BusinessModel!
     /// 列表
     @IBOutlet weak var tableView: UITableView!
+    
     
     // MAKR: - override methods
     override func viewDidLoad() {
@@ -47,11 +48,19 @@ class BusinessListViewController: BaseViewController {
         tableView.register(UINib(nibName: "BusinessCell", bundle: nil), forCellReuseIdentifier: "kBusinessCell")
     }
     
-    
     private func setupViewModel() {
         viewModel.setCompletion(onSuccess: {[weak self] (resultModel) in
-            self?.tableView.reloadData()
+            MBProgressHUD.hide(for: self!.view, animated: true)
+            if self!.viewModel.isBranch {
+                self?.viewModel.businessBranchModel.data.insert(self!.businessModel, at: 0)
+                self?.didSelectClosure!(self!.viewModel.businessBranchModel.data)
+                self?.navigationController?.popViewController(animated: true)
+                
+            } else {
+                self?.tableView.reloadData()
+            }
         }) { (error) in
+            MBProgressHUD.hide(for: self.view, animated: true)
             UIHelper.tip(message: error)
         }
     }
@@ -79,7 +88,8 @@ extension BusinessListViewController: UITableViewDataSource, UITableViewDelegate
     
     // 单元(cell)选中事件
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        didSelectClosure?(viewModel.businessResultModel.data[indexPath.row])
-        navigationController?.popViewController(animated: true)
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        businessModel = viewModel.businessResultModel.data[indexPath.row]
+        viewModel.getDealerBranch(dealerId: businessModel.dealerId)
     }
 }
