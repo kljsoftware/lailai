@@ -64,7 +64,7 @@ class MapView: UIView {
         mapView.mapType     = MKMapType.standard
         // 获取用户当前位置信息
         mapView.showsUserLocation = true
-        mapView.userTrackingMode = .followWithHeading
+        mapView.userTrackingMode = .follow
         // 显示罗盘
         if #available(iOS 9.0, *) {
             mapView.showsCompass = true
@@ -124,8 +124,9 @@ class MapView: UIView {
         locationManager.distanceFilter  = 100
         // 设置定位的精确度
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        // 请求前台授权
+        // 开启定位服务
         locationManager.requestWhenInUseAuthorization()
+        locationManager.requestAlwaysAuthorization()
     }
     
     /// 设置中心位置
