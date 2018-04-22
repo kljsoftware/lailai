@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Arial.ttf">
-            <string>ArialMT</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Splash View Controller-->
         <scene sceneID="pRw-sG-dSW">
@@ -26,8 +21,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash.png" translatesAutoresizingMaskIntoConstraints="NO" id="hay-3X-udI">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash.png" translatesAutoresizingMaskIntoConstraints="NO" id="hay-3X-udI">
+                                <rect key="frame" x="0.0" y="678" width="375" height="134"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="134" id="Lqc-wf-wsJ"/>
+                                </constraints>
                             </imageView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uaJ-DQ-BYv">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="678"/>
@@ -95,8 +93,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="iVJ-Rh-tql" firstAttribute="top" secondItem="uaJ-DQ-BYv" secondAttribute="bottom" constant="100" id="4ey-gf-H2O"/>
-                            <constraint firstItem="hay-3X-udI" firstAttribute="top" secondItem="s1p-Vg-Yvz" secondAttribute="top" id="IEm-Ft-AHn"/>
+                            <constraint firstItem="hay-3X-udI" firstAttribute="top" secondItem="uaJ-DQ-BYv" secondAttribute="bottom" id="JoG-aK-TLf"/>
                             <constraint firstAttribute="bottom" secondItem="hay-3X-udI" secondAttribute="bottom" id="LZh-lA-t0D"/>
                             <constraint firstItem="hay-3X-udI" firstAttribute="leading" secondItem="s1p-Vg-Yvz" secondAttribute="leading" id="NUT-u0-zXI"/>
                             <constraint firstItem="uaJ-DQ-BYv" firstAttribute="leading" secondItem="s1p-Vg-Yvz" secondAttribute="leading" id="SHR-Db-51h"/>
@@ -135,6 +132,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="splash.png" width="750" height="1334"/>
+        <image name="splash.png" width="750" height="212"/>
     </resources>
 </document>
