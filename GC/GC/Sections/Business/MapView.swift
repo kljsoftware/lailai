@@ -45,9 +45,13 @@ class MapView: UIView {
             guard let wself = self else {
                 return
             }
+            if wself.viewModel.urlType == .searchDealers && wself.viewModel.businessResultModel.data.count == 0 {
+                UIHelper.tip(message: LanguageKey.business_no_exist.value)
+                return
+            }
             let center = wself.viewModel.showCurLocation ? wself.currentLocation?.coordinate : wself.getCoordinate2D(model: wself.viewModel.businessResultModel.data.first!)
             wself.loaction(models: wself.viewModel.businessResultModel.data, center: center)
-
+            
         }) { (error) in
             UIHelper.tip(message: error)
         }

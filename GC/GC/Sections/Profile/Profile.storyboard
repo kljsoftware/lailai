@@ -95,7 +95,7 @@
         <!--语言-->
         <scene sceneID="52l-BY-mhp">
             <objects>
-                <viewController storyboardIdentifier="setting_language" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ki5-8E-zpl" userLabel="语言" customClass="SettingLanguageViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="setting_language" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ki5-8E-zpl" userLabel="语言" customClass="SettingLanguageViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8HO-or-1Wc"/>
                         <viewControllerLayoutGuide type="bottom" id="dNi-ma-Ch5"/>
@@ -458,7 +458,7 @@
         <!--个人设置-->
         <scene sceneID="enM-fY-On1">
             <objects>
-                <viewController storyboardIdentifier="ProfileDetails" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UG2-Uf-XYr" userLabel="个人设置" customClass="ProfileDetailsViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileDetails" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UG2-Uf-XYr" userLabel="个人设置" customClass="ProfileDetailsViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eXz-QP-O33"/>
                         <viewControllerLayoutGuide type="bottom" id="C2y-i9-bMe"/>

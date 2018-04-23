@@ -51,7 +51,7 @@ class BusinessListViewController: BaseViewController {
     private func setupViewModel() {
         viewModel.setCompletion(onSuccess: {[weak self] (resultModel) in
             MBProgressHUD.hide(for: self!.view, animated: true)
-            if self!.viewModel.isBranch {
+            if self!.viewModel.urlType == .getDealerAndBranch {
                 self?.viewModel.businessBranchModel.data.insert(self!.businessModel, at: 0)
                 self?.didSelectClosure!(self!.viewModel.businessBranchModel.data)
                 self?.navigationController?.popViewController(animated: true)
@@ -88,8 +88,12 @@ extension BusinessListViewController: UITableViewDataSource, UITableViewDelegate
     
     // 单元(cell)选中事件
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        MBProgressHUD.showAdded(to: self.view, animated: true)
         businessModel = viewModel.businessResultModel.data[indexPath.row]
-        viewModel.getDealerBranch(dealerId: businessModel.id)
+        if businessModel.isBranch {
+            UIHelper.tip(message: "当前为分支商家")
+        } else {
+            MBProgressHUD.showAdded(to: self.view, animated: true)
+            viewModel.getDealerBranch(dealerId: businessModel.id)
+        }
     }
 }

@@ -58,7 +58,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tg4-Dm-NFS">
-                                <rect key="frame" x="0.0" y="45" width="0.0" height="13.5"/>
+                                <rect key="frame" x="0.0" y="42" width="0.0" height="13.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="13.5" id="hbV-eB-0fz"/>
                                 </constraints>
@@ -66,17 +66,8 @@
                                 <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIx-UI-flP">
-                                <rect key="frame" x="0.0" y="46" width="224" height="11.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="11.5" id="ZxN-XL-6db"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="10"/>
-                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0e-OO-Snf">
-                                <rect key="frame" x="0.0" y="66" width="224" height="0.0"/>
+                                <rect key="frame" x="0.0" y="60" width="224" height="0.0"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
                                 <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -116,14 +107,23 @@
                                     <constraint firstAttribute="width" constant="18" id="Clk-3C-MnR"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIx-UI-flP">
+                                <rect key="frame" x="0.0" y="43" width="224" height="11.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="11.5" id="ZxN-XL-6db"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="10"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="x0e-OO-Snf" firstAttribute="leading" secondItem="VDE-ck-kSl" secondAttribute="leading" id="6cy-XF-FYs"/>
-                            <constraint firstItem="x0e-OO-Snf" firstAttribute="top" secondItem="bIx-UI-flP" secondAttribute="bottom" constant="8" id="7eA-3W-L8U"/>
+                            <constraint firstItem="x0e-OO-Snf" firstAttribute="top" secondItem="bIx-UI-flP" secondAttribute="bottom" constant="5" id="7eA-3W-L8U"/>
                             <constraint firstItem="7Fh-x6-kft" firstAttribute="leading" secondItem="z0n-bC-aAq" secondAttribute="trailing" constant="4" id="C0g-5s-cyx"/>
                             <constraint firstItem="5mS-bJ-Bhv" firstAttribute="leading" secondItem="7Fh-x6-kft" secondAttribute="trailing" constant="4" id="IcK-Z7-SSq"/>
-                            <constraint firstItem="bIx-UI-flP" firstAttribute="top" secondItem="ne7-GT-dyj" secondAttribute="bottom" constant="8" id="Lg6-MY-Ckq"/>
+                            <constraint firstItem="bIx-UI-flP" firstAttribute="top" secondItem="ne7-GT-dyj" secondAttribute="bottom" constant="5" id="Lg6-MY-Ckq"/>
                             <constraint firstItem="ne7-GT-dyj" firstAttribute="top" secondItem="VlS-zv-wpT" secondAttribute="bottom" constant="8" id="OJX-6Z-Z5i"/>
                             <constraint firstItem="iKT-lg-ycR" firstAttribute="centerY" secondItem="EIt-qs-kVP" secondAttribute="centerY" id="VGg-o8-2yL"/>
                             <constraint firstItem="ne7-GT-dyj" firstAttribute="leading" secondItem="VDE-ck-kSl" secondAttribute="leading" id="VqM-La-axB"/>

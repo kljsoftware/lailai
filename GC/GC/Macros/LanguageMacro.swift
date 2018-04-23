@@ -64,6 +64,7 @@ enum LanguageKey : String {
     case address            // 地址
     case public_key         // 公钥地址
     case no_open_locaiton   // 没有开放定位服务
+    case business_no_exist  // 该商家不存在
     
     /// 我
     case setting            // 设置

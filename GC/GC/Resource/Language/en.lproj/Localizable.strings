@@ -59,6 +59,7 @@
 "address"           = "Address";
 "public_key"        = "Public key";
 "no_open_locaiton"  = "No open location service";
+"business_no_exist" = "The business does not exist";
 
 // 我
 "setting"               = "Settings";

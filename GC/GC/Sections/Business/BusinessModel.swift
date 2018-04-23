@@ -67,7 +67,7 @@ class BusinessModel: NSObject {
     var createdDate = 0     // 创建日期
     var del = 0             //
     var blockchain_id = ""  // 区块链id
-    var isBranch = false    // 标记是否是分支（本地）
+    var isBranch = false    // 是否是分支
     
     
     override class func mj_replacedKeyFromPropertyName() -> [AnyHashable : Any]! {

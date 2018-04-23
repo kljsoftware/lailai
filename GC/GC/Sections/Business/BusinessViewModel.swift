@@ -9,14 +9,14 @@
 /// 绿色商家业务模块
 class BusinessViewModel: BaseViewModel {
     
-    var isBranch: Bool = false
+    var urlType: NetworkURL = .getDealers
     var showCurLocation: Bool = false
     var businessResultModel = BusinessResultModel()
     var businessBranchModel = BusinessResultModel()
     
     /// 获取绿色商家
     func getDealers(page: Int = 0, size: Int = 10) {
-        isBranch = false
+        urlType = .getDealers
         let reqModel = BusinessRequestModel()
         reqModel.page = page
         reqModel.size = size
@@ -35,7 +35,7 @@ class BusinessViewModel: BaseViewModel {
     
     /// 4.2 搜索商家
     func searchDealers(x: String = "", y: String = "", name: String = "", range: String = "", page: Int = 0, size: Int = 10) {
-        isBranch = false
+        urlType = .searchDealers
         let reqModel = BusinessDealersRequestModel()
         reqModel.x = x
         reqModel.y = y
@@ -57,7 +57,7 @@ class BusinessViewModel: BaseViewModel {
     
     /// 4.3 获取指定商家的分支
     func getDealerBranch(dealerId: Int) {
-        isBranch = true
+        urlType = .getDealerAndBranch
         let reqModel = BusinessBranchRequestModel()
         reqModel.dealerId = dealerId
         HTTPSessionManager.shared.request(urlString: NetworkURL.getDealerAndBranch.url, parameters: reqModel.mj_keyValues()) { (json, success) in

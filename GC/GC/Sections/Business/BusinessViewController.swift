@@ -100,7 +100,7 @@ class BusinessViewController: PortraitViewController {
             MBProgressHUD.hide(for: wself.view, animated: true)
             wself.businessView.stopRefreshing()
             
-            if wself.viewModel.isBranch {
+            if wself.viewModel.urlType == .getDealerAndBranch {
                 wself.businessTitleView.update(isSelectBusiness: false)
                 wself.fristDefautLocation = false
                 wself.scrollView.contentOffset.x = DEVICE_SCREEN_WIDTH

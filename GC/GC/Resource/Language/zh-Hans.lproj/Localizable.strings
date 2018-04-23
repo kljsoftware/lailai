@@ -59,6 +59,7 @@
 "address"           = "地址";
 "public_key"        = "公钥地址";
 "no_open_locaiton"  = "没有开放定位服务";
+"business_no_exist" = "该商家不存在";
 
 // 我
 "setting"               = "设置";
