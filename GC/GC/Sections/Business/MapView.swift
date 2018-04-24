@@ -45,9 +45,12 @@ class MapView: UIView {
             guard let wself = self else {
                 return
             }
-            if wself.viewModel.urlType == .searchDealers && wself.viewModel.businessResultModel.data.count == 0 {
-                UIHelper.tip(message: LanguageKey.business_no_exist.value)
-                return
+            if wself.viewModel.urlType == .searchDealers {
+                if wself.viewModel.businessResultModel.data.count == 0 {
+                    UIHelper.tip(message: LanguageKey.business_no_exist.value)
+                    return
+                }
+                wself.quitSearchState()
             }
             let center = wself.viewModel.showCurLocation ? wself.currentLocation?.coordinate : wself.getCoordinate2D(model: wself.viewModel.businessResultModel.data.first!)
             wself.loaction(models: wself.viewModel.businessResultModel.data, center: center)
@@ -100,6 +103,7 @@ class MapView: UIView {
                 let vc = UIStoryboard(name: "Business", bundle: nil).instantiateViewController(withIdentifier: "business_list") as! BusinessListViewController
                 vc.loaction = ("\(wself.currentLocation!.coordinate.longitude)", "\(wself.currentLocation!.coordinate.latitude)")
                 vc.didSelectClosure = { [weak self](models) in
+                    self?.quitSearchState()
                     self?.loaction(models: models, center: self!.getCoordinate2D(model: models.first!))
                 }
                 wself.navController?.pushViewController(vc, animated: true)
@@ -197,6 +201,13 @@ class MapView: UIView {
     func stopUpdatingLocation() {
         locationManager.stopUpdatingLocation()
     }
+    
+    /// 退出搜索状态
+    func quitSearchState() {
+        searchBar.text = ""
+        searchBar.showsCancelButton = false
+        searchBar.resignFirstResponder()
+    }
 }
 
 // MARK: - MKMapViewDelegate
@@ -262,12 +273,11 @@ extension MapView: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
+        viewModel.showCurLocation = false
         viewModel.searchDealers(name:searchBar.text ?? "")
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.text = ""
-        searchBar.showsCancelButton = false
-        searchBar.resignFirstResponder()
+        quitSearchState()
     }
 }

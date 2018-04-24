@@ -6,6 +6,8 @@
 //  Copyright © 2018年 demo. All rights reserved.
 //
 
+import YLImagePickerController
+
 ///  常量定义
 private let avatarHeight: CGFloat = 84, otherCellHeight: CGFloat = 50, descCellHeight: CGFloat = 50, saveCellHeight: CGFloat = 100
 
@@ -199,13 +201,13 @@ extension ProfileDetailsViewController: UITableViewDataSource, UITableViewDelega
         if type != .tel {
             switch type {
             case .avatar:
-                if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-                    let picker = UIImagePickerController()
-                    picker.delegate = self
-                    picker.allowsEditing = true
-                    picker.sourceType = .savedPhotosAlbum
-                    self.present(picker, animated: true, completion:nil)
+                let imagePicker = YLImagePickerController(imagePickerType: .album, cropType: .circular)
+                imagePicker.didFinishPickingPhotosHandle = { [weak self](photos: [YLPhotoModel]) in
+                    MBProgressHUD.showAdded(to: self!.view, animated: true)
+                    self?.viewModel.upload(data: UIImagePNGRepresentation(photos.first!.image!)!)
                 }
+                self.present(imagePicker, animated: true, completion:nil)
+                
             case .gender:
                 ActionSheet.show(items: [LanguageKey.man.value, LanguageKey.woman.value], selectedIndex: {[weak self] (index) in
                     guard let wself = self else {
@@ -243,26 +245,27 @@ extension ProfileDetailsViewController: UITableViewDataSource, UITableViewDelega
     }
 }
 
-/// 图像选取委托事件
-extension ProfileDetailsViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-        let type = info[UIImagePickerControllerMediaType] as! String
-        if type == "public.image" {
-            let image = info[UIImagePickerControllerEditedImage] as? UIImage
-            if image != nil {
-                let data = UIImageJPEGRepresentation(image!, 0.8)
-                if data != nil {
-                    MBProgressHUD.showAdded(to: self.view, animated: true)
-                    self.viewModel.upload(data: data!)
-                }
-            }
-            picker.dismiss(animated: true, completion:nil)
-        }
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion: nil)
-    }
-}
+///// 图像选取委托事件
+//extension ProfileDetailsViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+//
+//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+//
+//        let type = info[UIImagePickerControllerMediaType] as! String
+//        if type == "public.image" {
+//            let image = info[UIImagePickerControllerEditedImage] as? UIImage
+//            if image != nil {
+//                let data = UIImageJPEGRepresentation(image!, 0.8)
+//                if data != nil {
+//                    MBProgressHUD.showAdded(to: self.view, animated: true)
+//                    self.viewModel.upload(data: data!)
+//                }
+//            }
+//            picker.dismiss(animated: true, completion:nil)
+//        }
+//    }
+//
+//    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+//        picker.dismiss(animated: true, completion: nil)
+//    }
+//}
+

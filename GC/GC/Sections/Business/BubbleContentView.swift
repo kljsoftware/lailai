@@ -75,7 +75,7 @@ class CalloutAnnotation: NSObject, MKAnnotation {
     init(coordinate: CLLocationCoordinate2D, model: BusinessModel) {
         self.coordinate = coordinate
         self.logo       = model.logo
-        self.dealerName = model.isBranch ? model.dealerName : model.name
+        self.dealerName = model.dealerName
         self.dealerTel  = model.dealerTel
         self.address    = model.address
         self.publicKey  = model.blockchain_id

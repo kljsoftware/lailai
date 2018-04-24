@@ -93,7 +93,7 @@ extension BusinessListViewController: UITableViewDataSource, UITableViewDelegate
             UIHelper.tip(message: "当前为分支商家")
         } else {
             MBProgressHUD.showAdded(to: self.view, animated: true)
-            viewModel.getDealerBranch(dealerId: businessModel.id)
+            viewModel.getDealerBranch(dealerId: businessModel.dealerId)
         }
     }
 }

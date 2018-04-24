@@ -15,5 +15,6 @@ target 'GC' do
   pod 'mob_smssdk'
   pod 'MBProgressHUD', '1.1.0'
   pod 'IQKeyboardManager', '~> 5.0.8'
+  pod 'YLImagePickerController', '0.0.8'
 
 end

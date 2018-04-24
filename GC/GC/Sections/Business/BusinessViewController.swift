@@ -57,6 +57,7 @@ class BusinessViewController: PortraitViewController {
         businessTitleView.businessButtonCallback = { [weak self] in
             self?.scrollView.contentOffset.x = 0
             self?.mapView.stopUpdatingLocation()
+            self?.mapView.quitSearchState()
         }
         businessTitleView.mapbuttonCallback = { [weak self] in
             guard let wself = self else {
@@ -74,7 +75,7 @@ class BusinessViewController: PortraitViewController {
         businessView = BusinessView(frame: CGRect(x: 0, y: 0, width: DEVICE_SCREEN_WIDTH, height: APP_CONTENT_HEIGHT))
         businessView.didSelectClosure = {[weak self] (model) in
             self?.businessModel = model
-            self?.viewModel.getDealerBranch(dealerId: model.id)
+            self?.viewModel.getDealerBranch(dealerId: model.dealerId)
         }
         businessView.refreshingClosure = { [weak self] (page) in
             guard let wself = self else {

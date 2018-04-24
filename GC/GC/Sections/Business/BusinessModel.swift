@@ -52,10 +52,8 @@ class BusinessResultModel: BaseResultModel {
 
 /// 绿色商家
 class BusinessModel: NSObject {
-    var id = 0              // 商家Id
-    var dealerId = 0        // 商家分支Id
-    var name = ""           // 商家名称
-    var dealerName = ""     // 商家分支名称
+    var dealerId = 0        // 商家Id
+    var dealerName = ""     // 商家名称
     var desc = ""           // 商家描述
     var color = ""          // 主题色
     var dealerTel = ""      // 商家电话
@@ -71,6 +69,29 @@ class BusinessModel: NSObject {
     
     
     override class func mj_replacedKeyFromPropertyName() -> [AnyHashable : Any]! {
-        return ["desc" : "description"]
+        return ["dealerId" : "id",
+                "desc" : "description",
+                "dealerName" : "name"]
     }
+}
+
+/// 商家分支结果模型
+class BusinessBranchResultModel: BaseResultModel {
+    
+    var data = [BusinessBranchModel]()
+    
+    /// 指定数组元素类型
+    override class func mj_objectClassInArray() -> [AnyHashable: Any]! {
+        return ["data" : BusinessBranchModel.self]
+    }
+}
+
+/// 绿色商家
+class BusinessBranchModel: NSObject {
+    var dealerId = 0        // 商家Id
+    var logo = ""           // 商家logo
+    var dealerName = ""     // 商家名称
+    var address = ""        // 商家地址
+    var dealerTel = ""      // 商家电话
+    var coordinate = ""     // 商家定位坐标
 }
