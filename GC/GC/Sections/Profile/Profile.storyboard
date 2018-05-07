@@ -45,11 +45,12 @@
                         <segue destination="oTC-ux-9yt" kind="show" id="sq5-8F-qdA"/>
                         <segue destination="oKL-br-MNH" kind="show" id="5HR-Zt-8Qi"/>
                         <segue destination="EaK-Ai-Zvu" kind="show" id="hl9-sj-xJO"/>
+                        <segue destination="wS0-9Z-0RF" kind="show" id="eQY-Lt-p6K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1A-Mi-XWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-354" y="1283"/>
+            <point key="canvasLocation" x="-431" y="1704"/>
         </scene>
         <!--设置-->
         <scene sceneID="JXU-xi-o5Z">
@@ -509,7 +510,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjK-oM-ofk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1804" y="1282"/>
+            <point key="canvasLocation" x="-1881" y="1703"/>
         </scene>
         <!--设置密码-->
         <scene sceneID="9x1-Wx-qxp">
@@ -698,6 +699,80 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T77-j2-Bbe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3686" y="-432"/>
+        </scene>
+        <!--我的绿色布丁-->
+        <scene sceneID="w7G-Ve-e49">
+            <objects>
+                <viewController storyboardIdentifier="my_green_pudding" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wS0-9Z-0RF" userLabel="我的绿色布丁" customClass="PuddingViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aj0-QH-ccV"/>
+                        <viewControllerLayoutGuide type="bottom" id="KcI-aV-hPz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DDb-xP-PAt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tBL-co-Gzx">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="wS0-9Z-0RF" id="vll-Xm-YNm"/>
+                                    <outlet property="delegate" destination="wS0-9Z-0RF" id="8SR-nT-Pg2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tBL-co-Gzx" secondAttribute="trailing" id="Os8-9d-3gN"/>
+                            <constraint firstItem="KcI-aV-hPz" firstAttribute="top" secondItem="tBL-co-Gzx" secondAttribute="bottom" id="aHb-U8-o8j"/>
+                            <constraint firstItem="tBL-co-Gzx" firstAttribute="top" secondItem="aj0-QH-ccV" secondAttribute="bottom" id="e03-My-FWe"/>
+                            <constraint firstItem="tBL-co-Gzx" firstAttribute="leading" secondItem="DDb-xP-PAt" secondAttribute="leading" id="suF-u5-pIo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="tBL-co-Gzx" id="6oD-m7-o0I"/>
+                        <segue destination="BU4-q9-OrZ" kind="show" id="Fqb-or-OLx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Tu-Sh-Lun" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1361" y="3512"/>
+        </scene>
+        <!--布丁说明书-->
+        <scene sceneID="TOJ-pT-f9r">
+            <objects>
+                <viewController storyboardIdentifier="pudding_instructions" id="BU4-q9-OrZ" userLabel="布丁说明书" customClass="InstructionsViewController" customModule="GC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bWC-jc-Ecf"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rkd-9d-0n1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jXa-9P-DA6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a78-Rw-mQD">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BU4-q9-OrZ" id="ec8-nc-sGl"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="a78-Rw-mQD" firstAttribute="leading" secondItem="jXa-9P-DA6" secondAttribute="leading" id="EyQ-RC-5pZ"/>
+                            <constraint firstItem="Rkd-9d-0n1" firstAttribute="top" secondItem="a78-Rw-mQD" secondAttribute="bottom" id="po6-5d-2db"/>
+                            <constraint firstAttribute="trailing" secondItem="a78-Rw-mQD" secondAttribute="trailing" id="qOO-1i-cxh"/>
+                            <constraint firstItem="a78-Rw-mQD" firstAttribute="top" secondItem="bWC-jc-Ecf" secondAttribute="bottom" id="vw9-bD-cL8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="a78-Rw-mQD" id="q4x-94-U7y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lkV-m6-xiQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2513" y="3511"/>
         </scene>
     </scenes>
 </document>

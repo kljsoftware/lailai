@@ -8,7 +8,7 @@
 
 
 ///  常量定义
-private let profileHeight: CGFloat = 116, settingCellHeight: CGFloat = 50, quitCellHeight: CGFloat = 100
+private let profileHeight: CGFloat = 104, settingCellHeight: CGFloat = 50, quitCellHeight: CGFloat = 100
 
 /// 单元类型
 private enum ProfileCellType: Int {
@@ -16,9 +16,9 @@ private enum ProfileCellType: Int {
     case setting
     case accept_busniss
     case secret_key_address
+    case my_green_pudding
     case quit
-    
-    static var count = 5
+    static var count = 6
 }
 
 /// 个人详情设置界面
@@ -87,12 +87,14 @@ class ProfileViewController: PortraitViewController {
     fileprivate func getLabelName(type:ProfileCellType) -> String {
         var labelName = ""
         switch type {
-        case .setting:
+        case .setting:              // 设置
             labelName = LanguageKey.setting.value
-        case .accept_busniss:
+        case .accept_busniss:       // 授权商家
             labelName = LanguageKey.accept_busniss.value
-        case .secret_key_address:    // 手机号
+        case .secret_key_address:   // 我的密钥地址
             labelName = LanguageKey.secret_key_address.value
+        case .my_green_pudding:     // 我的绿色布丁
+            labelName = LanguageKey.my_green_pudding.value
         default:
             break
         }
@@ -100,8 +102,8 @@ class ProfileViewController: PortraitViewController {
     }
 }
 
-// MARK:  UITableViewDataSource&UITableViewDelegate
-extension ProfileViewController : UITableViewDataSource, UITableViewDelegate {
+// MARK: UITableViewDataSource & UITableViewDelegate
+extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     
     // 各个分区的单元(Cell)个数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -154,6 +156,9 @@ extension ProfileViewController : UITableViewDataSource, UITableViewDelegate {
             navigationController?.pushViewController(vc, animated: true)
         case .secret_key_address:
             let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "secretkey_address")
+            navigationController?.pushViewController(vc, animated: true)
+        case .my_green_pudding:
+            let vc = UIStoryboard(name: "Profile", bundle: nil).instantiateViewController(withIdentifier: "my_green_pudding")
             navigationController?.pushViewController(vc, animated: true)
         case .quit:
             AlertController.show(in: self, title: LanguageKey.logout_message.value, btns: [LanguageKey.cancel.value, LanguageKey.ok.value], handler: { (action, text) in

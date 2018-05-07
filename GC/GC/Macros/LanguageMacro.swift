@@ -70,6 +70,8 @@ enum LanguageKey : String {
     case setting            // 设置
     case accept_busniss     // 授权商家
     case secret_key_address // 我的秘钥地址
+    case my_green_pudding   // 我的绿色布丁
+    case pud_instructions   // 布丁说明书
     case blockchain         // 区块链
     case profile_setting    // 个人设置
     case photo              // 照片

@@ -72,6 +72,7 @@ enum NetworkURL {
     case putMemberDeaRelKey     // 7.6 手动输入秘钥
     case getDealerList          // 7.7 授权商家列表
     case getBlockchainAddress   // 7.8 我的区块链地址列表
+    case getPuddingRecord       // 7.9 我的布丁
     
     // 通用部分
     case getBlockChainInfo      // 8.1 获取区块链信息
@@ -124,6 +125,8 @@ enum NetworkURL {
             api = "\(Token.shared.value)/getDealerList"
         case .getBlockchainAddress:
             api = "\(Token.shared.value)/getBlockchainAddress"
+        case .getPuddingRecord:
+            api = "\(Token.shared.value)/getPuddingRecord"
         case .getBlockChainInfo:
             api = "\(Token.shared.value)/getBlockChainInfo"
         case .uploadFile:

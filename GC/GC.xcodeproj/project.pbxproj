@@ -192,6 +192,14 @@
 		A43A50E4E7F53329C5B11904 /* Pods_GC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19EB8A19ED869E797BC1EDA /* Pods_GC.framework */; };
 		E505394A207C966200551393 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5053949207C966200551393 /* AlertController.swift */; };
 		E5375E59207DA66E004F7F62 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5375E58207DA66E004F7F62 /* BannerView.swift */; };
+		E548F21B209FE5CA00774AB6 /* PuddingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E548F21A209FE5CA00774AB6 /* PuddingViewController.swift */; };
+		E548F21E209FE8A000774AB6 /* PointsTotalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E548F21C209FE8A000774AB6 /* PointsTotalCell.swift */; };
+		E548F21F209FE8A000774AB6 /* PointsTotalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E548F21D209FE8A000774AB6 /* PointsTotalCell.xib */; };
+		E548F222209FE8E000774AB6 /* PointsTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E548F220209FE8E000774AB6 /* PointsTypeCell.swift */; };
+		E548F223209FE8E000774AB6 /* PointsTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E548F221209FE8E000774AB6 /* PointsTypeCell.xib */; };
+		E548F225209FF32000774AB6 /* PuddingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E548F224209FF32000774AB6 /* PuddingViewModel.swift */; };
+		E548F227209FF34800774AB6 /* PuddingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E548F226209FF34800774AB6 /* PuddingModel.swift */; };
+		E548F22920A0206900774AB6 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E548F22820A0206900774AB6 /* InstructionsViewController.swift */; };
 		E589147D2085E33900A9937A /* BubbleContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E589147C2085E33900A9937A /* BubbleContentView.swift */; };
 		E5947BE5208D8D2F00C60F69 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = E5947BE4208D8D2F00C60F69 /* location.png */; };
 		E5A2A0322079B419000B20F0 /* TradeRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A2A02F2079B418000B20F0 /* TradeRecordViewModel.swift */; };
@@ -393,6 +401,14 @@
 		C19EB8A19ED869E797BC1EDA /* Pods_GC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5053949207C966200551393 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		E5375E58207DA66E004F7F62 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		E548F21A209FE5CA00774AB6 /* PuddingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuddingViewController.swift; sourceTree = "<group>"; };
+		E548F21C209FE8A000774AB6 /* PointsTotalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsTotalCell.swift; sourceTree = "<group>"; };
+		E548F21D209FE8A000774AB6 /* PointsTotalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointsTotalCell.xib; sourceTree = "<group>"; };
+		E548F220209FE8E000774AB6 /* PointsTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsTypeCell.swift; sourceTree = "<group>"; };
+		E548F221209FE8E000774AB6 /* PointsTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointsTypeCell.xib; sourceTree = "<group>"; };
+		E548F224209FF32000774AB6 /* PuddingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuddingViewModel.swift; sourceTree = "<group>"; };
+		E548F226209FF34800774AB6 /* PuddingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuddingModel.swift; sourceTree = "<group>"; };
+		E548F22820A0206900774AB6 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		E589147C2085E33900A9937A /* BubbleContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleContentView.swift; sourceTree = "<group>"; };
 		E5947BE4208D8D2F00C60F69 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
 		E5A2A02F2079B418000B20F0 /* TradeRecordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeRecordViewModel.swift; sourceTree = "<group>"; };
@@ -752,6 +768,7 @@
 				3C7E26C52026930400ED4B56 /* Detail */,
 				3C7E26CD2026930400ED4B56 /* Setting */,
 				3C7E26CE2026930400ED4B56 /* Business */,
+				E548F219209FE59D00774AB6 /* Pudding */,
 				3CF364DE2022A916003179E8 /* Profile.storyboard */,
 				3CF364E02022A916003179E8 /* ProfileViewController.swift */,
 				3CD6AA1C2025EE4900EAEECA /* ProfileCell.swift */,
@@ -960,6 +977,21 @@
 			path = AreaPickerView;
 			sourceTree = "<group>";
 		};
+		E548F219209FE59D00774AB6 /* Pudding */ = {
+			isa = PBXGroup;
+			children = (
+				E548F21A209FE5CA00774AB6 /* PuddingViewController.swift */,
+				E548F21C209FE8A000774AB6 /* PointsTotalCell.swift */,
+				E548F21D209FE8A000774AB6 /* PointsTotalCell.xib */,
+				E548F220209FE8E000774AB6 /* PointsTypeCell.swift */,
+				E548F221209FE8E000774AB6 /* PointsTypeCell.xib */,
+				E548F226209FF34800774AB6 /* PuddingModel.swift */,
+				E548F224209FF32000774AB6 /* PuddingViewModel.swift */,
+				E548F22820A0206900774AB6 /* InstructionsViewController.swift */,
+			);
+			path = Pudding;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1065,6 +1097,7 @@
 				3C6550742025934400FE0504 /* tab_donate_sel@3x.png in Resources */,
 				3C8DCEF9201D76C400C9F40E /* tab_business_sel@2x.png in Resources */,
 				3CF5D66E2031470A0021961B /* dot_sel.png in Resources */,
+				E548F21F209FE8A000774AB6 /* PointsTotalCell.xib in Resources */,
 				3C65505F20243D0300FE0504 /* WalletSectionCell.xib in Resources */,
 				3CB4D10E202AF8D000AB70B9 /* AdView.xib in Resources */,
 				3C8DCEF4201D76C400C9F40E /* tab_business_nor@2x.png in Resources */,
@@ -1084,6 +1117,7 @@
 				3C8DCEEC201D76C400C9F40E /* launch.png in Resources */,
 				3CF365012022A916003179E8 /* BusinessTitleView.xib in Resources */,
 				A3A728C72077A89A00846993 /* Area.plist in Resources */,
+				E548F223209FE8E000774AB6 /* PointsTypeCell.xib in Resources */,
 				3C4B070B201EF7CA00856698 /* wallet_donate@3x.png in Resources */,
 				3C8DCEF3201D76C400C9F40E /* tab_wallet_sel@3x.png in Resources */,
 				3C7E26D02026930400ED4B56 /* ProfileDetailAvatarCell.xib in Resources */,
@@ -1183,6 +1217,7 @@
 			files = (
 				3C1B0B4E202D82E600E059BD /* NewsDetailsViewController.swift in Sources */,
 				3CA33DA1202CAB17003032A4 /* MapAroundView.swift in Sources */,
+				E548F222209FE8E000774AB6 /* PointsTypeCell.swift in Sources */,
 				3CB5539D201CB73F009AC1CD /* String+Extension.swift in Sources */,
 				3CB4D119202B488300AB70B9 /* ProfileSettingPwdViewController.swift in Sources */,
 				E589147D2085E33900A9937A /* BubbleContentView.swift in Sources */,
@@ -1233,6 +1268,7 @@
 				3CB4D10F202AF8D000AB70B9 /* AdView.swift in Sources */,
 				3CB4D127202C7BFC00AB70B9 /* SettingFAQViewController.swift in Sources */,
 				3CFD84F4201C9B5900F9E7E5 /* AppDelegate.swift in Sources */,
+				E548F227209FF34800774AB6 /* PuddingModel.swift in Sources */,
 				3CF3652B2022EB19003179E8 /* UIHelper.swift in Sources */,
 				E5DAEE41207B40C900AE4B90 /* DatePickerView.swift in Sources */,
 				3CB4D12D202C8E0500AB70B9 /* BlockChainViewController.swift in Sources */,
@@ -1251,6 +1287,7 @@
 				3C7E26D12026930400ED4B56 /* ProfileDetailOtherCell.swift in Sources */,
 				3C7E26CF2026930400ED4B56 /* ProfileDetailAvatarCell.swift in Sources */,
 				3C1B0B49202D786500E059BD /* ProfileBusinessCell.swift in Sources */,
+				E548F225209FF32000774AB6 /* PuddingViewModel.swift in Sources */,
 				3CF365062022A916003179E8 /* RegisterViewController.swift in Sources */,
 				3C1B0B44202D6FAB00E059BD /* DonateViewModel.swift in Sources */,
 				3CB55399201CB73F009AC1CD /* UIButton+Extension.swift in Sources */,
@@ -1261,6 +1298,7 @@
 				3CF3650F2022A916003179E8 /* NewsHeaderView.swift in Sources */,
 				3CB553A0201CB73F009AC1CD /* LanguageHelper.swift in Sources */,
 				3CF364FE2022A916003179E8 /* BusinessViewController.swift in Sources */,
+				E548F21B209FE5CA00774AB6 /* PuddingViewController.swift in Sources */,
 				3C65507D2025E50E00FE0504 /* DonateRecordCell.swift in Sources */,
 				3CB5539B201CB73F009AC1CD /* UIImage+Extension.swift in Sources */,
 				3C65505A20243B8600FE0504 /* WalletCell.swift in Sources */,
@@ -1271,6 +1309,7 @@
 				A3A728C12077661100846993 /* AreaPickerView.swift in Sources */,
 				3C37461A201DBA14000FD752 /* BorderView.swift in Sources */,
 				3CF364FD2022A916003179E8 /* MapView.swift in Sources */,
+				E548F21E209FE8A000774AB6 /* PointsTotalCell.swift in Sources */,
 				3C25DA3E201CC286003E4BFB /* UIImageView+Extension.swift in Sources */,
 				3CD6AA292025F9D900EAEECA /* BaseNavigationController.swift in Sources */,
 				3CB4D0FA202A011600AB70B9 /* NewsModel.swift in Sources */,
@@ -1278,6 +1317,7 @@
 				A3A728C92077A8D500846993 /* AreaModel.swift in Sources */,
 				3CB553A5201CB73F009AC1CD /* GlobalMacro.swift in Sources */,
 				3CF3651E2022A9F2003179E8 /* RegiserViewModel.swift in Sources */,
+				E548F22920A0206900774AB6 /* InstructionsViewController.swift in Sources */,
 				3CB4D11D202C241700AB70B9 /* Double+Extension.swift in Sources */,
 				3CB4D101202A05AF00AB70B9 /* ProfileModel.swift in Sources */,
 				3CF365022022A916003179E8 /* BusinessTitleView.swift in Sources */,

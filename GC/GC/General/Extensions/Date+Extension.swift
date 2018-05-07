@@ -21,6 +21,15 @@ extension Date {
         return date
     }
     
+    /// 13位时间戳转换为时间字符串
+    static func convert(from timeStamp: Double, format: String) -> String {
+        let date = Date(timeIntervalSince1970: timeStamp/1000.0)
+        let dateFormatter           = DateFormatter()
+        dateFormatter.dateFormat    = format
+        let dateStr = dateFormatter.string(from: date)
+        return dateStr
+    }
+    
     /// 时间转换为字符串
     func convert(format: String) -> String {
         let dateFormatter           = DateFormatter()

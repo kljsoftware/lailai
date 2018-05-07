@@ -65,6 +65,8 @@
 "setting"               = "Settings";
 "accept_busniss"        = "Authorized merchant";
 "secret_key_address"    = "The secret key";
+"my_green_pudding"      = "My green pudding";
+"pud_instructions"      = "Pudding Instructions";
 "blockchain"            = "Block chain";
 "profile_setting"       = "Personal settings";
 "photo"                 = "Photo";
