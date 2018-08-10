@@ -102,3 +102,6 @@
 "ok"        = "OK";
 "cancel"    = "Cancel";
 "open"      = "Open";
+
+// TODO: 未做多语言处理的字串放在下面
+
